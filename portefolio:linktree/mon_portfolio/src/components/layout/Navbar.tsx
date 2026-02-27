@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Colors } from '../colors';
 import './Navbar.css';
 
 const Navbar: React.FC = () => {
@@ -18,45 +17,36 @@ const Navbar: React.FC = () => {
         </NavLink>
 
         <div className={`navbar__menu ${menuOpen ? 'navbar__menu--open' : ''}`}>
-          <NavLink 
-            to="/" 
-            className={({ isActive }: { isActive: boolean }) => 
+          <NavLink
+            to="/"
+            className={({ isActive }: { isActive: boolean }) =>
               isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
             }
             onClick={() => setMenuOpen(false)}
           >
             LinkTree
           </NavLink>
-          <NavLink 
-            to="/portefolio" 
-            className={({ isActive }: { isActive: boolean }) => 
+          <NavLink
+            to="/portefolio"
+            className={({ isActive }: { isActive: boolean }) =>
               isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
             }
             onClick={() => setMenuOpen(false)}
           >
             Portefolio
           </NavLink>
-          <NavLink 
-            to="/design" 
-            className={({ isActive }: { isActive: boolean }) => 
-              isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
-            }
-            onClick={() => setMenuOpen(false)}
-          >
-            Design
-          </NavLink>
-          <NavLink 
-            to="/cv" 
-            className={({ isActive }: { isActive: boolean }) => 
+          <NavLink
+            to="/cv"
+            className={({ isActive }: { isActive: boolean }) =>
               isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
             }
             onClick={() => setMenuOpen(false)}
           >
             CV
           </NavLink>
-          <NavLink 
-            to="/profil" 
-            className={({ isActive }: { isActive: boolean }) => 
+          <NavLink
+            to="/profil"
+            className={({ isActive }: { isActive: boolean }) =>
               isActive ? 'navbar__link navbar__link--active' : 'navbar__link'
             }
             onClick={() => setMenuOpen(false)}

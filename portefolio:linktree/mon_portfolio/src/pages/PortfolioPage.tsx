@@ -1,5 +1,6 @@
-import React, { useState, useRef, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import TabletViewer from '../components/TabletViewer';
 import './PortfolioPage.css';
 
 // Types pour les applications
@@ -127,7 +128,7 @@ const apps: AppInfo[] = [
 // Composant de carte d'application
 const AppCard: React.FC<{ app: AppInfo, onClick: () => void }> = ({ app, onClick }) => {
   return (
-    <motion.div 
+    <motion.div
       className="app-card"
       whileHover={{ y: -5 }}
       whileTap={{ scale: 0.98 }}
@@ -155,26 +156,16 @@ const AppCard: React.FC<{ app: AppInfo, onClick: () => void }> = ({ app, onClick
   );
 };
 
-// Visualisation simple de tablette
-const SimpleTabletViewer: React.FC<{ app: AppInfo, onViewDetails: () => void }> = ({ app, onViewDetails }) => {
+// Visualisation 3D GLB de la tablette
+const GLBTabletViewer: React.FC<{ app: AppInfo, onViewDetails: () => void }> = ({ app, onViewDetails }) => {
   return (
-    <div className="portfolio__simple-tablet">
-      <div className="portfolio__simple-tablet-container">
-        <div className="portfolio__simple-tablet-frame">
-          <div className="portfolio__simple-tablet-screen">
-            <img 
-              src={app.screenshots[0]} 
-              alt={`Capture d'écran de ${app.name}`} 
-              className="portfolio__simple-tablet-screenshot" 
-            />
-          </div>
-          <div className="portfolio__simple-tablet-button"></div>
-        </div>
-      </div>
+    <div className="portfolio__glb-tablet">
+      <TabletViewer screenshotUrl={app.screenshots[0]} />
       <div className="portfolio__tablet-info">
         <h3>{app.name}</h3>
         <p>{app.subtitle}</p>
-        <button 
+        <p className="portfolio__tablet-hint">↔ Rotation automatique · Cliquez-glissez pour explorer</p>
+        <button
           className="portfolio__view-button"
           onClick={onViewDetails}
         >
@@ -189,11 +180,11 @@ const SimpleTabletViewer: React.FC<{ app: AppInfo, onViewDetails: () => void }> 
 const PortfolioPage: React.FC = () => {
   const [currentApp, setCurrentApp] = useState<AppInfo | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  
+
   const handleNextTablet = () => {
     setCurrentIndex((prev) => (prev + 1) % apps.length);
   };
-  
+
   const handlePrevTablet = () => {
     setCurrentIndex((prev) => (prev - 1 + apps.length) % apps.length);
   };
@@ -210,11 +201,11 @@ const PortfolioPage: React.FC = () => {
   // Filtrer les applications mises en avant
   const featuredApps = apps.filter(app => app.featured);
   const newApps = apps.filter(app => app.new);
-  
+
   return (
     <div className="portfolio-page">
       <div className="portfolio__glass-background"></div>
-      
+
       <header className="portfolio__header">
         <h1 className="portfolio__title">App Portfolio</h1>
         <p className="portfolio__description">
@@ -230,20 +221,20 @@ const PortfolioPage: React.FC = () => {
             <button className="portfolio__tablet-nav portfolio__tablet-nav--prev" onClick={handlePrevTablet}>
               ◀
             </button>
-            
+
             <div className="portfolio__tablet-viewer">
-              <SimpleTabletViewer 
-                app={apps[currentIndex]} 
+              <GLBTabletViewer
+                app={apps[currentIndex]}
                 onViewDetails={() => openAppDetails(apps[currentIndex])}
               />
             </div>
-            
+
             <button className="portfolio__tablet-nav portfolio__tablet-nav--next" onClick={handleNextTablet}>
               ▶
             </button>
           </div>
         </section>
-        
+
         {/* Section applications à la une */}
         <section className="portfolio__featured">
           <h2 className="portfolio__section-title">À la une aujourd'hui</h2>
@@ -253,7 +244,7 @@ const PortfolioPage: React.FC = () => {
             ))}
           </div>
         </section>
-        
+
         {/* Section nouvelles applications */}
         <section className="portfolio__new">
           <h2 className="portfolio__section-title">Nouveautés</h2>
@@ -263,7 +254,7 @@ const PortfolioPage: React.FC = () => {
             ))}
           </div>
         </section>
-        
+
         {/* Section toutes les applications */}
         <section className="portfolio__all-apps">
           <h2 className="portfolio__section-title">Toutes les applications</h2>
@@ -274,12 +265,12 @@ const PortfolioPage: React.FC = () => {
           </div>
         </section>
       </main>
-      
+
       {/* Modal de détails d'application */}
       {currentApp && (
         <div className="app-details-modal">
           <div className="app-details-modal__overlay" onClick={closeAppDetails}></div>
-          <motion.div 
+          <motion.div
             className="app-details-modal__content"
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -287,7 +278,7 @@ const PortfolioPage: React.FC = () => {
             transition={{ type: 'spring', damping: 25 }}
           >
             <button className="app-details-modal__close" onClick={closeAppDetails}>×</button>
-            
+
             <div className="app-details-modal__header">
               <img src={currentApp.icon} alt={`Icône de ${currentApp.name}`} className="app-details-modal__icon" />
               <div className="app-details-modal__title-container">
@@ -305,10 +296,10 @@ const PortfolioPage: React.FC = () => {
               </div>
               <button className="app-details-modal__get-button">OBTENIR</button>
             </div>
-            
+
             <div className="app-details-modal__screenshots">
               {currentApp.screenshots.map((screenshot, index) => (
-                <img 
+                <img
                   key={index}
                   src={screenshot}
                   alt={`Capture d'écran ${index + 1} de ${currentApp.name}`}
@@ -316,12 +307,12 @@ const PortfolioPage: React.FC = () => {
                 />
               ))}
             </div>
-            
+
             <div className="app-details-modal__description">
               <h3 className="app-details-modal__section-title">Description</h3>
               <p>{currentApp.description}</p>
             </div>
-            
+
             <div className="app-details-modal__features">
               <h3 className="app-details-modal__section-title">Fonctionnalités</h3>
               <ul className="app-details-modal__features-list">

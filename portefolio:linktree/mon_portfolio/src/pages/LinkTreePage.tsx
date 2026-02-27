@@ -1,16 +1,9 @@
 import React from 'react';
 import { ButtonStyle } from '../components';
 import SocialButton from '../components/SocialButton';
-import { 
-  TwitterIcon, 
-  LinkedInIcon, 
-  GitHubIcon, 
-  InstagramIcon, 
-  YouTubeIcon, 
-  FacebookIcon,
-  TikTokIcon,
-  MediumIcon,
-  WhatsAppIcon,
+import {
+  LinkedInIcon,
+  GitHubIcon,
   EmailIcon,
   PortfolioIcon
 } from '../components/icons';
@@ -36,48 +29,6 @@ const LinkTreePage: React.FC = () => {
       url: 'https://github.com/',
       icon: <GitHubIcon />,
       style: ButtonStyle.Tertiary
-    },
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/',
-      icon: <TwitterIcon />,
-      style: ButtonStyle.Cyan
-    },
-    {
-      name: 'Instagram',
-      url: 'https://instagram.com/',
-      icon: <InstagramIcon />,
-      style: ButtonStyle.Pink
-    },
-    {
-      name: 'YouTube',
-      url: 'https://youtube.com/',
-      icon: <YouTubeIcon />,
-      style: ButtonStyle.Error
-    },
-    {
-      name: 'Facebook',
-      url: 'https://facebook.com/',
-      icon: <FacebookIcon />,
-      style: ButtonStyle.Info
-    },
-    {
-      name: 'TikTok',
-      url: 'https://tiktok.com/',
-      icon: <TikTokIcon />,
-      style: ButtonStyle.Purple
-    },
-    {
-      name: 'Medium',
-      url: 'https://medium.com/',
-      icon: <MediumIcon />,
-      style: ButtonStyle.Secondary
-    },
-    {
-      name: 'WhatsApp',
-      url: 'https://wa.me/123456789',
-      icon: <WhatsAppIcon />,
-      style: ButtonStyle.Success
     },
     {
       name: 'Email',
@@ -115,7 +66,7 @@ const LinkTreePage: React.FC = () => {
           ))}
         </div>
       </main>
-      
+
       <footer className="linktree-page__footer">
         <p>© 2023 - Sharik Mohamed</p>
       </footer>

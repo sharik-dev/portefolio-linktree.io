@@ -1,5 +1,4 @@
 import React from 'react';
-import './ButtonGroup.css';
 
 interface ButtonGroupProps {
   children: React.ReactNode;
@@ -9,30 +8,32 @@ interface ButtonGroupProps {
   className?: string;
 }
 
+const spacingMap = { small: 'gap-2', medium: 'gap-3', large: 'gap-4' };
+const alignMap = {
+  start: 'items-start justify-start',
+  center: 'items-center justify-center',
+  end: 'items-end justify-end',
+  stretch: 'items-stretch'
+};
+
 export const ButtonGroup: React.FC<ButtonGroupProps> = ({
   children,
   orientation = 'horizontal',
   spacing = 'medium',
   align = 'center',
   className = ''
-}) => {
-  const groupClasses = [
-    'ds-button-group',
-    `ds-button-group--${orientation}`,
-    `ds-button-group--spacing-${spacing}`,
-    `ds-button-group--align-${align}`,
+}) => (
+  <div className={[
+    'flex',
+    orientation === 'vertical' ? 'flex-col' : 'flex-row flex-wrap',
+    spacingMap[spacing],
+    alignMap[align],
     className
-  ].filter(Boolean).join(' ');
+  ].filter(Boolean).join(' ')}>
+    {React.Children.map(children, (child, index) => (
+      <div key={index}>{child}</div>
+    ))}
+  </div>
+);
 
-  return (
-    <div className={groupClasses}>
-      {React.Children.map(children, (child, index) => (
-        <div key={index} className="ds-button-group__item">
-          {child}
-        </div>
-      ))}
-    </div>
-  );
-};
-
-export default ButtonGroup; 
+export default ButtonGroup;

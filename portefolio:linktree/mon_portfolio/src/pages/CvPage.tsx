@@ -1,351 +1,313 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import './CvPage.css';
+import { useLang, t } from '../contexts/LangContext';
 
-// Types pour les expériences
-interface Experience {
-  id: string;
-  titre: string;
-  entreprise: string;
-  periode: string;
-  description: string;
-  technologies: string[];
-  logo: string;
-}
+/* ─── Bilingual Data ─────────────────────────────────────────────── */
+const DATA = {
+  experiences: [
+    {
+      id: 'skyconseil',
+      title: { fr: 'Développeur Applications iOS', en: 'iOS Application Developer' },
+      company: 'Skyconseil',
+      badge: { fr: 'Alternance', en: 'Work-Study' },
+      period: { fr: 'Janvier 2024 – Présent · Toulouse', en: 'January 2024 – Present · Toulouse' },
+      current: true,
+      description: {
+        fr: 'Développement de fonctionnalités iOS en architecture MVVM. Intégration MapboxMaps SDK v10+ : couches météo multiples, filtres dynamiques, expressions de zoom, gestion de visibilité par piste. Rédaction de documentation technique interne et client. Tests unitaires, optimisation des performances, code review en Agile/Scrum.',
+        en: 'Designed and implemented iOS features following MVVM architecture. Developed complex MapboxMaps SDK integrations: multiple weather overlay layers, dynamic filter expressions, zoom-level visibility management, multi-layer track control. Wrote technical documentation. Unit testing, performance optimization, code reviews in Agile sprints.'
+      },
+      tags: ['Swift', 'iOS', 'MVVM', 'MapboxMaps SDK v10+', 'UIKit', 'CI/CD', 'GitHub Actions', 'Tests unitaires', 'Agile/Scrum'],
+      logo: 'https://cdn-icons-png.flaticon.com/512/2537/2537338.png',
+    },
+    {
+      id: 'facteur-humain',
+      title: { fr: 'Stagiaire Développeur Embarqué', en: 'Software Development Intern' },
+      company: 'Le Facteur Humain & Combustible Numérique',
+      badge: { fr: 'Stage', en: 'Internship' },
+      period: { fr: 'Juin – Juillet 2023 · Toulouse', en: 'June – July 2023 · Toulouse' },
+      current: false,
+      description: {
+        fr: 'Projet Guidor : développement embarqué avec Arduino et C++. Conception d\'un système de guidage avec capteurs, actionneurs et interface de contrôle dans une équipe pluridisciplinaire.',
+        en: 'Guidor project: embedded development with Arduino and C++. Built guidance system integrating hardware sensors and control interface within a cross-functional team.'
+      },
+      tags: ['C++', 'Arduino', 'Embarqué'],
+      logo: 'https://cdn-icons-png.flaticon.com/512/9913/9913429.png',
+    },
+    {
+      id: 'madagascar',
+      title: { fr: 'Stagiaire', en: 'Intern' },
+      company: 'Min. de l\'Économie et des Finances de Madagascar',
+      badge: { fr: 'Stage', en: 'Internship' },
+      period: { fr: 'Mai 2019 · Madagascar', en: 'May 2019 · Madagascar' },
+      current: false,
+      description: {
+        fr: 'Stage d\'observation et de découverte au sein du ministère. Exposition aux systèmes d\'information institutionnels et aux processus administratifs numériques.',
+        en: 'Observation internship within the ministry. Exposure to institutional information systems and digital administrative processes.'
+      },
+      tags: [],
+      logo: 'https://cdn-icons-png.flaticon.com/512/1997/1997930.png',
+    },
+  ],
+  formations: [
+    {
+      id: 'epitech',
+      title: { fr: 'Licence Informatique', en: "Bachelor's in Computer Science" },
+      school: 'Epitech',
+      period: { fr: 'Août 2023 – Septembre 2026', en: 'August 2023 – September 2026' },
+      description: {
+        fr: 'Formation en informatique couvrant algorithmique, JavaScript, React.js et développement de projets en équipe. Approche par projets pratiques.',
+        en: 'Computer science curriculum covering algorithms, JavaScript, React.js and collaborative project development. Project-driven learning approach.'
+      },
+      logo: 'https://cdn-icons-png.flaticon.com/512/8074/8074808.png',
+    },
+    {
+      id: 'simplon',
+      title: { fr: 'AFP Concepteur Développeur d\'Applications', en: 'Professional Qualification – Application Developer' },
+      school: 'Simplon Auvergne-Rhône-Alpes',
+      period: { fr: 'Avril – Mai 2023', en: 'April – May 2023' },
+      description: {
+        fr: 'Formation intensive en Swift et développement web. Conception et développement d\'applications mobiles iOS.',
+        en: 'Intensive training in Swift and web development. iOS mobile application design and development.'
+      },
+      logo: 'https://cdn-icons-png.flaticon.com/512/2602/2602414.png',
+    },
+  ],
+  skills: {
+    fr: [
+      { cat: 'Mobile iOS', tags: ['Swift', 'SwiftUI', 'UIKit', 'AVFoundation', 'Objective-C'] },
+      { cat: 'Architecture', tags: ['MVVM', 'MVC', 'Clean Architecture'] },
+      { cat: 'Cartographie', tags: ['MapboxMaps SDK v10+', 'SDK Legacy Mapbox', 'Filtres JSON', 'Expressions de zoom'] },
+      { cat: 'DevOps & CI/CD', tags: ['Git', 'GitHub Actions', 'Pipelines automatisés', 'Tests unitaires'] },
+      { cat: 'Web & Autres', tags: ['React.js', 'TypeScript', 'JavaScript', 'C++', 'Python', 'Arduino'] },
+      { cat: 'Méthodes', tags: ['Agile/Scrum', 'Code Review', 'Documentation technique', 'REST API / JSON'] },
+    ],
+    en: [
+      { cat: 'iOS Mobile', tags: ['Swift', 'SwiftUI', 'UIKit', 'AVFoundation', 'Objective-C'] },
+      { cat: 'Architecture', tags: ['MVVM', 'MVC', 'Clean Architecture'] },
+      { cat: 'Mapping & Geospatial', tags: ['MapboxMaps SDK v10+', 'Legacy Mapbox SDK', 'JSON Filters', 'Zoom Expressions'] },
+      { cat: 'DevOps & CI/CD', tags: ['Git', 'GitHub Actions', 'Automated Pipelines', 'Unit Testing'] },
+      { cat: 'Web & Other', tags: ['React.js', 'TypeScript', 'JavaScript', 'C++', 'Python', 'Arduino'] },
+      { cat: 'Methodologies', tags: ['Agile/Scrum', 'Code Review', 'Technical Documentation', 'REST API / JSON'] },
+    ],
+  },
+  languages: {
+    fr: [{ lang: 'Français', level: 'Natif' }, { lang: 'Anglais', level: 'Avancé (B2/C1)' }],
+    en: [{ lang: 'French', level: 'Native' }, { lang: 'English', level: 'Advanced (B2/C1)' }],
+  },
+};
 
-// Types pour les formations
-interface Formation {
-  id: string;
-  diplome: string;
-  etablissement: string;
-  periode: string;
-  description: string;
-  logo: string;
-}
-
-// Types pour les compétences
-interface Competence {
-  categorie: string;
-  skills: Array<{
-    nom: string;
-    niveau: number;
-  }>;
-}
-
-// Données fictives pour les expériences
-const experiences: Experience[] = [
-  {
-    id: 'exp1',
-    titre: 'Développeur Mobile Guidor',
-    entreprise: 'SkyConseil',
-    periode: 'Janvier 2024 - juin 2026',
-    description: 'Conception et développement d\'applications mobile',
-    technologies: ['Swift', 'c++', 'Uikit'],
-    logo: 'https://cdn-icons-png.flaticon.com/512/2537/2537338.png'
-  },
-  {
-    id: 'exp2',
-    titre: 'Développeur Front-End',
-    entreprise: 'DigitalCraft Agency',
-    periode: 'Mars 2020 - Décembre 2021',
-    description: 'Développement d\'interfaces utilisateur attractives et réactives. Implémentation de designs en suivant les meilleures pratiques d\'accessibilité et de SEO. Optimisation des performances et expérience utilisateur.',
-    technologies: ['JavaScript', 'Vue.js', 'CSS/SASS', 'Webpack', 'Figma'],
-    logo: 'https://cdn-icons-png.flaticon.com/512/9913/9913429.png'
-  },
-  {
-    id: 'exp3',
-    titre: 'Stagiaire Développeur Web',
-    entreprise: 'WebGen Studio',
-    periode: 'Juin 2019 - Février 2020',
-    description: 'Stage de fin d\'études axé sur le développement web. Participation à la création de sites web et applications pour les clients. Apprentissage des fondamentaux du développement web professionnel et des méthodes agiles.',
-    technologies: ['HTML/CSS', 'JavaScript', 'PHP', 'MySQL', 'WordPress'],
-    logo: 'https://cdn-icons-png.flaticon.com/512/1997/1997930.png'
-  }
-];
-
-// Données fictives pour les formations
-const formations: Formation[] = [
-  {
-    id: 'form1',
-    diplome: 'Master en Développement Web',
-    etablissement: 'École Supérieure du Digital',
-    periode: '2018 - 2020',
-    description: 'Formation approfondie en développement web et mobile. Spécialisation dans les technologies modernes du front-end et back-end. Projet de fin d\'études sur la création d\'une application de gestion de projet.',
-    logo: 'https://cdn-icons-png.flaticon.com/512/8074/8074808.png'
-  },
-  {
-    id: 'form2',
-    diplome: 'Licence en Informatique',
-    etablissement: 'Université de Technologie',
-    periode: '2015 - 2018',
-    description: 'Formation généraliste en informatique couvrant les bases de la programmation, des algorithmes, des bases de données et des réseaux. Option développement logiciel en dernière année.',
-    logo: 'https://cdn-icons-png.flaticon.com/512/2602/2602414.png'
-  },
-  {
-    id: 'form3',
-    diplome: 'Baccalauréat Scientifique',
-    etablissement: 'Lycée International',
-    periode: '2014 - 2015',
-    description: 'Baccalauréat avec spécialité mathématiques. Option informatique et sciences du numérique.',
-    logo: 'https://cdn-icons-png.flaticon.com/512/2602/2602392.png'
-  }
-];
-
-// Données fictives pour les compétences
-const competences: Competence[] = [
-  {
-    categorie: 'Langages de programmation',
-    skills: [
-      { nom: 'JavaScript', niveau: 90 },
-      { nom: 'TypeScript', niveau: 85 },
-      { nom: 'Python', niveau: 75 },
-      { nom: 'PHP', niveau: 65 },
-      { nom: 'Java', niveau: 60 }
-    ]
-  },
-  {
-    categorie: 'Front-End',
-    skills: [
-      { nom: 'React', niveau: 90 },
-      { nom: 'HTML5/CSS3', niveau: 95 },
-      { nom: 'Vue.js', niveau: 80 },
-      { nom: 'Angular', niveau: 70 },
-      { nom: 'SASS/SCSS', niveau: 85 }
-    ]
-  },
-  {
-    categorie: 'Back-End',
-    skills: [
-      { nom: 'Node.js', niveau: 85 },
-      { nom: 'Express', niveau: 80 },
-      { nom: 'Django', niveau: 70 },
-      { nom: 'Laravel', niveau: 65 },
-      { nom: 'Spring Boot', niveau: 60 }
-    ]
-  },
-  {
-    categorie: 'Base de données',
-    skills: [
-      { nom: 'MongoDB', niveau: 85 },
-      { nom: 'MySQL', niveau: 80 },
-      { nom: 'PostgreSQL', niveau: 75 },
-      { nom: 'Firebase', niveau: 80 },
-      { nom: 'Redis', niveau: 65 }
-    ]
-  },
-  {
-    categorie: 'DevOps & Outils',
-    skills: [
-      { nom: 'Git', niveau: 90 },
-      { nom: 'Docker', niveau: 80 },
-      { nom: 'AWS', niveau: 75 },
-      { nom: 'CI/CD', niveau: 70 },
-      { nom: 'Linux', niveau: 85 }
-    ]
-  }
-];
-
-// Composant pour les expériences
-const ExperienceCard: React.FC<{ experience: Experience }> = ({ experience }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  
+/* ─── Subcomponents ──────────────────────────────────────────────── */
+const ExpandableCard: React.FC<{
+  logo: string; title: string; subtitle: string; badge?: string;
+  meta: string; description: string; tags: string[]; current?: boolean;
+}> = ({ logo, title, subtitle, badge, meta, description, tags, current }) => {
+  const [open, setOpen] = useState(false);
   return (
-    <motion.div 
-      className="cv-card"
-      whileHover={{ y: -5 }}
-      onClick={() => setIsExpanded(!isExpanded)}
+    <motion.div
+      whileHover={{ y: -2 }}
+      onClick={() => setOpen(o => !o)}
+      className="bg-white dark:bg-[#1C1C1E] border border-black/[0.06] dark:border-white/[0.06] rounded-2xl p-5 cursor-pointer shadow-sm hover:shadow-md transition-all duration-200 relative"
     >
-      <div className="cv-card__header">
-        <img src={experience.logo} alt={`Logo ${experience.entreprise}`} className="cv-card__logo" />
-        <div className="cv-card__header-text">
-          <h3 className="cv-card__title">{experience.titre}</h3>
-          <p className="cv-card__subtitle">{experience.entreprise}</p>
-          <p className="cv-card__period">{experience.periode}</p>
+      <div className="flex items-start gap-4">
+        <img src={logo} alt={title} className="w-11 h-11 rounded-xl object-cover border border-black/[0.06] dark:border-white/[0.06] flex-shrink-0 mt-0.5" />
+        <div className="flex-1 min-w-0">
+          <div className="flex flex-wrap items-center gap-2 mb-0.5">
+            <h3 className="text-[14px] font-semibold text-[#1D1D1F] dark:text-white tracking-tight">{title}</h3>
+            {current && <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[#34C759]/10 text-[#27AE60]">• En cours</span>}
+            {badge && <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#F5F5F7] dark:bg-[#2C2C2E] text-[#6E6E73] dark:text-[#98989D]">{badge}</span>}
+          </div>
+          <p className="text-[13px] font-medium text-[#0071E3]">{subtitle}</p>
+          <p className="text-[12px] text-[#86868B] dark:text-[#636366] mt-0.5">{meta}</p>
         </div>
+        <span
+          className="text-[#86868B] flex-shrink-0 mt-1 transition-transform duration-200"
+          style={{ transform: open ? 'rotate(45deg)' : 'none', display: 'inline-block' }}
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
+        </span>
       </div>
-      
-      <motion.div 
-        className="cv-card__content"
-        initial={{ height: 0, opacity: 0 }}
-        animate={{ 
-          height: isExpanded ? 'auto' : 0,
-          opacity: isExpanded ? 1 : 0
-        }}
-        transition={{ duration: 0.3 }}
+      <motion.div
+        initial={false}
+        animate={{ height: open ? 'auto' : 0, opacity: open ? 1 : 0 }}
+        transition={{ duration: 0.22 }}
+        className="overflow-hidden"
       >
-        <p className="cv-card__description">{experience.description}</p>
-        <div className="cv-card__technologies">
-          {experience.technologies.map((tech, index) => (
-            <span key={index} className="cv-card__tag">{tech}</span>
-          ))}
+        <div className="pt-4 mt-4 border-t border-black/[0.06] dark:border-white/[0.06]">
+          <p className="text-[13px] text-[#6E6E73] dark:text-[#98989D] leading-relaxed mb-3">{description}</p>
+          {tags.length > 0 && (
+            <div className="flex flex-wrap gap-1.5">
+              {tags.map(tag => (
+                <span key={tag} className="text-[11px] font-medium px-2.5 py-1 rounded-full bg-[#F5F5F7] dark:bg-[#2C2C2E] text-[#6E6E73] dark:text-[#98989D] border border-black/[0.06] dark:border-white/[0.06]">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
       </motion.div>
-      
-      <button className="cv-card__expand-button">
-        {isExpanded ? '−' : '+'}
-      </button>
     </motion.div>
   );
 };
 
-// Composant pour les formations
-const FormationCard: React.FC<{ formation: Formation }> = ({ formation }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  
-  return (
-    <motion.div 
-      className="cv-card"
-      whileHover={{ y: -5 }}
-      onClick={() => setIsExpanded(!isExpanded)}
-    >
-      <div className="cv-card__header">
-        <img src={formation.logo} alt={`Logo ${formation.etablissement}`} className="cv-card__logo" />
-        <div className="cv-card__header-text">
-          <h3 className="cv-card__title">{formation.diplome}</h3>
-          <p className="cv-card__subtitle">{formation.etablissement}</p>
-          <p className="cv-card__period">{formation.periode}</p>
-        </div>
-      </div>
-      
-      <motion.div 
-        className="cv-card__content"
-        initial={{ height: 0, opacity: 0 }}
-        animate={{ 
-          height: isExpanded ? 'auto' : 0,
-          opacity: isExpanded ? 1 : 0
-        }}
-        transition={{ duration: 0.3 }}
-      >
-        <p className="cv-card__description">{formation.description}</p>
-      </motion.div>
-      
-      <button className="cv-card__expand-button">
-        {isExpanded ? '−' : '+'}
-      </button>
-    </motion.div>
-  );
-};
-
-// Composant pour les compétences
-const SkillBar: React.FC<{ skill: { nom: string; niveau: number } }> = ({ skill }) => {
-  return (
-    <div className="skill-bar">
-      <div className="skill-bar__info">
-        <span className="skill-bar__name">{skill.nom}</span>
-        <span className="skill-bar__percent">{skill.niveau}%</span>
-      </div>
-      <div className="skill-bar__bg">
-        <motion.div
-          className="skill-bar__progress"
-          initial={{ width: 0 }}
-          animate={{ width: `${skill.niveau}%` }}
-          transition={{ duration: 1, delay: 0.2 }}
-        />
-      </div>
-    </div>
-  );
-};
+/* ─── Main Page ──────────────────────────────────────────────────── */
+type Tab = 'experiences' | 'formations' | 'competences';
 
 const CvPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'all' | 'experiences' | 'formations' | 'competences'>('all');
-  
+  const { lang } = useLang();
+  const [tab, setTab] = useState<Tab>('experiences');
+
+  const ui = {
+    fr: { hero: 'Mon CV', sub: 'Ingénieur Logiciel · Développeur iOS · Toulouse', tabs: ['Expériences', 'Formations', 'Compétences'], download: 'Télécharger le CV', downloadSub: 'Disponible en français et en anglais', dlFr: 'CV Français (PDF)', dlEn: 'CV Anglais (PDF)' },
+    en: { hero: 'My CV', sub: 'Software Engineer · iOS Developer · Toulouse', tabs: ['Experience', 'Education', 'Skills'], download: 'Download CV', downloadSub: 'Available in French and English', dlFr: 'French CV (PDF)', dlEn: 'English CV (PDF)' },
+  }[lang];
+
+  const tabKeys: Tab[] = ['experiences', 'formations', 'competences'];
+
   return (
-    <div className="cv-page">
-      <div className="cv-page__glass-background"></div>
-      
-      <header className="cv-page__header">
-        <h1 className="cv-page__title">Mon CV</h1>
-        <p className="cv-page__description">
-          Découvrez mon parcours professionnel et mes compétences
+    <div className="min-h-screen bg-[#F5F5F7] dark:bg-[#000000] transition-colors duration-300">
+
+      {/* Hero */}
+      <header className="bg-white dark:bg-[#1D1D1F] border-b border-black/[0.06] dark:border-white/[0.06] px-6 pt-12 pb-0 text-center">
+        <p className="text-[12px] font-semibold text-[#0071E3] uppercase tracking-[0.12em] mb-2">
+          {lang === 'fr' ? 'Parcours' : 'Career'}
         </p>
-        
-        <div className="cv-page__tabs">
-          <button 
-            className={`cv-page__tab ${activeTab === 'all' ? 'cv-page__tab--active' : ''}`}
-            onClick={() => setActiveTab('all')}
-          >
-            Tout
-          </button>
-          <button 
-            className={`cv-page__tab ${activeTab === 'experiences' ? 'cv-page__tab--active' : ''}`}
-            onClick={() => setActiveTab('experiences')}
-          >
-            Expériences
-          </button>
-          <button 
-            className={`cv-page__tab ${activeTab === 'formations' ? 'cv-page__tab--active' : ''}`}
-            onClick={() => setActiveTab('formations')}
-          >
-            Formations
-          </button>
-          <button 
-            className={`cv-page__tab ${activeTab === 'competences' ? 'cv-page__tab--active' : ''}`}
-            onClick={() => setActiveTab('competences')}
-          >
-            Compétences
-          </button>
+        <h1 className="text-4xl md:text-5xl font-bold text-[#1D1D1F] dark:text-white tracking-tight mb-2">{ui.hero}</h1>
+        <p className="text-base text-[#6E6E73] dark:text-[#98989D] mb-6">{ui.sub}</p>
+
+        {/* Apple-style segmented control */}
+        <div className="inline-flex bg-[#F5F5F7] dark:bg-[#2C2C2E] rounded-xl p-1 gap-1 mb-0">
+          {ui.tabs.map((label, i) => (
+            <button
+              key={tabKeys[i]}
+              onClick={() => setTab(tabKeys[i])}
+              className={`px-4 py-1.5 rounded-[10px] text-[13px] font-medium transition-all duration-200 whitespace-nowrap ${tab === tabKeys[i]
+                ? 'bg-white dark:bg-[#3A3A3C] text-[#1D1D1F] dark:text-white shadow-sm'
+                : 'text-[#6E6E73] dark:text-[#98989D] hover:text-[#1D1D1F] dark:hover:text-white'
+                }`}
+            >
+              {label}
+            </button>
+          ))}
         </div>
       </header>
 
-      <main className="cv-page__content">
-        {(activeTab === 'all' || activeTab === 'experiences') && (
-          <section className="cv-page__section">
-            <h2 className="cv-page__section-title">Expériences</h2>
-            <div className="cv-page__cards">
-              {experiences.map(experience => (
-                <ExperienceCard key={experience.id} experience={experience} />
-              ))}
-            </div>
+      <div className="max-w-3xl mx-auto px-5 md:px-8 py-10 space-y-8">
+
+        {/* Experience */}
+        {tab === 'experiences' && (
+          <section className="space-y-3">
+            {DATA.experiences.map(exp => (
+              <ExpandableCard
+                key={exp.id}
+                logo={exp.logo}
+                title={t(lang, exp.title.fr, exp.title.en)}
+                subtitle={typeof exp.company === 'string' ? exp.company : t(lang, (exp.company as { fr: string; en: string }).fr, (exp.company as { fr: string; en: string }).en)}
+                badge={t(lang, exp.badge.fr, exp.badge.en)}
+                meta={t(lang, exp.period.fr, exp.period.en)}
+                description={t(lang, exp.description.fr, exp.description.en)}
+                tags={exp.tags}
+                current={exp.current}
+              />
+            ))}
           </section>
         )}
-        
-        {(activeTab === 'all' || activeTab === 'formations') && (
-          <section className="cv-page__section">
-            <h2 className="cv-page__section-title">Formations</h2>
-            <div className="cv-page__cards">
-              {formations.map(formation => (
-                <FormationCard key={formation.id} formation={formation} />
-              ))}
-            </div>
+
+        {/* Education */}
+        {tab === 'formations' && (
+          <section className="space-y-3">
+            {DATA.formations.map(f => (
+              <ExpandableCard
+                key={f.id}
+                logo={f.logo}
+                title={t(lang, f.title.fr, f.title.en)}
+                subtitle={f.school}
+                meta={t(lang, f.period.fr, f.period.en)}
+                description={t(lang, f.description.fr, f.description.en)}
+                tags={[]}
+              />
+            ))}
           </section>
         )}
-        
-        {(activeTab === 'all' || activeTab === 'competences') && (
-          <section className="cv-page__section">
-            <h2 className="cv-page__section-title">Compétences</h2>
-            <div className="cv-page__skills">
-              {competences.map((categorie, index) => (
-                <div key={index} className="cv-page__skill-category">
-                  <h3 className="cv-page__skill-category-title">{categorie.categorie}</h3>
-                  <div className="cv-page__skill-bars">
-                    {categorie.skills.map((skill, skillIndex) => (
-                      <SkillBar key={skillIndex} skill={skill} />
+
+        {/* Skills — tags only, no gauges */}
+        {tab === 'competences' && (
+          <section className="space-y-4">
+            {/* Skills groups */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {DATA.skills[lang].map(group => (
+                <div key={group.cat} className="bg-white dark:bg-[#1C1C1E] border border-black/[0.06] dark:border-white/[0.06] rounded-2xl p-5 shadow-sm">
+                  <h3 className="text-[11px] font-semibold text-[#86868B] uppercase tracking-[0.08em] mb-3">{group.cat}</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {group.tags.map(tag => (
+                      <span key={tag} className="text-[12px] font-medium px-3 py-1.5 rounded-full bg-[#F5F5F7] dark:bg-[#2C2C2E] text-[#1D1D1F] dark:text-[#E5E5E7] border border-black/[0.06] dark:border-white/[0.06]">
+                        {tag}
+                      </span>
                     ))}
                   </div>
                 </div>
               ))}
             </div>
+
+            {/* Languages */}
+            <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.06] dark:border-white/[0.06] rounded-2xl p-5 shadow-sm">
+              <h3 className="text-[11px] font-semibold text-[#86868B] uppercase tracking-[0.08em] mb-3">
+                {lang === 'fr' ? 'Langues' : 'Languages'}
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {DATA.languages[lang].map(l => (
+                  <div key={l.lang} className="flex items-center gap-2 bg-[#F5F5F7] dark:bg-[#2C2C2E] px-4 py-2 rounded-full border border-black/[0.06] dark:border-white/[0.06]">
+                    <span className="text-[13px] font-semibold text-[#1D1D1F] dark:text-white">{l.lang}</span>
+                    <span className="text-[11px] text-[#6E6E73] dark:text-[#98989D]">— {l.level}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* ATS keywords */}
+            <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.06] dark:border-white/[0.06] rounded-2xl p-5 shadow-sm">
+              <h3 className="text-[11px] font-semibold text-[#86868B] uppercase tracking-[0.08em] mb-3">
+                {lang === 'fr' ? 'Mots-clés' : 'Keywords'}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {['Swift', 'iOS', 'MVVM', 'MapboxMaps', 'AVFoundation', 'CI/CD', 'GitHub Actions', 'SwiftUI', 'UIKit', 'Agile', 'Scrum', 'JSON', 'REST API', 'Git', 'React.js', 'TypeScript', 'C++', 'Arduino', 'Python', 'Clean Architecture'].map(kw => (
+                  <span key={kw} className="text-[11px] font-medium px-2.5 py-1 rounded-full bg-[#0071E3]/[0.08] text-[#0071E3]">{kw}</span>
+                ))}
+              </div>
+            </div>
           </section>
         )}
-        
-        <section className="cv-page__section">
-          <h2 className="cv-page__section-title">Télécharger mon CV</h2>
-          <div className="cv-page__download">
-            <p>Vous préférez consulter mon CV au format PDF ?</p>
-            <a 
-              href="/CV_Sharik_Mohamed.pdf" 
-              download="CV_Sharik_Mohamed.pdf"
-              className="cv-page__download-button"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Télécharger le CV complet
-            </a>
+
+        {/* CV Download section */}
+        <section>
+          <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.06] dark:border-white/[0.06] rounded-2xl p-6 shadow-sm text-center">
+            <div className="w-12 h-12 rounded-2xl bg-[#0071E3]/[0.08] flex items-center justify-center mx-auto mb-4">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0071E3" strokeWidth="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="12" y1="18" x2="12" y2="12" /><polyline points="9 15 12 18 15 15" /></svg>
+            </div>
+            <h3 className="text-[15px] font-semibold text-[#1D1D1F] dark:text-white mb-1">{ui.download}</h3>
+            <p className="text-[13px] text-[#6E6E73] dark:text-[#98989D] mb-5">{ui.downloadSub}</p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a
+                href="/cv_markdown/CV_Sharik_french.md"
+                download="CV_Sharik_Mohamed_FR.md"
+                className="inline-flex items-center gap-2 bg-[#0071E3] text-white px-5 py-2.5 rounded-full text-[13px] font-medium hover:bg-[#0077ED] transition-colors shadow-sm"
+              >
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                🇫🇷 {ui.dlFr}
+              </a>
+              <a
+                href="/cv_markdown/CV_Sharik_english.md"
+                download="CV_Sharik_Mohamed_EN.md"
+                className="inline-flex items-center gap-2 bg-white dark:bg-[#2C2C2E] text-[#1D1D1F] dark:text-white border border-black/[0.12] dark:border-white/[0.12] px-5 py-2.5 rounded-full text-[13px] font-medium hover:bg-[#F5F5F7] dark:hover:bg-[#3A3A3C] transition-colors"
+              >
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                🇬🇧 {ui.dlEn}
+              </a>
+            </div>
           </div>
         </section>
-      </main>
+      </div>
     </div>
   );
 };
 
-export default CvPage; 
+export default CvPage;

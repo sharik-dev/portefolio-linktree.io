@@ -1,12 +1,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    tailwindcss(),
+    react(),
+  ],
   server: {
     proxy: {
-      // Proxy pour les images freepik (bloquées par CORS dans WebGL)
       '/img-proxy/freepik': {
         target: 'https://img.freepik.com',
         changeOrigin: true,
@@ -20,4 +22,3 @@ export default defineConfig({
     },
   },
 })
-

@@ -1,77 +1,63 @@
 import React from 'react';
 import { ButtonStyle } from '../components';
 import SocialButton from '../components/SocialButton';
-import {
-  LinkedInIcon,
-  GitHubIcon,
-  EmailIcon,
-  PortfolioIcon
-} from '../components/icons';
-import './LinkTreePage.css';
+import { LinkedInIcon, GitHubIcon, EmailIcon, PortfolioIcon } from '../components/icons';
+import { useLang, t } from '../contexts/LangContext';
 
 const LinkTreePage: React.FC = () => {
-  // Liste des réseaux sociaux (vous pourrez modifier les URL plus tard)
+  const { lang } = useLang();
+
   const socialLinks = [
-    {
-      name: 'Portfolio',
-      url: '/portefolio',
-      icon: <PortfolioIcon />,
-      style: ButtonStyle.Primary
-    },
-    {
-      name: 'LinkedIn',
-      url: 'https://linkedin.com/',
-      icon: <LinkedInIcon />,
-      style: ButtonStyle.Secondary
-    },
-    {
-      name: 'GitHub',
-      url: 'https://github.com/',
-      icon: <GitHubIcon />,
-      style: ButtonStyle.Tertiary
-    },
-    {
-      name: 'Email',
-      url: 'mailto:contact@example.com',
-      icon: <EmailIcon />,
-      style: ButtonStyle.Orange
-    }
+    { name: 'Portfolio', url: '/portefolio', icon: <PortfolioIcon />, style: ButtonStyle.Primary },
+    { name: 'LinkedIn', url: 'https://linkedin.com/in/sharik-mohamed', icon: <LinkedInIcon />, style: ButtonStyle.Secondary },
+    { name: 'GitHub', url: 'https://github.com/sharik-mohamed', icon: <GitHubIcon />, style: ButtonStyle.Secondary },
+    { name: 'Email', url: 'mailto:contact@sharikmohamed.dev', icon: <EmailIcon />, style: ButtonStyle.Tertiary },
   ];
 
   return (
-    <div className="linktree-page">
-      <header className="linktree-page__header">
-        <div className="linktree-page__profile">
-          <div className="linktree-page__avatar">
-            {/* Emplacement pour la photo de profil */}
-            <div className="linktree-page__avatar-placeholder">S</div>
-          </div>
-          <h1 className="linktree-page__title">Sharik Mohamed</h1>
-          <p className="linktree-page__description">
-            Développeur Web Fullstack | Créateur de contenu | Designer
-          </p>
+    <div className="min-h-screen bg-white dark:bg-black flex flex-col items-center px-5 pt-14 pb-8 transition-colors duration-300">
+
+      <header className="w-full max-w-sm flex flex-col items-center mb-10">
+        {/* Avatar */}
+        <div className="w-24 h-24 rounded-full overflow-hidden border border-black/[0.08] dark:border-white/[0.08] shadow-lg mb-5 bg-gradient-to-br from-[#0071E3] to-[#34AADC] flex items-center justify-center">
+          <span className="text-white text-4xl font-bold select-none">S</span>
         </div>
+
+        <h1 className="text-[22px] font-bold tracking-tight text-[#1D1D1F] dark:text-white mb-1">
+          Sharik Mohamed
+        </h1>
+
+        <p className="text-[14px] text-[#6E6E73] dark:text-[#98989D] text-center">
+          {t(lang, 'Ingénieur Logiciel · Développeur iOS', 'Software Engineer · iOS Developer')}
+        </p>
+
+        <p className="mt-1.5 text-[13px] text-[#86868B] dark:text-[#636366] flex items-center gap-1">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+          </svg>
+          Toulouse, France
+        </p>
       </header>
 
-      <main className="linktree-page__content">
-        <div className="linktree-page__links">
-          {socialLinks.map((link, index) => (
-            <SocialButton
-              key={index}
-              name={link.name}
-              url={link.url}
-              icon={link.icon}
-              style={link.style}
-            />
+      <main className="w-full max-w-sm flex flex-col gap-3">
+        {socialLinks.map((link, i) => (
+          <SocialButton key={i} name={link.name} url={link.url} icon={link.icon} style={link.style} />
+        ))}
+
+        <div className="mt-4 flex flex-wrap justify-center gap-2">
+          {['Swift', 'iOS', 'MVVM', 'Mapbox', 'React'].map(tag => (
+            <span key={tag} className="text-[11px] font-medium px-3 py-1 rounded-full bg-[#F5F5F7] dark:bg-[#1C1C1E] text-[#6E6E73] dark:text-[#98989D] border border-black/[0.06] dark:border-white/[0.06]">
+              {tag}
+            </span>
           ))}
         </div>
       </main>
 
-      <footer className="linktree-page__footer">
-        <p>© 2023 - Sharik Mohamed</p>
+      <footer className="mt-auto pt-10 text-[12px] text-[#86868B] dark:text-[#636366]">
+        © 2026 · Sharik Mohamed
       </footer>
     </div>
   );
 };
 
-export default LinkTreePage; 
+export default LinkTreePage;

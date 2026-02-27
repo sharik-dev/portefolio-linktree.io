@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from './Navbar';
-import './Layout.css';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -8,13 +7,11 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="layout">
+    <div className="min-h-screen bg-white dark:bg-black transition-colors duration-300">
       <Navbar />
-      <main className="layout__content">
-        {children}
-      </main>
+      <main>{children}</main>
     </div>
   );
 };
 
-export default Layout; 
+export default Layout;

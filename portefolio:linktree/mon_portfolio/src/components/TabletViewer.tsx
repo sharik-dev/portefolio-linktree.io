@@ -145,7 +145,7 @@ function TabletModel({ screenshotUrl }: { screenshotUrl: string }) {
     return (
         <primitive
             object={clonedScene}
-            scale={11.6}
+            scale={8.6}
             position={[0, -0.2, 0]}
             rotation={[0.05, 0.2, 0]}
         />

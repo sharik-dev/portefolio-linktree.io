@@ -1,154 +1,99 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import './ProfilePage.css';
 
-interface Project {
-  id: string;
-  title: string;
-  description: string;
-  image: string;
-  tags: string[];
-  link?: string;
-}
-
-interface Hobby {
-  id: string;
-  name: string;
-  icon: string;
-  description: string;
-}
-
-// Projets personnels fictifs
-const personalProjects: Project[] = [
+const personalProjects = [
   {
-    id: 'project1',
-    title: 'Application de recettes',
-    description: 'Application web permettant de découvrir, sauvegarder et partager des recettes de cuisine. Inclut une fonctionnalité de planification de repas hebdomadaire.',
-    image: 'https://img.freepik.com/free-vector/app-order-food-with-smartphone_23-2148551749.jpg',
-    tags: ['React', 'Firebase', 'Styled Components'],
-    link: 'https://github.com/username/recipe-app'
+    id: 'focusfast',
+    title: 'FocusFast',
+    description: 'Application iOS de vidéos courtes (type TikTok) avec feed vertical, catégories, commentaires, notes et upload vidéo. Architecture MVVM avec AVFoundation.',
+    image: 'https://img.freepik.com/free-vector/gradient-mindfulness-app-interface_23-2149099708.jpg',
+    tags: ['Swift', 'MVVM', 'AVFoundation', 'UIKit'],
+    link: 'https://github.com/sharik-mohamed/focusfast',
   },
   {
-    id: 'project2',
-    title: 'Extension de navigateur',
-    description: "Extension Chrome qui permet de suivre votre temps passé sur différents sites web et d'établir des limites pour améliorer votre productivité.",
-    image: 'https://img.freepik.com/free-vector/productivity-concept-illustration_114360-1079.jpg',
-    tags: ['JavaScript', 'Chrome API', 'Chart.js'],
-    link: 'https://github.com/username/time-tracker'
+    id: 'mapbox-weather',
+    title: 'MapboxMaps Weather Layers',
+    description: 'Intégration de couches météo multiples sur MapboxMaps SDK v10+ pour Skyconseil. Filtres JSON dynamiques, expressions de zoom, compatibilité legacy/v10.',
+    image: 'https://img.freepik.com/free-vector/dashboard-user-panel-template_23-2148627015.jpg',
+    tags: ['Swift', 'MapboxMaps v10+', 'JSON', 'iOS'],
+    link: 'https://github.com/sharik-mohamed',
   },
   {
-    id: 'project3',
-    title: 'Blog tech personnel',
-    description: 'Blog statique où je partage mes connaissances sur le développement web, les nouvelles technologies et mes expériences professionnelles.',
-    image: 'https://img.freepik.com/free-vector/blogging-concept-illustration_114360-1038.jpg',
-    tags: ['Next.js', 'Markdown', 'Tailwind CSS'],
-    link: 'https://github.com/username/tech-blog'
-  }
+    id: 'guidor',
+    title: 'Guidor',
+    description: 'Système de guidage embarqué développé avec Arduino et C++ pour Le Facteur Humain & Combustible Numérique.',
+    image: 'https://img.freepik.com/free-vector/app-dashboard-tasks-dark-mode_23-2148703295.jpg',
+    tags: ['C++', 'Arduino', 'Embarqué'],
+    link: 'https://github.com/sharik-mohamed',
+  },
 ];
 
-// Centres d'intérêt fictifs
-const hobbies: Hobby[] = [
-  {
-    id: 'hobby1',
-    name: 'Photographie',
-    icon: 'https://cdn-icons-png.flaticon.com/512/1042/1042339.png',
-    description: "J'aime capturer des moments uniques lors de mes voyages. Je me spécialise principalement dans la photographie de paysage et de rue."
-  },
-  {
-    id: 'hobby2',
-    name: 'Randonnée',
-    icon: 'https://cdn-icons-png.flaticon.com/512/71/71423.png',
-    description: "La randonnée me permet de me reconnecter avec la nature et de découvrir de nouveaux horizons. J'essaie de faire au moins une grande randonnée par mois."
-  },
-  {
-    id: 'hobby3',
-    name: 'Cuisine',
-    icon: 'https://cdn-icons-png.flaticon.com/512/1830/1830839.png',
-    description: "J'aime expérimenter de nouvelles recettes et cuisiner pour mes amis. Je m'intéresse particulièrement à la cuisine asiatique et méditerranéenne."
-  },
-  {
-    id: 'hobby4',
-    name: 'Lecture',
-    icon: 'https://cdn-icons-png.flaticon.com/512/2702/2702134.png',
-    description: "Je lis principalement des livres sur le développement personnel, la technologie et la science-fiction. J'essaie de lire au moins un livre par mois."
-  }
+const skills = [
+  'Swift', 'iOS', 'MVVM', 'MapboxMaps', 'AVFoundation',
+  'Git', 'GitHub Actions', 'React.js', 'TypeScript', 'C++',
 ];
 
-// Langues parlées
-const languages = [
+const langues = [
   { name: 'Français', level: 'Natif', percent: 100 },
-  { name: 'Anglais', level: 'Courant', percent: 90 },
-  { name: 'Espagnol', level: 'Intermédiaire', percent: 70 },
-  { name: 'Allemand', level: 'Débutant', percent: 30 }
+  { name: 'Anglais', level: 'B2/C1', percent: 88 },
 ];
 
 const ProfilePage: React.FC = () => {
-  const [activeHobby, setActiveHobby] = useState<string | null>(null);
+  const [activeSkill, setActiveSkill] = useState<string | null>(null);
 
   return (
-    <div className="profile-page">
-      <div className="profile-page__glass-background"></div>
-      
-      <header className="profile-page__header">
-        <div className="profile-page__avatar-container">
-          <img 
-            src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" 
-            alt="Avatar" 
-            className="profile-page__avatar" 
-          />
+    <div className="min-h-screen bg-[#F5F5F7] dark:bg-[#000000] transition-colors duration-300">
+
+      {/* Header */}
+      <header className="bg-white dark:bg-[#1D1D1F] border-b border-black/[0.06] dark:border-white/[0.06] px-6 py-12 flex flex-col items-center text-center">
+        <div className="w-24 h-24 rounded-full overflow-hidden border border-black/[0.08] dark:border-white/[0.08] shadow-lg mb-5 bg-gradient-to-br from-[#0071E3] to-[#34AADC] flex items-center justify-center">
+          <span className="text-white text-4xl font-bold select-none">S</span>
         </div>
-        <h1 className="profile-page__title">Sharik Mohamed</h1>
-        <p className="profile-page__subtitle">Développeur Web Fullstack | Paris, France</p>
-        <p className="profile-page__description">
-          Passionné par le développement web et les nouvelles technologies.
-          Je crée des applications web modernes, intuitives et performantes.
+        <h1 className="text-3xl font-bold text-[#1D1D1F] dark:text-white tracking-tight mb-1">Sharik Mohamed</h1>
+        <p className="text-base text-[#6E6E73] dark:text-[#98989D] mb-1">Ingénieur Logiciel · Développeur iOS</p>
+        <p className="text-[13px] text-[#86868B] dark:text-[#636366] flex items-center gap-1">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" /></svg>
+          Toulouse, France · Disponible Freelance / CDI
         </p>
       </header>
 
-      <main className="profile-page__content">
-        <section className="profile-page__section">
-          <h2 className="profile-page__section-title">À Propos de Moi</h2>
-          <div className="profile-page__about">
-            <div className="profile-page__bio">
-              <p>
-                Développeur web passionné avec une solide expérience dans la création d'applications web modernes et réactives.
-                Je m'efforce constamment d'améliorer mes compétences et de rester à jour avec les dernières technologies et tendances du développement web.
-              </p>
-              <p>
-                J'ai une approche axée sur l'utilisateur et je crois fermement que le meilleur code est celui qui résout efficacement les problèmes tout en offrant une expérience utilisateur exceptionnelle.
-              </p>
-              <p>
-                En dehors du développement, je m'intéresse à la photographie, à la randonnée et à la cuisine. Ces activités me permettent de maintenir un bon équilibre entre vie professionnelle et personnelle.
-              </p>
-            </div>
-            
-            <div className="profile-page__details">
-              <div className="profile-page__detail-item">
-                <span className="profile-page__detail-label">Email:</span>
-                <span className="profile-page__detail-value">contact@example.com</span>
+      <div className="max-w-4xl mx-auto px-5 md:px-8 py-10 space-y-10">
+
+        {/* About */}
+        <section>
+          <h2 className="text-xl font-bold text-[#1D1D1F] dark:text-white tracking-tight mb-4">À Propos</h2>
+          <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.06] dark:border-white/[0.06] rounded-2xl p-6 shadow-sm">
+            <div className="md:grid md:grid-cols-2 md:gap-8">
+              <div>
+                <p className="text-sm text-[#6E6E73] dark:text-[#98989D] leading-relaxed mb-3">
+                  Ingénieur logiciel spécialisé en développement iOS, avec une expertise en architecture <strong className="text-[#1D1D1F] dark:text-white font-semibold">MVVM</strong>, intégration <strong className="text-[#1D1D1F] dark:text-white font-semibold">MapboxMaps SDK</strong> et CI/CD.
+                </p>
+                <p className="text-sm text-[#6E6E73] dark:text-[#98989D] leading-relaxed">
+                  Orienté qualité, performance et lisibilité du code. Je conçois des applications mobiles robustes, documentées et testées dans un environnement Agile/Scrum.
+                </p>
               </div>
-              <div className="profile-page__detail-item">
-                <span className="profile-page__detail-label">Localisation:</span>
-                <span className="profile-page__detail-value">Paris, France</span>
-              </div>
-              <div className="profile-page__detail-item">
-                <span className="profile-page__detail-label">Disponibilité:</span>
-                <span className="profile-page__detail-value">Freelance / CDI</span>
-              </div>
-              <div className="profile-page__detail-item">
-                <span className="profile-page__detail-label">Langues:</span>
-                <div className="profile-page__languages">
-                  {languages.map((language, index) => (
-                    <div key={index} className="profile-page__language">
-                      <div className="profile-page__language-info">
-                        <span className="profile-page__language-name">{language.name}</span>
-                        <span className="profile-page__language-level">{language.level}</span>
+              <div className="mt-6 md:mt-0 space-y-4">
+                {[
+                  { label: 'Email', value: 'contact@sharikmohamed.dev' },
+                  { label: 'Localisation', value: 'Toulouse, France' },
+                  { label: 'Disponibilité', value: 'Freelance / CDI' },
+                ].map(item => (
+                  <div key={item.label}>
+                    <p className="text-[11px] font-semibold text-[#86868B] uppercase tracking-widest">{item.label}</p>
+                    <p className="text-sm text-[#1D1D1F] dark:text-white font-medium mt-0.5">{item.value}</p>
+                  </div>
+                ))}
+
+                <div>
+                  <p className="text-[11px] font-semibold text-[#86868B] uppercase tracking-widest mb-2">Langues</p>
+                  {langues.map(l => (
+                    <div key={l.name} className="mb-2">
+                      <div className="flex justify-between mb-1">
+                        <span className="text-sm text-[#1D1D1F] dark:text-white">{l.name}</span>
+                        <span className="text-[12px] text-[#0071E3] font-medium">{l.level}</span>
                       </div>
-                      <div className="profile-page__language-bar">
-                        <div 
-                          className="profile-page__language-progress"
-                          style={{ width: `${language.percent}%` }}
-                        ></div>
+                      <div className="h-1 bg-[#E8E8ED] dark:bg-[#2C2C2E] rounded-full">
+                        <div className="h-full bg-gradient-to-r from-[#0071E3] to-[#34AADC] rounded-full" style={{ width: `${l.percent}%` }} />
                       </div>
                     </div>
                   ))}
@@ -157,93 +102,74 @@ const ProfilePage: React.FC = () => {
             </div>
           </div>
         </section>
-        
-        <section className="profile-page__section">
-          <h2 className="profile-page__section-title">Mes Projets Personnels</h2>
-          <div className="profile-page__projects">
+
+        {/* Projects */}
+        <section>
+          <h2 className="text-xl font-bold text-[#1D1D1F] dark:text-white tracking-tight mb-4">Projets</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {personalProjects.map(project => (
-              <motion.div 
+              <motion.div
                 key={project.id}
-                className="profile-page__project"
-                whileHover={{ y: -10 }}
+                whileHover={{ y: -6 }}
                 whileTap={{ scale: 0.98 }}
+                className="bg-white dark:bg-[#1C1C1E] border border-black/[0.06] dark:border-white/[0.06] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer"
               >
-                <div className="profile-page__project-image-container">
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="profile-page__project-image" 
+                <div className="h-36 overflow-hidden bg-[#F5F5F7]">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                   />
                 </div>
-                <div className="profile-page__project-content">
-                  <h3 className="profile-page__project-title">{project.title}</h3>
-                  <p className="profile-page__project-description">{project.description}</p>
-                  <div className="profile-page__project-tags">
-                    {project.tags.map((tag, index) => (
-                      <span key={index} className="profile-page__project-tag">{tag}</span>
+                <div className="p-4">
+                  <h3 className="text-[14px] font-semibold text-[#1D1D1F] dark:text-white tracking-tight mb-1">{project.title}</h3>
+                  <p className="text-[12px] text-[#6E6E73] dark:text-[#98989D] leading-relaxed mb-3 line-clamp-3">{project.description}</p>
+                  <div className="flex flex-wrap gap-1.5 mb-3">
+                    {project.tags.map(tag => (
+                      <span key={tag} className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-[#F5F5F7] dark:bg-[#2C2C2E] text-[#6E6E73] dark:text-[#98989D] border border-black/[0.06] dark:border-white/[0.06]">
+                        {tag}
+                      </span>
                     ))}
                   </div>
-                  {project.link && (
-                    <a 
-                      href={project.link} 
-                      className="profile-page__project-link"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Voir le projet
-                    </a>
-                  )}
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={e => e.stopPropagation()}
+                    className="inline-flex items-center gap-1 text-[12px] font-medium text-[#0071E3] hover:text-[#0077ED] transition-colors"
+                  >
+                    Voir le projet
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="9 18 15 12 9 6" /></svg>
+                  </a>
                 </div>
               </motion.div>
             ))}
           </div>
         </section>
-        
-        <section className="profile-page__section">
-          <h2 className="profile-page__section-title">Centres d'Intérêt</h2>
-          <div className="profile-page__hobbies">
-            <div className="profile-page__hobby-icons">
-              {hobbies.map(hobby => (
-                <div 
-                  key={hobby.id}
-                  className={`profile-page__hobby-icon-container ${activeHobby === hobby.id ? 'profile-page__hobby-icon-container--active' : ''}`}
-                  onClick={() => setActiveHobby(hobby.id)}
+
+        {/* Skills cloud */}
+        <section>
+          <h2 className="text-xl font-bold text-[#1D1D1F] dark:text-white tracking-tight mb-4">Compétences clés</h2>
+          <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.06] dark:border-white/[0.06] rounded-2xl p-6 shadow-sm">
+            <div className="flex flex-wrap gap-2">
+              {skills.map(skill => (
+                <button
+                  key={skill}
+                  onClick={() => setActiveSkill(s => s === skill ? null : skill)}
+                  className={`text-[13px] font-medium px-4 py-2 rounded-full transition-all duration-150 ${activeSkill === skill
+                      ? 'bg-[#0071E3] text-white shadow-sm'
+                      : 'bg-[#F5F5F7] dark:bg-[#2C2C2E] text-[#6E6E73] dark:text-[#98989D] hover:bg-[#E8E8ED] dark:hover:bg-[#3A3A3C] border border-black/[0.06] dark:border-white/[0.06]'
+                    }`}
                 >
-                  <img 
-                    src={hobby.icon} 
-                    alt={hobby.name} 
-                    className="profile-page__hobby-icon" 
-                  />
-                  <span className="profile-page__hobby-name">{hobby.name}</span>
-                </div>
+                  {skill}
+                </button>
               ))}
             </div>
-            
-            <motion.div 
-              className="profile-page__hobby-details"
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ 
-                opacity: activeHobby ? 1 : 0, 
-                height: activeHobby ? 'auto' : 0 
-              }}
-              transition={{ duration: 0.3 }}
-            >
-              {activeHobby && (
-                <div className="profile-page__hobby-content">
-                  <h3 className="profile-page__hobby-title">
-                    {hobbies.find(h => h.id === activeHobby)?.name}
-                  </h3>
-                  <p className="profile-page__hobby-description">
-                    {hobbies.find(h => h.id === activeHobby)?.description}
-                  </p>
-                </div>
-              )}
-            </motion.div>
           </div>
         </section>
-      </main>
+      </div>
     </div>
   );
 };
 
-export default ProfilePage; 
+export default ProfilePage;

@@ -1,6 +1,5 @@
 import React from 'react';
 import Button, { ButtonStyle, ButtonSize, ButtonShape } from './Button';
-import './SocialButton.css';
 
 interface SocialButtonProps {
   name: string;
@@ -18,7 +17,11 @@ const SocialButton: React.FC<SocialButtonProps> = ({
   className = ''
 }) => {
   const handleClick = () => {
-    window.open(url, '_blank', 'noopener,noreferrer');
+    if (url.startsWith('/')) {
+      window.location.href = url;
+    } else {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
   };
 
   return (
@@ -29,9 +32,9 @@ const SocialButton: React.FC<SocialButtonProps> = ({
       size={ButtonSize.Large}
       shape={ButtonShape.Pill}
       onClick={handleClick}
-      className={`social-button ${className}`}
+      className={`w-full ${className}`}
     />
   );
 };
 
-export default SocialButton; 
+export default SocialButton;

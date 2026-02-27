@@ -8,6 +8,7 @@ export default defineConfig({
     tailwindcss(),
     react(),
   ],
+  assetsInclude: ['**/*.md', '**/*.glb'],
   server: {
     proxy: {
       '/img-proxy/freepik': {

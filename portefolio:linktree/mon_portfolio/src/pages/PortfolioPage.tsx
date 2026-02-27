@@ -269,25 +269,6 @@ const PortfolioPage: React.FC = () => {
             ))}
           </div>
         </section>
-
-        {/* Contact CTA */}
-        <section>
-          <div className="bg-gradient-to-br from-[#0071E3] to-[#34AADC] rounded-3xl p-8 text-center text-white">
-            <h2 className="text-2xl font-bold tracking-tight mb-2">
-              {lang === 'fr' ? 'Travaillons ensemble' : "Let's work together"}
-            </h2>
-            <p className="text-white/80 text-sm mb-5 max-w-xs mx-auto">
-              {lang === 'fr'
-                ? 'Ouvert aux opportunités CDI, alternance et missions freelance sur Toulouse et remote.'
-                : 'Open to full-time, work-study and freelance opportunities in Toulouse or remote.'}
-            </p>
-            <a href="mailto:contact@sharikmohamed.dev"
-              className="inline-flex items-center gap-2 bg-white text-[#0071E3] font-semibold text-[13px] px-6 py-2.5 rounded-full hover:bg-white/90 transition-colors shadow-sm">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" /></svg>
-              contact@sharikmohamed.dev
-            </a>
-          </div>
-        </section>
       </div>
 
       <AnimatePresence>

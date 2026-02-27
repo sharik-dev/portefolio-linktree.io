@@ -1,5 +1,6 @@
 {
   "name": "mon_portfolio",
+  "homepage": "https://sharik-dev.github.io/portefolio-linktree.io/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,6 +17,7 @@
     "framer-motion": "^12.9.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-markdown": "^10.1.0",
     "react-router-dom": "^7.5.3",
     "tailwindcss": "^4.2.1",
     "three": "^0.176.0"

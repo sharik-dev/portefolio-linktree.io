@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
             to="/"
             className="text-[14px] font-semibold text-[#1D1D1F] dark:text-white tracking-tight hover:opacity-75 transition-opacity"
           >
-            Sharik<span className="text-[#0071E3]">.</span>
+            Sharik<span className="text-[#0071E3]">.dev</span>
           </NavLink>
 
           {/* Desktop links */}

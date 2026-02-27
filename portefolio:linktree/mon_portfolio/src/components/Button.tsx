@@ -43,7 +43,7 @@ interface ButtonProps {
 
 const styleClasses: Record<ButtonStyle, string> = {
   [ButtonStyle.Primary]: 'bg-[#0071E3] text-white hover:bg-[#0077ED] shadow-sm hover:shadow-md',
-  [ButtonStyle.Secondary]: 'bg-white dark:bg-[#1C1C1E] text-[#1D1D1F] dark:text-white border border-black/[0.14] dark:border-white/[0.14] hover:bg-[#F5F5F7] dark:hover:bg-[#2C2C2E]',
+  [ButtonStyle.Secondary]: 'bg-white dark:bg-[#1C1C1E] text-[#1D1D1F] dark:text-white border border-black/[0.08] dark:border-white/[0.14] shadow-sm hover:shadow-md hover:bg-[#F9F9F9] dark:hover:bg-[#2C2C2E]',
   [ButtonStyle.Tertiary]: 'bg-transparent text-[#0071E3] border border-[#0071E3] hover:bg-[#0071E3]/[0.06]',
   [ButtonStyle.Success]: 'bg-[#34C759] text-white hover:bg-[#30B04E] shadow-sm',
   [ButtonStyle.Warning]: 'bg-[#FF9F0A] text-white hover:bg-[#E8900A] shadow-sm',

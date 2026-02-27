@@ -1,6 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import ReactMarkdown from 'react-markdown';
 import { useLang, t } from '../contexts/LangContext';
+
+/* ─── CV markdown URLs (served from /public/cv_markdown/) ─────────── */
+const CV_URLS = {
+  fr: '/cv_markdown/CV_Sharik_french.md',
+  en: '/cv_markdown/CV_Sharik_english.md',
+} as const;
 
 /* ─── Bilingual Data ─────────────────────────────────────────────── */
 const DATA = {
@@ -150,18 +157,37 @@ const ExpandableCard: React.FC<{
 };
 
 /* ─── Main Page ──────────────────────────────────────────────────── */
-type Tab = 'experiences' | 'formations' | 'competences';
+type Tab = 'experiences' | 'formations' | 'competences' | 'apercu';
 
 const CvPage: React.FC = () => {
   const { lang } = useLang();
   const [tab, setTab] = useState<Tab>('experiences');
+  const [copied, setCopied] = useState(false);
+  const [cvContent, setCvContent] = useState('');
+  const [cvLoading, setCvLoading] = useState(true);
+
+  /* Fetch the markdown file whenever the language changes */
+  useEffect(() => {
+    setCvLoading(true);
+    fetch(CV_URLS[lang])
+      .then(res => res.text())
+      .then(text => { setCvContent(text); setCvLoading(false); })
+      .catch(() => { setCvContent(''); setCvLoading(false); });
+  }, [lang]);
 
   const ui = {
-    fr: { hero: 'Mon CV', sub: 'Ingénieur Logiciel · Développeur iOS · Toulouse', tabs: ['Expériences', 'Formations', 'Compétences'], download: 'Télécharger le CV', downloadSub: 'Disponible en français et en anglais', dlFr: 'CV Français (PDF)', dlEn: 'CV Anglais (PDF)' },
-    en: { hero: 'My CV', sub: 'Software Engineer · iOS Developer · Toulouse', tabs: ['Experience', 'Education', 'Skills'], download: 'Download CV', downloadSub: 'Available in French and English', dlFr: 'French CV (PDF)', dlEn: 'English CV (PDF)' },
+    fr: { hero: 'Mon CV', sub: 'Ingénieur Logiciel · Développeur iOS · Toulouse', tabs: ['Expériences', 'Formations', 'Compétences', 'Aperçu'], download: 'Télécharger le CV', downloadSub: 'Disponible en français et en anglais', dlFr: 'CV Français', dlEn: 'CV Anglais', copyBtn: 'Copier', copiedBtn: 'Copié !', previewLabel: 'Aperçu brut du CV', previewHint: 'Le contenu switch automatiquement avec la langue sélectionnée.' },
+    en: { hero: 'My CV', sub: 'Software Engineer · iOS Developer · Toulouse', tabs: ['Experience', 'Education', 'Skills', 'Preview'], download: 'Download CV', downloadSub: 'Available in French and English', dlFr: 'French CV', dlEn: 'English CV', copyBtn: 'Copy', copiedBtn: 'Copied!', previewLabel: 'Raw CV Preview', previewHint: 'Content switches automatically with the selected language.' },
   }[lang];
 
-  const tabKeys: Tab[] = ['experiences', 'formations', 'competences'];
+  const handleCopy = () => {
+    navigator.clipboard.writeText(cvContent).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  };
+
+  const tabKeys: Tab[] = ['experiences', 'formations', 'competences', 'apercu'];
 
   return (
     <div className="min-h-screen bg-[#F5F5F7] dark:bg-[#000000] transition-colors duration-300">
@@ -272,6 +298,105 @@ const CvPage: React.FC = () => {
                 {['Swift', 'iOS', 'MVVM', 'MapboxMaps', 'AVFoundation', 'CI/CD', 'GitHub Actions', 'SwiftUI', 'UIKit', 'Agile', 'Scrum', 'JSON', 'REST API', 'Git', 'React.js', 'TypeScript', 'C++', 'Arduino', 'Python', 'Clean Architecture'].map(kw => (
                   <span key={kw} className="text-[11px] font-medium px-2.5 py-1 rounded-full bg-[#0071E3]/[0.08] text-[#0071E3]">{kw}</span>
                 ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* Raw Markdown Preview */}
+        {tab === 'apercu' && (
+          <section className="space-y-4">
+            {/* Info banner */}
+            <div className="flex items-start gap-3 bg-[#0071E3]/[0.06] border border-[#0071E3]/20 rounded-2xl px-5 py-4">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0071E3" strokeWidth="2" className="flex-shrink-0 mt-0.5"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="12" /><line x1="12" y1="16" x2="12.01" y2="16" /></svg>
+              <div>
+                <p className="text-[13px] font-semibold text-[#0071E3] mb-0.5">{ui.previewLabel}</p>
+                <p className="text-[12px] text-[#6E6E73] dark:text-[#98989D]">{ui.previewHint}</p>
+              </div>
+            </div>
+
+            {/* Markdown viewer */}
+            <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.06] dark:border-white/[0.06] rounded-2xl overflow-hidden shadow-sm">
+              {/* Toolbar */}
+              <div className="flex items-center justify-between px-5 py-3 border-b border-black/[0.06] dark:border-white/[0.06] bg-[#E0E0E2] dark:bg-[#2C2C2E]">
+                <div className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-[#FF5F57]" />
+                  <span className="w-3 h-3 rounded-full bg-[#FEBC2E]" />
+                  <span className="w-3 h-3 rounded-full bg-[#28C840]" />
+                  <span className="ml-3 text-[11px] font-mono text-[#86868B] dark:text-[#636366]">
+                    {lang === 'fr' ? 'CV_Sharik_french.md' : 'CV_Sharik_english.md'}
+                  </span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <a
+                    href={lang === 'fr' ? '/cv_markdown/CV_Sharik_french.md' : '/cv_markdown/CV_Sharik_english.md'}
+                    download
+                    className="inline-flex items-center gap-1.5 text-[11px] font-medium text-[#6E6E73] dark:text-[#98989D] hover:text-[#0071E3] transition-colors"
+                  >
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                    {lang === 'fr' ? ui.dlFr : ui.dlEn}
+                  </a>
+                  <button
+                    onClick={handleCopy}
+                    className={`inline-flex items-center gap-1.5 text-[11px] font-semibold px-3 py-1 rounded-full transition-all duration-200 ${copied
+                      ? 'bg-[#34C759] text-white'
+                      : 'bg-[#0071E3] text-white hover:bg-[#0077ED]'
+                      }`}
+                  >
+                    {copied ? (
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="20 6 9 17 4 12" /></svg>
+                    ) : (
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="9" y="9" width="13" height="13" rx="2" /><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" /></svg>
+                    )}
+                    {copied ? ui.copiedBtn : ui.copyBtn}
+                  </button>
+                </div>
+              </div>
+
+              {/* Rendered Markdown */}
+              <div className="p-6 md:p-8 overflow-y-auto max-h-[70vh] scrollbar-hide">
+                <ReactMarkdown
+                  components={{
+                    h1: ({ children }) => (
+                      <h1 className="text-2xl font-bold text-[#1D1D1F] dark:text-white tracking-tight mb-1">{children}</h1>
+                    ),
+                    h2: ({ children }) => (
+                      <h2 className="text-[13px] font-semibold text-[#86868B] uppercase tracking-[0.08em] mt-7 mb-3 pb-2 border-b border-black/[0.06] dark:border-white/[0.06]">{children}</h2>
+                    ),
+                    h3: ({ children }) => (
+                      <h3 className="text-[14px] font-semibold text-[#1D1D1F] dark:text-white mt-4 mb-1">{children}</h3>
+                    ),
+                    p: ({ children }) => (
+                      <p className="text-[13px] text-[#6E6E73] dark:text-[#98989D] leading-relaxed mb-2">{children}</p>
+                    ),
+                    strong: ({ children }) => (
+                      <strong className="font-semibold text-[#1D1D1F] dark:text-white">{children}</strong>
+                    ),
+                    em: ({ children }) => (
+                      <em className="text-[#6E6E73] dark:text-[#98989D] not-italic text-[12px]">{children}</em>
+                    ),
+                    ul: ({ children }) => (
+                      <ul className="space-y-1.5 mb-3 ml-1">{children}</ul>
+                    ),
+                    li: ({ children }) => (
+                      <li className="flex items-start gap-2 text-[13px] text-[#6E6E73] dark:text-[#98989D]">
+                        <span className="text-[#0071E3] font-bold shrink-0 mt-0.5 text-[10px]">●</span>
+                        <span>{children}</span>
+                      </li>
+                    ),
+                    hr: () => (
+                      <hr className="my-5 border-black/[0.06] dark:border-white/[0.06]" />
+                    ),
+                    code: ({ children }) => (
+                      <code className="text-[11px] font-medium px-2 py-0.5 rounded-md bg-[#0071E3]/[0.08] text-[#0071E3] font-mono">{children}</code>
+                    ),
+                    a: ({ children }) => (
+                      <span className="text-[#0071E3] font-medium">{children}</span>
+                    ),
+                  }}
+                >
+                  {cvLoading ? '…' : cvContent}
+                </ReactMarkdown>
               </div>
             </div>
           </section>

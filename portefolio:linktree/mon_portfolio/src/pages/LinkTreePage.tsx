@@ -9,18 +9,22 @@ const LinkTreePage: React.FC = () => {
 
   const socialLinks = [
     { name: 'Portfolio', url: '/portefolio', icon: <PortfolioIcon />, style: ButtonStyle.Primary },
-    { name: 'LinkedIn', url: 'https://linkedin.com/in/sharik-mohamed', icon: <LinkedInIcon />, style: ButtonStyle.Secondary },
-    { name: 'GitHub', url: 'https://github.com/sharik-mohamed', icon: <GitHubIcon />, style: ButtonStyle.Secondary },
-    { name: 'Email', url: 'mailto:contact@sharikmohamed.dev', icon: <EmailIcon />, style: ButtonStyle.Tertiary },
+    { name: 'LinkedIn', url: 'https://www.linkedin.com/in/sharik-abubucker-393194205/', icon: <LinkedInIcon />, style: ButtonStyle.Secondary },
+    { name: 'GitHub', url: 'https://github.com/sharik-dev', icon: <GitHubIcon />, style: ButtonStyle.Secondary },
+    { name: 'Email', url: 'mailto:sharikmohamed8@gmail.com', icon: <EmailIcon />, style: ButtonStyle.Tertiary },
   ];
 
   return (
-    <div className="min-h-screen bg-white dark:bg-black flex flex-col items-center px-5 pt-14 pb-8 transition-colors duration-300">
+    <div className="min-h-screen bg-[#F2F2F7] dark:bg-black flex flex-col items-center px-5 pt-14 pb-8 transition-colors duration-300">
 
       <header className="w-full max-w-sm flex flex-col items-center mb-10">
         {/* Avatar */}
-        <div className="w-24 h-24 rounded-full overflow-hidden border border-black/[0.08] dark:border-white/[0.08] shadow-lg mb-5 bg-gradient-to-br from-[#0071E3] to-[#34AADC] flex items-center justify-center">
-          <span className="text-white text-4xl font-bold select-none">S</span>
+        <div className="w-24 h-24 rounded-full overflow-hidden border border-black/[0.08] dark:border-white/[0.08] shadow-lg mb-5">
+          <img
+            src="https://media.licdn.com/dms/image/v2/D4E03AQGqJf1Y0BjJrA/profile-displayphoto-shrink_400_400/B4EZbEjXXqHIAg-/0/1747054327832?e=1773878400&v=beta&t=cYeI6lNTlNILW_oHrEfY7npeU1RSY8yge91WdLIA0Iw"
+            alt="Sharik Mohamed"
+            className="w-full h-full object-cover"
+          />
         </div>
 
         <h1 className="text-[22px] font-bold tracking-tight text-[#1D1D1F] dark:text-white mb-1">
@@ -45,8 +49,8 @@ const LinkTreePage: React.FC = () => {
         ))}
 
         <div className="mt-4 flex flex-wrap justify-center gap-2">
-          {['Swift', 'iOS', 'MVVM', 'Mapbox', 'React'].map(tag => (
-            <span key={tag} className="text-[11px] font-medium px-3 py-1 rounded-full bg-[#F5F5F7] dark:bg-[#1C1C1E] text-[#6E6E73] dark:text-[#98989D] border border-black/[0.06] dark:border-white/[0.06]">
+          {['Swift', 'iOS', 'UIKIT', 'SwiftUI', 'Mapbox'].map(tag => (
+            <span key={tag} className="text-[11px] font-medium px-3 py-1 rounded-full bg-white dark:bg-[#1C1C1E] text-[#6E6E73] dark:text-[#98989D] border border-black/[0.08] dark:border-white/[0.06] shadow-sm">
               {tag}
             </span>
           ))}

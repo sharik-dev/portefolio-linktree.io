@@ -3,6 +3,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import TabletViewer from '../components/TabletViewer';
 import { useLang, t } from '../contexts/LangContext';
 
+import screenshotFocusfast from '../assets/images/screenshots/focusfast.png';
+import screenshotMapbox from '../assets/images/screenshots/mapbox_weather.png';
+import screenshotGuidor from '../assets/images/screenshots/guidor.png';
+
 /* ─── Bilingual app data ─────────────────────────────────────────── */
 const APPS = [
   {
@@ -15,9 +19,9 @@ const APPS = [
     category: { fr: 'Social & Vidéo', en: 'Social & Video' },
     icon: 'https://cdn-icons-png.flaticon.com/512/6295/6295532.png',
     screenshots: [
-      'https://img.freepik.com/free-vector/gradient-mindfulness-app-interface_23-2149099708.jpg',
-      'https://img.freepik.com/free-vector/gradient-mindfulness-app-screens_23-2149099694.jpg',
-      'https://img.freepik.com/free-vector/gradient-meditation-app-interface_23-2149116595.jpg'
+      screenshotFocusfast,
+      screenshotFocusfast,
+      screenshotFocusfast
     ],
     tech: ['Swift', 'MVVM', 'AVFoundation', 'UIKit'],
     featured: true,
@@ -34,9 +38,9 @@ const APPS = [
     category: { fr: 'Cartographie & Météo', en: 'Mapping & Weather' },
     icon: 'https://cdn-icons-png.flaticon.com/512/5341/5341569.png',
     screenshots: [
-      'https://img.freepik.com/free-vector/dashboard-user-panel-template_23-2148627015.jpg',
-      'https://img.freepik.com/free-vector/crypto-dashboard-concept_23-2148627011.jpg',
-      'https://img.freepik.com/free-vector/dashboard-template-gradient-style_23-2148627124.jpg'
+      screenshotMapbox,
+      screenshotMapbox,
+      screenshotMapbox
     ],
     tech: ['Swift', 'MapboxMaps SDK v10+', 'JSON', 'iOS'],
     featured: true,
@@ -53,9 +57,9 @@ const APPS = [
     category: { fr: 'Embarqué', en: 'Embedded' },
     icon: 'https://cdn-icons-png.flaticon.com/512/2387/2387635.png',
     screenshots: [
-      'https://img.freepik.com/free-vector/app-dashboard-tasks-dark-mode_23-2148703295.jpg',
-      'https://img.freepik.com/free-vector/application-mobile-statistics-dashboard_23-2148607159.jpg',
-      'https://img.freepik.com/free-vector/application-mobile-control-dashboard_23-2148607161.jpg'
+      screenshotGuidor,
+      screenshotGuidor,
+      screenshotGuidor
     ],
     tech: ['C++', 'Arduino', 'Embedded'],
     featured: false,

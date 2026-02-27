@@ -4,6 +4,10 @@ import { useLang, t } from '../contexts/LangContext';
 import cvFrenchUrl from '../assets/cv_markdown/CV_Sharik_french.md';
 import cvEnglishUrl from '../assets/cv_markdown/CV_Sharik_english.md';
 
+import screenshotFocusfast from '../assets/images/screenshots/focusfast.png';
+import screenshotMapbox from '../assets/images/screenshots/mapbox_weather.png';
+import screenshotGuidor from '../assets/images/screenshots/guidor.png';
+
 /* ─── Bilingual project data ─────────────────────────────────────── */
 const PROJECTS = [
   {
@@ -14,7 +18,7 @@ const PROJECTS = [
       en: 'iOS short-video app (TikTok-style) with swipeable vertical feed, categories, comments, ratings and video upload. MVVM architecture with AVFoundation.'
     },
     context: { fr: 'Projet personnel', en: 'Personal project' },
-    image: 'https://img.freepik.com/free-vector/gradient-mindfulness-app-interface_23-2149099708.jpg',
+    image: screenshotFocusfast,
     tags: ['Swift', 'MVVM', 'AVFoundation', 'UIKit'],
     link: 'https://github.com/sharik-mohamed',
   },
@@ -26,7 +30,7 @@ const PROJECTS = [
       en: 'Multi-layer weather overlay integration on MapboxMaps SDK v10+ for Skyconseil. Dynamic JSON filters, zoom expressions, legacy/v10 compatibility.'
     },
     context: { fr: 'Professionnel — Skyconseil', en: 'Professional — Skyconseil' },
-    image: 'https://img.freepik.com/free-vector/dashboard-user-panel-template_23-2148627015.jpg',
+    image: screenshotMapbox,
     tags: ['Swift', 'MapboxMaps v10+', 'JSON', 'iOS'],
     link: 'https://github.com/sharik-mohamed',
   },
@@ -38,7 +42,7 @@ const PROJECTS = [
       en: 'Embedded guidance system built with Arduino and C++ for Le Facteur Humain & Combustible Numérique.'
     },
     context: { fr: 'Stage', en: 'Internship' },
-    image: 'https://img.freepik.com/free-vector/app-dashboard-tasks-dark-mode_23-2148703295.jpg',
+    image: screenshotGuidor,
     tags: ['C++', 'Arduino', 'Embedded'],
     link: 'https://github.com/sharik-mohamed',
   },

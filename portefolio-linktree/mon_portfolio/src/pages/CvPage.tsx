@@ -3,10 +3,13 @@ import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 import { useLang, t } from '../contexts/LangContext';
 
-/* ─── CV markdown URLs (served from /public/cv_markdown/) ─────────── */
+import cvFrenchUrl from '../assets/cv_markdown/CV_Sharik_french.md';
+import cvEnglishUrl from '../assets/cv_markdown/CV_Sharik_english.md';
+
+/* ─── CV markdown URLs ────────────────────────────────────────────── */
 const CV_URLS = {
-  fr: `${import.meta.env.BASE_URL}cv_markdown/CV_Sharik_french.md`,
-  en: `${import.meta.env.BASE_URL}cv_markdown/CV_Sharik_english.md`,
+  fr: cvFrenchUrl,
+  en: cvEnglishUrl,
 } as const;
 
 /* ─── Bilingual Data ─────────────────────────────────────────────── */
@@ -329,7 +332,7 @@ const CvPage: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-2">
                   <a
-                    href={lang === 'fr' ? `${import.meta.env.BASE_URL}cv_markdown/CV_Sharik_french.md` : `${import.meta.env.BASE_URL}cv_markdown/CV_Sharik_english.md`}
+                    href={CV_URLS[lang]}
                     download
                     className="inline-flex items-center gap-1.5 text-[11px] font-medium text-[#6E6E73] dark:text-[#98989D] hover:text-[#0071E3] transition-colors"
                   >
@@ -412,7 +415,7 @@ const CvPage: React.FC = () => {
             <p className="text-[13px] text-[#6E6E73] dark:text-[#98989D] mb-5">{ui.downloadSub}</p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <a
-                href={`${import.meta.env.BASE_URL}cv_markdown/CV_Sharik_french.md`}
+                href={CV_URLS.fr}
                 download="CV_Sharik_Mohamed_FR.md"
                 className="inline-flex items-center gap-2 bg-[#0071E3] text-white px-5 py-2.5 rounded-full text-[13px] font-medium hover:bg-[#0077ED] transition-colors shadow-sm"
               >
@@ -420,7 +423,7 @@ const CvPage: React.FC = () => {
                 🇫🇷 {ui.dlFr}
               </a>
               <a
-                href={`${import.meta.env.BASE_URL}cv_markdown/CV_Sharik_english.md`}
+                href={CV_URLS.en}
                 download="CV_Sharik_Mohamed_EN.md"
                 className="inline-flex items-center gap-2 bg-white dark:bg-[#2C2C2E] text-[#1D1D1F] dark:text-white border border-black/[0.12] dark:border-white/[0.12] px-5 py-2.5 rounded-full text-[13px] font-medium hover:bg-[#F5F5F7] dark:hover:bg-[#3A3A3C] transition-colors"
               >

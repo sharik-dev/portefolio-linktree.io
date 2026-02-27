@@ -12,8 +12,15 @@ import * as THREE from 'three';
 import type { GLTF } from 'three-stdlib';
 import type { ObjectMap } from '@react-three/fiber';
 
+// Import assets from src/assets
+import tabletModelUrl from '../assets/model/tablet.glb';
+
 // ─── Proxy Vite pour éviter CORS WebGL ─────────────────────────────────────
 function toProxyUrl(url: string): string {
+    // Le proxy ne fonctionne qu'en développement (Vite dev server)
+    // En production (GitHub Pages), on utilise l'URL directe.
+    if (import.meta.env.PROD) return url;
+
     if (url.startsWith('https://img.freepik.com'))
         return url.replace('https://img.freepik.com', '/img-proxy/freepik');
     if (url.startsWith('https://cdn-icons-png.flaticon.com'))
@@ -35,9 +42,7 @@ function makePlaceholderTexture() {
 
 // ─── Modèle 3D ──────────────────────────────────────────────────────────────
 function TabletModel({ screenshotUrl }: { screenshotUrl: string }) {
-    const modelUrl = `${import.meta.env.BASE_URL}model/tablet.glb`.replace(/\/+/g, '/');
-    console.log('Loading tablet model from:', modelUrl);
-    const gltf = useGLTF(modelUrl) as GLTF & ObjectMap & {
+    const gltf = useGLTF(tabletModelUrl) as GLTF & ObjectMap & {
         materials: Record<string, THREE.Material>;
     };
     const texture = useTexture(toProxyUrl(screenshotUrl));
@@ -199,4 +204,4 @@ export default function TabletViewer({ screenshotUrl }: { screenshotUrl: string 
     );
 }
 
-useGLTF.preload(`${import.meta.env.BASE_URL}model/tablet.glb`);
+useGLTF.preload(tabletModelUrl);

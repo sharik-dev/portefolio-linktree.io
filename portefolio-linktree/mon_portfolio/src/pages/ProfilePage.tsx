@@ -244,10 +244,10 @@ const ProfilePage: React.FC = () => {
             </div>
             <h3 className="text-[14px] font-semibold text-[#1D1D1F] dark:text-white mb-3">{ui.cvTitle}</h3>
             <div className="flex gap-2">
-              <a href="/cv_markdown/CV_Sharik_french.md" download className="inline-flex items-center gap-1.5 bg-[#0071E3] text-white px-4 py-2 rounded-full text-[12px] font-medium hover:bg-[#0077ED] transition-colors">
+              <a href={`${import.meta.env.BASE_URL}cv_markdown/CV_Sharik_french.md`} download className="inline-flex items-center gap-1.5 bg-[#0071E3] text-white px-4 py-2 rounded-full text-[12px] font-medium hover:bg-[#0077ED] transition-colors">
                 🇫🇷 FR
               </a>
-              <a href="/cv_markdown/CV_Sharik_english.md" download className="inline-flex items-center gap-1.5 bg-white dark:bg-[#2C2C2E] text-[#1D1D1F] dark:text-white border border-black/[0.12] dark:border-white/[0.12] px-4 py-2 rounded-full text-[12px] font-medium hover:bg-[#F5F5F7] dark:hover:bg-[#3A3A3C] transition-colors">
+              <a href={`${import.meta.env.BASE_URL}cv_markdown/CV_Sharik_english.md`} download className="inline-flex items-center gap-1.5 bg-white dark:bg-[#2C2C2E] text-[#1D1D1F] dark:text-white border border-black/[0.12] dark:border-white/[0.12] px-4 py-2 rounded-full text-[12px] font-medium hover:bg-[#F5F5F7] dark:hover:bg-[#3A3A3C] transition-colors">
                 🇬🇧 EN
               </a>
             </div>

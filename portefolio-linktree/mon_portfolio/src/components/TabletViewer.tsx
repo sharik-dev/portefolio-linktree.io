@@ -35,7 +35,9 @@ function makePlaceholderTexture() {
 
 // ─── Modèle 3D ──────────────────────────────────────────────────────────────
 function TabletModel({ screenshotUrl }: { screenshotUrl: string }) {
-    const gltf = useGLTF(`${import.meta.env.BASE_URL}model/tablet.glb`) as GLTF & ObjectMap & {
+    const modelUrl = `${import.meta.env.BASE_URL}model/tablet.glb`.replace(/\/+/g, '/');
+    console.log('Loading tablet model from:', modelUrl);
+    const gltf = useGLTF(modelUrl) as GLTF & ObjectMap & {
         materials: Record<string, THREE.Material>;
     };
     const texture = useTexture(toProxyUrl(screenshotUrl));

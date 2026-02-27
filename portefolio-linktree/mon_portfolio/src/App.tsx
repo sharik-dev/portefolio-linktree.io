@@ -4,7 +4,7 @@ import { AppRoutes } from './routes';
 
 function App() {
   return (
-    <BrowserRouter basename="/portefolio-linktree.io">
+    <BrowserRouter basename="/portefolio-linktree.io/">
       <AppRoutes />
     </BrowserRouter>
   );

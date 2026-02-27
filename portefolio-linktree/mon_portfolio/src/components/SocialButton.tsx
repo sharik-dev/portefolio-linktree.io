@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button, { ButtonStyle, ButtonSize, ButtonShape } from './Button';
 
 interface SocialButtonProps {
@@ -16,9 +17,11 @@ const SocialButton: React.FC<SocialButtonProps> = ({
   style = ButtonStyle.Primary,
   className = ''
 }) => {
+  const navigate = useNavigate();
+
   const handleClick = () => {
     if (url.startsWith('/')) {
-      window.location.href = url;
+      navigate(url);
     } else {
       window.open(url, '_blank', 'noopener,noreferrer');
     }

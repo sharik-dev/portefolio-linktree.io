@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import TabletViewer from '../components/TabletViewer';
 import { useLang, t } from '../contexts/LangContext';
 
 import screenshotFocusfast from '../assets/images/screenshots/focusfast.png';
 import screenshotMapbox from '../assets/images/screenshots/mapbox_weather.png';
 import screenshotGuidor from '../assets/images/screenshots/guidor.png';
+import meowTubeIcon from '../assets/meowTube/appLogo.png';
+import meowTubeHome from '../assets/meowTube/AppHomePage.png';
+import meowTubeSecond from '../assets/meowTube/AppSecondPage.png';
 
 /* ─── Bilingual app data ─────────────────────────────────────────── */
 const APPS = [
@@ -66,6 +70,22 @@ const APPS = [
     isNew: false,
     rating: 4.5,
   },
+  {
+    id: 'meowtube',
+    name: 'Meow-Toob',
+    subtitle: { fr: 'Vidéo sans distraction, axé productivité', en: 'Distraction-free, productivity-first video' },
+    description: { fr: 'Application iOS de consultation de contenu multimédia type YouTube, sans Shorts, sans publicités et sans timer de temps passé. Conçue pour une consommation saine et productive de vidéos.', en: 'iOS app for browsing YouTube-style content — no Shorts, no ads, no screen-time tracking. Built for focused, healthy video consumption.' },
+    features: { fr: ['Zéro publicité', 'Sans vidéos courtes', 'Aucun suivi du temps', 'Interface épurée', 'Axé productivité'], en: ['Zero ads', 'No short-form content', 'No time tracking', 'Clean interface', 'Productivity focused'] },
+    price: { fr: 'Projet personnel', en: 'Personal project' },
+    category: { fr: 'Productivité & Vidéo', en: 'Productivity & Video' },
+    icon: meowTubeIcon,
+    screenshots: [meowTubeHome, meowTubeSecond],
+    tech: ['Swift', 'SwiftUI', 'AVFoundation', 'iOS'],
+    featured: true,
+    isNew: true,
+    rating: 4.9,
+    landingPage: '/meowtube',
+  },
 ];
 
 /* ─── UI strings ─────────────────────────────────────────────────── */
@@ -122,7 +142,11 @@ const AppCard: React.FC<{ app: typeof APPS[0]; lang: 'fr' | 'en'; ui: typeof UI[
   </motion.div>
 );
 
-const AppModal: React.FC<{ app: typeof APPS[0]; lang: 'fr' | 'en'; ui: typeof UI['fr']; onClose: () => void }> = ({ app, lang, ui, onClose }) => (
+const AppModal: React.FC<{ app: typeof APPS[0]; lang: 'fr' | 'en'; ui: typeof UI['fr']; onClose: () => void }> = ({ app, lang, ui, onClose }) => {
+  const navigate = useNavigate();
+  const hasLanding = 'landingPage' in app && typeof (app as any).landingPage === 'string';
+
+  return (
   <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center p-0 md:p-4">
     <div className="absolute inset-0 bg-black/30 backdrop-blur-md" onClick={onClose} />
     <motion.div
@@ -154,9 +178,17 @@ const AppModal: React.FC<{ app: typeof APPS[0]; lang: 'fr' | 'en'; ui: typeof UI
               <Stars rating={app.rating} />
             </div>
           </div>
-          <span className="flex-shrink-0 mt-1 bg-[#0071E3] text-white text-[12px] font-semibold px-4 py-1.5 rounded-full hover:bg-[#0077ED] transition-colors cursor-pointer">
-            {ui.seeMore}
-          </span>
+          {hasLanding ? (
+            <button
+              onClick={() => { onClose(); navigate((app as any).landingPage); }}
+              className="flex-shrink-0 mt-1 bg-[#E60000] text-white text-[12px] font-semibold px-4 py-1.5 rounded-full hover:bg-[#CC0000] transition-colors cursor-pointer">
+              {lang === 'fr' ? 'Découvrir' : 'Discover'}
+            </button>
+          ) : (
+            <span className="flex-shrink-0 mt-1 bg-[#0071E3] text-white text-[12px] font-semibold px-4 py-1.5 rounded-full hover:bg-[#0077ED] transition-colors cursor-pointer">
+              {ui.seeMore}
+            </span>
+          )}
         </div>
 
         {/* Screenshots */}
@@ -190,7 +222,8 @@ const AppModal: React.FC<{ app: typeof APPS[0]; lang: 'fr' | 'en'; ui: typeof UI
       </div>
     </motion.div>
   </div>
-);
+  );
+};
 
 /* ─── Page ────────────────────────────────────────────────────────── */
 const PortfolioPage: React.FC = () => {

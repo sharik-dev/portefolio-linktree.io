@@ -4,10 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import TabletViewer from '../components/TabletViewer';
 import { useLang, t } from '../contexts/LangContext';
 
-import guidorImg1 from '../assets/guidor/image.png';
-import guidorImg2 from '../assets/guidor/image copy.png';
-import guidorImg3 from '../assets/guidor/image copy 2.png';
-import guidorImg4 from '../assets/guidor/image copy 3.png';
+import guidorLogo from '../assets/guidor/logo.png';
+import guidorImg1 from '../assets/guidor/imageApp.png';
+import guidorImg2 from '../assets/guidor/imageApp2.png';
 import meowTubeIcon from '../assets/meowTube/appLogo.png';
 import meowTubeHome from '../assets/meowTube/AppHomePage.png';
 import meowTubeSecond from '../assets/meowTube/AppSecondPage.png';
@@ -17,17 +16,17 @@ const APPS = [
   {
     id: 'guidor',
     name: 'Guidor',
-    subtitle: { fr: 'Embarqué Arduino & C++', en: 'Embedded Arduino & C++' },
-    description: { fr: 'Projet de développement embarqué avec Arduino et C++ réalisé chez Le Facteur Humain & Combustible Numérique. Système de guidage intelligent avec capteurs et interface de contrôle.', en: 'Embedded development project built with Arduino and C++ at Le Facteur Humain & Combustible Numérique. Intelligent guidance system with sensors and a control interface.' },
-    features: { fr: ['Développement embarqué', 'Capteurs & actionneurs', 'Interface de contrôle', 'Firmware C++'], en: ['Embedded development', 'Sensors & actuators', 'Control interface', 'C++ firmware'] },
-    price: { fr: 'Stage – Le Facteur Humain', en: 'Internship – Le Facteur Humain' },
-    category: { fr: 'Embarqué', en: 'Embedded' },
-    icon: 'https://cdn-icons-png.flaticon.com/512/2387/2387635.png',
-    screenshots: [guidorImg1, guidorImg2, guidorImg3, guidorImg4],
-    tech: ['C++', 'Arduino', 'Embedded'],
+    subtitle: { fr: 'Application aviation professionnelle', en: 'Professional aviation app' },
+    description: { fr: 'Guidor est une application aviation professionnelle destinée aux pilotes de ligne et opérateurs de vol. Elle analyse la route et l\'environnement en temps réel pour optimiser la planification et améliorer la sécurité à chaque phase du vol.', en: 'Guidor is a professional aviation app designed for airline pilots and flight operators. It analyzes the route and surrounding environment in real time to optimize flight planning and improve safety at every stage of the flight.' },
+    features: { fr: ['Visualisation route & profil vertical', 'Météo aviation (METAR, TAF, turbulences)', 'Mises à jour en temps réel (Wi-Fi bord)', 'Optimisation de route & altitude', 'Alertes turbulences & météo dangereuse', 'Intégration standards ARINC & avionique'], en: ['Route & vertical profile visualization', 'Aviation weather (METAR, TAF, turbulence)', 'Real-time updates (onboard Wi-Fi)', 'Route & altitude optimization', 'Turbulence & dangerous weather alerts', 'ARINC avionics integration'] },
+    price: { fr: 'Application professionnelle', en: 'Professional application' },
+    category: { fr: 'Aviation & Navigation', en: 'Aviation & Navigation' },
+    icon: guidorLogo,
+    screenshots: [guidorImg1, guidorImg2],
+    tech: ['iOS', 'Swift', 'Aviation APIs', 'ARINC'],
     featured: true,
     isNew: false,
-    rating: 4.5,
+    rating: 4.8,
     externalLink: 'https://www.guidor.fr/',
   },
   {
@@ -222,7 +221,10 @@ const PortfolioPage: React.FC = () => {
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="15 18 9 12 15 6" /></svg>
               </button>
               <div className="flex-1 max-w-[360px]">
-                <TabletViewer screenshotUrl={APPS[tabletIndex].screenshots[0]} />
+                <TabletViewer
+                  screenshots={APPS[tabletIndex].screenshots}
+                  landscape={APPS[tabletIndex].id === 'guidor'}
+                />
                 <div className="text-center mt-3">
                   <h3 className="font-semibold text-[#1D1D1F] dark:text-white text-[15px]">{APPS[tabletIndex].name}</h3>
                   <p className="text-[12px] text-[#6E6E73] dark:text-[#98989D]">{t(lang, APPS[tabletIndex].subtitle.fr, APPS[tabletIndex].subtitle.en)}</p>

@@ -1,207 +1,291 @@
-import { Suspense, useEffect, useMemo } from 'react';
-import { Canvas } from '@react-three/fiber';
-import {
-    useGLTF,
-    useTexture,
-    OrbitControls,
-    Environment,
-    ContactShadows,
-    PerspectiveCamera,
-} from '@react-three/drei';
-import * as THREE from 'three';
-import type { GLTF } from 'three-stdlib';
-import type { ObjectMap } from '@react-three/fiber';
+import React, { useRef, useEffect, useState, useCallback } from 'react';
 
-// Import assets from src/assets
-import tabletModelUrl from '../assets/model/tablet.glb';
-
-// ─── Proxy Vite pour éviter CORS WebGL ─────────────────────────────────────
-function toProxyUrl(url: string): string {
-    // Le proxy ne fonctionne qu'en développement (Vite dev server)
-    // En production (GitHub Pages), on utilise l'URL directe.
-    if (import.meta.env.PROD) return url;
-
-    if (url.startsWith('https://img.freepik.com'))
-        return url.replace('https://img.freepik.com', '/img-proxy/freepik');
-    if (url.startsWith('https://cdn-icons-png.flaticon.com'))
-        return url.replace('https://cdn-icons-png.flaticon.com', '/img-proxy/flaticon');
-    return url;
+interface Props {
+  screenshots: string[];
+  landscape?: boolean;
 }
 
-// ─── Placeholder noir pour compiler le shader avec 'map' dès le départ ──────
-function makePlaceholderTexture() {
-    const canvas = document.createElement('canvas');
-    canvas.width = 4; canvas.height = 4;
-    const ctx = canvas.getContext('2d')!;
-    ctx.fillStyle = '#111111';
-    ctx.fillRect(0, 0, 4, 4);
-    const t = new THREE.CanvasTexture(canvas);
-    t.colorSpace = THREE.SRGBColorSpace;
-    return t;
-}
+export default function TabletViewer({ screenshots, landscape = false }: Props) {
+  const deviceRef = useRef<HTMLDivElement>(null);
 
-// ─── Modèle 3D ──────────────────────────────────────────────────────────────
-function TabletModel({ screenshotUrl }: { screenshotUrl: string }) {
-    const gltf = useGLTF(tabletModelUrl) as GLTF & ObjectMap & {
-        materials: Record<string, THREE.Material>;
+  // ── Rotation state ─────────────────────────────────────────────
+  const rot = useRef({ y: landscape ? -25 : 18, x: landscape ? -6 : -8 });
+  const vel = useRef({ y: 0.30, x: 0 });
+  const drag = useRef({ active: false, lx: 0, ly: 0 });
+  const rafRef = useRef<number>(0);
+
+  // ── Auto-slide screenshots ──────────────────────────────────────
+  const [imgIndex, setImgIndex] = useState(0);
+  const [fadeIn, setFadeIn] = useState(true);
+
+  // Cycle screenshots every 3.5 s
+  useEffect(() => {
+    if (screenshots.length <= 1) return;
+    const id = setInterval(() => {
+      setFadeIn(false);
+      setTimeout(() => {
+        setImgIndex(i => (i + 1) % screenshots.length);
+        setFadeIn(true);
+      }, 200);
+    }, 3500);
+    return () => clearInterval(id);
+  }, [screenshots]);
+
+  // Reset to first image when app changes
+  useEffect(() => {
+    setImgIndex(0);
+    setFadeIn(true);
+  }, [screenshots]);
+
+  // ── Transform apply ─────────────────────────────────────────────
+  const apply = useCallback(() => {
+    if (!deviceRef.current) return;
+    deviceRef.current.style.transform =
+      `rotateX(${rot.current.x}deg) rotateY(${rot.current.y}deg)`;
+  }, []);
+
+  // ── Animation loop ──────────────────────────────────────────────
+  useEffect(() => {
+    const tick = () => {
+      if (!drag.current.active) {
+        rot.current.y += vel.current.y;
+        rot.current.x += vel.current.x;
+        vel.current.y = vel.current.y * 0.997 + 0.30 * 0.003;
+        vel.current.x *= 0.92;
+        rot.current.x = Math.max(-25, Math.min(25, rot.current.x));
+      }
+      apply();
+      rafRef.current = requestAnimationFrame(tick);
     };
-    const texture = useTexture(toProxyUrl(screenshotUrl));
-    const placeholder = useMemo(makePlaceholderTexture, []);
+    rafRef.current = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(rafRef.current);
+  }, [apply]);
 
-    // ── Collecter les UUID du matériau "Pre-Screen" dans la scène originale ──
-    const greenScreenUUIDs = useMemo(() => {
-        const uuids = new Set<string>();
-        // Méthode 1 : accès direct par nom via gltf.materials
-        if (gltf.materials?.['Pre-Screen']) {
-            uuids.add(gltf.materials['Pre-Screen'].uuid);
-        }
-        // Méthode 2 : fallback traversal — nom + couleur verte
-        gltf.scene.traverse((obj: THREE.Object3D) => {
-            const mesh = obj as THREE.Mesh;
-            if (!mesh.isMesh || !mesh.material) return;
-            const mats = Array.isArray(mesh.material)
-                ? (mesh.material as THREE.Material[])
-                : [mesh.material as THREE.Material];
-            mats.forEach((m) => {
-                const mat = m as THREE.MeshStandardMaterial;
-                const byName = mat.name === 'Pre-Screen' || mat.name.trim() === 'Pre-Screen';
-                const byColor = mat.color && mat.color.g > 0.4 && mat.color.r < 0.08 && mat.color.b < 0.08;
-                if (byName || byColor) uuids.add(mat.uuid);
-            });
-        });
-        return uuids;
-    }, [gltf.scene, gltf.materials]);
+  // ── Pointer handlers ────────────────────────────────────────────
+  const onDown = useCallback((e: React.PointerEvent) => {
+    drag.current = { active: true, lx: e.clientX, ly: e.clientY };
+    (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
+  }, []);
 
-    // ── Cloner la scène UNE SEULE FOIS
-    //    SEUL le matériau Pre-Screen est remplacé — tout le reste reste intact ─
-    const clonedScene = useMemo(() => {
-        const clone = gltf.scene.clone(true);
+  const onMove = useCallback((e: React.PointerEvent) => {
+    if (!drag.current.active) return;
+    const dx = e.clientX - drag.current.lx;
+    const dy = e.clientY - drag.current.ly;
+    rot.current.y += dx * 0.55;
+    rot.current.x = Math.max(-25, Math.min(25, rot.current.x - dy * 0.35));
+    vel.current.y = dx * 0.35;
+    vel.current.x = -dy * 0.22;
+    drag.current.lx = e.clientX;
+    drag.current.ly = e.clientY;
+    apply();
+  }, [apply]);
 
-        clone.traverse((obj: THREE.Object3D) => {
-            const mesh = obj as THREE.Mesh;
-            if (!mesh.isMesh || !mesh.material) return;
+  const onUp = useCallback(() => {
+    drag.current.active = false;
+    if (Math.abs(vel.current.y) < 0.15) vel.current.y = 0.30;
+  }, []);
 
-            // Vérifier si ce mesh appartient au cylindre (bord décoratif)
-            // Pre-Screen est partagé entre le cube (écran) ET le cylindre (bord)
-            // → on ne remplace QUE sur les meshes du cube principal
-            let ancestor = mesh.parent;
-            let isCylinder = false;
-            while (ancestor) {
-                // "Цилиндр" = Cylinder en russe (nom du node dans le GLB)
-                if (ancestor.name.includes('Цилиндр') || ancestor.name.includes('ylinder')) {
-                    isCylinder = true;
-                    break;
-                }
-                ancestor = ancestor.parent;
-            }
+  // ── Device geometry ─────────────────────────────────────────────
+  // Portrait (phone/app) vs Landscape (iPad for Guidor)
+  const W      = landscape ? 360 : 240;
+  const H      = landscape ? 252 : 336;
+  const DEPTH  = 11;
+  const R      = landscape ? 20 : 24;
 
-            const processMat = (m: THREE.Material): THREE.Material => {
-                if (!greenScreenUUIDs.has(m.uuid) || isCylinder) return m; // ← laissé intact
-                const sm = new THREE.MeshStandardMaterial({
-                    map: placeholder,
-                    roughness: 0.55, // plus élevé = texture visible (pas de miroir blanc)
-                    metalness: 0.0,
-                });
-                sm.userData.isScreen = true;
-                return sm;
-            };
+  // Bezels
+  const topB  = landscape ? 10 : 34;   // top / left-in-landscape
+  const botB  = landscape ? 10 : 40;   // bottom / right-in-landscape  (no home btn on landscape)
+  const sideB = landscape ? 10 : 9;    // sides
+  const showHomeBtn = !landscape;
 
-            if (Array.isArray(mesh.material)) {
-                mesh.material = (mesh.material as THREE.Material[]).map(processMat);
-            } else {
-                const m = mesh.material as THREE.Material;
-                if (greenScreenUUIDs.has(m.uuid) && !isCylinder) {
-                    const sm = new THREE.MeshStandardMaterial({
-                        map: placeholder,
-                        roughness: 0.55,
-                        metalness: 0.0,
-                    });
-                    sm.userData.isScreen = true;
-                    mesh.material = sm;
-                }
-            }
-        });
+  // Colors
+  const FRONT_BG     = '#1e1e20';
+  const EDGE_COLOR   = '#b0b0b4';
+  const EDGE_DARK    = '#8a8a8e';
+  const alumGrad     = `linear-gradient(145deg, #d0d0d4 0%, ${EDGE_COLOR} 40%, #c2c2c6 65%, ${EDGE_DARK} 100%)`;
+  const alumGradBack = `linear-gradient(145deg, #cacace 0%, #b8b8bc 50%, #c0c0c4 100%)`;
 
-        return clone;
-    }, [gltf.scene, greenScreenUUIDs, placeholder]);
+  const containerH = landscape ? 320 : 420;
 
-    // ── Mise à jour de la texture quand l'app change (sans remonte du modèle) ─
-    useEffect(() => {
-        const t = texture.clone();
-        t.colorSpace = THREE.SRGBColorSpace;
-        t.flipY = false;
-        t.needsUpdate = true;
+  return (
+    <div
+      onPointerDown={onDown}
+      onPointerMove={onMove}
+      onPointerUp={onUp}
+      onPointerLeave={onUp}
+      style={{
+        width: '100%',
+        height: `${containerH}px`,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        perspective: '1100px',
+        perspectiveOrigin: '50% 50%',
+        userSelect: 'none',
+        cursor: 'grab',
+      }}
+    >
+      {/* ── 3D scene ──────────────────────────────────────────── */}
+      <div
+        ref={deviceRef}
+        style={{
+          width: `${W}px`,
+          height: `${H}px`,
+          position: 'relative',
+          transformStyle: 'preserve-3d',
+          willChange: 'transform',
+          transform: `rotateX(${rot.current.x}deg) rotateY(${rot.current.y}deg)`,
+        }}
+      >
 
-        clonedScene.traverse((obj: THREE.Object3D) => {
-            const mesh = obj as THREE.Mesh;
-            if (!mesh.isMesh) return;
-            const mats = Array.isArray(mesh.material)
-                ? (mesh.material as THREE.Material[])
-                : [mesh.material as THREE.Material];
-            mats.forEach((m) => {
-                if (!m?.userData?.isScreen) return;
-                const sm = m as THREE.MeshStandardMaterial;
-                if (sm.map && sm.map !== placeholder) sm.map.dispose();
-                sm.map = t;
-            });
-        });
+        {/* ── FRONT face ───────────────────────────────────────── */}
+        <div style={{
+          position: 'absolute', inset: 0,
+          borderRadius: `${R}px`,
+          background: FRONT_BG,
+          boxShadow: 'inset 0 0 0 1px rgba(255,255,255,0.07)',
+          transform: `translateZ(${DEPTH / 2}px)`,
+          overflow: 'hidden',
+        }}>
+          {/* Camera / sensor (portrait: top center · landscape: right center) */}
+          <div style={{
+            position: 'absolute',
+            ...(landscape
+              ? { right: '14px', top: '50%', transform: 'translateY(-50%)' }
+              : { top: '13px', left: '50%', transform: 'translateX(-50%)' }),
+            width: '7px', height: '7px',
+            borderRadius: '50%',
+            backgroundColor: '#0a0a0a',
+            border: '1px solid #333',
+          }} />
 
-        return () => { t.dispose(); };
-    }, [clonedScene, texture, placeholder]);
+          {/* Screen */}
+          <div style={{
+            position: 'absolute',
+            top: `${topB}px`, left: `${sideB}px`,
+            right: `${landscape ? botB : sideB}px`,
+            bottom: `${landscape ? topB : botB}px`,
+            backgroundColor: '#000',
+            overflow: 'hidden',
+            borderRadius: '3px',
+          }}>
+            <img
+              key={screenshots[imgIndex]}
+              src={screenshots[imgIndex]}
+              alt=""
+              draggable={false}
+              style={{
+                width: '100%', height: '100%',
+                objectFit: 'cover',
+                objectPosition: 'center top',
+                display: 'block',
+                opacity: fadeIn ? 1 : 0,
+                transition: 'opacity 0.22s ease',
+              }}
+            />
+            {/* Subtle glass sheen */}
+            <div style={{
+              position: 'absolute', inset: 0,
+              background: 'linear-gradient(135deg, rgba(255,255,255,0.06) 0%, transparent 55%)',
+              pointerEvents: 'none',
+            }} />
+          </div>
 
-    return (
-        <primitive
-            object={clonedScene}
-            scale={8.6}
-            position={[0, -0.2, 0]}
-            rotation={[0.05, 0.2, 0]}
-        />
-    );
-}
-
-// ─── Loading placeholder ─────────────────────────────────────────────────────
-function LoadingBox() {
-    return (
-        <mesh>
-            <boxGeometry args={[1.2, 1.8, 0.08]} />
-            <meshStandardMaterial color="#1c1c1e" />
-        </mesh>
-    );
-}
-
-// ─── Canvas principal ────────────────────────────────────────────────────────
-export default function TabletViewer({ screenshotUrl }: { screenshotUrl: string }) {
-    return (
-        <div style={{ width: '100%', height: '400px', borderRadius: '12px', overflow: 'hidden' }}>
-            <Canvas
-                gl={{ antialias: true, alpha: true }}
-                dpr={[1, 1.5]}
-                shadows={false}
-                style={{ background: 'transparent' }}
-            >
-                <PerspectiveCamera makeDefault fov={36} position={[0, 0.2, 3.6]} />
-                <ambientLight intensity={0.8} />
-                <directionalLight position={[3, 5, 4]} intensity={1.5} />
-                <directionalLight position={[-4, 2, -3]} intensity={0.4} color="#a0a0ff" />
-
-                <Suspense fallback={<LoadingBox />}>
-                    <Environment preset="city" />
-                    <TabletModel screenshotUrl={screenshotUrl} />
-                    <ContactShadows position={[0, -1.6, 0]} opacity={0.4} scale={7} blur={2} far={3.5} />
-                </Suspense>
-
-                <OrbitControls
-                    enablePan={false}
-                    enableZoom={false}
-                    minPolarAngle={Math.PI / 5}
-                    maxPolarAngle={Math.PI / 1.8}
-                    autoRotate
-                    autoRotateSpeed={1.3}
-                    target={[0, 0.05, 0]}
-                />
-            </Canvas>
+          {/* Home button (portrait only) */}
+          {showHomeBtn && (
+            <div style={{
+              position: 'absolute', bottom: '11px',
+              left: '50%', transform: 'translateX(-50%)',
+              width: '26px', height: '26px',
+              borderRadius: '50%',
+              border: '2px solid #383838',
+              backgroundColor: '#111',
+            }} />
+          )}
         </div>
-    );
-}
 
-useGLTF.preload(tabletModelUrl);
+        {/* ── BACK face ────────────────────────────────────────── */}
+        <div style={{
+          position: 'absolute', inset: 0,
+          borderRadius: `${R}px`,
+          background: alumGradBack,
+          transform: `translateZ(-${DEPTH / 2}px) rotateY(180deg)`,
+        }} />
+
+        {/* ── EDGES — full-dimension, no corner offsets ─────────
+            Extending to left:0/right:0 and top:0/bottom:0
+            eliminates the corner gaps that appeared previously.
+            The front/back faces (at ±Z) visually cap the corners.
+        ───────────────────────────────────────────────────────── */}
+
+        {/* Top */}
+        <div style={{
+          position: 'absolute',
+          top: 0, left: 0, right: 0,
+          height: `${DEPTH}px`,
+          background: alumGrad,
+          transform: `translateY(-${DEPTH / 2}px) rotateX(90deg)`,
+          transformOrigin: 'top center',
+        }} />
+        {/* Bottom */}
+        <div style={{
+          position: 'absolute',
+          bottom: 0, left: 0, right: 0,
+          height: `${DEPTH}px`,
+          background: alumGrad,
+          transform: `translateY(${DEPTH / 2}px) rotateX(-90deg)`,
+          transformOrigin: 'bottom center',
+        }} />
+        {/* Left */}
+        <div style={{
+          position: 'absolute',
+          left: 0, top: 0, bottom: 0,
+          width: `${DEPTH}px`,
+          background: alumGrad,
+          transform: `translateX(-${DEPTH / 2}px) rotateY(-90deg)`,
+          transformOrigin: 'left center',
+        }} />
+        {/* Right */}
+        <div style={{
+          position: 'absolute',
+          right: 0, top: 0, bottom: 0,
+          width: `${DEPTH}px`,
+          background: alumGrad,
+          transform: `translateX(${DEPTH / 2}px) rotateY(90deg)`,
+          transformOrigin: 'right center',
+        }} />
+
+        {/* Drop shadow plane */}
+        <div style={{
+          position: 'absolute',
+          bottom: '-28px', left: '8%', right: '8%',
+          height: '36px',
+          background: 'radial-gradient(ellipse at center, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.08) 55%, transparent 75%)',
+          transform: `translateZ(-${DEPTH / 2 + 2}px) rotateX(90deg)`,
+          transformOrigin: 'top center',
+          pointerEvents: 'none',
+        }} />
+      </div>
+
+      {/* Screenshot dots */}
+      {screenshots.length > 1 && (
+        <div style={{
+          display: 'flex', gap: '6px',
+          marginTop: '12px',
+          justifyContent: 'center',
+        }}>
+          {screenshots.map((_, i) => (
+            <div key={i} style={{
+              width: i === imgIndex ? '16px' : '6px',
+              height: '6px',
+              borderRadius: '3px',
+              backgroundColor: i === imgIndex ? '#0071E3' : '#C7C7CC',
+              transition: 'all 0.3s ease',
+            }} />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}

@@ -4,53 +4,16 @@ import { useNavigate } from 'react-router-dom';
 import TabletViewer from '../components/TabletViewer';
 import { useLang, t } from '../contexts/LangContext';
 
-import screenshotFocusfast from '../assets/images/screenshots/focusfast.png';
-import screenshotMapbox from '../assets/images/screenshots/mapbox_weather.png';
-import screenshotGuidor from '../assets/images/screenshots/guidor.png';
+import guidorImg1 from '../assets/guidor/image.png';
+import guidorImg2 from '../assets/guidor/image copy.png';
+import guidorImg3 from '../assets/guidor/image copy 2.png';
+import guidorImg4 from '../assets/guidor/image copy 3.png';
 import meowTubeIcon from '../assets/meowTube/appLogo.png';
 import meowTubeHome from '../assets/meowTube/AppHomePage.png';
 import meowTubeSecond from '../assets/meowTube/AppSecondPage.png';
 
 /* ─── Bilingual app data ─────────────────────────────────────────── */
 const APPS = [
-  {
-    id: 'focusfast',
-    name: 'FocusFast',
-    subtitle: { fr: 'Application vidéo courte', en: 'Short-Video iOS App' },
-    description: { fr: 'Application iOS de type TikTok avec un feed vertical de vidéos courtes. Architecture MVVM avec AVFoundation pour la lecture vidéo haute performance, système de catégories, commentaires/notes et upload vidéo.', en: 'TikTok-style iOS app with a swipeable vertical video feed. MVVM architecture using AVFoundation for high-performance playback, category system, comments/ratings and video upload.' },
-    features: { fr: ['Feed vertical de vidéos', 'Architecture MVVM', 'Catégories & filtres', 'Commentaires & notes', 'Upload vidéo'], en: ['Swipeable vertical video feed', 'MVVM Architecture', 'Categories & filters', 'Comments & ratings', 'Video upload'] },
-    price: { fr: 'Projet personnel', en: 'Personal project' },
-    category: { fr: 'Social & Vidéo', en: 'Social & Video' },
-    icon: 'https://cdn-icons-png.flaticon.com/512/6295/6295532.png',
-    screenshots: [
-      screenshotFocusfast,
-      screenshotFocusfast,
-      screenshotFocusfast
-    ],
-    tech: ['Swift', 'MVVM', 'AVFoundation', 'UIKit'],
-    featured: true,
-    isNew: false,
-    rating: 4.8,
-  },
-  {
-    id: 'mapbox-weather',
-    name: 'MapboxMaps Weather',
-    subtitle: { fr: 'Couches météo multicouches', en: 'Multi-layer weather mapping' },
-    description: { fr: 'Intégration de couches météo multiples sur MapboxMaps SDK v10+ pour Skyconseil. Filtres dynamiques, expressions de zoom, gestion de visibilité par piste avec compatibilité SDK legacy et v10+.', en: 'Multiple weather overlay layers on MapboxMaps SDK v10+ for Skyconseil. Dynamic filters, zoom expressions, per-track visibility management with backward compatibility between legacy SDK and v10+.' },
-    features: { fr: ['Couches météo multiples', 'Filtres dynamiques JSON', 'Expressions de zoom', 'Compatibilité legacy/v10+', 'Documentation technique'], en: ['Multiple weather layers', 'Dynamic JSON filters', 'Zoom expressions', 'Legacy/v10+ compatibility', 'Technical documentation'] },
-    price: { fr: 'Skyconseil – Alternance', en: 'Skyconseil – Work-Study' },
-    category: { fr: 'Cartographie & Météo', en: 'Mapping & Weather' },
-    icon: 'https://cdn-icons-png.flaticon.com/512/5341/5341569.png',
-    screenshots: [
-      screenshotMapbox,
-      screenshotMapbox,
-      screenshotMapbox
-    ],
-    tech: ['Swift', 'MapboxMaps SDK v10+', 'JSON', 'iOS'],
-    featured: true,
-    isNew: true,
-    rating: 4.9,
-  },
   {
     id: 'guidor',
     name: 'Guidor',
@@ -60,15 +23,12 @@ const APPS = [
     price: { fr: 'Stage – Le Facteur Humain', en: 'Internship – Le Facteur Humain' },
     category: { fr: 'Embarqué', en: 'Embedded' },
     icon: 'https://cdn-icons-png.flaticon.com/512/2387/2387635.png',
-    screenshots: [
-      screenshotGuidor,
-      screenshotGuidor,
-      screenshotGuidor
-    ],
+    screenshots: [guidorImg1, guidorImg2, guidorImg3, guidorImg4],
     tech: ['C++', 'Arduino', 'Embedded'],
-    featured: false,
+    featured: true,
     isNew: false,
     rating: 4.5,
+    externalLink: 'https://www.guidor.fr/',
   },
   {
     id: 'meowtube',
@@ -145,6 +105,7 @@ const AppCard: React.FC<{ app: typeof APPS[0]; lang: 'fr' | 'en'; ui: typeof UI[
 const AppModal: React.FC<{ app: typeof APPS[0]; lang: 'fr' | 'en'; ui: typeof UI['fr']; onClose: () => void }> = ({ app, lang, ui, onClose }) => {
   const navigate = useNavigate();
   const hasLanding = 'landingPage' in app && typeof (app as any).landingPage === 'string';
+  const hasExternal = 'externalLink' in app && typeof (app as any).externalLink === 'string';
 
   return (
   <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center p-0 md:p-4">
@@ -184,6 +145,13 @@ const AppModal: React.FC<{ app: typeof APPS[0]; lang: 'fr' | 'en'; ui: typeof UI
               className="flex-shrink-0 mt-1 bg-[#E60000] text-white text-[12px] font-semibold px-4 py-1.5 rounded-full hover:bg-[#CC0000] transition-colors cursor-pointer">
               {lang === 'fr' ? 'Découvrir' : 'Discover'}
             </button>
+          ) : hasExternal ? (
+            <a
+              href={(app as any).externalLink}
+              target="_blank" rel="noopener noreferrer"
+              className="flex-shrink-0 mt-1 bg-[#0071E3] text-white text-[12px] font-semibold px-4 py-1.5 rounded-full hover:bg-[#0077ED] transition-colors cursor-pointer">
+              {lang === 'fr' ? 'Voir' : 'Visit'}
+            </a>
           ) : (
             <span className="flex-shrink-0 mt-1 bg-[#0071E3] text-white text-[12px] font-semibold px-4 py-1.5 rounded-full hover:bg-[#0077ED] transition-colors cursor-pointer">
               {ui.seeMore}

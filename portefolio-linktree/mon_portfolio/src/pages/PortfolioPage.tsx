@@ -10,6 +10,9 @@ import guidorImg2 from '../assets/guidor/imageApp2.png';
 import meowTubeIcon from '../assets/meowTube/appLogo.png';
 import meowTubeHome from '../assets/meowTube/AppHomePage.png';
 import meowTubeSecond from '../assets/meowTube/AppSecondPage.png';
+import localShortIcon from '../assets/localShort/logo.png';
+import localShortScreen1 from '../assets/localShort/screen1.PNG';
+import localShortScreen2 from '../assets/localShort/screen2.PNG';
 
 /* ─── Bilingual app data ─────────────────────────────────────────── */
 const APPS = [
@@ -44,6 +47,22 @@ const APPS = [
     isNew: true,
     rating: 4.9,
     landingPage: '/meowtube',
+  },
+  {
+    id: 'localshort',
+    name: 'LocalShort',
+    subtitle: { fr: 'Lecteur de vidéos courtes en local', en: 'Offline short-form video player' },
+    description: { fr: 'LocalShort est une application iOS permettant de consulter vos vidéos courtes (TikTok, Reels, Shorts) stockées localement sur votre appareil. Sans connexion, sans algorithme, avec un respect total de votre vie privée.', en: 'LocalShort is an iOS app for browsing your short-form videos (TikTok, Reels, Shorts) stored locally on your device. No internet, no algorithm, with total privacy.' },
+    features: { fr: ['Lecture hors ligne totale', 'Zéro donnée transmise', 'Import depuis la galerie', 'Interface fluide & rapide', 'Lecture en boucle', 'Aucun algorithme'], en: ['Fully offline playback', 'Zero data transmitted', 'Import from gallery', 'Smooth & fast interface', 'Loop playback', 'No algorithm'] },
+    price: { fr: 'Projet personnel', en: 'Personal project' },
+    category: { fr: 'Vidéo & Productivité', en: 'Video & Productivity' },
+    icon: localShortIcon,
+    screenshots: [localShortScreen1, localShortScreen2],
+    tech: ['Swift', 'SwiftUI', 'AVFoundation', 'iOS'],
+    featured: true,
+    isNew: true,
+    rating: 4.7,
+    landingPage: '/local-short',
   },
 ];
 

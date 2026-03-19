@@ -19,6 +19,8 @@ jobs:
 
       - name: Install and Build 🔧
         working-directory: ./portefolio-linktree/mon_portfolio
+        env:
+          VITE_BASE: /portefolio-linktree.io/
         run: |
           npm install
           npx tsc -b

@@ -26,6 +26,8 @@ jobs:
 
       - name: Build
         working-directory: ./portefolio-linktree/mon_portfolio
+        env:
+          VITE_BASE: /
         run: npm run build
 
       - name: Deploy via SCP

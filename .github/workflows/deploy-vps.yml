@@ -1,0 +1,48 @@
+name: Deploy to sharik.fr
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: portefolio-linktree/mon_portfolio/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ./portefolio-linktree/mon_portfolio
+        run: npm ci
+
+      - name: Build
+        working-directory: ./portefolio-linktree/mon_portfolio
+        run: npm run build
+
+      - name: Deploy via SCP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: 51.91.125.99
+          username: ubuntu
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          source: portefolio-linktree/mon_portfolio/dist/*
+          target: /var/www/sharik.fr
+          strip_components: 3
+          rm: true
+
+      - name: Fix permissions
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 51.91.125.99
+          username: ubuntu
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          script: sudo chown -R www-data:www-data /var/www/sharik.fr

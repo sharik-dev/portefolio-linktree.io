@@ -21,7 +21,7 @@ const LinkTreePage: React.FC = () => {
         {/* Avatar */}
         <div className="w-24 h-24 rounded-full overflow-hidden border border-black/[0.08] dark:border-white/[0.08] shadow-lg mb-5">
           <img
-            src="https://media.licdn.com/dms/image/v2/D4E03AQGqJf1Y0BjJrA/profile-displayphoto-shrink_400_400/B4EZbEjXXqHIAg-/0/1747054327832?e=1773878400&v=beta&t=cYeI6lNTlNILW_oHrEfY7npeU1RSY8yge91WdLIA0Iw"
+            src="./assets/pf.png"
             alt="Sharik Mohamed"
             className="w-full h-full object-cover"
           />

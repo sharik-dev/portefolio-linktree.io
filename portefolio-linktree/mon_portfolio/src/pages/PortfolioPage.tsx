@@ -31,7 +31,7 @@ const APPS = [
   },
   {
     id: 'meowtube',
-    name: 'Meow-Toob',
+    name: 'Meow-Tube',
     subtitle: { fr: 'Vidéo sans distraction, axé productivité', en: 'Distraction-free, productivity-first video' },
     description: { fr: 'Application iOS de consultation de contenu multimédia type YouTube, sans Shorts, sans publicités et sans timer de temps passé. Conçue pour une consommation saine et productive de vidéos.', en: 'iOS app for browsing YouTube-style content — no Shorts, no ads, no screen-time tracking. Built for focused, healthy video consumption.' },
     features: { fr: ['Zéro publicité', 'Sans vidéos courtes', 'Aucun suivi du temps', 'Interface épurée', 'Axé productivité'], en: ['Zero ads', 'No short-form content', 'No time tracking', 'Clean interface', 'Productivity focused'] },

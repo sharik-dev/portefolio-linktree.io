@@ -1,13 +1,13 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { useLang } from '../contexts/LangContext';
 
-import appLogo from '../assets/meowTube/appLogo.png';
-import appHome from '../assets/meowTube/AppHomePage.png';
-import appSecond from '../assets/meowTube/AppSecondPage.png';
-import redCat from '../assets/meowTube/Red Cat Illustration.png';
-import redDecoration from '../assets/meowTube/redCatDecoration.png';
+import appLogo from '../assets/islamic daily quote/logo.png';
+import firstImage from '../assets/islamic daily quote/firstImage.png';
+import appImage from '../assets/islamic daily quote/image.png';
+import secondImage from '../assets/islamic daily quote/second image.png';
+import thirdImage from '../assets/islamic daily quote/thirst image.png';
 
 /* ─── Contact form ────────────────────────────────────────────── */
 const CONTACT_EMAIL = 'VOTRE_EMAIL@exemple.com'; // TODO: remplace par ton adresse
@@ -15,50 +15,58 @@ const CONTACT_EMAIL = 'VOTRE_EMAIL@exemple.com'; // TODO: remplace par ton adres
 /* ─── UI strings ──────────────────────────────────────────────── */
 const UI = {
   fr: {
-    navFeatures: 'Fonctionnalités', navCgu: 'CGU', navContact: 'Contact', navBack: 'Retour',
+    navFeatures: 'Fonctionnalités', navQuotes: 'Citations', navContact: 'Contact', navBack: 'Retour',
     badge: 'Disponible sur AppStore',
-    heroTitle: 'Regardez.', heroAccent: 'Sans dérive.',
-    heroSub: "Meow-Tube vous donne accès à du contenu vidéo de qualité — sans publicités, sans Shorts, sans chronomètre. Juste ce que vous voulez regarder.",
+    heroTitle: 'Nourris ton', heroAccent: 'cœur.', heroTitle2: 'Chaque jour.',
+    heroSub: "Une citation islamique authentique chaque jour — hadith du Prophète ﷺ, versets coraniques réconfortants, paroles de sagesse pour illuminer votre quotidien.",
     ctaBeta: 'Rejoindre la bêta', ctaFeatures: 'Voir les fonctionnalités',
-    stats: [{ value: '0', label: 'Publicités' }, { value: '0', label: 'Shorts / Reels' }, { value: '∞', label: 'Productivité' }],
-    featuresEyebrow: 'Pourquoi Meow-Tube', featuresTitle: 'Conçu pour votre attention.',
-    featuresSub: "Chaque fonctionnalité est pensée pour vous garder dans le flux, pas pour vous y piéger.",
-    screensEyebrow: 'Aperçu', screensTitle: "L'interface, simple.",
+    stats: [{ value: '100+', label: 'Citations vérifiées' }, { value: '2', label: 'Langues (AR / FR)' }, { value: '∞', label: 'Sérénité' }],
+    quotesEyebrow: 'Paroles de sagesse', quotesTitle: 'La citation du jour',
+    quotesSub: 'Des paroles authentiques pour guider chaque instant de votre vie.',
+    featuresEyebrow: 'Pourquoi Islamic Daily Quote', featuresTitle: "Conçu pour l'âme.",
+    featuresSub: "Chaque fonctionnalité est pensée pour enrichir votre quotidien spirituel.",
+    screensEyebrow: 'Aperçu', screensTitle: "L'expérience, épurée.",
     missionEyebrow: 'Notre mission',
-    missionTitle: 'La vidéo devrait vous servir.', missionAccent: "Pas l'inverse.",
-    missionText: "Les plateformes vidéo actuelles sont conçues pour maximiser votre temps d'écran. Meow-Tube renverse cette logique : vous regardez ce que vous voulez, quand vous voulez, sans algorithme qui vous retient.",
+    missionTitle: 'La sagesse islamique,', missionAccent: 'à portée de main.',
+    missionText: "Dans un monde connecté et souvent agité, nous voulons offrir un espace de sérénité — un instant quotidien pour se reconnecter à sa foi, puiser dans la sagesse du Prophète ﷺ et des versets coraniques, et repartir avec le cœur apaisé.",
+    missionVerse: '« Certes, c\'est par le rappel d\'Allah que les cœurs se tranquillisent. »',
+    missionVerseSource: '— Coran, Ar-Ra\'d (13:28)',
     legalEyebrow: 'Légal & Transparence', legalTitle: 'Documents officiels',
     contactEyebrow: 'Contact', contactTitle: 'Une question ?',
-    contactSub: "Bêta, partenariat, bug report — on vous répond.",
+    contactSub: "Bêta, suggestion de citation, partenariat — on vous répond.",
     formName: 'Nom', formEmail: 'Email', formSubject: 'Sujet', formMsg: 'Message',
-    formNamePh: 'Votre nom', formSubjectPh: 'Bêta, question, partenariat...', formMsgPh: 'Votre message...',
+    formNamePh: 'Votre nom', formSubjectPh: 'Bêta, suggestion, question...', formMsgPh: 'Votre message...',
     formSend: 'Envoyer le message', formSending: 'Envoi en cours...',
-    successTitle: 'Message envoyé !', successSub: 'On vous répondra dès que possible.',
+    successTitle: 'Message envoyé !', successSub: 'On vous répondra dès que possible. Jazakallahu khayran.',
     successBtn: 'Envoyer un autre message',
     errorMsg: "Une erreur est survenue. Réessayez ou contactez-nous directement.",
     footerCgu: 'CGU', footerPrivacy: 'Confidentialité', footerMentions: 'Mentions légales',
     footerRights: 'Tous droits réservés.',
   },
   en: {
-    navFeatures: 'Features', navCgu: 'TOS', navContact: 'Contact', navBack: 'Back',
+    navFeatures: 'Features', navQuotes: 'Quotes', navContact: 'Contact', navBack: 'Back',
     badge: 'Available on AppStore',
-    heroTitle: 'Watch.', heroAccent: 'Without drifting.',
-    heroSub: "Meow-Tube gives you access to quality video content — no ads, no Shorts, no screen timer. Just what you want to watch.",
+    heroTitle: 'Nourish your', heroAccent: 'heart.', heroTitle2: 'Every day.',
+    heroSub: "An authentic Islamic quote every day — hadith of the Prophet ﷺ, comforting Quranic verses, words of wisdom to illuminate your daily life.",
     ctaBeta: 'Join the beta', ctaFeatures: 'See features',
-    stats: [{ value: '0', label: 'Ads' }, { value: '0', label: 'Shorts / Reels' }, { value: '∞', label: 'Productivity' }],
-    featuresEyebrow: 'Why Meow-Tube', featuresTitle: 'Built for your attention.',
-    featuresSub: "Every feature is designed to keep you in the flow, not trap you in it.",
-    screensEyebrow: 'Preview', screensTitle: 'Simple interface.',
+    stats: [{ value: '100+', label: 'Verified quotes' }, { value: '2', label: 'Languages (AR / EN)' }, { value: '∞', label: 'Serenity' }],
+    quotesEyebrow: 'Words of wisdom', quotesTitle: 'Quote of the day',
+    quotesSub: 'Authentic words to guide every moment of your life.',
+    featuresEyebrow: 'Why Islamic Daily Quote', featuresTitle: 'Built for the soul.',
+    featuresSub: "Every feature is designed to enrich your daily spiritual life.",
+    screensEyebrow: 'Preview', screensTitle: 'Pure experience.',
     missionEyebrow: 'Our mission',
-    missionTitle: 'Video should work for you.', missionAccent: 'Not against you.',
-    missionText: "Today's video platforms are designed to maximize your screen time. Meow-Tube flips this logic: you watch what you want, when you want, without an algorithm keeping you hooked.",
+    missionTitle: 'Islamic wisdom,', missionAccent: 'at your fingertips.',
+    missionText: "In a connected and often hectic world, we want to offer a space of serenity — a daily moment to reconnect with your faith, draw from the wisdom of the Prophet ﷺ and Quranic verses, and move forward with a peaceful heart.",
+    missionVerse: '"Verily, it is in the remembrance of Allah that hearts find rest."',
+    missionVerseSource: '— Quran, Ar-Ra\'d (13:28)',
     legalEyebrow: 'Legal & Transparency', legalTitle: 'Official documents',
     contactEyebrow: 'Contact', contactTitle: 'A question?',
-    contactSub: "Beta, partnership, bug report — we'll get back to you.",
+    contactSub: "Beta, quote suggestion, partnership — we'll get back to you.",
     formName: 'Name', formEmail: 'Email', formSubject: 'Subject', formMsg: 'Message',
-    formNamePh: 'Your name', formSubjectPh: 'Beta, question, partnership...', formMsgPh: 'Your message...',
+    formNamePh: 'Your name', formSubjectPh: 'Beta, suggestion, question...', formMsgPh: 'Your message...',
     formSend: 'Send message', formSending: 'Sending...',
-    successTitle: 'Message sent!', successSub: "We'll get back to you as soon as possible.",
+    successTitle: 'Message sent!', successSub: "We'll get back to you as soon as possible. Jazakallahu khayran.",
     successBtn: 'Send another message',
     errorMsg: "An error occurred. Please try again or contact us directly.",
     footerCgu: 'TOS', footerPrivacy: 'Privacy', footerMentions: 'Legal notice',
@@ -66,17 +74,69 @@ const UI = {
   },
 };
 
-/* ─── Features ────────────────────────────────────────────────── */
-const FEATURES = [
-  { icon: '🚫', title: { fr: 'Zéro publicité', en: 'Zero ads' }, desc: { fr: 'Regardez ce qui vous intéresse sans interruption. Aucune pub, jamais.', en: 'Watch what you care about without interruption. No ads, ever.' } },
-  { icon: '⏱️', title: { fr: 'Sans timer intrusif', en: 'No intrusive timer' }, desc: { fr: 'Votre temps vous appartient. Pas de notification culpabilisante.', en: 'Your time is yours. No guilt-tripping notifications.' } },
-  { icon: '📵', title: { fr: 'Adieu les Shorts', en: 'Goodbye Shorts' }, desc: { fr: 'Fini le scroll infini de vidéos courtes. Du contenu long, de qualité.', en: 'No more infinite short-video scrolling. Long-form, quality content only.' } },
-  { icon: '🧠', title: { fr: 'Axé productivité', en: 'Productivity-first' }, desc: { fr: 'Interface pensée pour rester concentré sur ce qui compte vraiment.', en: 'Interface designed to keep you focused on what truly matters.' } },
-  { icon: '🎯', title: { fr: 'Contenu ciblé', en: 'Targeted content' }, desc: { fr: 'Trouvez rapidement les vidéos qui enrichissent votre quotidien.', en: 'Quickly find videos that enrich your daily life.' } },
-  { icon: '🔒', title: { fr: 'Vie privée respectée', en: 'Privacy respected' }, desc: { fr: 'Aucun profil publicitaire. Aucune donnée vendue à des tiers.', en: 'No ad profiles. No data sold to third parties.' } },
+/* ─── Hadith & citations ──────────────────────────────────────── */
+const QUOTES = [
+  {
+    arabic: 'إِنَّ مَعَ الْعُسْرِ يُسْرًا',
+    text: { fr: 'Car avec la difficulté vient la facilité.', en: 'For indeed, with hardship comes ease.' },
+    source: { fr: 'Coran, Sourate Al-Inshirah (94:6)', en: 'Quran, Surah Al-Inshirah (94:6)' },
+    category: { fr: 'Coran', en: 'Quran' },
+  },
+  {
+    arabic: 'لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا',
+    text: { fr: "Allah ne charge aucune âme au-delà de sa capacité.", en: 'Allah does not burden a soul beyond that it can bear.' },
+    source: { fr: 'Coran, Sourate Al-Baqara (2:286)', en: 'Quran, Surah Al-Baqara (2:286)' },
+    category: { fr: 'Coran', en: 'Quran' },
+  },
+  {
+    arabic: 'خَيْرُ النَّاسِ أَنْفَعُهُمْ لِلنَّاسِ',
+    text: { fr: 'Le meilleur des hommes est celui qui est le plus utile aux autres.', en: 'The best of people are those who are most beneficial to others.' },
+    source: { fr: 'Hadith – Rapporté par Al-Bayhaqi', en: 'Hadith – Reported by Al-Bayhaqi' },
+    category: { fr: 'Hadith', en: 'Hadith' },
+  },
+  {
+    arabic: 'إِنَّ اللَّهَ مَعَ الصَّابِرِينَ',
+    text: { fr: 'Certes, Allah est avec les patients.', en: 'Indeed, Allah is with the patient.' },
+    source: { fr: 'Coran, Sourate Al-Baqara (2:153)', en: 'Quran, Surah Al-Baqara (2:153)' },
+    category: { fr: 'Coran', en: 'Quran' },
+  },
+  {
+    arabic: 'الْمُؤْمِنُ الْقَوِيُّ خَيْرٌ وَأَحَبُّ إِلَى اللَّهِ مِنَ الْمُؤْمِنِ الضَّعِيفِ',
+    text: { fr: "Le croyant fort est meilleur et plus aimé d'Allah que le croyant faible.", en: 'The strong believer is better and more beloved to Allah than the weak believer.' },
+    source: { fr: 'Hadith – Sahih Muslim', en: 'Hadith – Sahih Muslim' },
+    category: { fr: 'Hadith', en: 'Hadith' },
+  },
+  {
+    arabic: 'تَبَسُّمُكَ فِي وَجْهِ أَخِيكَ صَدَقَةٌ',
+    text: { fr: 'Ton sourire à ton frère est une aumône.', en: 'Your smile to your brother is a charity.' },
+    source: { fr: 'Hadith – Rapporté par At-Tirmidhi', en: 'Hadith – Reported by At-Tirmidhi' },
+    category: { fr: 'Hadith', en: 'Hadith' },
+  },
+  {
+    arabic: 'وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا',
+    text: { fr: 'Celui qui craint Allah, Il lui ménagera une issue favorable.', en: 'Whoever fears Allah, He will make for him a way out.' },
+    source: { fr: 'Coran, Sourate At-Talaq (65:2)', en: 'Quran, Surah At-Talaq (65:2)' },
+    category: { fr: 'Coran', en: 'Quran' },
+  },
+  {
+    arabic: 'إِنَّ اللَّهَ لَا يُضِيعُ أَجْرَ الْمُحْسِنِينَ',
+    text: { fr: 'Certes, Allah ne laisse pas perdre la récompense de ceux qui font le bien.', en: 'Indeed, Allah does not waste the reward of the good-doers.' },
+    source: { fr: 'Coran, Sourate At-Tawba (9:120)', en: 'Quran, Surah At-Tawba (9:120)' },
+    category: { fr: 'Coran', en: 'Quran' },
+  },
 ];
 
-/* ─── Legal sections ──────────────────────────────────────────── */
+/* ─── Features ────────────────────────────────────────────────── */
+const FEATURES = [
+  { icon: '📖', title: { fr: 'Citation du jour', en: 'Quote of the day' }, desc: { fr: 'Une parole spirituelle chaque jour pour commencer votre journée avec foi et sérénité.', en: 'A spiritual quote every day to start your morning with faith and serenity.' } },
+  { icon: '🌙', title: { fr: 'Hadith authentiques', en: 'Authentic hadith' }, desc: { fr: 'Des hadiths vérifiés et sourcés, issus des recueils les plus fiables de la tradition.', en: 'Verified and sourced hadith, drawn from the most reliable classical collections.' } },
+  { icon: '💚', title: { fr: 'Versets coraniques', en: 'Quranic verses' }, desc: { fr: 'Des versets réconfortants avec leur traduction en français pour nourrir votre cœur.', en: 'Comforting verses with their translation to nourish your heart.' } },
+  { icon: '🔔', title: { fr: 'Rappel quotidien', en: 'Daily reminder' }, desc: { fr: 'Configurez une notification douce pour ne jamais manquer votre rappel spirituel.', en: 'Set a gentle notification so you never miss your daily spiritual reminder.' } },
+  { icon: '🌍', title: { fr: 'Bilingue Arabe / FR', en: 'Bilingual Arabic / EN' }, desc: { fr: "Chaque citation s'affiche en arabe avec sa translittération et traduction française.", en: 'Every quote displays in Arabic with transliteration and English translation.' } },
+  { icon: '🤍', title: { fr: 'Favoris & partage', en: 'Favorites & sharing' }, desc: { fr: 'Sauvegardez les citations qui vous touchent et partagez-les avec vos proches.', en: 'Save the quotes that move you and share them easily with your loved ones.' } },
+];
+
+/* ─── Legal ───────────────────────────────────────────────────── */
 const LEGAL = {
   cgu: {
     title: { fr: "Conditions Générales d'Utilisation", en: 'Terms of Service' },
@@ -84,7 +144,7 @@ const LEGAL = {
       fr: `**Dernière mise à jour : mars 2026**
 
 **1. Objet**
-Les présentes CGU régissent l'utilisation de l'application mobile Meow-Tube.
+Les présentes CGU régissent l'utilisation de l'application mobile Islamic Daily Quote.
 
 **2. Accès à l'Application**
 L'Application est accessible gratuitement. L'utilisateur s'engage à ne pas l'utiliser à des fins illicites.
@@ -92,18 +152,18 @@ L'Application est accessible gratuitement. L'utilisateur s'engage à ne pas l'ut
 **3. Propriété intellectuelle**
 L'ensemble des éléments constituant l'Application est la propriété exclusive du développeur.
 
-**4. Limitation de responsabilité**
-L'Application est fournie « en l'état », sans garantie d'aucune sorte.
+**4. Contenu religieux**
+Le contenu spirituel est sélectionné avec soin à partir de sources reconnues. L'Application décline toute responsabilité quant à une interprétation erronée du contenu.
 
-**5. Modification des CGU**
-Le développeur se réserve le droit de modifier les présentes CGU à tout moment.
+**5. Limitation de responsabilité**
+L'Application est fournie « en l'état », sans garantie d'aucune sorte.
 
 **6. Droit applicable**
 Les présentes CGU sont soumises au droit français.`,
       en: `**Last updated: March 2026**
 
 **1. Purpose**
-These Terms govern the use of the Meow-Tube mobile application.
+These Terms govern the use of the Islamic Daily Quote mobile application.
 
 **2. Access**
 The app is free to use. Users agree not to use it for unlawful purposes.
@@ -111,11 +171,11 @@ The app is free to use. Users agree not to use it for unlawful purposes.
 **3. Intellectual property**
 All elements of the app are the exclusive property of the developer.
 
-**4. Limitation of liability**
-The app is provided "as is", without warranty of any kind.
+**4. Religious content**
+Spiritual content is carefully selected from recognized sources. The app disclaims responsibility for any misinterpretation of content.
 
-**5. Amendments**
-The developer reserves the right to modify these terms at any time.
+**5. Limitation of liability**
+The app is provided "as is", without warranty of any kind.
 
 **6. Governing law**
 These terms are governed by French law.`,
@@ -127,13 +187,13 @@ These terms are governed by French law.`,
       fr: `**Dernière mise à jour : mars 2026**
 
 **1. Collecte de données**
-Meow-Tube ne collecte aucune donnée personnelle à des fins publicitaires ou de profilage.
+Islamic Daily Quote ne collecte aucune donnée personnelle à des fins publicitaires ou de profilage.
 
 **2. Données techniques**
 Des données techniques anonymisées peuvent être collectées pour améliorer les performances.
 
-**3. Données de connexion**
-Vos identifiants sont traités directement par les fournisseurs concernés.
+**3. Notifications**
+Si vous activez les notifications, aucune donnée personnelle n'est transmise à des tiers.
 
 **4. Cookies et traceurs**
 L'Application n'utilise pas de cookies à des fins de ciblage publicitaire.
@@ -143,13 +203,13 @@ Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de
       en: `**Last updated: March 2026**
 
 **1. Data collection**
-Meow-Tube does not collect personal data for advertising or profiling.
+Islamic Daily Quote does not collect personal data for advertising or profiling.
 
 **2. Technical data**
 Anonymized technical data may be collected to improve performance.
 
-**3. Login data**
-Your credentials are processed directly by the relevant service providers.
+**3. Notifications**
+If you enable notifications, no personal data is shared with third parties.
 
 **4. Cookies**
 The app does not use cookies for advertising targeting.
@@ -162,7 +222,7 @@ Under GDPR, you have the right to access, rectify, and delete your data.`,
     title: { fr: 'Mentions Légales', en: 'Legal Notice' },
     content: {
       fr: `**Éditeur de l'Application**
-Meow-Tube est développée et éditée par un développeur indépendant.
+Islamic Daily Quote est développée et éditée par un développeur indépendant.
 
 **Hébergement**
 Distribuée via l'App Store d'Apple Inc., One Apple Park Way, Cupertino, CA 95014, USA.
@@ -173,7 +233,7 @@ Tous droits réservés. Toute reproduction est interdite sans autorisation préa
 **Contact**
 Utilisez le formulaire de contact disponible sur cette page.`,
       en: `**Publisher**
-Meow-Tube is developed and published by an independent developer.
+Islamic Daily Quote is developed and published by an independent developer.
 
 **Hosting**
 Distributed via Apple Inc. App Store, One Apple Park Way, Cupertino, CA 95014, USA.
@@ -210,15 +270,24 @@ const SimpleMarkdown: React.FC<{ text: string }> = ({ text }) => {
 };
 
 /* ─── Page ────────────────────────────────────────────────────── */
-const MeowTubeLandingPage: React.FC = () => {
+const IslamicDailyQuoteLandingPage: React.FC = () => {
   const navigate = useNavigate();
   const { lang, toggleLang } = useLang();
   const ui = UI[lang];
   const [activeLegal, setActiveLegal] = useState<'cgu' | 'privacy' | 'mentions' | null>(null);
+  const [activeQuote, setActiveQuote] = useState(0);
   const [formState, setFormState] = useState({ name: '', email: '', subject: '', message: '' });
   const [formStatus, setFormStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
   const contactRef = useRef<HTMLElement>(null);
   const featuresRef = useRef<HTMLElement>(null);
+  const quotesRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveQuote(i => (i + 1) % QUOTES.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   const scrollTo = (ref: React.RefObject<HTMLElement | null>) => {
     ref.current?.scrollIntoView({ behavior: 'smooth' });
@@ -234,7 +303,7 @@ const MeowTubeLandingPage: React.FC = () => {
         body: JSON.stringify({
           name: formState.name,
           email: formState.email,
-          subject: formState.subject || 'Contact Meow-Tube',
+          subject: formState.subject || 'Contact Islamic Daily Quote',
           message: formState.message,
         }),
       });
@@ -250,20 +319,20 @@ const MeowTubeLandingPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0D0D0D] text-white overflow-x-hidden">
+    <div className="min-h-screen bg-[#070D09] text-white overflow-x-hidden">
 
       {/* ── Navbar ─────────────────────────────────────────────── */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0D0D0D]/80 backdrop-blur-xl border-b border-white/[0.06]">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#070D09]/80 backdrop-blur-xl border-b border-white/[0.06]">
         <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src={appLogo} alt="Meow-Tube" className="w-8 h-8 rounded-lg" />
+            <img src={appLogo} alt="Islamic Daily Quote" className="w-8 h-8 rounded-xl" />
             <span className="text-lg font-bold tracking-tight text-white">
-              Meow<span className="text-[#E60000]">-Tube</span>
+              Islamic <span className="text-[#22C55E]">Daily Quote</span>
             </span>
           </div>
           <div className="hidden md:flex items-center gap-6 text-sm text-white/60">
             <button onClick={() => scrollTo(featuresRef)} className="hover:text-white transition-colors">{ui.navFeatures}</button>
-            <button onClick={() => setActiveLegal('cgu')} className="hover:text-white transition-colors">{ui.navCgu}</button>
+            <button onClick={() => scrollTo(quotesRef)} className="hover:text-white transition-colors">{ui.navQuotes}</button>
             <button onClick={() => scrollTo(contactRef)} className="hover:text-white transition-colors">{ui.navContact}</button>
           </div>
           <div className="flex items-center gap-3">
@@ -287,11 +356,12 @@ const MeowTubeLandingPage: React.FC = () => {
       {/* ── Hero ───────────────────────────────────────────────── */}
       <section className="relative min-h-screen flex items-center justify-center px-6 pt-20 pb-16 overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-[#E60000]/10 blur-[120px]" />
-          <div className="absolute top-1/4 right-1/4 w-[300px] h-[300px] rounded-full bg-[#FF4444]/5 blur-[80px]" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] rounded-full bg-[#16A34A]/10 blur-[130px]" />
+          <div className="absolute top-1/4 right-1/4 w-[300px] h-[300px] rounded-full bg-[#4ADE80]/5 blur-[80px]" />
+          <div className="absolute bottom-1/4 left-1/4 w-[250px] h-[250px] rounded-full bg-[#C9A84C]/5 blur-[80px]" />
         </div>
-        <img src={redDecoration} alt="" aria-hidden
-          className="absolute right-0 bottom-0 w-72 md:w-96 opacity-20 pointer-events-none select-none" />
+        <div className="absolute inset-0 pointer-events-none opacity-[0.03]"
+          style={{ backgroundImage: 'radial-gradient(circle, #22C55E 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
 
         <div className="relative z-10 text-center max-w-3xl mx-auto">
           <motion.div
@@ -300,26 +370,34 @@ const MeowTubeLandingPage: React.FC = () => {
             className="flex justify-center mb-8"
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-[#E60000]/30 rounded-[28px] blur-2xl scale-110" />
-              <img src={appLogo} alt="Meow-Tube" className="relative w-28 h-28 rounded-[28px] shadow-2xl" />
+              <div className="absolute inset-0 bg-[#16A34A]/40 rounded-[28px] blur-2xl scale-110" />
+              <img src={appLogo} alt="Islamic Daily Quote" className="relative w-28 h-28 rounded-[28px] shadow-2xl object-cover" />
             </div>
           </motion.div>
 
           <motion.div initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.15, duration: 0.6 }}>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#E60000]/10 border border-[#E60000]/20 text-[#FF4444] text-xs font-semibold mb-6 tracking-widest uppercase">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#E60000] animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#16A34A]/10 border border-[#16A34A]/20 text-[#4ADE80] text-xs font-semibold mb-6 tracking-widest uppercase">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E] animate-pulse" />
               {ui.badge}
             </div>
           </motion.div>
+
+          <motion.p
+            initial={{ y: 20, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.18, duration: 0.5 }}
+            className="text-2xl md:text-3xl text-[#C9A84C]/80 font-arabic mb-4 tracking-wider"
+          >
+            بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+          </motion.p>
 
           <motion.h1
             initial={{ y: 40, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.2, duration: 0.7 }}
             className="text-5xl md:text-7xl font-black tracking-tight mb-6 leading-none"
           >
             {ui.heroTitle}{' '}
-            <span className="bg-gradient-to-r from-[#E60000] to-[#FF6B6B] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#22C55E] to-[#4ADE80] bg-clip-text text-transparent">
               {ui.heroAccent}
             </span>
+            <br />{ui.heroTitle2}
           </motion.h1>
 
           <motion.p
@@ -334,7 +412,7 @@ const MeowTubeLandingPage: React.FC = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <button onClick={() => scrollTo(contactRef)}
-              className="px-8 py-4 rounded-2xl bg-[#E60000] hover:bg-[#CC0000] text-white font-bold text-base transition-all duration-200 hover:scale-[1.03] active:scale-[0.98] shadow-lg shadow-[#E60000]/30">
+              className="px-8 py-4 rounded-2xl bg-[#16A34A] hover:bg-[#15803D] text-white font-bold text-base transition-all duration-200 hover:scale-[1.03] active:scale-[0.98] shadow-lg shadow-[#16A34A]/30">
               {ui.ctaBeta}
             </button>
             <button onClick={() => scrollTo(featuresRef)}
@@ -350,9 +428,63 @@ const MeowTubeLandingPage: React.FC = () => {
         <div className="max-w-5xl mx-auto px-6 py-10 grid grid-cols-3 gap-6 text-center">
           {ui.stats.map((s) => (
             <div key={s.label}>
-              <div className="text-4xl md:text-5xl font-black text-[#E60000] mb-1">{s.value}</div>
+              <div className="text-4xl md:text-5xl font-black text-[#22C55E] mb-1">{s.value}</div>
               <div className="text-sm text-white/40 font-medium">{s.label}</div>
             </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── Quotes Carousel ────────────────────────────────────── */}
+      <section ref={quotesRef} className="max-w-4xl mx-auto px-6 py-24">
+        <div className="text-center mb-12">
+          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#22C55E] mb-3">{ui.quotesEyebrow}</p>
+          <h2 className="text-4xl md:text-5xl font-black tracking-tight">{ui.quotesTitle}</h2>
+          <p className="text-white/40 mt-4 max-w-lg mx-auto">{ui.quotesSub}</p>
+        </div>
+
+        <div className="relative overflow-hidden">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeQuote}
+              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+              className="bg-gradient-to-br from-[#0F2A16] to-[#071209] border border-[#22C55E]/20 rounded-3xl p-8 md:p-12 text-center"
+            >
+              <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#22C55E]/10 border border-[#22C55E]/20 text-[#4ADE80] text-xs font-semibold mb-6 tracking-wider uppercase">
+                {QUOTES[activeQuote].category[lang]}
+              </div>
+              <p className="text-3xl md:text-4xl text-[#C9A84C] font-bold mb-6 leading-relaxed tracking-widest">
+                {QUOTES[activeQuote].arabic}
+              </p>
+              <p className="text-lg md:text-xl text-white font-medium italic mb-4 leading-relaxed">
+                « {QUOTES[activeQuote].text[lang]} »
+              </p>
+              <p className="text-sm text-white/40">{QUOTES[activeQuote].source[lang]}</p>
+            </motion.div>
+          </AnimatePresence>
+          <div className="flex justify-center gap-2 mt-6">
+            {QUOTES.map((_, i) => (
+              <button key={i} onClick={() => setActiveQuote(i)}
+                className={`h-2 rounded-full transition-all duration-300 ${i === activeQuote ? 'bg-[#22C55E] w-6' : 'bg-white/20 hover:bg-white/40 w-2'}`} />
+            ))}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
+          {QUOTES.slice(0, 4).map((q, i) => (
+            <motion.div key={i}
+              initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }} transition={{ delay: i * 0.08, duration: 0.5 }}
+              onClick={() => setActiveQuote(i)}
+              className="bg-white/[0.03] border border-white/[0.07] rounded-2xl p-5 cursor-pointer hover:border-[#22C55E]/30 hover:bg-white/[0.05] transition-all duration-300"
+            >
+              <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-[#22C55E]/10 text-[#4ADE80] text-[10px] font-semibold uppercase tracking-wider mb-3">
+                {q.category[lang]}
+              </span>
+              <p className="text-sm text-white/70 italic leading-relaxed mb-2">« {q.text[lang]} »</p>
+              <p className="text-[11px] text-white/30">{q.source[lang]}</p>
+            </motion.div>
           ))}
         </div>
       </section>
@@ -360,17 +492,16 @@ const MeowTubeLandingPage: React.FC = () => {
       {/* ── Features ───────────────────────────────────────────── */}
       <section ref={featuresRef} className="max-w-6xl mx-auto px-6 py-24">
         <div className="text-center mb-16">
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#E60000] mb-3">{ui.featuresEyebrow}</p>
+          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#22C55E] mb-3">{ui.featuresEyebrow}</p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight">{ui.featuresTitle}</h2>
           <p className="text-white/40 mt-4 max-w-lg mx-auto">{ui.featuresSub}</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {FEATURES.map((f, i) => (
-            <motion.div
-              key={f.title.fr}
+            <motion.div key={f.title.fr}
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ delay: i * 0.07, duration: 0.5 }}
-              className="group bg-white/[0.03] border border-white/[0.07] rounded-2xl p-6 hover:bg-white/[0.06] hover:border-[#E60000]/30 transition-all duration-300"
+              className="group bg-white/[0.03] border border-white/[0.07] rounded-2xl p-6 hover:bg-white/[0.06] hover:border-[#22C55E]/30 transition-all duration-300"
             >
               <div className="text-3xl mb-4">{f.icon}</div>
               <h3 className="text-base font-bold text-white mb-2">{f.title[lang]}</h3>
@@ -383,19 +514,19 @@ const MeowTubeLandingPage: React.FC = () => {
       {/* ── Screenshots ────────────────────────────────────────── */}
       <section className="py-20 overflow-hidden">
         <div className="max-w-6xl mx-auto px-6 mb-12 text-center">
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#E60000] mb-3">{ui.screensEyebrow}</p>
+          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#22C55E] mb-3">{ui.screensEyebrow}</p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight">{ui.screensTitle}</h2>
         </div>
-        <div className="flex gap-6 overflow-x-auto scrollbar-hide px-8 pb-4 justify-center">
-          {[appHome, appSecond].map((src, i) => (
+        <div className="flex gap-6 overflow-x-auto scrollbar-hide px-8 pb-4 justify-center flex-wrap">
+          {[firstImage, appImage, secondImage, thirdImage].map((src, i) => (
             <motion.div key={i}
               initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }} transition={{ delay: i * 0.15, duration: 0.6 }}
+              viewport={{ once: true }} transition={{ delay: i * 0.12, duration: 0.6 }}
               className="flex-shrink-0 relative"
             >
-              <div className="absolute inset-0 bg-[#E60000]/10 rounded-[32px] blur-2xl scale-95" />
+              <div className="absolute inset-0 bg-[#16A34A]/10 rounded-[32px] blur-2xl scale-95" />
               <img src={src} alt={`Screenshot ${i + 1}`}
-                className="relative h-[520px] w-auto rounded-[28px] shadow-2xl border border-white/[0.08] object-cover" />
+                className="relative h-[480px] w-auto rounded-[28px] shadow-2xl border border-white/[0.08] object-cover" />
             </motion.div>
           ))}
         </div>
@@ -403,26 +534,32 @@ const MeowTubeLandingPage: React.FC = () => {
 
       {/* ── Mission ────────────────────────────────────────────── */}
       <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#E60000]/5 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#16A34A]/5 to-transparent pointer-events-none" />
         <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
           <motion.div
             initial={{ opacity: 0, x: -40 }} whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }} transition={{ duration: 0.7 }}
             className="flex-1"
           >
-            <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#E60000] mb-4">{ui.missionEyebrow}</p>
+            <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#22C55E] mb-4">{ui.missionEyebrow}</p>
             <h2 className="text-4xl md:text-5xl font-black tracking-tight mb-6 leading-tight">
               {ui.missionTitle}<br />
-              <span className="text-[#E60000]">{ui.missionAccent}</span>
+              <span className="text-[#22C55E]">{ui.missionAccent}</span>
             </h2>
-            <p className="text-white/50 leading-relaxed max-w-md">{ui.missionText}</p>
+            <p className="text-white/50 leading-relaxed max-w-md mb-6">{ui.missionText}</p>
+            <p className="text-[#C9A84C]/70 text-sm leading-relaxed italic">
+              {ui.missionVerse}<br />
+              <span className="text-white/40 not-italic">{ui.missionVerseSource}</span>
+            </p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }} transition={{ duration: 0.7 }}
-            className="flex-shrink-0"
+            className="flex-shrink-0 grid grid-cols-2 gap-4"
           >
-            <img src={redCat} alt="Meow-Tube mascot" className="w-64 md:w-80 drop-shadow-2xl" />
+            {[firstImage, secondImage].map((src, i) => (
+              <img key={i} src={src} alt="" className="w-32 md:w-44 rounded-2xl shadow-xl border border-white/[0.08]" />
+            ))}
           </motion.div>
         </div>
       </section>
@@ -430,7 +567,7 @@ const MeowTubeLandingPage: React.FC = () => {
       {/* ── Legal ──────────────────────────────────────────────── */}
       <section className="max-w-5xl mx-auto px-6 py-20">
         <div className="text-center mb-10">
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#E60000] mb-3">{ui.legalEyebrow}</p>
+          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#22C55E] mb-3">{ui.legalEyebrow}</p>
           <h2 className="text-3xl md:text-4xl font-black tracking-tight">{ui.legalTitle}</h2>
         </div>
         <div className="flex flex-wrap gap-3 justify-center mb-8">
@@ -438,7 +575,7 @@ const MeowTubeLandingPage: React.FC = () => {
             <button key={key}
               onClick={() => setActiveLegal(activeLegal === key ? null : key)}
               className={`px-5 py-2.5 rounded-xl text-sm font-semibold border transition-all duration-200 ${activeLegal === key
-                ? 'bg-[#E60000] border-[#E60000] text-white'
+                ? 'bg-[#16A34A] border-[#16A34A] text-white'
                 : 'bg-white/[0.04] border-white/[0.08] text-white/60 hover:text-white hover:border-white/20'}`}
             >
               {LEGAL[key].title[lang]}
@@ -462,7 +599,7 @@ const MeowTubeLandingPage: React.FC = () => {
       {/* ── Contact ────────────────────────────────────────────── */}
       <section ref={contactRef} className="max-w-2xl mx-auto px-6 py-20">
         <div className="text-center mb-10">
-          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#E60000] mb-3">{ui.contactEyebrow}</p>
+          <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#22C55E] mb-3">{ui.contactEyebrow}</p>
           <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-3">{ui.contactTitle}</h2>
           <p className="text-white/40 text-sm">{ui.contactSub}</p>
         </div>
@@ -485,14 +622,14 @@ const MeowTubeLandingPage: React.FC = () => {
                   <input type="text" required value={formState.name}
                     onChange={e => setFormState(s => ({ ...s, name: e.target.value }))}
                     placeholder={ui.formNamePh}
-                    className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-[#E60000]/50 focus:bg-white/[0.06] transition-all" />
+                    className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-[#16A34A]/50 focus:bg-white/[0.06] transition-all" />
                 </div>
                 <div>
                   <label className="block text-xs font-semibold text-white/40 mb-1.5 uppercase tracking-wider">{ui.formEmail}</label>
                   <input type="email" required value={formState.email}
                     onChange={e => setFormState(s => ({ ...s, email: e.target.value }))}
                     placeholder="votre@email.com"
-                    className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-[#E60000]/50 focus:bg-white/[0.06] transition-all" />
+                    className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-[#16A34A]/50 focus:bg-white/[0.06] transition-all" />
                 </div>
               </div>
               <div>
@@ -500,18 +637,18 @@ const MeowTubeLandingPage: React.FC = () => {
                 <input type="text" value={formState.subject}
                   onChange={e => setFormState(s => ({ ...s, subject: e.target.value }))}
                   placeholder={ui.formSubjectPh}
-                  className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-[#E60000]/50 focus:bg-white/[0.06] transition-all" />
+                  className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-[#16A34A]/50 focus:bg-white/[0.06] transition-all" />
               </div>
               <div>
                 <label className="block text-xs font-semibold text-white/40 mb-1.5 uppercase tracking-wider">{ui.formMsg}</label>
                 <textarea required rows={5} value={formState.message}
                   onChange={e => setFormState(s => ({ ...s, message: e.target.value }))}
                   placeholder={ui.formMsgPh}
-                  className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-[#E60000]/50 focus:bg-white/[0.06] transition-all resize-none" />
+                  className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-[#16A34A]/50 focus:bg-white/[0.06] transition-all resize-none" />
               </div>
               {formStatus === 'error' && <p className="text-sm text-red-400">{ui.errorMsg}</p>}
               <button type="submit" disabled={formStatus === 'sending'}
-                className="w-full py-4 rounded-xl bg-[#E60000] hover:bg-[#CC0000] disabled:opacity-50 text-white font-bold text-base transition-all duration-200 hover:scale-[1.01] active:scale-[0.99] shadow-lg shadow-[#E60000]/20">
+                className="w-full py-4 rounded-xl bg-[#16A34A] hover:bg-[#15803D] disabled:opacity-50 text-white font-bold text-base transition-all duration-200 hover:scale-[1.01] active:scale-[0.99] shadow-lg shadow-[#16A34A]/20">
                 {formStatus === 'sending' ? ui.formSending : ui.formSend}
               </button>
             </form>
@@ -524,18 +661,18 @@ const MeowTubeLandingPage: React.FC = () => {
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/30">
           <div className="flex items-center gap-2">
             <img src={appLogo} alt="" className="w-6 h-6 rounded-md" />
-            <span>Meow<span className="text-[#E60000]/60">-Tube</span></span>
+            <span>Islamic <span className="text-[#22C55E]/60">Daily Quote</span></span>
           </div>
           <div className="flex gap-6">
             <button onClick={() => setActiveLegal('cgu')} className="hover:text-white/60 transition-colors">{ui.footerCgu}</button>
             <button onClick={() => setActiveLegal('privacy')} className="hover:text-white/60 transition-colors">{ui.footerPrivacy}</button>
             <button onClick={() => setActiveLegal('mentions')} className="hover:text-white/60 transition-colors">{ui.footerMentions}</button>
           </div>
-          <span>© {new Date().getFullYear()} Meow-Tube. {ui.footerRights}</span>
+          <span>© {new Date().getFullYear()} Islamic Daily Quote. {ui.footerRights}</span>
         </div>
       </footer>
     </div>
   );
 };
 
-export default MeowTubeLandingPage;
+export default IslamicDailyQuoteLandingPage;

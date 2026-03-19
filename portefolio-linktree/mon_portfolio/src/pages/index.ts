@@ -3,3 +3,4 @@ export { default as LinkTreePage } from './LinkTreePage';
 export { default as CvPage } from './CvPage';
 export { default as ProfilePage } from './ProfilePage';
 export { default as MeowTubeLandingPage } from './MeowTubeLandingPage';
+export { default as IslamicDailyQuoteLandingPage } from './IslamicDailyQuoteLandingPage';

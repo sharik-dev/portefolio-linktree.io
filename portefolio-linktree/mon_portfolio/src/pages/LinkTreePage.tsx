@@ -1,4 +1,5 @@
 import React from 'react';
+import pfImage from '../assets/pfp.png';
 import { ButtonStyle } from '../components';
 import SocialButton from '../components/SocialButton';
 import { LinkedInIcon, GitHubIcon, EmailIcon, PortfolioIcon } from '../components/icons';
@@ -21,7 +22,7 @@ const LinkTreePage: React.FC = () => {
         {/* Avatar */}
         <div className="w-24 h-24 rounded-full overflow-hidden border border-black/[0.08] dark:border-white/[0.08] shadow-lg mb-5">
           <img
-            src="./assets/pf.png"
+            src={pfImage}
             alt="Sharik Mohamed"
             className="w-full h-full object-cover"
           />

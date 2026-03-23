@@ -13,6 +13,10 @@ import meowTubeSecond from '../assets/meowTube/AppSecondPage.png';
 import localShortIcon from '../assets/localShort/logo.png';
 import localShortScreen1 from '../assets/localShort/screen1.PNG';
 import localShortScreen2 from '../assets/localShort/screen2.PNG';
+import islamicIcon from '../assets/islamic daily quote/logo.png';
+import islamicScreen1 from '../assets/islamic daily quote/firstImage.png';
+import islamicScreen2 from '../assets/islamic daily quote/second image.png';
+import islamicScreen3 from '../assets/islamic daily quote/thirst image.png';
 
 /* ─── Bilingual app data ─────────────────────────────────────────── */
 const APPS = [
@@ -63,6 +67,22 @@ const APPS = [
     isNew: true,
     rating: 4.7,
     landingPage: '/local-short',
+  },
+  {
+    id: 'islamic-daily-quote',
+    name: 'Islamic Daily Quote',
+    subtitle: { fr: 'Citation islamique quotidienne', en: 'Daily Islamic quote' },
+    description: { fr: 'Application iOS proposant chaque jour une citation islamique tirée du Coran ou des Hadiths, en arabe et en plusieurs langues. Conçue pour le bien-être spirituel et la pratique quotidienne.', en: 'iOS app offering a new Islamic quote every day from the Quran or Hadiths, in Arabic and multiple languages. Designed for spiritual wellness and daily practice.' },
+    features: { fr: ['Citation quotidienne (Coran & Hadiths)', 'Arabe + traduction multilingue', 'Interface épurée & apaisante', 'Notifications journalières', 'Partage de citations', 'Mode sombre'], en: ['Daily quote (Quran & Hadiths)', 'Arabic + multilingual translation', 'Clean & calming interface', 'Daily notifications', 'Share quotes', 'Dark mode'] },
+    price: { fr: 'Projet personnel', en: 'Personal project' },
+    category: { fr: 'Spiritualité & Bien-être', en: 'Spirituality & Wellness' },
+    icon: islamicIcon,
+    screenshots: [islamicScreen1, islamicScreen2, islamicScreen3],
+    tech: ['Swift', 'SwiftUI', 'iOS'],
+    featured: true,
+    isNew: true,
+    rating: 4.8,
+    landingPage: '/islamic-daily-quote',
   },
 ];
 
@@ -125,89 +145,156 @@ const AppModal: React.FC<{ app: typeof APPS[0]; lang: 'fr' | 'en'; ui: typeof UI
   const hasLanding = 'landingPage' in app && typeof (app as any).landingPage === 'string';
   const hasExternal = 'externalLink' in app && typeof (app as any).externalLink === 'string';
 
+  const actionBtn = hasLanding ? (
+    <button onClick={() => { onClose(); navigate((app as any).landingPage); }}
+      className="flex-shrink-0 bg-[#E60000] text-white text-[13px] font-bold px-5 py-2 rounded-full hover:bg-[#CC0000] active:scale-95 transition-all cursor-pointer">
+      {lang === 'fr' ? 'Découvrir' : 'Discover'}
+    </button>
+  ) : hasExternal ? (
+    <a href={(app as any).externalLink} target="_blank" rel="noopener noreferrer"
+      className="flex-shrink-0 bg-[#0071E3] text-white text-[13px] font-bold px-5 py-2 rounded-full hover:bg-[#0077ED] active:scale-95 transition-all">
+      {lang === 'fr' ? 'Voir' : 'Visit'}
+    </a>
+  ) : null;
+
+  const STATS = [
+    {
+      label: lang === 'fr' ? 'NOTES' : 'RATINGS',
+      value: app.rating.toFixed(1),
+      sub: <div className="flex justify-center gap-[2px] mt-0.5">
+        {[...Array(5)].map((_, i) => (
+          <svg key={i} width="9" height="9" viewBox="0 0 24 24" fill={i < Math.floor(app.rating) ? '#FF9F0A' : '#3A3A3C'}>
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+          </svg>
+        ))}
+      </div>,
+    },
+    {
+      label: lang === 'fr' ? 'CATÉGORIE' : 'CATEGORY',
+      value: t(lang, app.category.fr, app.category.en).split(' & ')[0],
+      sub: <span className="text-[10px] text-[#636366]">{t(lang, app.category.fr, app.category.en).split(' & ')[1] ?? ''}</span>,
+    },
+    {
+      label: lang === 'fr' ? 'TYPE' : 'TYPE',
+      value: t(lang, app.price.fr, app.price.en),
+      sub: null,
+    },
+    {
+      label: lang === 'fr' ? 'DÉVELOPPEUR' : 'DEVELOPER',
+      value: 'Sharik Dev',
+      sub: null,
+    },
+    {
+      label: lang === 'fr' ? 'LANGAGE' : 'LANGUAGE',
+      value: app.tech[0] ?? 'Swift',
+      sub: app.tech.length > 1 ? <span className="text-[10px] text-[#636366]">+{app.tech.length - 1} {lang === 'fr' ? 'autres' : 'more'}</span> : null,
+    },
+    {
+      label: lang === 'fr' ? 'PLATE-FORME' : 'PLATFORM',
+      value: 'iOS',
+      sub: null,
+    },
+  ];
+
   return (
-  <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center p-0 md:p-4">
-    <div className="absolute inset-0 bg-black/30 backdrop-blur-md" onClick={onClose} />
-    <motion.div
-      initial={{ y: 80, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 80, opacity: 0 }}
-      transition={{ type: 'spring', damping: 30, stiffness: 400 }}
-      className="relative w-full max-w-2xl max-h-[92vh] overflow-y-auto bg-white dark:bg-[#1C1C1E] rounded-t-3xl md:rounded-3xl shadow-2xl scrollbar-hide"
-    >
-      {/* iOS drag handle */}
-      <div className="flex justify-center pt-3 pb-1 md:hidden">
-        <div className="w-9 h-1 rounded-full bg-[#C7C7CC] dark:bg-[#48484A]" />
-      </div>
-      <div className="p-5 md:p-7">
-        {/* Close */}
+    <div className="fixed inset-0 z-50 flex items-end md:items-center justify-center p-0 md:p-4">
+      <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
+      <motion.div
+        initial={{ y: 80, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: 80, opacity: 0 }}
+        transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+        className="relative w-full max-w-2xl max-h-[94vh] overflow-y-auto bg-[#1C1C1E] rounded-t-[2rem] md:rounded-[2rem] shadow-2xl scrollbar-hide"
+      >
+        {/* Drag handle (mobile) */}
+        <div className="flex justify-center pt-3 pb-0 md:hidden">
+          <div className="w-10 h-1 rounded-full bg-[#48484A]" />
+        </div>
+
+        {/* Close button */}
         <button onClick={onClose}
-          className="absolute top-4 right-4 w-7 h-7 rounded-full bg-[#E8E8ED] dark:bg-[#2C2C2E] flex items-center justify-center text-[#6E6E73] hover:bg-[#D1D1D6] dark:hover:bg-[#3A3A3C] transition-colors">
-          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
+          className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-[#3A3A3C] flex items-center justify-center text-[#98989D] hover:bg-[#48484A] transition-colors">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.8">
+            <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
         </button>
 
-        {/* Header */}
-        <div className="flex items-start gap-4 mb-5">
-          <img src={app.icon} alt={app.name} className="w-20 h-20 rounded-[20px] shadow-md flex-shrink-0" />
-          <div className="flex-1 min-w-0 pt-1">
-            <h2 className="text-xl font-bold text-[#1D1D1F] dark:text-white tracking-tight mb-0.5">{app.name}</h2>
-            <p className="text-sm text-[#6E6E73] dark:text-[#98989D] mb-2">{t(lang, app.subtitle.fr, app.subtitle.en)}</p>
-            <div className="flex items-center gap-2 flex-wrap">
-              <span className="text-[11px] px-2.5 py-0.5 rounded-full bg-[#F5F5F7] dark:bg-[#2C2C2E] text-[#6E6E73] dark:text-[#98989D]">
-                {t(lang, app.category.fr, app.category.en)}
-              </span>
-              <Stars rating={app.rating} />
+        <div className="px-5 pt-5 pb-8 md:px-7 md:pt-6">
+
+          {/* ── Header ── */}
+          <div className="flex items-start gap-4 mb-5 pr-8">
+            <img src={app.icon} alt={app.name}
+              className="w-[88px] h-[88px] rounded-[20px] shadow-xl flex-shrink-0 object-cover" />
+            <div className="flex-1 min-w-0">
+              <h2 className="text-[22px] font-bold text-white tracking-tight leading-tight">{app.name}</h2>
+              <p className="text-[14px] text-[#8E8E93] mt-0.5 mb-3">{t(lang, app.subtitle.fr, app.subtitle.en)}</p>
+              {actionBtn}
             </div>
           </div>
-          {hasLanding ? (
-            <button
-              onClick={() => { onClose(); navigate((app as any).landingPage); }}
-              className="flex-shrink-0 mt-1 bg-[#E60000] text-white text-[12px] font-semibold px-4 py-1.5 rounded-full hover:bg-[#CC0000] transition-colors cursor-pointer">
-              {lang === 'fr' ? 'Découvrir' : 'Discover'}
-            </button>
-          ) : hasExternal ? (
-            <a
-              href={(app as any).externalLink}
-              target="_blank" rel="noopener noreferrer"
-              className="flex-shrink-0 mt-1 bg-[#0071E3] text-white text-[12px] font-semibold px-4 py-1.5 rounded-full hover:bg-[#0077ED] transition-colors cursor-pointer">
-              {lang === 'fr' ? 'Voir' : 'Visit'}
-            </a>
-          ) : (
-            <span className="flex-shrink-0 mt-1 bg-[#0071E3] text-white text-[12px] font-semibold px-4 py-1.5 rounded-full hover:bg-[#0077ED] transition-colors cursor-pointer">
-              {ui.seeMore}
-            </span>
-          )}
+
+          {/* ── Divider ── */}
+          <div className="border-t border-white/[0.08] mb-4" />
+
+          {/* ── Stats strip ── */}
+          <div className="flex divide-x divide-white/[0.08] mb-4 overflow-x-auto scrollbar-hide">
+            {STATS.map((s) => (
+              <div key={s.label} className="flex-1 min-w-[70px] text-center px-2 py-1">
+                <p className="text-[9px] font-semibold text-[#636366] uppercase tracking-[0.06em] mb-0.5">{s.label}</p>
+                <p className="text-[13px] font-bold text-[#E5E5EA] leading-tight truncate">{s.value}</p>
+                {s.sub && <div className="mt-0.5">{s.sub}</div>}
+              </div>
+            ))}
+          </div>
+
+          {/* ── Divider ── */}
+          <div className="border-t border-white/[0.08] mb-5" />
+
+          {/* ── Preview ── */}
+          <h3 className="text-[20px] font-bold text-white tracking-tight mb-3">
+            {lang === 'fr' ? 'Aperçu' : 'Preview'}
+          </h3>
+          <div className="flex gap-3 overflow-x-auto -mx-5 px-5 pb-3 scrollbar-hide">
+            {app.screenshots.map((s, i) => (
+              <img key={i} src={s} alt=""
+                className="h-[260px] md:h-[300px] rounded-2xl object-cover flex-shrink-0 border border-white/[0.06]" />
+            ))}
+          </div>
+
+          {/* ── Divider ── */}
+          <div className="border-t border-white/[0.08] mt-5 mb-5" />
+
+          {/* ── Tech chips ── */}
+          <div className="flex flex-wrap gap-2 mb-5">
+            {app.tech.map(tech => (
+              <span key={tech}
+                className="text-[13px] font-semibold px-4 py-1.5 rounded-full bg-[#0071E3]/[0.15] text-[#4DB3FF] border border-[#0071E3]/20">
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          {/* ── Description ── */}
+          <p className="text-[15px] text-[#E5E5EA] leading-[1.6] mb-5">
+            {t(lang, app.description.fr, app.description.en)}
+          </p>
+
+          {/* ── Divider ── */}
+          <div className="border-t border-white/[0.08] mb-5" />
+
+          {/* ── Features ── */}
+          <h3 className="text-[20px] font-bold text-white tracking-tight mb-4">{ui.features}</h3>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {t(lang, app.features.fr, app.features.en).map((f, i) => (
+              <li key={i} className="flex items-start gap-2.5 text-[14px] text-[#EBEBF5]/80 leading-snug">
+                <svg className="shrink-0 mt-0.5" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#30D158" strokeWidth="2.5">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                {f}
+              </li>
+            ))}
+          </ul>
+
         </div>
-
-        {/* Screenshots */}
-        <div className="flex gap-3 overflow-x-auto pb-3 mb-4 scrollbar-hide -mx-1 px-1">
-          {app.screenshots.map((s, i) => (
-            <img key={i} src={s} alt="" className="h-48 md:h-56 rounded-2xl object-cover border border-black/[0.06] dark:border-white/[0.06] flex-shrink-0" />
-          ))}
-        </div>
-
-        {/* Tech stack chips */}
-        <div className="flex flex-wrap gap-2 mb-4">
-          {app.tech.map(t => (
-            <span key={t} className="text-[12px] font-medium px-3 py-1 rounded-full bg-[#0071E3]/[0.08] text-[#0071E3]">{t}</span>
-          ))}
-        </div>
-
-        {/* Description */}
-        <p className="text-[13px] text-[#6E6E73] dark:text-[#98989D] leading-relaxed mb-4">
-          {t(lang, app.description.fr, app.description.en)}
-        </p>
-
-        {/* Features */}
-        <h3 className="text-[13px] font-semibold text-[#1D1D1F] dark:text-white mb-3">{ui.features}</h3>
-        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-2">
-          {t(lang, app.features.fr, app.features.en).map((f, i) => (
-            <li key={i} className="flex items-start gap-2 text-[13px] text-[#6E6E73] dark:text-[#98989D]">
-              <span className="text-[#0071E3] font-bold shrink-0 mt-0.5">✓</span>{f}
-            </li>
-          ))}
-        </ul>
-      </div>
-    </motion.div>
-  </div>
+      </motion.div>
+    </div>
   );
 };
 

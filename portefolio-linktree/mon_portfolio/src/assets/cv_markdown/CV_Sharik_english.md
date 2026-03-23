@@ -1,116 +1,77 @@
-# Sharik Mohamed
-**Software Engineer · iOS Developer**
-
-📍 Toulouse, France | 📧 [votre.email@example.com] | 🔗 [LinkedIn] | 💻 [GitHub]
+| ![photo](/cv-assets/pfp.png) | **Sharik Mohamed**<br/>Software Engineer · iOS Developer<br/>📍 Toulouse, France · 📧 [sharikmohamed8@gmail.com](mailto:sharikmohamed8@gmail.com)<br/>🔗 [LinkedIn](https://www.linkedin.com/in/sharik-abubucker-393194205/) · 💻 [GitHub](https://github.com/sharik-dev) · 🌐 [sharik.fr](https://sharik.fr) | ![qr](/cv-assets/qrCode.png) |
+|:---:|:---|:---:|
 
 ---
 
 ## Professional Summary
 
-Software Engineer specialized in iOS development with solid expertise in Swift, MVVM architecture, and Mapbox SDK integration. Experienced in building production-grade mobile applications with clean architecture, dynamic map layers, and rich video feed interfaces. Proficient in Agile project management, CI/CD pipelines, unit testing, and technical documentation. Committed to code quality, performance optimization, and delivering scalable, maintainable solutions.
+Software Engineer specialized in iOS development with expertise in **MVVM** architecture, **MapboxMaps SDK** integration, and CI/CD pipelines. Experienced in building production-grade mobile applications with clean architecture, dynamic map layers, and on-device AI. Committed to code quality, performance, and technical documentation in Agile environments.
 
 ---
 
 ## Core Skills
 
-- **Languages:** Swift, JavaScript, C++, Python
-- **Mobile Development:** iOS, SwiftUI, UIKit, AVFoundation
-- **Architecture:** MVVM, MVC, Clean Architecture
-- **Mapping & Geospatial:** MapboxMaps SDK v10+, Legacy Mapbox SDK, dynamic layer management, zoom expressions, visibility filters
-- **Data & APIs:** JSON, REST APIs, data parsing and modeling
-- **DevOps & CI/CD:** Git, GitHub Actions, automated pipelines, build configuration
-- **Testing:** Unit testing, debugging, performance profiling
-- **Web:** HTML, CSS, JavaScript, React.js
-- **Embedded:** Arduino, C++
-- **Methodologies:** Agile/Scrum, technical documentation, problem-solving, code review
+| iOS Mobile | Architecture | Mapping & Geospatial |
+|---|---|---|
+| Swift · SwiftUI · UIKit · AVFoundation · Core ML · Vision · On-device AI | MVVM · MVC · Clean Architecture | MapboxMaps SDK v10+ · Legacy Mapbox SDK · JSON Filters · Zoom Expressions |
+
+| DevOps & CI/CD | Web & Other | Methodologies |
+|---|---|---|
+| Git · GitHub Actions · Automated Pipelines · Unit Testing | React.js · TypeScript · JavaScript · C++ · Python · Arduino | Agile/Scrum · Code Review · Technical Documentation · REST API |
 
 ---
 
 ## Professional Experience
 
-### **Application Developer (Alternance)**
-**Skyconseil** · *January 2024 – Present · Toulouse, France (On-site)*
+### ![guidor](/cv-assets/guidor.png) **iOS Application Developer** · Skyconseil *(Work-Study)*
+*January 2024 – Present · Toulouse, France*
 
-- Designed and implemented mobile application features following **MVVM architecture** principles, ensuring separation of concerns and testability.
-- Developed complex **MapboxMaps SDK** integrations including multiple weather overlay layers, dynamic filter expressions, zoom-level visibility management, and multi-layer track control using both **MapboxMaps v10+** and the legacy Mapbox SDK.
-- Wrote and maintained **technical documentation** for internal and client-facing components.
-- Participated in **Agile** sprint planning, code reviews, and retrospectives.
-- Implemented **unit tests** to improve code coverage and application reliability.
-- Optimized rendering performance and resolved geospatial display bugs through systematic **problem-solving** and profiling.
-
-**Key technologies:** Swift, iOS, MapboxMaps, MVVM, JSON, CI/CD, unit testing, documentation
+- Built iOS features (UIKit, MVVM) and integrated **MapboxMaps SDK v10+**: multiple weather overlay layers, map annotations, and raster tiles.
+- Wrote **technical documentation** for internal teams and clients.
+- Worked in an **Agile/Scrum** environment.
 
 ---
 
-### **Software Development Intern**
-**Le Facteur Humain & Combustible Numérique** · *June 2023 – July 2023 · Toulouse, France*
+### ![comb](/cv-assets/comb.png) **Embedded Software Development Intern** · Le Facteur Humain & Combustible Numérique
+*June 2023 – July 2023 · Toulouse, France*
 
-- Contributed to the **Guidor** project as a full-stack intern within a cross-functional team.
-- Developed embedded system features using **Arduino** and **C++**, integrating hardware components with software logic.
-- Gained experience in collaborative development workflows and Agile-adjacent team practices.
-
-**Key technologies:** Arduino, C++, embedded systems
+- Contributed to the **Guidor** project: embedded development with **Arduino** and **C++**. Built a guidance system integrating hardware sensors and a control interface within a cross-functional team.
 
 ---
 
-### **Intern**
-**Ministère de l'Économie et des Finances de Madagascar** · *May 2019 · Madagascar (On-site)*
+### **Intern** · Ministry of Economy and Finance of Madagascar
+*May 2019 · Madagascar*
 
-- Observed and supported digital administrative processes within a government financial institution.
-- Gained exposure to information systems management and institutional IT infrastructure.
+- Observation internship within the ministry. Exposure to institutional information systems and digital administrative processes.
 
 ---
 
 ## Projects
 
-### **FocusFast** — *iOS Short-Video Application*
-> Personal project | Architecture: MVVM | Stack: Swift, iOS, AVFoundation, JSON
+**FocusFast** — *iOS Short-Video Application (TikTok-style)*
+Swift · MVVM · AVFoundation · Vertical Feed · Categories · Comments/Ratings · Video Upload
 
-- Built a fully functional local **TikTok-style video feed** application from scratch.
-- Implemented **MVVM architecture** with clean data binding and reactive UI updates.
-- Features include: swipeable vertical video feed, video categorization system, comments and ratings, and user-driven video upload flow.
-- Designed modular components for scalability and future feature extension.
-- Applied **unit testing** on business logic layers and optimized video playback performance.
-
-**Keywords:** MVVM, Swift, iOS, video feed, AVFoundation, data binding, unit testing, optimization
-
----
-
-### **MapboxMaps Multi-Layer Weather Integration**
-> Professional project at Skyconseil | Stack: Swift, MapboxMaps SDK v10+, Legacy SDK
-
-- Implemented **multiple simultaneous weather overlay layers** on an interactive map, each independently controllable by track and visibility state.
-- Used **MapboxMaps v10+** expressions for dynamic zoom-based rendering and layer filtering.
-- Maintained backward compatibility with the **legacy Mapbox SDK** while progressively migrating to v10+ APIs.
-- Built **dynamic filter expressions** and JSON-driven layer configuration for flexible map styling.
-
-**Keywords:** Mapbox, MapboxMaps, Swift, iOS, geospatial, JSON, dynamic filtering, zoom expressions, layer management
+**MapboxMaps Weather Layers** — *Multi-layer weather integration (Skyconseil)*
+MapboxMaps v10+ · JSON Filters · Zoom Expressions · Legacy SDK Compatibility
 
 ---
 
 ## Education
 
-### **Licence — Computer Science (Bachelor)**
-**Epitech — École de l'Excellence Informatique** · *August 2023 – September 2026*
-- Core focus: software engineering, algorithms, systems programming, project-based learning.
-- Technologies covered: JavaScript, React.js, collaborative development.
-
-### **AFP Concepteur Développeur d'Applications**
-**Simplon Auvergne-Rhône-Alpes** · *April 2023 – May 2023*
-- Professional qualification in application design and development.
-- Technologies covered: Swift, web development fundamentals.
+| | | |
+|:---:|:---|:---|
+| ![epitech](/cv-assets/epitech.png) | **Master's in Computer Science (BAC+5)** · Epitech | *August 2023 – September 2026* |
+| ![simplon](/cv-assets/simplon.png) | **Professional Qualification – iOS Application Developer** · Simplon Auvergne-Rhône-Alpes | *April – July 2023* |
+| ![billiere](/cv-assets/billiere.png) | **BTS Management of Commercial Units** · Écoles Billières | *September 2020 – July 2022* |
 
 ---
 
 ## Languages
 
-| Language | Level |
-|---|---|
-| French | Native |
-| English | Advanced (B2/C1) |
+French — Native | English — Advanced (B2/C1)
 
 ---
 
-## Keywords & Competencies (ATS)
+## Keywords & ATS
 
-`Swift` `iOS Development` `MVVM Architecture` `Mapbox` `MapboxMaps SDK` `Mobile Engineering` `Software Architecture` `CI/CD` `Unit Testing` `Agile` `Scrum` `JSON` `REST API` `Technical Documentation` `Performance Optimization` `Problem Solving` `Code Review` `Clean Architecture` `Git` `JavaScript` `React.js` `C++` `Arduino` `SwiftUI` `UIKit`
+`Swift` `iOS` `MVVM` `Mapbox` `MapboxMaps` `Core ML` `Vision` `On-device AI` `CI/CD` `Unit Testing` `Agile` `Scrum` `JSON` `REST API` `Git` `SwiftUI` `UIKit` `React.js` `C++` `Arduino`

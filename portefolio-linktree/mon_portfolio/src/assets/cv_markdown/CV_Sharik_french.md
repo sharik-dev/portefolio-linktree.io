@@ -1,7 +1,5 @@
-# Sharik Mohamed
-**Ingénieur Logiciel · Développeur iOS**
-
-📍 Toulouse, France | 📧 [email@exemple.com] | 🔗 [LinkedIn] | 💻 [GitHub]
+| ![photo](/cv-assets/pfp.png) | **Sharik Mohamed**<br/>Ingénieur Logiciel · Développeur iOS<br/>📍 Toulouse, France · 📧 [sharikmohamed8@gmail.com](mailto:sharikmohamed8@gmail.com)<br/>🔗 [LinkedIn](https://www.linkedin.com/in/sharik-abubucker-393194205/) · 💻 [GitHub](https://github.com/sharik-dev) · 🌐 [sharik.fr](https://sharik.fr) | ![qr](/cv-assets/qrCode.png) |
+|:---:|:---|:---:|
 
 ---
 
@@ -13,32 +11,38 @@ Ingénieur logiciel spécialisé en développement iOS, avec une expertise en ar
 
 ## Compétences Clés
 
-**Langages :** Swift, JavaScript, C++, Python
-**Mobile :** iOS, SwiftUI, UIKit, AVFoundation
-**Architecture :** MVVM, MVC, Clean Architecture
-**Cartographie :** MapboxMaps v10+, SDK legacy, filtres dynamiques, expressions de zoom
-**DevOps / CI/CD :** Git, GitHub Actions, pipelines automatisés
-**Autres :** JSON, REST API, tests unitaires, documentation technique, Agile/Scrum, React.js, Arduino
+| Mobile iOS | Architecture | Cartographie |
+|---|---|---|
+| Swift · SwiftUI · UIKit · AVFoundation · Core ML · Vision | MVVM · MVC · Clean Architecture | MapboxMaps v10+ · SDK legacy · filtres JSON · expressions de zoom |
+
+| DevOps / CI/CD | Web & Autres | Méthodes |
+|---|---|---|
+| Git · GitHub Actions · pipelines automatisés · Tests unitaires | React.js · TypeScript · JavaScript · C++ · Python · Arduino | Agile/Scrum · Code Review · Documentation · REST API |
 
 ---
 
 ## Expériences Professionnelles
 
-### **Développeur Applications** · Skyconseil *(Alternance)*
+### ![guidor](/cv-assets/guidor.png) **Développeur Applications iOS** · Skyconseil *(Alternance)*
 *Janvier 2024 – Présent · Toulouse, France*
 
-- Développement de fonctionnalités mobiles iOS en architecture **MVVM**.
-- Intégration **MapboxMaps SDK v10+** : couches météo multiples, filtres dynamiques, expressions de zoom, gestion de visibilité par piste (legacy & v10+).
-- Rédaction de **documentation technique** interne et client.
-- **Tests unitaires**, optimisation des performances, code review en cycles **Agile/Scrum**.
+- Développement de fonctionnalités iOS (UIKit, MVVM) et intégration du **MapboxMaps SDK v10+** : couches météo multiples, annotations cartographiques et tuiles raster.
+- Rédaction de **documentation technique** à destination des équipes internes et des clients.
+- Travail en méthodologie **Agile/Scrum**.
 
-### **Stagiaire Développeur** · Le Facteur Humain & Combustible Numérique
+---
+
+### ![comb](/cv-assets/comb.png) **Stagiaire Développeur Embarqué** · Le Facteur Humain & Combustible Numérique *(Stage)*
 *Juin 2023 – Juillet 2023 · Toulouse, France*
 
-- Projet **Guidor** : développement embarqué avec **Arduino** et **C++**.
+- Projet **Guidor** : développement embarqué avec **Arduino** et **C++**. Conception d'un système de guidage avec capteurs, actionneurs et interface de contrôle dans une équipe pluridisciplinaire.
+
+---
 
 ### **Stagiaire** · Ministère de l'Économie et des Finances de Madagascar
 *Mai 2019 · Madagascar*
+
+- Stage d'observation au sein du ministère. Exposition aux systèmes d'information institutionnels et aux processus administratifs numériques.
 
 ---
 
@@ -54,11 +58,11 @@ MapboxMaps v10+ · filtres JSON · expressions de zoom · compatibilité SDK leg
 
 ## Formation
 
-**Licence Informatique** · Epitech *(Août 2023 – Sept. 2026)*
-JavaScript, React.js, algorithmique, développement projet
-
-**AFP Concepteur Développeur d'Applications** · Simplon Auvergne-Rhône-Alpes *(Avr. – Mai 2023)*
-Swift, développement web
+| | | |
+|:---:|:---|:---|
+| ![epitech](/cv-assets/epitech.png) | **Licence Informatique (BAC+5)** · Epitech | *Août 2023 – Sept. 2026* |
+| ![simplon](/cv-assets/simplon.png) | **AFP Concepteur Développeur d'Applications iOS** · Simplon Auvergne-Rhône-Alpes | *Avr. – Juil. 2023* |
+| ![billiere](/cv-assets/billiere.png) | **BTS Management des Unités Commerciales** · Écoles Billières | *Sept. 2020 – Juil. 2022* |
 
 ---
 
@@ -70,4 +74,4 @@ Français — Natif | Anglais — Avancé (B2/C1)
 
 ## Mots-clés ATS
 
-`Swift` `iOS` `MVVM` `Mapbox` `MapboxMaps` `CI/CD` `Tests unitaires` `Agile` `Scrum` `JSON` `REST API` `Documentation technique` `Optimisation` `Résolution de problème` `Git` `Architecture logicielle` `Clean Architecture` `SwiftUI` `React.js` `C++` `Arduino`
+`Swift` `iOS` `MVVM` `Mapbox` `MapboxMaps` `Core ML` `Vision` `On-device AI` `CI/CD` `Tests unitaires` `Agile` `Scrum` `JSON` `REST API` `Git` `SwiftUI` `UIKit` `React.js` `C++` `Arduino`

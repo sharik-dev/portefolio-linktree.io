@@ -30,6 +30,18 @@ jobs:
           VITE_BASE: /
         run: npm run build
 
+      - name: Clear target folder
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 51.91.125.99
+          port: 2222
+          username: ubuntu
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          script: |
+            sudo rm -rf /var/www/sharik.fr
+            sudo mkdir -p /var/www/sharik.fr
+            sudo chown ubuntu:ubuntu /var/www/sharik.fr
+
       - name: Deploy via SCP
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -40,7 +52,6 @@ jobs:
           source: portefolio-linktree/mon_portfolio/dist/*
           target: /var/www/sharik.fr
           strip_components: 3
-          rm: true
 
       - name: Fix permissions
         uses: appleboy/ssh-action@v1.0.3

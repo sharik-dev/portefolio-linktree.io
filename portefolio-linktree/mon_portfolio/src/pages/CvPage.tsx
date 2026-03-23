@@ -121,15 +121,15 @@ const ExpandableCard: React.FC<{
     <motion.div
       whileHover={{ y: -2 }}
       onClick={() => setOpen(o => !o)}
-      className="bg-white dark:bg-[#1C1C1E] border border-black/[0.06] dark:border-white/[0.06] rounded-2xl p-5 cursor-pointer shadow-sm hover:shadow-md transition-all duration-200 relative"
+      className="bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl p-5 cursor-pointer shadow-sm hover:shadow-md transition-all duration-200 relative"
     >
       <div className="flex items-start gap-4">
-        <img src={logo} alt={title} className={`w-14 h-14 rounded-xl border border-black/[0.06] dark:border-white/[0.06] flex-shrink-0 mt-0.5 ${logoScale ? `object-contain scale-75` : 'object-cover'}`} />
+        <img src={logo} alt={title} className={`w-14 h-14 rounded-xl border border-black/[0.10] dark:border-white/[0.06] flex-shrink-0 mt-0.5 ${logoScale ? `object-contain scale-75` : 'object-cover'}`} />
         <div className="flex-1 min-w-0">
           <div className="flex flex-wrap items-center gap-2 mb-0.5">
             <h3 className="text-[14px] font-semibold text-[#1D1D1F] dark:text-white tracking-tight">{title}</h3>
             {current && <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[#34C759]/10 text-[#27AE60]">• En cours</span>}
-            {badge && <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#F5F5F7] dark:bg-[#2C2C2E] text-[#6E6E73] dark:text-[#98989D]">{badge}</span>}
+            {badge && <span className="text-[10px] px-2 py-0.5 rounded-full bg-[#E8E8ED] dark:bg-[#2C2C2E] text-[#6E6E73] dark:text-[#98989D]">{badge}</span>}
           </div>
           <p className="text-[13px] font-medium text-[#0071E3]">{subtitle}</p>
           <p className="text-[12px] text-[#86868B] dark:text-[#636366] mt-0.5">{meta}</p>
@@ -152,7 +152,7 @@ const ExpandableCard: React.FC<{
           {tags.length > 0 && (
             <div className="flex flex-wrap gap-1.5">
               {tags.map(tag => (
-                <span key={tag} className="text-[11px] font-medium px-2.5 py-1 rounded-full bg-[#F5F5F7] dark:bg-[#2C2C2E] text-[#6E6E73] dark:text-[#98989D] border border-black/[0.06] dark:border-white/[0.06]">
+                <span key={tag} className="text-[11px] font-medium px-2.5 py-1 rounded-full bg-[#E8E8ED] dark:bg-[#2C2C2E] text-[#6E6E73] dark:text-[#98989D] border border-black/[0.10] dark:border-white/[0.06]">
                   {tag}
                 </span>
               ))}
@@ -209,7 +209,7 @@ const CvPage: React.FC = () => {
   const tabKeys: Tab[] = ['experiences', 'formations', 'competences', 'apercu'];
 
   return (
-    <div className="min-h-screen bg-[#F5F5F7] dark:bg-[#000000] transition-colors duration-300">
+    <div className="min-h-screen bg-[#E8E8ED] dark:bg-[#000000] transition-colors duration-300">
 
       {/* Hero */}
       <header className="bg-white dark:bg-[#1D1D1F] border-b border-black/[0.06] dark:border-white/[0.06] px-6 pt-12 pb-0 text-center">
@@ -220,7 +220,7 @@ const CvPage: React.FC = () => {
         <p className="text-base text-[#6E6E73] dark:text-[#98989D] mb-6">{ui.sub}</p>
 
         {/* Apple-style segmented control */}
-        <div className="inline-flex bg-[#F5F5F7] dark:bg-[#2C2C2E] rounded-xl p-1 gap-1 mb-0">
+        <div className="inline-flex bg-[#E8E8ED] dark:bg-[#2C2C2E] rounded-xl p-1 gap-1 mb-0">
           {ui.tabs.map((label, i) => (
             <button
               key={tabKeys[i]}
@@ -280,11 +280,11 @@ const CvPage: React.FC = () => {
             {/* Skills groups */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {DATA.skills[lang].map(group => (
-                <div key={group.cat} className="bg-white dark:bg-[#1C1C1E] border border-black/[0.06] dark:border-white/[0.06] rounded-2xl p-5 shadow-sm">
+                <div key={group.cat} className="bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl p-5 shadow-sm">
                   <h3 className="text-[11px] font-semibold text-[#86868B] uppercase tracking-[0.08em] mb-3">{group.cat}</h3>
                   <div className="flex flex-wrap gap-2">
                     {group.tags.map(tag => (
-                      <span key={tag} className="text-[12px] font-medium px-3 py-1.5 rounded-full bg-[#F5F5F7] dark:bg-[#2C2C2E] text-[#1D1D1F] dark:text-[#E5E5E7] border border-black/[0.06] dark:border-white/[0.06]">
+                      <span key={tag} className="text-[12px] font-medium px-3 py-1.5 rounded-full bg-[#E8E8ED] dark:bg-[#2C2C2E] text-[#1D1D1F] dark:text-[#E5E5E7] border border-black/[0.10] dark:border-white/[0.06]">
                         {tag}
                       </span>
                     ))}
@@ -294,13 +294,13 @@ const CvPage: React.FC = () => {
             </div>
 
             {/* Languages */}
-            <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.06] dark:border-white/[0.06] rounded-2xl p-5 shadow-sm">
+            <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl p-5 shadow-sm">
               <h3 className="text-[11px] font-semibold text-[#86868B] uppercase tracking-[0.08em] mb-3">
                 {lang === 'fr' ? 'Langues' : 'Languages'}
               </h3>
               <div className="flex flex-wrap gap-3">
                 {DATA.languages[lang].map(l => (
-                  <div key={l.lang} className="flex items-center gap-2 bg-[#F5F5F7] dark:bg-[#2C2C2E] px-4 py-2 rounded-full border border-black/[0.06] dark:border-white/[0.06]">
+                  <div key={l.lang} className="flex items-center gap-2 bg-[#E8E8ED] dark:bg-[#2C2C2E] px-4 py-2 rounded-full border border-black/[0.10] dark:border-white/[0.06]">
                     <span className="text-[13px] font-semibold text-[#1D1D1F] dark:text-white">{l.lang}</span>
                     <span className="text-[11px] text-[#6E6E73] dark:text-[#98989D]">— {l.level}</span>
                   </div>
@@ -309,7 +309,7 @@ const CvPage: React.FC = () => {
             </div>
 
             {/* ATS keywords */}
-            <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.06] dark:border-white/[0.06] rounded-2xl p-5 shadow-sm">
+            <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl p-5 shadow-sm">
               <h3 className="text-[11px] font-semibold text-[#86868B] uppercase tracking-[0.08em] mb-3">
                 {lang === 'fr' ? 'Mots-clés' : 'Keywords'}
               </h3>
@@ -335,7 +335,7 @@ const CvPage: React.FC = () => {
             </div>
 
             {/* Markdown viewer */}
-            <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.06] dark:border-white/[0.06] rounded-2xl overflow-hidden shadow-sm">
+            <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl overflow-hidden shadow-sm">
               {/* Toolbar */}
               <div className="flex items-center justify-between px-5 py-3 border-b border-black/[0.06] dark:border-white/[0.06] bg-[#E0E0E2] dark:bg-[#2C2C2E]">
                 <div className="flex items-center gap-2">
@@ -437,7 +437,7 @@ const CvPage: React.FC = () => {
 
         {/* CV Download section */}
         <section>
-          <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.06] dark:border-white/[0.06] rounded-2xl p-6 shadow-sm text-center">
+          <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl p-6 shadow-sm text-center">
             <div className="w-12 h-12 rounded-2xl bg-[#0071E3]/[0.08] flex items-center justify-center mx-auto mb-4">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0071E3" strokeWidth="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="12" y1="18" x2="12" y2="12" /><polyline points="9 15 12 18 15 15" /></svg>
             </div>

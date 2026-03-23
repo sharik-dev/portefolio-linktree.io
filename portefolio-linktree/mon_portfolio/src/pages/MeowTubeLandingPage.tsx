@@ -191,16 +191,16 @@ Use the contact form available on this page.`,
 const SimpleMarkdown: React.FC<{ text: string }> = ({ text }) => {
   const lines = text.split('\n');
   return (
-    <div className="space-y-2 text-sm text-white/70 leading-relaxed">
+    <div className="space-y-2 text-sm text-[#6E6E73] dark:text-white/70 leading-relaxed">
       {lines.map((line, i) => {
         if (line.startsWith('**') && line.endsWith('**') && line.length > 4 && !line.slice(2, -2).includes('**')) {
-          return <p key={i} className="font-bold text-white mt-4 first:mt-0">{line.slice(2, -2)}</p>;
+          return <p key={i} className="font-bold text-[#1D1D1F] dark:text-white mt-4 first:mt-0">{line.slice(2, -2)}</p>;
         }
         const parts = line.split(/(\*\*[^*]+\*\*)/g);
         return (
           <p key={i}>{parts.map((part, j) =>
             part.startsWith('**') && part.endsWith('**')
-              ? <strong key={j} className="text-white font-semibold">{part.slice(2, -2)}</strong>
+              ? <strong key={j} className="text-[#1D1D1F] dark:text-white font-semibold">{part.slice(2, -2)}</strong>
               : part
           )}</p>
         );
@@ -250,18 +250,18 @@ const MeowTubeLandingPage: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0D0D0D] text-white overflow-x-hidden">
+    <div className="min-h-screen bg-[#F5F5F7] dark:bg-[#0D0D0D] text-[#1D1D1F] dark:text-white overflow-x-hidden transition-colors duration-300">
 
       {/* ── Navbar ─────────────────────────────────────────────── */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0D0D0D]/80 backdrop-blur-xl border-b border-white/[0.06]">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#F5F5F7]/80 dark:bg-[#0D0D0D]/80 backdrop-blur-xl border-b border-black/[0.06] dark:border-white/[0.06]">
         <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img src={appLogo} alt="Meow-Tube" className="w-8 h-8 rounded-lg" />
-            <span className="text-lg font-bold tracking-tight text-white">
+            <span className="text-lg font-bold tracking-tight text-[#1D1D1F] dark:text-white">
               Meow<span className="text-[#E60000]">-Tube</span>
             </span>
           </div>
-          <div className="hidden md:flex items-center gap-6 text-sm text-white/60">
+          <div className="hidden md:flex items-center gap-6 text-sm text-[#6E6E73] dark:text-white/60">
             <button onClick={() => scrollTo(featuresRef)} className="hover:text-white transition-colors">{ui.navFeatures}</button>
             <button onClick={() => setActiveLegal('cgu')} className="hover:text-white transition-colors">{ui.navCgu}</button>
             <button onClick={() => scrollTo(contactRef)} className="hover:text-white transition-colors">{ui.navContact}</button>
@@ -269,14 +269,14 @@ const MeowTubeLandingPage: React.FC = () => {
           <div className="flex items-center gap-3">
             <button
               onClick={toggleLang}
-              className="h-7 px-2.5 rounded-md text-[11px] font-bold text-white/50 hover:text-white hover:bg-white/[0.08] transition-colors uppercase tracking-wider border border-white/[0.10]"
+              className="h-7 px-2.5 rounded-md text-[11px] font-bold text-[#6E6E73] dark:text-white/50 hover:text-white hover:bg-black/[0.08] dark:hover:bg-white/[0.08] transition-colors uppercase tracking-wider border border-black/[0.10] dark:border-white/[0.10]"
               aria-label="Toggle language"
             >
               {lang === 'fr' ? 'EN' : 'FR'}
             </button>
             <button
               onClick={() => navigate('/portefolio')}
-              className="text-xs text-white/40 hover:text-white/80 transition-colors flex items-center gap-1">
+              className="text-xs text-[#86868B] dark:text-white/40 hover:text-white/80 transition-colors flex items-center gap-1">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="15 18 9 12 15 6" /></svg>
               {ui.navBack}
             </button>
@@ -324,7 +324,7 @@ const MeowTubeLandingPage: React.FC = () => {
 
           <motion.p
             initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-lg md:text-xl text-white/50 max-w-xl mx-auto leading-relaxed mb-10"
+            className="text-lg md:text-xl text-[#6E6E73] dark:text-white/50 max-w-xl mx-auto leading-relaxed mb-10"
           >
             {ui.heroSub}
           </motion.p>
@@ -338,7 +338,7 @@ const MeowTubeLandingPage: React.FC = () => {
               {ui.ctaBeta}
             </button>
             <button onClick={() => scrollTo(featuresRef)}
-              className="px-8 py-4 rounded-2xl bg-white/[0.06] hover:bg-white/[0.10] border border-white/10 text-white font-medium text-base transition-all duration-200">
+              className="px-8 py-4 rounded-2xl bg-black/[0.06] dark:bg-white/[0.06] hover:bg-black/[0.10] dark:hover:bg-black/[0.10] dark:bg-white/[0.10] border border-black/10 dark:border-white/10 text-[#1D1D1F] dark:text-white font-medium text-base transition-all duration-200">
               {ui.ctaFeatures}
             </button>
           </motion.div>
@@ -346,12 +346,12 @@ const MeowTubeLandingPage: React.FC = () => {
       </section>
 
       {/* ── Stats ──────────────────────────────────────────────── */}
-      <section className="border-y border-white/[0.06] bg-white/[0.02]">
+      <section className="border-y border-white/[0.06] bg-black/[0.02] dark:bg-white/[0.02]">
         <div className="max-w-5xl mx-auto px-6 py-10 grid grid-cols-3 gap-6 text-center">
           {ui.stats.map((s) => (
             <div key={s.label}>
               <div className="text-4xl md:text-5xl font-black text-[#E60000] mb-1">{s.value}</div>
-              <div className="text-sm text-white/40 font-medium">{s.label}</div>
+              <div className="text-sm text-[#86868B] dark:text-white/40 font-medium">{s.label}</div>
             </div>
           ))}
         </div>
@@ -362,7 +362,7 @@ const MeowTubeLandingPage: React.FC = () => {
         <div className="text-center mb-16">
           <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#E60000] mb-3">{ui.featuresEyebrow}</p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight">{ui.featuresTitle}</h2>
-          <p className="text-white/40 mt-4 max-w-lg mx-auto">{ui.featuresSub}</p>
+          <p className="text-[#86868B] dark:text-white/40 mt-4 max-w-lg mx-auto">{ui.featuresSub}</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {FEATURES.map((f, i) => (
@@ -370,11 +370,11 @@ const MeowTubeLandingPage: React.FC = () => {
               key={f.title.fr}
               initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }} transition={{ delay: i * 0.07, duration: 0.5 }}
-              className="group bg-white/[0.03] border border-white/[0.07] rounded-2xl p-6 hover:bg-white/[0.06] hover:border-[#E60000]/30 transition-all duration-300"
+              className="group bg-black/[0.03] dark:bg-white/[0.03] border border-black/[0.07] dark:border-white/[0.07] rounded-2xl p-6 hover:bg-black/[0.06] dark:hover:bg-black/[0.06] dark:bg-white/[0.06] hover:border-[#E60000]/30 transition-all duration-300"
             >
               <div className="text-3xl mb-4">{f.icon}</div>
-              <h3 className="text-base font-bold text-white mb-2">{f.title[lang]}</h3>
-              <p className="text-sm text-white/50 leading-relaxed">{f.desc[lang]}</p>
+              <h3 className="text-base font-bold text-[#1D1D1F] dark:text-white mb-2">{f.title[lang]}</h3>
+              <p className="text-sm text-[#6E6E73] dark:text-white/50 leading-relaxed">{f.desc[lang]}</p>
             </motion.div>
           ))}
         </div>
@@ -395,7 +395,7 @@ const MeowTubeLandingPage: React.FC = () => {
             >
               <div className="absolute inset-0 bg-[#E60000]/10 rounded-[32px] blur-2xl scale-95" />
               <img src={src} alt={`Screenshot ${i + 1}`}
-                className="relative h-[520px] w-auto rounded-[28px] shadow-2xl border border-white/[0.08] object-cover" />
+                className="relative h-[520px] w-auto rounded-[28px] shadow-2xl border border-black/[0.08] dark:border-white/[0.08] object-cover" />
             </motion.div>
           ))}
         </div>
@@ -415,7 +415,7 @@ const MeowTubeLandingPage: React.FC = () => {
               {ui.missionTitle}<br />
               <span className="text-[#E60000]">{ui.missionAccent}</span>
             </h2>
-            <p className="text-white/50 leading-relaxed max-w-md">{ui.missionText}</p>
+            <p className="text-[#6E6E73] dark:text-white/50 leading-relaxed max-w-md">{ui.missionText}</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }}
@@ -439,7 +439,7 @@ const MeowTubeLandingPage: React.FC = () => {
               onClick={() => setActiveLegal(activeLegal === key ? null : key)}
               className={`px-5 py-2.5 rounded-xl text-sm font-semibold border transition-all duration-200 ${activeLegal === key
                 ? 'bg-[#E60000] border-[#E60000] text-white'
-                : 'bg-white/[0.04] border-white/[0.08] text-white/60 hover:text-white hover:border-white/20'}`}
+                : 'bg-black/[0.04] dark:bg-white/[0.04] border-black/[0.08] dark:border-white/[0.08] text-[#6E6E73] dark:text-white/60 hover:text-white hover:border-black/20 dark:hover:border-white/20'}`}
             >
               {LEGAL[key].title[lang]}
             </button>
@@ -450,9 +450,9 @@ const MeowTubeLandingPage: React.FC = () => {
             <motion.div key={activeLegal}
               initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.25 }}
-              className="bg-white/[0.03] border border-white/[0.07] rounded-2xl p-6 md:p-8"
+              className="bg-black/[0.03] dark:bg-white/[0.03] border border-black/[0.07] dark:border-white/[0.07] rounded-2xl p-6 md:p-8"
             >
-              <h3 className="text-lg font-bold text-white mb-5">{LEGAL[activeLegal].title[lang]}</h3>
+              <h3 className="text-lg font-bold text-[#1D1D1F] dark:text-white mb-5">{LEGAL[activeLegal].title[lang]}</h3>
               <SimpleMarkdown text={LEGAL[activeLegal].content[lang]} />
             </motion.div>
           )}
@@ -464,16 +464,16 @@ const MeowTubeLandingPage: React.FC = () => {
         <div className="text-center mb-10">
           <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#E60000] mb-3">{ui.contactEyebrow}</p>
           <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-3">{ui.contactTitle}</h2>
-          <p className="text-white/40 text-sm">{ui.contactSub}</p>
+          <p className="text-[#86868B] dark:text-white/40 text-sm">{ui.contactSub}</p>
         </div>
-        <div className="bg-white/[0.03] border border-white/[0.07] rounded-3xl p-6 md:p-8">
+        <div className="bg-black/[0.03] dark:bg-white/[0.03] border border-black/[0.07] dark:border-white/[0.07] rounded-3xl p-6 md:p-8">
           {formStatus === 'success' ? (
             <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="text-center py-8">
               <div className="text-5xl mb-4">✅</div>
-              <h3 className="text-xl font-bold text-white mb-2">{ui.successTitle}</h3>
-              <p className="text-white/40 text-sm">{ui.successSub}</p>
+              <h3 className="text-xl font-bold text-[#1D1D1F] dark:text-white mb-2">{ui.successTitle}</h3>
+              <p className="text-[#86868B] dark:text-white/40 text-sm">{ui.successSub}</p>
               <button onClick={() => setFormStatus('idle')}
-                className="mt-6 px-6 py-2.5 rounded-xl bg-white/[0.06] border border-white/[0.10] text-white text-sm hover:bg-white/[0.10] transition-colors">
+                className="mt-6 px-6 py-2.5 rounded-xl bg-black/[0.06] dark:bg-white/[0.06] border border-black/[0.10] dark:border-white/[0.10] text-[#1D1D1F] dark:text-white text-sm hover:bg-black/[0.10] dark:hover:bg-white/[0.10] transition-colors">
                 {ui.successBtn}
               </button>
             </motion.div>
@@ -481,33 +481,33 @@ const MeowTubeLandingPage: React.FC = () => {
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-xs font-semibold text-white/40 mb-1.5 uppercase tracking-wider">{ui.formName}</label>
+                  <label className="block text-xs font-semibold text-[#86868B] dark:text-white/40 mb-1.5 uppercase tracking-wider">{ui.formName}</label>
                   <input type="text" required value={formState.name}
                     onChange={e => setFormState(s => ({ ...s, name: e.target.value }))}
                     placeholder={ui.formNamePh}
-                    className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-[#E60000]/50 focus:bg-white/[0.06] transition-all" />
+                    className="w-full bg-black/[0.04] dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] rounded-xl px-4 py-3 text-sm text-[#1D1D1F] dark:text-white placeholder-black/30 dark:placeholder-white/20 focus:outline-none focus:border-[#E60000]/50 focus:bg-black/[0.06] dark:focus:bg-black/[0.06] dark:bg-white/[0.06] transition-all" />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-white/40 mb-1.5 uppercase tracking-wider">{ui.formEmail}</label>
+                  <label className="block text-xs font-semibold text-[#86868B] dark:text-white/40 mb-1.5 uppercase tracking-wider">{ui.formEmail}</label>
                   <input type="email" required value={formState.email}
                     onChange={e => setFormState(s => ({ ...s, email: e.target.value }))}
                     placeholder="votre@email.com"
-                    className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-[#E60000]/50 focus:bg-white/[0.06] transition-all" />
+                    className="w-full bg-black/[0.04] dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] rounded-xl px-4 py-3 text-sm text-[#1D1D1F] dark:text-white placeholder-black/30 dark:placeholder-white/20 focus:outline-none focus:border-[#E60000]/50 focus:bg-black/[0.06] dark:focus:bg-black/[0.06] dark:bg-white/[0.06] transition-all" />
                 </div>
               </div>
               <div>
-                <label className="block text-xs font-semibold text-white/40 mb-1.5 uppercase tracking-wider">{ui.formSubject}</label>
+                <label className="block text-xs font-semibold text-[#86868B] dark:text-white/40 mb-1.5 uppercase tracking-wider">{ui.formSubject}</label>
                 <input type="text" value={formState.subject}
                   onChange={e => setFormState(s => ({ ...s, subject: e.target.value }))}
                   placeholder={ui.formSubjectPh}
-                  className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-[#E60000]/50 focus:bg-white/[0.06] transition-all" />
+                  className="w-full bg-black/[0.04] dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] rounded-xl px-4 py-3 text-sm text-[#1D1D1F] dark:text-white placeholder-black/30 dark:placeholder-white/20 focus:outline-none focus:border-[#E60000]/50 focus:bg-black/[0.06] dark:focus:bg-black/[0.06] dark:bg-white/[0.06] transition-all" />
               </div>
               <div>
-                <label className="block text-xs font-semibold text-white/40 mb-1.5 uppercase tracking-wider">{ui.formMsg}</label>
+                <label className="block text-xs font-semibold text-[#86868B] dark:text-white/40 mb-1.5 uppercase tracking-wider">{ui.formMsg}</label>
                 <textarea required rows={5} value={formState.message}
                   onChange={e => setFormState(s => ({ ...s, message: e.target.value }))}
                   placeholder={ui.formMsgPh}
-                  className="w-full bg-white/[0.04] border border-white/[0.08] rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-[#E60000]/50 focus:bg-white/[0.06] transition-all resize-none" />
+                  className="w-full bg-black/[0.04] dark:bg-white/[0.04] border border-black/[0.08] dark:border-white/[0.08] rounded-xl px-4 py-3 text-sm text-[#1D1D1F] dark:text-white placeholder-black/30 dark:placeholder-white/20 focus:outline-none focus:border-[#E60000]/50 focus:bg-black/[0.06] dark:focus:bg-black/[0.06] dark:bg-white/[0.06] transition-all resize-none" />
               </div>
               {formStatus === 'error' && <p className="text-sm text-red-400">{ui.errorMsg}</p>}
               <button type="submit" disabled={formStatus === 'sending'}
@@ -521,15 +521,15 @@ const MeowTubeLandingPage: React.FC = () => {
 
       {/* ── Footer ─────────────────────────────────────────────── */}
       <footer className="border-t border-white/[0.06] px-6 py-10">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/30">
+        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[#86868B] dark:text-white/30">
           <div className="flex items-center gap-2">
             <img src={appLogo} alt="" className="w-6 h-6 rounded-md" />
             <span>Meow<span className="text-[#E60000]/60">-Tube</span></span>
           </div>
           <div className="flex gap-6">
-            <button onClick={() => setActiveLegal('cgu')} className="hover:text-white/60 transition-colors">{ui.footerCgu}</button>
-            <button onClick={() => setActiveLegal('privacy')} className="hover:text-white/60 transition-colors">{ui.footerPrivacy}</button>
-            <button onClick={() => setActiveLegal('mentions')} className="hover:text-white/60 transition-colors">{ui.footerMentions}</button>
+            <button onClick={() => setActiveLegal('cgu')} className="hover:text-[#6E6E73] dark:text-white/60 transition-colors">{ui.footerCgu}</button>
+            <button onClick={() => setActiveLegal('privacy')} className="hover:text-[#6E6E73] dark:text-white/60 transition-colors">{ui.footerPrivacy}</button>
+            <button onClick={() => setActiveLegal('mentions')} className="hover:text-[#6E6E73] dark:text-white/60 transition-colors">{ui.footerMentions}</button>
           </div>
           <span>© {new Date().getFullYear()} Meow-Tube. {ui.footerRights}</span>
         </div>

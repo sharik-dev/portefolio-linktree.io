@@ -289,21 +289,18 @@ export async function downloadCvAsPdf(lang: 'fr' | 'en', filename: string): Prom
     const pdf = new jsPDF('p', 'mm', 'a4');
     const pageW = pdf.internal.pageSize.getWidth();
     const pageH = pdf.internal.pageSize.getHeight();
-    const imgW = pageW;
-    const imgH = (canvas.height * imgW) / canvas.width;
     const imgData = canvas.toDataURL('image/png');
 
-    let remaining = imgH;
-    let offset = 0;
-    pdf.addImage(imgData, 'PNG', 0, offset, imgW, imgH);
-    remaining -= pageH;
-    while (remaining > 0) {
-      offset -= pageH;
-      pdf.addPage();
-      pdf.addImage(imgData, 'PNG', 0, offset, imgW, imgH);
-      remaining -= pageH;
+    // Scale to fit exactly one page (width-first, clamp height if needed)
+    const ratio = canvas.width / canvas.height;
+    let finalW = pageW;
+    let finalH = pageW / ratio;
+    if (finalH > pageH) {
+      finalH = pageH;
+      finalW = pageH * ratio;
     }
 
+    pdf.addImage(imgData, 'PNG', 0, 0, finalW, finalH);
     pdf.save(filename);
   } finally {
     document.body.removeChild(container);

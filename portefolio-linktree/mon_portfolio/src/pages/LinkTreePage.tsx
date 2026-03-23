@@ -16,7 +16,7 @@ const LinkTreePage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#F2F2F7] dark:bg-black flex flex-col items-center px-5 pt-14 pb-8 transition-colors duration-300">
+    <div className="min-h-screen bg-[#E8E8ED] dark:bg-black flex flex-col items-center px-5 pt-14 pb-8 transition-colors duration-300">
 
       <header className="w-full max-w-sm flex flex-col items-center mb-10">
         {/* Avatar */}

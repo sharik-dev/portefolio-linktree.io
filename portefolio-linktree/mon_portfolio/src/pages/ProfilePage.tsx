@@ -117,7 +117,7 @@ const ProfilePage: React.FC = () => {
   }[lang];
 
   return (
-    <div className="min-h-screen bg-[#F5F5F7] dark:bg-black transition-colors duration-300">
+    <div className="min-h-screen bg-[#E8E8ED] dark:bg-black transition-colors duration-300">
 
       {/* Hero header */}
       <header className="bg-white dark:bg-[#1D1D1F] border-b border-black/[0.06] dark:border-white/[0.06] px-6 py-12 flex flex-col items-center text-center">
@@ -145,7 +145,7 @@ const ProfilePage: React.FC = () => {
         {/* About */}
         <section>
           <h2 className="text-xl font-bold text-[#1D1D1F] dark:text-white tracking-tight mb-4">{ui.aboutTitle}</h2>
-          <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.06] dark:border-white/[0.06] rounded-2xl p-6 shadow-sm">
+          <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl p-6 shadow-sm">
             <div className="md:grid md:grid-cols-2 md:gap-8">
               {/* Bio */}
               <div>
@@ -172,7 +172,7 @@ const ProfilePage: React.FC = () => {
                   <p className="text-[10px] font-semibold text-[#86868B] uppercase tracking-[0.08em] mb-2">{ui.langsTitle}</p>
                   <div className="flex flex-wrap gap-2">
                     {LANGS[lang].map(l => (
-                      <span key={l.name} className="flex items-center gap-1.5 text-[12px] bg-[#F5F5F7] dark:bg-[#2C2C2E] border border-black/[0.06] dark:border-white/[0.06] px-3 py-1 rounded-full">
+                      <span key={l.name} className="flex items-center gap-1.5 text-[12px] bg-[#E8E8ED] dark:bg-[#2C2C2E] border border-black/[0.10] dark:border-white/[0.06] px-3 py-1 rounded-full">
                         <span className="font-semibold text-[#1D1D1F] dark:text-white">{l.name}</span>
                         <span className="text-[#6E6E73] dark:text-[#98989D]">— {l.level}</span>
                       </span>
@@ -191,14 +191,14 @@ const ProfilePage: React.FC = () => {
             {PROJECTS.map(project => (
               <Link key={project.id} to={project.route} className="block group">
                 <motion.div whileHover={{ y: -6 }} whileTap={{ scale: 0.98 }}
-                  className="bg-white dark:bg-[#1C1C1E] border border-black/[0.06] dark:border-white/[0.06] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer h-full">
-                  <div className="h-44 overflow-hidden bg-[#F5F5F7]">
+                  className="bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer h-full">
+                  <div className="h-44 overflow-hidden bg-[#E8E8ED]">
                     <img src={project.image} alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                   </div>
                   <div className="p-4">
                     {/* Context badge */}
-                    <span className="text-[10px] font-medium text-[#6E6E73] dark:text-[#98989D] bg-[#F5F5F7] dark:bg-[#2C2C2E] px-2 py-0.5 rounded-full">
+                    <span className="text-[10px] font-medium text-[#6E6E73] dark:text-[#98989D] bg-[#E8E8ED] dark:bg-[#2C2C2E] px-2 py-0.5 rounded-full">
                       {t(lang, project.context.fr, project.context.en)}
                     </span>
                     <h3 className="text-[13px] font-semibold text-[#1D1D1F] dark:text-white tracking-tight mt-1.5 mb-1">{project.title}</h3>
@@ -207,7 +207,7 @@ const ProfilePage: React.FC = () => {
                     </p>
                     <div className="flex flex-wrap gap-1.5 mb-3">
                       {project.tags.map(tag => (
-                        <span key={tag} className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-[#F5F5F7] dark:bg-[#2C2C2E] text-[#6E6E73] dark:text-[#98989D] border border-black/[0.06] dark:border-white/[0.06]">
+                        <span key={tag} className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-[#E8E8ED] dark:bg-[#2C2C2E] text-[#6E6E73] dark:text-[#98989D] border border-black/[0.10] dark:border-white/[0.06]">
                           {tag}
                         </span>
                       ))}
@@ -227,13 +227,13 @@ const ProfilePage: React.FC = () => {
         {/* Skills cloud */}
         <section>
           <h2 className="text-xl font-bold text-[#1D1D1F] dark:text-white tracking-tight mb-4">{ui.skillsTitle}</h2>
-          <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.06] dark:border-white/[0.06] rounded-2xl p-6 shadow-sm">
+          <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl p-6 shadow-sm">
             <div className="flex flex-wrap gap-2">
               {SKILLS.map(skill => (
                 <button key={skill} onClick={() => setActiveSkill(s => s === skill ? null : skill)}
                   className={`text-[13px] font-medium px-4 py-2 rounded-full transition-all duration-150 ${activeSkill === skill
                     ? 'bg-[#0071E3] text-white shadow-sm'
-                    : 'bg-[#F5F5F7] dark:bg-[#2C2C2E] text-[#1D1D1F] dark:text-[#E5E5E7] hover:bg-[#E8E8ED] dark:hover:bg-[#3A3A3C] border border-black/[0.06] dark:border-white/[0.06]'
+                    : 'bg-[#E8E8ED] dark:bg-[#2C2C2E] text-[#1D1D1F] dark:text-[#E5E5E7] hover:bg-[#E8E8ED] dark:hover:bg-[#3A3A3C] border border-black/[0.10] dark:border-white/[0.06]'
                     }`}>
                   {skill}
                 </button>
@@ -245,7 +245,7 @@ const ProfilePage: React.FC = () => {
         {/* Contact + CV download row */}
         <section className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {/* Contact */}
-          <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.06] dark:border-white/[0.06] rounded-2xl p-6 shadow-sm text-center flex flex-col items-center">
+          <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl p-6 shadow-sm text-center flex flex-col items-center">
             <div className="w-11 h-11 rounded-2xl bg-[#0071E3]/[0.08] flex items-center justify-center mb-3">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0071E3" strokeWidth="1.5"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="#0071E3" stroke="none" /></svg>
             </div>
@@ -257,7 +257,7 @@ const ProfilePage: React.FC = () => {
           </div>
 
           {/* CV download */}
-          <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.06] dark:border-white/[0.06] rounded-2xl p-6 shadow-sm text-center flex flex-col items-center">
+          <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl p-6 shadow-sm text-center flex flex-col items-center">
             <div className="w-11 h-11 rounded-2xl bg-[#0071E3]/[0.08] flex items-center justify-center mb-3">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0071E3" strokeWidth="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="12" y1="18" x2="12" y2="12" /><polyline points="9 15 12 18 15 15" /></svg>
             </div>

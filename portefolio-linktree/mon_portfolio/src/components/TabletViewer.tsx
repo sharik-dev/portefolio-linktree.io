@@ -9,7 +9,7 @@ export default function TabletViewer({ screenshots, landscape = false }: Props) 
   const deviceRef = useRef<HTMLDivElement>(null);
 
   // ── Rotation state ─────────────────────────────────────────────
-  const rot = useRef({ y: landscape ? -25 : 18, x: landscape ? -6 : -8 });
+  const rot = useRef({ y: landscape ? -25 : 22, x: landscape ? -6 : -8 });
   const vel = useRef({ y: 0.07, x: 0 });
   const drag = useRef({ active: false, lx: 0, ly: 0 });
   const rafRef = useRef<number>(0);
@@ -48,7 +48,12 @@ export default function TabletViewer({ screenshots, landscape = false }: Props) 
       if (!drag.current.active) {
         rot.current.y += vel.current.y;
         rot.current.x += vel.current.x;
-        vel.current.y = vel.current.y * 0.997 + 0.07 * 0.003;
+        // Force de rappel quand Y dépasse ±50° pour éviter la vue latérale (corner gaps)
+        if (Math.abs(rot.current.y) > 50) {
+          vel.current.y += -Math.sign(rot.current.y) * 0.10;
+        } else {
+          vel.current.y = vel.current.y * 0.997 + 0.07 * 0.003;
+        }
         vel.current.x *= 0.92;
         rot.current.x = Math.max(-25, Math.min(25, rot.current.x));
       }

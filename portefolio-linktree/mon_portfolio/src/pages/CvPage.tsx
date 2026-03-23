@@ -12,6 +12,7 @@ import epitechLogo from '../assets/formation/epitech.png';
 import simplonLogo from '../assets/formation/simplon.png';
 import billiereLogo from '../assets/formation/billiere.png';
 import combLogo from '../assets/company/comb.png';
+import guidorLogo from '../assets/company/guidor.png';
 
 /* ─── CV markdown URLs ────────────────────────────────────────────── */
 const CV_URLS = {
@@ -34,7 +35,7 @@ const DATA = {
         en: 'Designed and implemented iOS features following MVVM architecture. Developed complex MapboxMaps SDK integrations: multiple weather overlay layers, zoom-level visibility management, multi-layer track control. Wrote technical documentation. Unit testing, performance optimization, code reviews in Agile sprints.'
       },
       tags: ['Swift', 'iOS', 'MVVM', 'MapboxMaps SDK v10+', 'UIKit', 'CI/CD', 'GitHub Actions', 'Tests unitaires', 'Agile/Scrum'],
-      logo: 'src/assets/company/guidor.png',
+      logo: guidorLogo,
     },
     {
       id: 'facteur-humain',

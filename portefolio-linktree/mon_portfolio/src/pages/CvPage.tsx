@@ -4,7 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import { useLang, t } from '../contexts/LangContext';
-import { downloadCvAsPdf } from '../utils/downloadCvAsPdf';
+import { downloadCvAsPdf, buildCvText } from '../utils/downloadCvAsPdf';
 
 import cvFrenchUrl from '../assets/cv_markdown/CV_Sharik_french.md';
 import cvEnglishUrl from '../assets/cv_markdown/CV_Sharik_english.md';
@@ -189,7 +189,7 @@ const CvPage: React.FC = () => {
   }[lang];
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(cvContent).then(() => {
+    navigator.clipboard.writeText(buildCvText(lang)).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     });
@@ -198,13 +198,8 @@ const CvPage: React.FC = () => {
   const handleDownloadPdf = async (targetLang: 'fr' | 'en') => {
     setDownloading(targetLang);
     try {
-      let content = cvContent;
-      if (targetLang !== lang) {
-        const url = targetLang === 'fr' ? cvFrenchUrl : cvEnglishUrl;
-        content = await fetch(url).then(r => r.text());
-      }
       const name = targetLang === 'fr' ? 'CV_Sharik_Mohamed_FR.pdf' : 'CV_Sharik_Mohamed_EN.pdf';
-      await downloadCvAsPdf(content, name);
+      await downloadCvAsPdf(targetLang, name);
     } finally {
       setDownloading(null);
     }

@@ -3,8 +3,6 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useLang, t } from '../contexts/LangContext';
 import { downloadCvAsPdf } from '../utils/downloadCvAsPdf';
-import cvFrenchUrl from '../assets/cv_markdown/CV_Sharik_french.md';
-import cvEnglishUrl from '../assets/cv_markdown/CV_Sharik_english.md';
 
 import pfpImage from '../assets/pfp.png';
 import imgGuidor from '../assets/guidor/imageApp.png';
@@ -92,10 +90,8 @@ const ProfilePage: React.FC = () => {
   const handleDownloadPdf = async (targetLang: 'fr' | 'en') => {
     setDownloading(targetLang);
     try {
-      const url = targetLang === 'fr' ? cvFrenchUrl : cvEnglishUrl;
-      const content = await fetch(url).then(r => r.text());
       const name = targetLang === 'fr' ? 'CV_Sharik_Mohamed_FR.pdf' : 'CV_Sharik_Mohamed_EN.pdf';
-      await downloadCvAsPdf(content, name);
+      await downloadCvAsPdf(targetLang, name);
     } finally {
       setDownloading(null);
     }

@@ -145,7 +145,7 @@ export default function TabletViewer({ screenshots, landscape = false }: Props) 
           borderRadius: `${R + 1}px`,
           background: FRONT_BG,
           // outer ring in body color seals sub-pixel corner gaps
-          boxShadow: `inset 0 0 0 1px rgba(255,255,255,0.07), 0 0 0 3px ${FRONT_BG}`,
+          boxShadow: `inset 0 0 0 1px rgba(255,255,255,0.07), 0 0 0 5px #c2c2c6`,
           transform: `translateZ(${DEPTH / 2}px)`,
           overflow: 'hidden',
         }}>

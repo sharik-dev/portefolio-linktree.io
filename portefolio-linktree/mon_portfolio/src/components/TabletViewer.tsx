@@ -60,13 +60,13 @@ function DeviceModel({
   rotState: React.MutableRefObject<RotState>;
 }) {
   const { gl } = useThree();
-  const groupRef     = useRef<THREE.Group>(null!);
-  const screenMatRef = useRef<THREE.MeshBasicMaterial>(null!);
-  const pendingTex   = useRef<THREE.Texture | null>(null);
+  const groupRef  = useRef<THREE.Group>(null!);
+  // Texture stored in React state so R3F JSX reconciliation never clears it
+  const [screenTex, setScreenTex] = useState<THREE.Texture | null>(null);
 
   useEffect(() => {
     let alive = true;
-    pendingTex.current = null;
+    setScreenTex(null);
 
     const loader = new THREE.TextureLoader();
     loader.load(
@@ -74,9 +74,8 @@ function DeviceModel({
       (tex) => {
         if (!alive) return;
         tex.colorSpace = THREE.SRGBColorSpace;
-        // Force GPU upload inside the active WebGL context — critical on iPad/iOS
         try { gl.initTexture(tex); } catch (_) { /* non-fatal */ }
-        pendingTex.current = tex;
+        setScreenTex(tex);
       },
       undefined,
       (err) => console.warn('[TabletViewer] texture failed to load:', screenshot, err)
@@ -129,17 +128,6 @@ function DeviceModel({
   }, [W, H, Dd, R, bev]);
 
   useFrame(() => {
-    // Apply pending texture — runs inside R3F loop where all refs are guaranteed set
-    if (pendingTex.current && screenMatRef.current) {
-      screenMatRef.current.map = pendingTex.current;
-      screenMatRef.current.needsUpdate = true;
-      pendingTex.current = null;
-    }
-    // Sync opacity (set by parent's slide transition via React state)
-    if (screenMatRef.current && screenMatRef.current.opacity !== opacity) {
-      screenMatRef.current.opacity = opacity;
-      screenMatRef.current.needsUpdate = true;
-    }
     if (!groupRef.current) return;
     const s = rotState.current;
     if (!s.dragging) {
@@ -184,13 +172,13 @@ function DeviceModel({
           <meshBasicMaterial color="#000" />
         </mesh>
 
-        {/* ── Screenshot — always rendered, texture applied imperatively ─── */}
+        {/* ── Screenshot — texture via React state, never cleared by reconciliation ─── */}
         <mesh position={[0, sOY, zFront + 0.001]}>
           <planeGeometry args={[SW, SH]} />
           <meshBasicMaterial
-            ref={screenMatRef}
+            map={screenTex ?? undefined}
             transparent
-            opacity={opacity}
+            opacity={screenTex ? opacity : 0}
             depthWrite={false}
           />
         </mesh>

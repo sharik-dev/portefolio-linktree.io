@@ -3,6 +3,17 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { RoundedBox } from '@react-three/drei';
 import * as THREE from 'three';
 
+// ── Error boundary for WebGL failures (iPad, old Android, etc.) ─────────────
+class CanvasErrorBoundary extends React.Component<
+  { children: React.ReactNode; fallback: React.ReactNode },
+  { hasError: boolean }
+> {
+  state = { hasError: false };
+  static getDerivedStateFromError() { return { hasError: true }; }
+  componentDidCatch(e: unknown) { console.warn('[TabletViewer] WebGL error caught by boundary:', e); }
+  render() { return this.state.hasError ? this.props.fallback : this.props.children; }
+}
+
 // ── CI/CD version tag ───────────────────────────────────────────────────────
 const VIEWER_VERSION = 'v3.2.0';
 console.log(`[TabletViewer] ${VIEWER_VERSION} loaded`);
@@ -437,29 +448,43 @@ export default function TabletViewer({ screenshots, landscape = false }: Props) 
   const containerH = landscape ? 320 : 500;
   const cameraZ    = landscape ? 5.0  : 4.4;
 
+  // Fallback: simple image carousel shown when WebGL fails (iPad, old devices)
+  const fallback = (
+    <div style={{ width: '100%', height: `${containerH}px`, display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'transparent', overflow: 'hidden' }}>
+      <img
+        src={screenshots[imgIndex] ?? screenshots[0]}
+        alt="app screenshot"
+        style={{ maxHeight: '100%', maxWidth: '100%', objectFit: 'contain', borderRadius: '16px' }}
+      />
+    </div>
+  );
+
   return (
     <div style={{ userSelect: 'none' }}>
-      <div
-        style={{ width: '100%', height: `${containerH}px`, cursor: 'grab' }}
-        onPointerDown={onDown}
-        onPointerMove={onMove}
-        onPointerUp={onUp}
-        onPointerLeave={onUp}
-      >
-        <Canvas
-          camera={{ position: [0, 0, cameraZ], fov: 36 }}
-          gl={{ antialias: true, alpha: true }}
-          onCreated={({ gl }) => gl.setClearColor(0x000000, 0)}
-          style={{ background: 'transparent' }}
+      <CanvasErrorBoundary fallback={fallback}>
+        <div
+          style={{ width: '100%', height: `${containerH}px`, cursor: 'grab' }}
+          onPointerDown={onDown}
+          onPointerMove={onMove}
+          onPointerUp={onUp}
+          onPointerLeave={onUp}
         >
-          <DeviceModel
-            screenshot={screenshots[imgIndex] ?? screenshots[0]}
-            opacity={opacity}
-            landscape={landscape}
-            rotState={rotState}
-          />
-        </Canvas>
-      </div>
+          <Canvas
+            camera={{ position: [0, 0, cameraZ], fov: 36 }}
+            gl={{ antialias: true, alpha: true, powerPreference: 'default', failIfMajorPerformanceCaveat: false }}
+            dpr={[1, 2]}
+            onCreated={({ gl }) => gl.setClearColor(0x000000, 0)}
+            style={{ background: 'transparent' }}
+          >
+            <DeviceModel
+              screenshot={screenshots[imgIndex] ?? screenshots[0]}
+              opacity={opacity}
+              landscape={landscape}
+              rotState={rotState}
+            />
+          </Canvas>
+        </div>
+      </CanvasErrorBoundary>
 
       {screenshots.length > 1 && (
         <div style={{ display: 'flex', gap: '6px', marginTop: '12px', justifyContent: 'center', alignItems: 'center' }}>

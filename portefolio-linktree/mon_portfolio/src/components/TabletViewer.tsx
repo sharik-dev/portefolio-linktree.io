@@ -141,8 +141,8 @@ function DeviceModel({
   const bodyRgh = landscape ? 0.18 : 0.22;
   const btnCol  = landscape ? '#2e2e30' : '#c0bdb7';
 
-  const zFront = Dd / 2 + 0.001;
-  const zBack  = -(Dd / 2) - 0.001;
+  const zFront = Dd / 2 + bev + 0.001;
+  const zBack  = -(Dd / 2 + bev) - 0.001;
 
   return (
     <>

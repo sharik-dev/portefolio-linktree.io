@@ -1,6 +1,6 @@
-import React, { useRef, useState, useEffect, useCallback, useMemo } from 'react';
+import React, { Suspense, useRef, useState, useEffect, useCallback, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { RoundedBox } from '@react-three/drei';
+import { RoundedBox, useTexture } from '@react-three/drei';
 import * as THREE from 'three';
 
 interface Props {
@@ -38,6 +38,21 @@ function makeTex(color: string): THREE.CanvasTexture {
   return tex;
 }
 
+// ── Screen mesh (uses useTexture — must be inside Suspense) ────────────────
+function ScreenMesh({ screenshot, SW, SH, sOY, zFront, opacity }: {
+  screenshot: string; SW: number; SH: number;
+  sOY: number; zFront: number; opacity: number;
+}) {
+  const texture = useTexture(screenshot);
+  texture.colorSpace = THREE.SRGBColorSpace;
+  return (
+    <mesh position={[0, sOY, zFront + 0.001]}>
+      <planeGeometry args={[SW, SH]} />
+      <meshBasicMaterial map={texture} transparent opacity={opacity} depthWrite={false} />
+    </mesh>
+  );
+}
+
 // ── Inner 3D scene ─────────────────────────────────────────────────────────
 function DeviceModel({
   screenshot, opacity, landscape, rotState,
@@ -46,17 +61,6 @@ function DeviceModel({
   rotState: React.MutableRefObject<RotState>;
 }) {
   const groupRef = useRef<THREE.Group>(null!);
-  const [screenTex, setScreenTex] = useState<THREE.Texture | null>(null);
-
-  useEffect(() => {
-    let alive = true;
-    new THREE.TextureLoader().load(screenshot, t => {
-      if (!alive) return;
-      t.colorSpace = THREE.SRGBColorSpace;
-      setScreenTex(t);
-    });
-    return () => { alive = false; };
-  }, [screenshot]);
 
   // Apple logo texture (memoised per component lifetime)
   const logoTex = useMemo(() =>
@@ -160,12 +164,9 @@ function DeviceModel({
         </mesh>
 
         {/* ── Screenshot ────────────────────────────────────────────────── */}
-        {screenTex && (
-          <mesh position={[0, sOY, zFront + 0.001]}>
-            <planeGeometry args={[SW, SH]} />
-            <meshBasicMaterial map={screenTex} transparent opacity={opacity} depthWrite={false} />
-          </mesh>
-        )}
+        <Suspense fallback={null}>
+          <ScreenMesh screenshot={screenshot} SW={SW} SH={SH} sOY={sOY} zFront={zFront} opacity={opacity} />
+        </Suspense>
 
         {/* ── Dynamic Island — iPhone portrait ──────────────────────────── */}
         {!landscape && (() => {

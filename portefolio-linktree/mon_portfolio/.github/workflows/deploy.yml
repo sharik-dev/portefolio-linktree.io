@@ -1,0 +1,41 @@
+name: Deploy to sharik.fr
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Deploy via SCP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: 51.91.125.99
+          port: 2222
+          username: ubuntu
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          fingerprint: "AAAAC3NzaC1lZDI1NTE5AAAAILpi+wFGqqX2lK46WgWM/RVRBlkRk9JnqhFdZvZzv860"
+          source: dist/*
+          target: /var/www/sharik.fr
+          strip_components: 1
+          rm: true
+      - name: Fix permissions
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 51.91.125.99
+          port: 2222
+          username: ubuntu
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          fingerprint: "AAAAC3NzaC1lZDI1NTE5AAAAILpi+wFGqqX2lK46WgWM/RVRBlkRk9JnqhFdZvZzv860"
+          script: sudo chown -R www-data:www-data /var/www/sharik.fr

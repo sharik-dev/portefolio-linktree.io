@@ -323,29 +323,42 @@ const PortfolioPage: React.FC = () => {
         <section>
           <h2 className="text-2xl font-bold text-[#1D1D1F] dark:text-white tracking-tight mb-5">{ui.preview3d}</h2>
           <div className="bg-white dark:bg-[#1C1C1E] rounded-3xl border border-black/[0.10] dark:border-white/[0.06] shadow-sm p-6">
-            <div className="flex items-center justify-center gap-4">
-              <button onClick={() => setTabletIndex(i => (i - 1 + APPS.length) % APPS.length)}
-                className="w-10 h-10 rounded-full bg-[#F5F5F7] dark:bg-[#2C2C2E] flex items-center justify-center text-[#1D1D1F] dark:text-white hover:bg-[#E8E8ED] dark:hover:bg-[#3A3A3C] transition-colors flex-shrink-0">
+
+            {/* Wrapper relatif : flèches centrées sur la hauteur du viewer uniquement */}
+            <div className="relative">
+              <button
+                onClick={() => setTabletIndex(i => (i - 1 + APPS.length) % APPS.length)}
+                className="absolute -left-3 sm:-left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-[#F5F5F7] dark:bg-[#2C2C2E] flex items-center justify-center text-[#1D1D1F] dark:text-white hover:bg-[#E8E8ED] dark:hover:bg-[#3A3A3C] transition-colors"
+              >
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="15 18 9 12 15 6" /></svg>
               </button>
-              <div className="flex-1 max-w-[360px]">
-                <TabletViewer
-                  screenshots={APPS[tabletIndex].screenshots}
-                  landscape={APPS[tabletIndex].id === 'guidor'}
-                />
-                <div className="text-center mt-3">
-                  <h3 className="font-semibold text-[#1D1D1F] dark:text-white text-[15px]">{APPS[tabletIndex].name}</h3>
-                  <p className="text-[12px] text-[#6E6E73] dark:text-[#98989D]">{t(lang, APPS[tabletIndex].subtitle.fr, APPS[tabletIndex].subtitle.en)}</p>
-                  <p className="text-[10px] text-[#86868B] mt-1">{ui.hint}</p>
-                  <button onClick={() => setSelectedApp(APPS[tabletIndex])}
-                    className="mt-3 bg-[#0071E3] text-white text-[13px] font-medium px-5 py-2 rounded-full hover:bg-[#0077ED] transition-colors">
-                    {ui.details}
-                  </button>
+
+              <button
+                onClick={() => setTabletIndex(i => (i + 1) % APPS.length)}
+                className="absolute -right-3 sm:-right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-[#F5F5F7] dark:bg-[#2C2C2E] flex items-center justify-center text-[#1D1D1F] dark:text-white hover:bg-[#E8E8ED] dark:hover:bg-[#3A3A3C] transition-colors"
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="9 18 15 12 9 6" /></svg>
+              </button>
+
+              {/* Viewer centré avec marges latérales pour laisser la place aux flèches */}
+              <div className="mx-12 sm:mx-14 flex justify-center">
+                <div className="w-full max-w-[340px]">
+                  <TabletViewer
+                    screenshots={APPS[tabletIndex].screenshots}
+                    landscape={APPS[tabletIndex].id === 'guidor'}
+                  />
                 </div>
               </div>
-              <button onClick={() => setTabletIndex(i => (i + 1) % APPS.length)}
-                className="w-10 h-10 rounded-full bg-[#F5F5F7] dark:bg-[#2C2C2E] flex items-center justify-center text-[#1D1D1F] dark:text-white hover:bg-[#E8E8ED] dark:hover:bg-[#3A3A3C] transition-colors flex-shrink-0">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="9 18 15 12 9 6" /></svg>
+            </div>
+
+            {/* Infos app — hors du wrapper pour que top-1/2 des flèches reste sur le viewer */}
+            <div className="text-center mt-3">
+              <h3 className="font-semibold text-[#1D1D1F] dark:text-white text-[15px]">{APPS[tabletIndex].name}</h3>
+              <p className="text-[12px] text-[#6E6E73] dark:text-[#98989D]">{t(lang, APPS[tabletIndex].subtitle.fr, APPS[tabletIndex].subtitle.en)}</p>
+              <p className="text-[10px] text-[#86868B] mt-1">{ui.hint}</p>
+              <button onClick={() => setSelectedApp(APPS[tabletIndex])}
+                className="mt-3 bg-[#0071E3] text-white text-[13px] font-medium px-5 py-2 rounded-full hover:bg-[#0077ED] transition-colors">
+                {ui.details}
               </button>
             </div>
           </div>

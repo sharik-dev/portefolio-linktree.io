@@ -379,52 +379,54 @@ const CvPage: React.FC = () => {
                   rehypePlugins={[rehypeRaw]}
                   components={{
                     h1: ({ children }) => (
-                      <h1 className="text-2xl font-bold text-[#1D1D1F] dark:text-white tracking-tight mb-1">{children}</h1>
+                      <h1 className="text-xl sm:text-2xl font-bold text-[#1D1D1F] dark:text-white tracking-tight mb-1 break-words">{children}</h1>
                     ),
                     h2: ({ children }) => (
-                      <h2 className="text-[13px] font-semibold text-[#86868B] uppercase tracking-[0.08em] mt-7 mb-3 pb-2 border-b border-black/[0.06] dark:border-white/[0.06]">{children}</h2>
+                      <h2 className="text-[12px] sm:text-[13px] font-semibold text-[#86868B] uppercase tracking-[0.08em] mt-6 sm:mt-7 mb-3 pb-2 border-b border-black/[0.06] dark:border-white/[0.06] break-words">{children}</h2>
                     ),
                     h3: ({ children }) => (
-                      <h3 className="text-[14px] font-semibold text-[#1D1D1F] dark:text-white mt-4 mb-1">{children}</h3>
+                      <h3 className="text-[13px] sm:text-[14px] font-semibold text-[#1D1D1F] dark:text-white mt-4 mb-1 break-words flex flex-wrap items-center gap-1">{children}</h3>
                     ),
                     p: ({ children }) => (
-                      <p className="text-[13px] text-[#6E6E73] dark:text-[#98989D] leading-relaxed mb-2">{children}</p>
+                      <p className="text-[12px] sm:text-[13px] text-[#6E6E73] dark:text-[#98989D] leading-relaxed mb-2 break-words">{children}</p>
                     ),
                     strong: ({ children }) => (
                       <strong className="font-semibold text-[#1D1D1F] dark:text-white">{children}</strong>
                     ),
                     em: ({ children }) => (
-                      <em className="text-[#6E6E73] dark:text-[#98989D] not-italic text-[12px]">{children}</em>
+                      <em className="text-[#6E6E73] dark:text-[#98989D] not-italic text-[11px] sm:text-[12px]">{children}</em>
                     ),
                     ul: ({ children }) => (
                       <ul className="space-y-1.5 mb-3 ml-1">{children}</ul>
                     ),
                     li: ({ children }) => (
-                      <li className="flex items-start gap-2 text-[13px] text-[#6E6E73] dark:text-[#98989D]">
+                      <li className="flex items-start gap-2 text-[12px] sm:text-[13px] text-[#6E6E73] dark:text-[#98989D]">
                         <span className="text-[#0071E3] font-bold shrink-0 mt-0.5 text-[10px]">●</span>
-                        <span>{children}</span>
+                        <span className="break-words min-w-0">{children}</span>
                       </li>
                     ),
                     hr: () => (
-                      <hr className="my-5 border-black/[0.06] dark:border-white/[0.06]" />
+                      <hr className="my-4 sm:my-5 border-black/[0.06] dark:border-white/[0.06]" />
                     ),
                     code: ({ children }) => (
-                      <code className="text-[10px] font-medium px-1.5 py-0.5 rounded-md bg-[#0071E3]/[0.08] text-[#0071E3] font-mono">{children}</code>
+                      <code className="text-[10px] font-medium px-1.5 py-0.5 rounded-md bg-[#0071E3]/[0.08] text-[#0071E3] font-mono break-all">{children}</code>
                     ),
                     a: ({ href, children }) => (
-                      <a href={href} target="_blank" rel="noopener noreferrer" className="text-[#0071E3] font-medium hover:underline">{children}</a>
+                      <a href={href} target="_blank" rel="noopener noreferrer" className="text-[#0071E3] font-medium hover:underline break-all">{children}</a>
                     ),
                     img: ({ src, alt }) => (
-                      <img src={src} alt={alt} className="inline-block rounded-xl object-cover" style={{ maxHeight: alt === 'photo' ? 72 : alt === 'qr' ? 64 : 36, maxWidth: alt === 'photo' ? 72 : alt === 'qr' ? 64 : 36 }} />
+                      <img src={src} alt={alt} className="inline-block rounded-xl object-cover" style={{ maxHeight: alt === 'photo' ? 56 : alt === 'qr' ? 48 : 28, maxWidth: alt === 'photo' ? 56 : alt === 'qr' ? 48 : 28 }} />
                     ),
                     table: ({ children }) => (
-                      <table className="w-full mb-4 border-collapse">{children}</table>
+                      <div className="overflow-x-auto my-3 -mx-4 sm:mx-0 px-4 sm:px-0">
+                        <table className="border-collapse min-w-max text-left">{children}</table>
+                      </div>
                     ),
                     td: ({ children }) => (
-                      <td className="align-middle py-2 pr-4 text-[13px] text-[#6E6E73] dark:text-[#98989D]">{children}</td>
+                      <td className="align-middle py-1.5 sm:py-2 pr-3 sm:pr-4 text-[11px] sm:text-[13px] text-[#6E6E73] dark:text-[#98989D]">{children}</td>
                     ),
                     th: ({ children }) => (
-                      <th className="align-middle py-2 pr-4 text-[13px] font-semibold text-[#1D1D1F] dark:text-white">{children}</th>
+                      <th className="align-middle py-1.5 sm:py-2 pr-3 sm:pr-4 text-[11px] sm:text-[13px] font-semibold text-[#1D1D1F] dark:text-white">{children}</th>
                     ),
                   }}
                 >

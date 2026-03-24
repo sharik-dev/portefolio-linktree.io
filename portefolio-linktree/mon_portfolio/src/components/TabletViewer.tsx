@@ -61,28 +61,47 @@ function DeviceModel({
 }) {
   const { gl } = useThree();
   const groupRef  = useRef<THREE.Group>(null!);
-  // Texture stored in React state so R3F JSX reconciliation never clears it
-  const [screenTex, setScreenTex] = useState<THREE.Texture | null>(null);
+  const screenMatRef = useRef<THREE.MeshBasicMaterial>(null!);
 
   useEffect(() => {
     let alive = true;
-    setScreenTex(null);
 
-    const loader = new THREE.TextureLoader();
-    loader.load(
-      screenshot,
-      (tex) => {
-        if (!alive) return;
-        tex.colorSpace = THREE.SRGBColorSpace;
-        try { gl.initTexture(tex); } catch (_) { /* non-fatal */ }
-        setScreenTex(tex);
-      },
-      undefined,
-      (err) => console.warn('[TabletViewer] texture failed to load:', screenshot, err)
-    );
+    // Reset material while new texture loads
+    if (screenMatRef.current) {
+      screenMatRef.current.map = null;
+      screenMatRef.current.opacity = 0;
+      screenMatRef.current.needsUpdate = true;
+    }
+
+    const img = new Image();
+    // NE PAS setter crossOrigin : les assets Vite sont same-origin et déjà
+    // cachés sans CORS par les <img> tags du DOM → conflit de cache garanti
+    // si on ajoute crossOrigin ici.
+    img.onload = () => {
+      if (!alive) return;
+      const tex = new THREE.Texture(img);
+      tex.colorSpace = THREE.SRGBColorSpace;
+      tex.needsUpdate = true;
+      try { gl.initTexture(tex); } catch (_) { /* non-fatal */ }
+      if (screenMatRef.current) {
+        screenMatRef.current.map = tex;
+        screenMatRef.current.opacity = opacity;
+        screenMatRef.current.needsUpdate = true;
+      }
+    };
+    img.onerror = (err) => console.warn('[TabletViewer] texture failed to load:', screenshot, err);
+    img.src = screenshot;
 
     return () => { alive = false; };
-  }, [screenshot, gl]);
+  }, [screenshot, gl]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Keep opacity in sync when it changes (carousel fade)
+  useEffect(() => {
+    if (screenMatRef.current && screenMatRef.current.map) {
+      screenMatRef.current.opacity = opacity;
+      screenMatRef.current.needsUpdate = true;
+    }
+  }, [opacity]);
 
   const logoTex = useMemo(() =>
     makeTex(landscape ? 'rgba(180,180,180,0.35)' : 'rgba(255,255,255,0.28)'),
@@ -172,13 +191,13 @@ function DeviceModel({
           <meshBasicMaterial color="#000" />
         </mesh>
 
-        {/* ── Screenshot — texture via React state, never cleared by reconciliation ─── */}
+        {/* ── Screenshot — updated imperatively via ref to force needsUpdate ── */}
         <mesh position={[0, sOY, zFront + 0.001]}>
           <planeGeometry args={[SW, SH]} />
           <meshBasicMaterial
-            map={screenTex ?? undefined}
+            ref={screenMatRef}
             transparent
-            opacity={screenTex ? opacity : 0}
+            opacity={0}
             depthWrite={false}
           />
         </mesh>

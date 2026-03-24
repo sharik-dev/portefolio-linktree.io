@@ -3,6 +3,10 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { RoundedBox } from '@react-three/drei';
 import * as THREE from 'three';
 
+// ── CI/CD version tag ───────────────────────────────────────────────────────
+const VIEWER_VERSION = 'v3.1.0';
+console.log(`[TabletViewer] ${VIEWER_VERSION} loaded`);
+
 interface Props {
   screenshots: string[];
   landscape?: boolean;
@@ -31,7 +35,6 @@ function makeTex(color: string): THREE.CanvasTexture {
   ctx.fill(new Path2D(APPLE_SVG_PATH));
   ctx.restore();
   const tex = new THREE.CanvasTexture(c);
-  // Flip U so logo reads correctly when plane is rotated 180° on Y
   tex.wrapS = THREE.RepeatWrapping;
   tex.repeat.x = -1;
   tex.offset.x = 1;
@@ -45,56 +48,70 @@ function DeviceModel({
   screenshot: string; opacity: number; landscape: boolean;
   rotState: React.MutableRefObject<RotState>;
 }) {
-  const groupRef = useRef<THREE.Group>(null!);
-  const [screenTex, setScreenTex] = useState<THREE.CanvasTexture | null>(null);
+  const groupRef  = useRef<THREE.Group>(null!);
+  // ── Imperative material ref: bypasses React state → R3F re-render cycle ──
+  const screenMatRef = useRef<THREE.MeshBasicMaterial>(null!);
 
-  // Load screenshot via native Image → canvas → CanvasTexture
-  // This avoids all TextureLoader / Suspense compatibility issues
   useEffect(() => {
     let alive = true;
     const img = new Image();
     img.onload = () => {
       if (!alive) return;
+      // Cap texture size to avoid WebGL limits on mobile
+      const MAX = 2048;
+      let w = img.naturalWidth  || img.width  || 512;
+      let h = img.naturalHeight || img.height || 512;
+      if (w > MAX || h > MAX) {
+        const r = Math.min(MAX / w, MAX / h);
+        w = Math.floor(w * r);
+        h = Math.floor(h * r);
+      }
       const canvas = document.createElement('canvas');
-      canvas.width  = img.naturalWidth  || img.width;
-      canvas.height = img.naturalHeight || img.height;
+      canvas.width = w; canvas.height = h;
       const ctx = canvas.getContext('2d');
       if (!ctx) return;
-      ctx.drawImage(img, 0, 0);
+      ctx.drawImage(img, 0, 0, w, h);
       const tex = new THREE.CanvasTexture(canvas);
       tex.colorSpace = THREE.SRGBColorSpace;
-      setScreenTex(tex);
+      tex.needsUpdate = true;
+      // Imperative update — no setState, no conditional render
+      if (screenMatRef.current) {
+        screenMatRef.current.map = tex;
+        screenMatRef.current.needsUpdate = true;
+      }
     };
+    img.onerror = () => console.warn('[TabletViewer] failed to load:', screenshot);
     img.src = screenshot;
-    return () => { alive = false; img.onload = null; };
+    return () => { alive = false; img.onload = null; img.onerror = null; };
   }, [screenshot]);
 
-  // Apple logo texture (memoised per component lifetime)
+  // Update opacity imperatively too (avoids re-render on slide transition)
+  useEffect(() => {
+    if (screenMatRef.current) {
+      screenMatRef.current.opacity = opacity;
+      screenMatRef.current.needsUpdate = true;
+    }
+  }, [opacity]);
+
   const logoTex = useMemo(() =>
     makeTex(landscape ? 'rgba(180,180,180,0.35)' : 'rgba(255,255,255,0.28)'),
   [landscape]);
 
   // ── Accurate Apple proportions ─────────────────────────────────────────
-  // iPhone 15: 71.5 × 147.6 × 7.8 mm  → scale W=1.0
-  // iPad Pro 11" M4: 248.6 × 177.5 × 5.3 mm  → scale W=2.5
   const W   = landscape ? 2.50  : 1.00;
   const H   = landscape ? 1.785 : 2.065;
-  const Dd  = landscape ? 0.053 : 0.109;   // depth
-  const R   = landscape ? 0.055 : 0.110;   // face-corner radius
-  const bev = 0.005;                         // tiny edge bevel
+  const Dd  = landscape ? 0.053 : 0.109;
+  const R   = landscape ? 0.055 : 0.110;
+  const bev = 0.005;
 
-  // Bezels (measured from real device dims)
   const bSide = landscape ? 0.058 : 0.039;
   const bTop  = landscape ? 0.051 : 0.038;
   const bBot  = landscape ? 0.046 : 0.038;
 
-  const SW  = W - bSide * 2;           // screen width
-  const SH  = H - bTop - bBot;         // screen height
-  const sOY = (bTop - bBot) / 2;       // vertical offset to center screen
+  const SW  = W - bSide * 2;
+  const SH  = H - bTop - bBot;
+  const sOY = (bTop - bBot) / 2;
 
-  // ── Build ExtrudeGeometry for correct Apple corner radius ─────────────
-  // RoundedBox forces same radius on all edges; ExtrudeGeometry lets us
-  // set a large face-corner R (≈11% of W) with a tiny depth bevel.
   const bodyGeo = useMemo(() => {
     const s = new THREE.Shape();
     const hw = W / 2, hh = H / 2;
@@ -107,7 +124,6 @@ function DeviceModel({
     s.quadraticCurveTo(-hw,  hh, -hw,  hh - R);
     s.lineTo(-hw, -hh + R);
     s.quadraticCurveTo(-hw, -hh, -hw + R, -hh);
-
     const geo = new THREE.ExtrudeGeometry(s, {
       steps: 1, depth: Dd,
       bevelEnabled: true,
@@ -119,10 +135,6 @@ function DeviceModel({
     geo.computeVertexNormals();
     return geo;
   }, [W, H, Dd, R, bev]);
-
-  // After center(): ExtrudeGeometry back cap (extruded end) is at z ≈ +Dd/2
-  // → that is the face closest to camera → this is where we put the screen.
-  // Front cap (original shape) is at z ≈ -Dd/2 → shows when device is rotated.
 
   useFrame(() => {
     if (!groupRef.current) return;
@@ -141,12 +153,11 @@ function DeviceModel({
     groupRef.current.rotation.x = s.x;
   });
 
-  // Body color: iPad Space Black / iPhone Natural Titanium
-  const bodyCol  = landscape ? '#1d1d1f' : '#cac8c2';
-  const bodyMet  = landscape ? 0.85 : 0.72;
-  const bodyRgh  = landscape ? 0.18 : 0.22;
+  const bodyCol = landscape ? '#1d1d1f' : '#cac8c2';
+  const bodyMet = landscape ? 0.85 : 0.72;
+  const bodyRgh = landscape ? 0.18 : 0.22;
+  const btnCol  = landscape ? '#2e2e30' : '#c0bdb7';
 
-  // Front z (screen side) and back z (logo side)
   const zFront = Dd / 2 + 0.001;
   const zBack  = -(Dd / 2) - 0.001;
 
@@ -170,13 +181,16 @@ function DeviceModel({
           <meshBasicMaterial color="#000" />
         </mesh>
 
-        {/* ── Screenshot ────────────────────────────────────────────────── */}
-        {screenTex && (
-          <mesh position={[0, sOY, zFront + 0.001]}>
-            <planeGeometry args={[SW, SH]} />
-            <meshBasicMaterial map={screenTex} transparent opacity={opacity} depthWrite={false} />
-          </mesh>
-        )}
+        {/* ── Screenshot — always rendered, texture applied imperatively ─── */}
+        <mesh position={[0, sOY, zFront + 0.001]}>
+          <planeGeometry args={[SW, SH]} />
+          <meshBasicMaterial
+            ref={screenMatRef}
+            transparent
+            opacity={opacity}
+            depthWrite={false}
+          />
+        </mesh>
 
         {/* ── Dynamic Island — iPhone portrait ──────────────────────────── */}
         {!landscape && (() => {
@@ -202,47 +216,110 @@ function DeviceModel({
         )}
 
         {/* ── Apple logo on back ────────────────────────────────────────── */}
-        {/* rotation Y=PI → normal faces -Z in local space → visible when
-            device turns to show back face to camera                        */}
         <mesh position={[0, landscape ? 0 : H * 0.04, zBack]} rotation={[0, Math.PI, 0]}>
           <planeGeometry args={[landscape ? 0.40 : 0.22, landscape ? 0.49 : 0.27]} />
           <meshBasicMaterial map={logoTex} transparent depthWrite={false} />
         </mesh>
 
-        {/* ── Camera module on back — iPhone (top-left) ─────────────────── */}
+        {/* ── iPhone 15 Pro triple-lens camera module ────────────────────── */}
         {!landscape && (
-          <group position={[-W * 0.19, H * 0.30, zBack - 0.003]} rotation={[0, Math.PI, 0]}>
-            {/* Module housing */}
-            <RoundedBox args={[0.26, 0.26, 0.008]} radius={0.04} smoothness={6}>
-              <meshStandardMaterial color="#111" metalness={0.7} roughness={0.3} />
+          <group position={[-W * 0.19, H * 0.305, zBack - 0.003]} rotation={[0, Math.PI, 0]}>
+            {/* Module housing — slightly larger for 3 lenses */}
+            <RoundedBox args={[0.295, 0.295, 0.010]} radius={0.046} smoothness={8}>
+              <meshStandardMaterial color="#111" metalness={0.75} roughness={0.25} />
             </RoundedBox>
-            {/* Lens 1 */}
-            <mesh position={[-0.055,  0.055, 0.005]}>
-              <circleGeometry args={[0.048, 24]} />
-              <meshStandardMaterial color="#1a1a1a" metalness={0.9} roughness={0.1} />
+            {/* Raised inner platform */}
+            <RoundedBox args={[0.270, 0.270, 0.005]} radius={0.038} smoothness={8} position={[0, 0, 0.007]}>
+              <meshStandardMaterial color="#181818" metalness={0.7} roughness={0.3} />
+            </RoundedBox>
+
+            {/* ── Lens 1: Main Wide — top-left ────────────────────────────── */}
+            <mesh position={[-0.068, 0.068, 0.010]}>
+              <circleGeometry args={[0.052, 32]} />
+              <meshStandardMaterial color="#111" metalness={0.9} roughness={0.1} />
             </mesh>
-            <mesh position={[-0.055,  0.055, 0.009]}>
-              <circleGeometry args={[0.032, 24]} />
-              <meshStandardMaterial color="#0a1020" metalness={0.95} roughness={0.05} />
+            {/* Lens 1 ring */}
+            <mesh position={[-0.068, 0.068, 0.011]}>
+              <ringGeometry args={[0.044, 0.052, 32]} />
+              <meshStandardMaterial color="#2a2a2a" metalness={0.95} roughness={0.05} />
             </mesh>
-            {/* Lens 2 */}
-            <mesh position={[ 0.055,  0.055, 0.005]}>
-              <circleGeometry args={[0.048, 24]} />
-              <meshStandardMaterial color="#1a1a1a" metalness={0.9} roughness={0.1} />
+            {/* Lens 1 glass */}
+            <mesh position={[-0.068, 0.068, 0.013]}>
+              <circleGeometry args={[0.038, 32]} />
+              <meshStandardMaterial color="#080c18" metalness={0.95} roughness={0.04} />
             </mesh>
-            <mesh position={[ 0.055,  0.055, 0.009]}>
-              <circleGeometry args={[0.032, 24]} />
-              <meshStandardMaterial color="#0a1020" metalness={0.95} roughness={0.05} />
+            {/* Lens 1 inner reflection dot */}
+            <mesh position={[-0.056, 0.079, 0.014]}>
+              <circleGeometry args={[0.007, 12]} />
+              <meshStandardMaterial color="#3a4a6a" metalness={1} roughness={0} />
             </mesh>
-            {/* Flash */}
-            <mesh position={[ 0.055, -0.055, 0.006]}>
-              <circleGeometry args={[0.022, 16]} />
-              <meshStandardMaterial color="#f5e6b0" metalness={0.3} roughness={0.5} />
+
+            {/* ── Lens 2: Ultrawide — top-right ───────────────────────────── */}
+            <mesh position={[0.068, 0.068, 0.010]}>
+              <circleGeometry args={[0.048, 32]} />
+              <meshStandardMaterial color="#111" metalness={0.9} roughness={0.1} />
+            </mesh>
+            <mesh position={[0.068, 0.068, 0.011]}>
+              <ringGeometry args={[0.040, 0.048, 32]} />
+              <meshStandardMaterial color="#2a2a2a" metalness={0.95} roughness={0.05} />
+            </mesh>
+            <mesh position={[0.068, 0.068, 0.013]}>
+              <circleGeometry args={[0.034, 32]} />
+              <meshStandardMaterial color="#0a0e1c" metalness={0.95} roughness={0.04} />
+            </mesh>
+            <mesh position={[0.056, 0.079, 0.014]}>
+              <circleGeometry args={[0.006, 12]} />
+              <meshStandardMaterial color="#3a4a6a" metalness={1} roughness={0} />
+            </mesh>
+
+            {/* ── Lens 3: Telephoto — bottom-center ───────────────────────── */}
+            <mesh position={[0, -0.072, 0.010]}>
+              <circleGeometry args={[0.050, 32]} />
+              <meshStandardMaterial color="#111" metalness={0.9} roughness={0.1} />
+            </mesh>
+            <mesh position={[0, -0.072, 0.011]}>
+              <ringGeometry args={[0.042, 0.050, 32]} />
+              <meshStandardMaterial color="#2a2a2a" metalness={0.95} roughness={0.05} />
+            </mesh>
+            <mesh position={[0, -0.072, 0.013]}>
+              <circleGeometry args={[0.036, 32]} />
+              <meshStandardMaterial color="#070b18" metalness={0.95} roughness={0.04} />
+            </mesh>
+            <mesh position={[0.010, -0.061, 0.014]}>
+              <circleGeometry args={[0.007, 12]} />
+              <meshStandardMaterial color="#3a4a6a" metalness={1} roughness={0} />
+            </mesh>
+
+            {/* ── Flash (top area, between lenses 1&2, slightly above) ─────── */}
+            <mesh position={[0, 0.095, 0.010]}>
+              <circleGeometry args={[0.024, 20]} />
+              <meshStandardMaterial color="#f0dfa0" metalness={0.3} roughness={0.5} emissive="#302010" emissiveIntensity={0.3} />
+            </mesh>
+            {/* Flash ring */}
+            <mesh position={[0, 0.095, 0.009]}>
+              <ringGeometry args={[0.024, 0.028, 20]} />
+              <meshStandardMaterial color="#333" metalness={0.6} roughness={0.4} />
+            </mesh>
+
+            {/* ── LiDAR sensor — bottom-right ─────────────────────────────── */}
+            <mesh position={[0.072, -0.072, 0.010]}>
+              <circleGeometry args={[0.020, 20]} />
+              <meshStandardMaterial color="#1a1a28" metalness={0.85} roughness={0.15} />
+            </mesh>
+            <mesh position={[0.072, -0.072, 0.011]}>
+              <ringGeometry args={[0.017, 0.020, 20]} />
+              <meshStandardMaterial color="#2a2a3a" metalness={0.9} roughness={0.1} />
+            </mesh>
+
+            {/* ── Microphone dot — bottom-left ────────────────────────────── */}
+            <mesh position={[-0.072, -0.072, 0.009]}>
+              <circleGeometry args={[0.012, 14]} />
+              <meshStandardMaterial color="#222" metalness={0.6} roughness={0.5} />
             </mesh>
           </group>
         )}
 
-        {/* ── Camera module on back — iPad (top-right) ──────────────────── */}
+        {/* ── Camera module — iPad (top-right) ──────────────────────────── */}
         {landscape && (
           <group position={[W * 0.35, H * 0.28, zBack - 0.002]} rotation={[0, Math.PI, 0]}>
             <mesh position={[0, 0, 0.003]}>
@@ -253,7 +330,6 @@ function DeviceModel({
               <circleGeometry args={[0.038, 24]} />
               <meshStandardMaterial color="#0a0e18" metalness={0.95} roughness={0.05} />
             </mesh>
-            {/* LiDAR */}
             <mesh position={[0.09, 0, 0.003]}>
               <circleGeometry args={[0.025, 16]} />
               <meshStandardMaterial color="#1a1a2a" metalness={0.9} roughness={0.1} />
@@ -261,25 +337,39 @@ function DeviceModel({
           </group>
         )}
 
-        {/* ── Power button — right edge, portrait ───────────────────────── */}
+        {/* ── iPhone buttons — right edge: Power/Side button ─────────────── */}
         {!landscape && (
-          <mesh position={[W / 2 + Dd * 0.25, H * 0.18, 0]}>
-            <boxGeometry args={[Dd * 0.6, 0.145, Dd * 0.4]} />
-            <meshStandardMaterial color={landscape ? '#2e2e30' : '#c0bdb7'} metalness={0.85} roughness={0.15} />
+          <mesh position={[W / 2 + Dd * 0.25, H * 0.165, 0]}>
+            <boxGeometry args={[Dd * 0.55, 0.165, Dd * 0.38]} />
+            <meshStandardMaterial color={btnCol} metalness={0.88} roughness={0.12} />
           </mesh>
         )}
 
-        {/* ── Volume & mute — left edge, portrait ───────────────────────── */}
-        {!landscape && [
-          [H * 0.250, 0.055],
-          [H * 0.140, 0.090],
-          [H * 0.035, 0.090],
-        ].map(([y, h], i) => (
-          <mesh key={i} position={[-W / 2 - Dd * 0.25, y as number, 0]}>
-            <boxGeometry args={[Dd * 0.6, h as number, Dd * 0.4]} />
-            <meshStandardMaterial color="#c0bdb7" metalness={0.85} roughness={0.15} />
-          </mesh>
-        ))}
+        {/* ── iPhone buttons — left edge ─────────────────────────────────── */}
+        {!landscape && (() => {
+          const x = -W / 2 - Dd * 0.25;
+          return (
+            <>
+              {/* Action button — distinct, shorter, positioned above vol */}
+              <mesh position={[x, H * 0.285, 0]}>
+                <boxGeometry args={[Dd * 0.55, 0.068, Dd * 0.38]} />
+                <meshStandardMaterial color={btnCol} metalness={0.90} roughness={0.10} />
+              </mesh>
+              {/* Small separator gap visible as slight geometry recess */}
+
+              {/* Volume + */}
+              <mesh position={[x, H * 0.170, 0]}>
+                <boxGeometry args={[Dd * 0.55, 0.092, Dd * 0.38]} />
+                <meshStandardMaterial color={btnCol} metalness={0.88} roughness={0.12} />
+              </mesh>
+              {/* Volume - */}
+              <mesh position={[x, H * 0.052, 0]}>
+                <boxGeometry args={[Dd * 0.55, 0.092, Dd * 0.38]} />
+                <meshStandardMaterial color={btnCol} metalness={0.88} roughness={0.12} />
+              </mesh>
+            </>
+          );
+        })()}
 
         {/* ── Top button — iPad landscape ───────────────────────────────── */}
         {landscape && (
@@ -371,11 +461,11 @@ export default function TabletViewer({ screenshots, landscape = false }: Props) 
       </div>
 
       {screenshots.length > 1 && (
-        <div style={{ display: 'flex', gap: '6px', marginTop: '12px', justifyContent: 'center' }}>
+        <div style={{ display: 'flex', gap: '6px', marginTop: '12px', justifyContent: 'center', alignItems: 'center' }}>
           {screenshots.map((_, i) => (
             <div key={i} style={{
-              width: i === imgIndex ? '16px' : '6px', height: '6px', borderRadius: '3px',
-              backgroundColor: i === imgIndex ? '#0071E3' : '#C7C7CC',
+              width: i === imgIndex ? '20px' : '6px', height: '6px', borderRadius: '3px',
+              backgroundColor: i === imgIndex ? '#0A84FF' : '#AEAEB2',
               transition: 'all 0.3s ease',
             }} />
           ))}

@@ -4,7 +4,7 @@ import { RoundedBox } from '@react-three/drei';
 import * as THREE from 'three';
 
 // ── CI/CD version tag ───────────────────────────────────────────────────────
-const VIEWER_VERSION = 'v3.1.0';
+const VIEWER_VERSION = 'v3.2.0';
 console.log(`[TabletViewer] ${VIEWER_VERSION} loaded`);
 
 interface Props {
@@ -48,16 +48,17 @@ function DeviceModel({
   screenshot: string; opacity: number; landscape: boolean;
   rotState: React.MutableRefObject<RotState>;
 }) {
-  const groupRef  = useRef<THREE.Group>(null!);
-  // ── Imperative material ref: bypasses React state → R3F re-render cycle ──
+  const groupRef     = useRef<THREE.Group>(null!);
   const screenMatRef = useRef<THREE.MeshBasicMaterial>(null!);
+  // Store loaded texture here; applied inside useFrame where R3F refs are guaranteed ready
+  const pendingTex   = useRef<THREE.CanvasTexture | null>(null);
 
   useEffect(() => {
     let alive = true;
+    pendingTex.current = null; // clear stale texture while new one loads
     const img = new Image();
     img.onload = () => {
       if (!alive) return;
-      // Cap texture size to avoid WebGL limits on mobile
       const MAX = 2048;
       let w = img.naturalWidth  || img.width  || 512;
       let h = img.naturalHeight || img.height || 512;
@@ -74,24 +75,13 @@ function DeviceModel({
       const tex = new THREE.CanvasTexture(canvas);
       tex.colorSpace = THREE.SRGBColorSpace;
       tex.needsUpdate = true;
-      // Imperative update — no setState, no conditional render
-      if (screenMatRef.current) {
-        screenMatRef.current.map = tex;
-        screenMatRef.current.needsUpdate = true;
-      }
+      // Queue for useFrame — avoids race where matRef isn't set yet
+      pendingTex.current = tex;
     };
     img.onerror = () => console.warn('[TabletViewer] failed to load:', screenshot);
     img.src = screenshot;
     return () => { alive = false; img.onload = null; img.onerror = null; };
   }, [screenshot]);
-
-  // Update opacity imperatively too (avoids re-render on slide transition)
-  useEffect(() => {
-    if (screenMatRef.current) {
-      screenMatRef.current.opacity = opacity;
-      screenMatRef.current.needsUpdate = true;
-    }
-  }, [opacity]);
 
   const logoTex = useMemo(() =>
     makeTex(landscape ? 'rgba(180,180,180,0.35)' : 'rgba(255,255,255,0.28)'),
@@ -137,6 +127,17 @@ function DeviceModel({
   }, [W, H, Dd, R, bev]);
 
   useFrame(() => {
+    // Apply pending texture — runs inside R3F loop where all refs are guaranteed set
+    if (pendingTex.current && screenMatRef.current) {
+      screenMatRef.current.map = pendingTex.current;
+      screenMatRef.current.needsUpdate = true;
+      pendingTex.current = null;
+    }
+    // Sync opacity (set by parent's slide transition via React state)
+    if (screenMatRef.current && screenMatRef.current.opacity !== opacity) {
+      screenMatRef.current.opacity = opacity;
+      screenMatRef.current.needsUpdate = true;
+    }
     if (!groupRef.current) return;
     const s = rotState.current;
     if (!s.dragging) {

@@ -1,6 +1,6 @@
-import React, { Suspense, useRef, useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useRef, useState, useEffect, useCallback, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import { RoundedBox, useTexture } from '@react-three/drei';
+import { RoundedBox } from '@react-three/drei';
 import * as THREE from 'three';
 
 interface Props {
@@ -38,21 +38,6 @@ function makeTex(color: string): THREE.CanvasTexture {
   return tex;
 }
 
-// ── Screen mesh (uses useTexture — must be inside Suspense) ────────────────
-function ScreenMesh({ screenshot, SW, SH, sOY, zFront, opacity }: {
-  screenshot: string; SW: number; SH: number;
-  sOY: number; zFront: number; opacity: number;
-}) {
-  const texture = useTexture(screenshot);
-  texture.colorSpace = THREE.SRGBColorSpace;
-  return (
-    <mesh position={[0, sOY, zFront + 0.001]}>
-      <planeGeometry args={[SW, SH]} />
-      <meshBasicMaterial map={texture} transparent opacity={opacity} depthWrite={false} />
-    </mesh>
-  );
-}
-
 // ── Inner 3D scene ─────────────────────────────────────────────────────────
 function DeviceModel({
   screenshot, opacity, landscape, rotState,
@@ -61,6 +46,29 @@ function DeviceModel({
   rotState: React.MutableRefObject<RotState>;
 }) {
   const groupRef = useRef<THREE.Group>(null!);
+  const [screenTex, setScreenTex] = useState<THREE.CanvasTexture | null>(null);
+
+  // Load screenshot via native Image → canvas → CanvasTexture
+  // This avoids all TextureLoader / Suspense compatibility issues
+  useEffect(() => {
+    let alive = true;
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => {
+      if (!alive) return;
+      const canvas = document.createElement('canvas');
+      canvas.width  = img.naturalWidth  || img.width;
+      canvas.height = img.naturalHeight || img.height;
+      const ctx = canvas.getContext('2d');
+      if (!ctx) return;
+      ctx.drawImage(img, 0, 0);
+      const tex = new THREE.CanvasTexture(canvas);
+      tex.colorSpace = THREE.SRGBColorSpace;
+      setScreenTex(tex);
+    };
+    img.src = screenshot;
+    return () => { alive = false; img.onload = null; };
+  }, [screenshot]);
 
   // Apple logo texture (memoised per component lifetime)
   const logoTex = useMemo(() =>
@@ -164,9 +172,12 @@ function DeviceModel({
         </mesh>
 
         {/* ── Screenshot ────────────────────────────────────────────────── */}
-        <Suspense fallback={null}>
-          <ScreenMesh screenshot={screenshot} SW={SW} SH={SH} sOY={sOY} zFront={zFront} opacity={opacity} />
-        </Suspense>
+        {screenTex && (
+          <mesh position={[0, sOY, zFront + 0.001]}>
+            <planeGeometry args={[SW, SH]} />
+            <meshBasicMaterial map={screenTex} transparent opacity={opacity} depthWrite={false} />
+          </mesh>
+        )}
 
         {/* ── Dynamic Island — iPhone portrait ──────────────────────────── */}
         {!landscape && (() => {

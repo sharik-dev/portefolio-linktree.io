@@ -121,10 +121,10 @@ const ExpandableCard: React.FC<{
     <motion.div
       whileHover={{ y: -2 }}
       onClick={() => setOpen(o => !o)}
-      className="bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl p-5 cursor-pointer shadow-sm hover:shadow-md transition-all duration-200 relative"
+      className="bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl p-4 sm:p-5 cursor-pointer shadow-sm hover:shadow-md transition-all duration-200 relative"
     >
-      <div className="flex items-start gap-4">
-        <img src={logo} alt={title} className={`w-14 h-14 rounded-xl border border-black/[0.10] dark:border-white/[0.06] flex-shrink-0 mt-0.5 ${logoScale ? `object-contain scale-75` : 'object-cover'}`} />
+      <div className="flex items-start gap-3 sm:gap-4">
+        <img src={logo} alt={title} className={`w-12 h-12 sm:w-14 sm:h-14 rounded-xl border border-black/[0.10] dark:border-white/[0.06] flex-shrink-0 mt-0.5 ${logoScale ? `object-contain scale-75` : 'object-cover'}`} />
         <div className="flex-1 min-w-0">
           <div className="flex flex-wrap items-center gap-2 mb-0.5">
             <h3 className="text-[14px] font-semibold text-[#1D1D1F] dark:text-white tracking-tight">{title}</h3>
@@ -212,20 +212,20 @@ const CvPage: React.FC = () => {
     <div className="min-h-screen bg-[#E8E8ED] dark:bg-[#000000] transition-colors duration-300">
 
       {/* Hero */}
-      <header className="bg-white dark:bg-[#1D1D1F] border-b border-black/[0.06] dark:border-white/[0.06] px-6 pt-12 pb-0 text-center">
+      <header className="bg-white dark:bg-[#1D1D1F] border-b border-black/[0.06] dark:border-white/[0.06] px-4 sm:px-6 pt-12 pb-0 text-center">
         <p className="text-[12px] font-semibold text-[#0071E3] uppercase tracking-[0.12em] mb-2">
           {lang === 'fr' ? 'Parcours' : 'Career'}
         </p>
         <h1 className="text-4xl md:text-5xl font-bold text-[#1D1D1F] dark:text-white tracking-tight mb-2">{ui.hero}</h1>
         <p className="text-base text-[#6E6E73] dark:text-[#98989D] mb-6">{ui.sub}</p>
 
-        {/* Apple-style segmented control */}
-        <div className="inline-flex bg-[#E8E8ED] dark:bg-[#2C2C2E] rounded-xl p-1 gap-1 mb-0">
+        {/* Apple-style segmented control — full width on mobile */}
+        <div className="flex sm:inline-flex w-full sm:w-auto bg-[#E8E8ED] dark:bg-[#2C2C2E] rounded-xl p-1 gap-1 mb-0">
           {ui.tabs.map((label, i) => (
             <button
               key={tabKeys[i]}
               onClick={() => setTab(tabKeys[i])}
-              className={`px-4 py-1.5 rounded-[10px] text-[13px] font-medium transition-all duration-200 whitespace-nowrap ${tab === tabKeys[i]
+              className={`flex-1 sm:flex-none px-2 sm:px-4 py-1.5 rounded-[10px] text-[11px] sm:text-[13px] font-medium transition-all duration-200 whitespace-nowrap ${tab === tabKeys[i]
                 ? 'bg-white dark:bg-[#3A3A3C] text-[#1D1D1F] dark:text-white shadow-sm'
                 : 'text-[#6E6E73] dark:text-[#98989D] hover:text-[#1D1D1F] dark:hover:text-white'
                 }`}
@@ -236,7 +236,7 @@ const CvPage: React.FC = () => {
         </div>
       </header>
 
-      <div className="max-w-3xl mx-auto px-5 md:px-8 py-10 space-y-8">
+      <div className="max-w-3xl mx-auto px-4 sm:px-5 md:px-8 py-8 sm:py-10 space-y-6 sm:space-y-8">
 
         {/* Experience */}
         {tab === 'experiences' && (
@@ -338,22 +338,22 @@ const CvPage: React.FC = () => {
             <div className="bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl overflow-hidden shadow-sm">
               {/* Toolbar */}
               <div className="flex items-center justify-between px-5 py-3 border-b border-black/[0.06] dark:border-white/[0.06] bg-[#E0E0E2] dark:bg-[#2C2C2E]">
-                <div className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-[#FF5F57]" />
-                  <span className="w-3 h-3 rounded-full bg-[#FEBC2E]" />
-                  <span className="w-3 h-3 rounded-full bg-[#28C840]" />
-                  <span className="ml-3 text-[11px] font-mono text-[#86868B] dark:text-[#636366]">
+                <div className="flex items-center gap-2 min-w-0">
+                  <span className="w-3 h-3 rounded-full bg-[#FF5F57] flex-shrink-0" />
+                  <span className="w-3 h-3 rounded-full bg-[#FEBC2E] flex-shrink-0" />
+                  <span className="w-3 h-3 rounded-full bg-[#28C840] flex-shrink-0" />
+                  <span className="ml-2 text-[11px] font-mono text-[#86868B] dark:text-[#636366] hidden sm:block truncate">
                     {lang === 'fr' ? 'CV_Sharik_french.md' : 'CV_Sharik_english.md'}
                   </span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 flex-shrink-0">
                   <button
                     onClick={() => handleDownloadPdf(lang)}
                     disabled={downloading === lang}
-                    className="inline-flex items-center gap-1.5 text-[11px] font-medium text-[#6E6E73] dark:text-[#98989D] hover:text-[#0071E3] transition-colors disabled:opacity-50"
+                    className="inline-flex items-center gap-1 text-[11px] font-medium text-[#6E6E73] dark:text-[#98989D] hover:text-[#0071E3] transition-colors disabled:opacity-50"
                   >
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
-                    {downloading === lang ? '…' : lang === 'fr' ? ui.dlFr : ui.dlEn}
+                    <span className="hidden sm:inline">{downloading === lang ? '…' : lang === 'fr' ? ui.dlFr : ui.dlEn}</span>
                   </button>
                   <button
                     onClick={handleCopy}
@@ -373,7 +373,7 @@ const CvPage: React.FC = () => {
               </div>
 
               {/* Rendered Markdown */}
-              <div className="p-6 md:p-8 overflow-y-auto max-h-[70vh] scrollbar-hide">
+              <div className="p-4 sm:p-6 md:p-8 overflow-y-auto max-h-[65vh] scrollbar-hide overflow-x-hidden">
                 <ReactMarkdown
                   remarkPlugins={[remarkGfm]}
                   rehypePlugins={[rehypeRaw]}

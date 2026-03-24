@@ -60,48 +60,27 @@ function DeviceModel({
   rotState: React.MutableRefObject<RotState>;
 }) {
   const { gl } = useThree();
-  const groupRef  = useRef<THREE.Group>(null!);
-  const screenMatRef = useRef<THREE.MeshBasicMaterial>(null!);
+  const groupRef = useRef<THREE.Group>(null!);
+  const [screenTex, setScreenTex] = useState<THREE.Texture | null>(null);
 
   useEffect(() => {
     let alive = true;
-
-    // Reset material while new texture loads
-    if (screenMatRef.current) {
-      screenMatRef.current.map = null;
-      screenMatRef.current.opacity = 0;
-      screenMatRef.current.needsUpdate = true;
-    }
+    setScreenTex(null);
 
     const img = new Image();
-    // NE PAS setter crossOrigin : les assets Vite sont same-origin et déjà
-    // cachés sans CORS par les <img> tags du DOM → conflit de cache garanti
-    // si on ajoute crossOrigin ici.
     img.onload = () => {
       if (!alive) return;
       const tex = new THREE.Texture(img);
       tex.colorSpace = THREE.SRGBColorSpace;
       tex.needsUpdate = true;
       try { gl.initTexture(tex); } catch (_) { /* non-fatal */ }
-      if (screenMatRef.current) {
-        screenMatRef.current.map = tex;
-        screenMatRef.current.opacity = opacity;
-        screenMatRef.current.needsUpdate = true;
-      }
+      setScreenTex(tex);
     };
-    img.onerror = (err) => console.warn('[TabletViewer] texture failed to load:', screenshot, err);
+    img.onerror = (err) => console.warn('[TabletViewer] texture failed:', screenshot, err);
     img.src = screenshot;
 
     return () => { alive = false; };
-  }, [screenshot, gl]); // eslint-disable-line react-hooks/exhaustive-deps
-
-  // Keep opacity in sync when it changes (carousel fade)
-  useEffect(() => {
-    if (screenMatRef.current && screenMatRef.current.map) {
-      screenMatRef.current.opacity = opacity;
-      screenMatRef.current.needsUpdate = true;
-    }
-  }, [opacity]);
+  }, [screenshot, gl]);
 
   const logoTex = useMemo(() =>
     makeTex(landscape ? 'rgba(180,180,180,0.35)' : 'rgba(255,255,255,0.28)'),
@@ -191,13 +170,13 @@ function DeviceModel({
           <meshBasicMaterial color="#000" />
         </mesh>
 
-        {/* ── Screenshot — updated imperatively via ref to force needsUpdate ── */}
+        {/* ── Screenshot — driven declaratively to avoid R3F reconciler conflicts ── */}
         <mesh position={[0, sOY, zFront + 0.001]}>
           <planeGeometry args={[SW, SH]} />
           <meshBasicMaterial
-            ref={screenMatRef}
+            map={screenTex ?? undefined}
             transparent
-            opacity={0}
+            opacity={screenTex ? opacity : 0}
             depthWrite={false}
           />
         </mesh>

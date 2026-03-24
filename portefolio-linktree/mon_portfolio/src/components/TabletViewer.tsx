@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect, useCallback, useMemo } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { RoundedBox } from '@react-three/drei';
 import * as THREE from 'three';
 
@@ -59,14 +59,14 @@ function DeviceModel({
   screenshot: string; opacity: number; landscape: boolean;
   rotState: React.MutableRefObject<RotState>;
 }) {
+  const { gl } = useThree();
   const groupRef     = useRef<THREE.Group>(null!);
   const screenMatRef = useRef<THREE.MeshBasicMaterial>(null!);
-  // Store loaded texture here; applied inside useFrame where R3F refs are guaranteed ready
   const pendingTex   = useRef<THREE.Texture | null>(null);
 
   useEffect(() => {
     let alive = true;
-    pendingTex.current = null; // clear stale texture while new one loads
+    pendingTex.current = null;
 
     const loader = new THREE.TextureLoader();
     loader.load(
@@ -74,39 +74,16 @@ function DeviceModel({
       (tex) => {
         if (!alive) return;
         tex.colorSpace = THREE.SRGBColorSpace;
-        // Queue for useFrame — avoids race where matRef isn't set yet
+        // Force GPU upload inside the active WebGL context — critical on iPad/iOS
+        try { gl.initTexture(tex); } catch (_) { /* non-fatal */ }
         pendingTex.current = tex;
       },
       undefined,
-      () => {
-        // TextureLoader failed — try canvas fallback
-        if (!alive) return;
-        const img = new Image();
-        img.onload = () => {
-          if (!alive) return;
-          const MAX = 1024;
-          let w = img.naturalWidth  || 512;
-          let h = img.naturalHeight || 512;
-          if (w > MAX || h > MAX) {
-            const r = Math.min(MAX / w, MAX / h);
-            w = Math.floor(w * r); h = Math.floor(h * r);
-          }
-          const canvas = document.createElement('canvas');
-          canvas.width = w; canvas.height = h;
-          const ctx = canvas.getContext('2d');
-          if (!ctx) { console.warn('[TabletViewer] canvas 2d unavailable'); return; }
-          ctx.drawImage(img, 0, 0, w, h);
-          const tex = new THREE.CanvasTexture(canvas);
-          tex.colorSpace = THREE.SRGBColorSpace;
-          pendingTex.current = tex;
-        };
-        img.onerror = () => console.warn('[TabletViewer] failed to load:', screenshot);
-        img.src = screenshot;
-      }
+      (err) => console.warn('[TabletViewer] texture failed to load:', screenshot, err)
     );
 
     return () => { alive = false; };
-  }, [screenshot]);
+  }, [screenshot, gl]);
 
   const logoTex = useMemo(() =>
     makeTex(landscape ? 'rgba(180,180,180,0.35)' : 'rgba(255,255,255,0.28)'),

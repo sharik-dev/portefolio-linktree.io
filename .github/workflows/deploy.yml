@@ -1,44 +1,12 @@
-name: Deploy to GitHub Pages
+# Ce workflow est désactivé — sharik.fr est servi par le VPS via deploy-vps.yml
+# GitHub Pages ne gère plus ce projet.
+name: Deploy to GitHub Pages (disabled)
 
 on:
-  push:
-    branches:
-      - main
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+  workflow_dispatch: {}
 
 jobs:
-  build:
+  placeholder:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v4
-
-      - name: Install and Build 🔧
-        working-directory: ./portefolio-linktree/mon_portfolio
-        env:
-          VITE_BASE: /portefolio-linktree.io/
-        run: |
-          npm install
-          npx tsc -b
-          npx vite build
-
-      - name: Upload Artifact 📦
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./portefolio-linktree/mon_portfolio/dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy 🚀
-        id: deployment
-        uses: actions/deploy-pages@v4
-
+      - run: echo "Use deploy-vps.yml instead"

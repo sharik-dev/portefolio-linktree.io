@@ -1,6 +1,6 @@
-import React, { useRef, useState, useEffect, useCallback, useMemo } from 'react';
-import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { RoundedBox } from '@react-three/drei';
+import React, { Suspense, useRef, useState, useEffect, useCallback, useMemo } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { RoundedBox, useTexture } from '@react-three/drei';
 import * as THREE from 'three';
 
 // ── Error boundary for WebGL failures (iPad, old Android, etc.) ─────────────
@@ -15,8 +15,23 @@ class CanvasErrorBoundary extends React.Component<
 }
 
 // ── CI/CD version tag ───────────────────────────────────────────────────────
-const VIEWER_VERSION = 'v3.2.0';
+const VIEWER_VERSION = 'v4.0.0';
 console.log(`[TabletViewer] ${VIEWER_VERSION} loaded`);
+
+// ── Screen sub-component — useTexture suspends until texture is ready ───────
+function ScreenTexture({ src, opacity, args, position }: {
+  src: string; opacity: number;
+  args: [number, number]; position: [number, number, number];
+}) {
+  const tex = useTexture(src);
+  tex.colorSpace = THREE.SRGBColorSpace;
+  return (
+    <mesh position={position}>
+      <planeGeometry args={args} />
+      <meshBasicMaterial map={tex} transparent opacity={opacity} depthWrite={false} />
+    </mesh>
+  );
+}
 
 interface Props {
   screenshots: string[];
@@ -59,28 +74,7 @@ function DeviceModel({
   screenshot: string; opacity: number; landscape: boolean;
   rotState: React.MutableRefObject<RotState>;
 }) {
-  const { gl } = useThree();
   const groupRef = useRef<THREE.Group>(null!);
-  const [screenTex, setScreenTex] = useState<THREE.Texture | null>(null);
-
-  useEffect(() => {
-    let alive = true;
-    setScreenTex(null);
-
-    const img = new Image();
-    img.onload = () => {
-      if (!alive) return;
-      const tex = new THREE.Texture(img);
-      tex.colorSpace = THREE.SRGBColorSpace;
-      tex.needsUpdate = true;
-      try { gl.initTexture(tex); } catch (_) { /* non-fatal */ }
-      setScreenTex(tex);
-    };
-    img.onerror = (err) => console.warn('[TabletViewer] texture failed:', screenshot, err);
-    img.src = screenshot;
-
-    return () => { alive = false; };
-  }, [screenshot, gl]);
 
   const logoTex = useMemo(() =>
     makeTex(landscape ? 'rgba(180,180,180,0.35)' : 'rgba(255,255,255,0.28)'),
@@ -170,16 +164,15 @@ function DeviceModel({
           <meshBasicMaterial color="#000" />
         </mesh>
 
-        {/* ── Screenshot — driven declaratively to avoid R3F reconciler conflicts ── */}
-        <mesh position={[0, sOY, zFront + 0.001]}>
-          <planeGeometry args={[SW, SH]} />
-          <meshBasicMaterial
-            map={screenTex ?? undefined}
-            transparent
-            opacity={screenTex ? opacity : 0}
-            depthWrite={false}
+        {/* ── Screenshot — useTexture suspends until ready, no reconciler conflict ── */}
+        <Suspense fallback={null}>
+          <ScreenTexture
+            src={screenshot}
+            opacity={opacity}
+            args={[SW, SH]}
+            position={[0, sOY, zFront + 0.001]}
           />
-        </mesh>
+        </Suspense>
 
         {/* ── Dynamic Island — iPhone portrait ──────────────────────────── */}
         {!landscape && (() => {

@@ -62,36 +62,50 @@ function DeviceModel({
   const groupRef     = useRef<THREE.Group>(null!);
   const screenMatRef = useRef<THREE.MeshBasicMaterial>(null!);
   // Store loaded texture here; applied inside useFrame where R3F refs are guaranteed ready
-  const pendingTex   = useRef<THREE.CanvasTexture | null>(null);
+  const pendingTex   = useRef<THREE.Texture | null>(null);
 
   useEffect(() => {
     let alive = true;
     pendingTex.current = null; // clear stale texture while new one loads
-    const img = new Image();
-    img.onload = () => {
-      if (!alive) return;
-      const MAX = 2048;
-      let w = img.naturalWidth  || img.width  || 512;
-      let h = img.naturalHeight || img.height || 512;
-      if (w > MAX || h > MAX) {
-        const r = Math.min(MAX / w, MAX / h);
-        w = Math.floor(w * r);
-        h = Math.floor(h * r);
+
+    const loader = new THREE.TextureLoader();
+    loader.load(
+      screenshot,
+      (tex) => {
+        if (!alive) return;
+        tex.colorSpace = THREE.SRGBColorSpace;
+        // Queue for useFrame — avoids race where matRef isn't set yet
+        pendingTex.current = tex;
+      },
+      undefined,
+      () => {
+        // TextureLoader failed — try canvas fallback
+        if (!alive) return;
+        const img = new Image();
+        img.onload = () => {
+          if (!alive) return;
+          const MAX = 1024;
+          let w = img.naturalWidth  || 512;
+          let h = img.naturalHeight || 512;
+          if (w > MAX || h > MAX) {
+            const r = Math.min(MAX / w, MAX / h);
+            w = Math.floor(w * r); h = Math.floor(h * r);
+          }
+          const canvas = document.createElement('canvas');
+          canvas.width = w; canvas.height = h;
+          const ctx = canvas.getContext('2d');
+          if (!ctx) { console.warn('[TabletViewer] canvas 2d unavailable'); return; }
+          ctx.drawImage(img, 0, 0, w, h);
+          const tex = new THREE.CanvasTexture(canvas);
+          tex.colorSpace = THREE.SRGBColorSpace;
+          pendingTex.current = tex;
+        };
+        img.onerror = () => console.warn('[TabletViewer] failed to load:', screenshot);
+        img.src = screenshot;
       }
-      const canvas = document.createElement('canvas');
-      canvas.width = w; canvas.height = h;
-      const ctx = canvas.getContext('2d');
-      if (!ctx) return;
-      ctx.drawImage(img, 0, 0, w, h);
-      const tex = new THREE.CanvasTexture(canvas);
-      tex.colorSpace = THREE.SRGBColorSpace;
-      tex.needsUpdate = true;
-      // Queue for useFrame — avoids race where matRef isn't set yet
-      pendingTex.current = tex;
-    };
-    img.onerror = () => console.warn('[TabletViewer] failed to load:', screenshot);
-    img.src = screenshot;
-    return () => { alive = false; img.onload = null; img.onerror = null; };
+    );
+
+    return () => { alive = false; };
   }, [screenshot]);
 
   const logoTex = useMemo(() =>

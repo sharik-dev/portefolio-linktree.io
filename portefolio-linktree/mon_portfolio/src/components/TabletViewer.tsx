@@ -53,7 +53,6 @@ function DeviceModel({
   useEffect(() => {
     let alive = true;
     const img = new Image();
-    img.crossOrigin = 'anonymous';
     img.onload = () => {
       if (!alive) return;
       const canvas = document.createElement('canvas');

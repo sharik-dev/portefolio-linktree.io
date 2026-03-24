@@ -8,6 +8,7 @@ import appHome from '../assets/meowTube/AppHomePage.png';
 import appSecond from '../assets/meowTube/AppSecondPage.png';
 import redCat from '../assets/meowTube/Red Cat Illustration.png';
 import redDecoration from '../assets/meowTube/redCatDecoration.png';
+import TabletViewer from '../components/TabletViewer';
 
 /* ─── Contact form ────────────────────────────────────────────── */
 const CONTACT_EMAIL = 'VOTRE_EMAIL@exemple.com'; // TODO: remplace par ton adresse
@@ -386,19 +387,13 @@ const MeowTubeLandingPage: React.FC = () => {
           <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#E60000] mb-3">{ui.screensEyebrow}</p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight">{ui.screensTitle}</h2>
         </div>
-        <div className="flex gap-6 overflow-x-auto scrollbar-hide px-8 pb-4 justify-center">
-          {[appHome, appSecond].map((src, i) => (
-            <motion.div key={i}
-              initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }} transition={{ delay: i * 0.15, duration: 0.6 }}
-              className="flex-shrink-0 relative"
-            >
-              <div className="absolute inset-0 bg-[#E60000]/10 rounded-[32px] blur-2xl scale-95" />
-              <img src={src} alt={`Screenshot ${i + 1}`}
-                className="relative h-[520px] w-auto rounded-[28px] shadow-2xl border border-black/[0.08] dark:border-white/[0.08] object-cover" />
-            </motion.div>
-          ))}
-        </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }} transition={{ duration: 0.6 }}
+          className="max-w-[280px] mx-auto"
+        >
+          <TabletViewer screenshots={[appHome, appSecond]} />
+        </motion.div>
       </section>
 
       {/* ── Mission ────────────────────────────────────────────── */}

@@ -8,6 +8,7 @@ import firstImage from '../assets/islamic daily quote/firstImage.png';
 import appImage from '../assets/islamic daily quote/image.png';
 import secondImage from '../assets/islamic daily quote/second image.png';
 import thirdImage from '../assets/islamic daily quote/thirst image.png';
+import TabletViewer from '../components/TabletViewer';
 
 /* ─── Contact form ────────────────────────────────────────────── */
 const CONTACT_EMAIL = 'VOTRE_EMAIL@exemple.com'; // TODO: remplace par ton adresse
@@ -517,19 +518,13 @@ const IslamicDailyQuoteLandingPage: React.FC = () => {
           <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#22C55E] mb-3">{ui.screensEyebrow}</p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight">{ui.screensTitle}</h2>
         </div>
-        <div className="flex gap-6 overflow-x-auto scrollbar-hide px-8 pb-4 justify-center flex-wrap">
-          {[firstImage, appImage, secondImage, thirdImage].map((src, i) => (
-            <motion.div key={i}
-              initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }} transition={{ delay: i * 0.12, duration: 0.6 }}
-              className="flex-shrink-0 relative"
-            >
-              <div className="absolute inset-0 bg-[#16A34A]/10 rounded-[32px] blur-2xl scale-95" />
-              <img src={src} alt={`Screenshot ${i + 1}`}
-                className="relative h-[480px] w-auto rounded-[28px] shadow-2xl border border-black/[0.08] dark:border-white/[0.08] object-cover" />
-            </motion.div>
-          ))}
-        </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }} transition={{ duration: 0.6 }}
+          className="max-w-[280px] mx-auto"
+        >
+          <TabletViewer screenshots={[firstImage, appImage, secondImage, thirdImage]} />
+        </motion.div>
       </section>
 
       {/* ── Mission ────────────────────────────────────────────── */}

@@ -7,6 +7,7 @@ import appLogo from '../assets/localShort/logo.png';
 import screen1 from '../assets/localShort/screen1.PNG';
 import screen2 from '../assets/localShort/screen2.PNG';
 import screen3 from '../assets/localShort/screen3.PNG';
+import TabletViewer from '../components/TabletViewer';
 
 /* ─── Contact form ────────────────────────────────────────────── */
 const CONTACT_EMAIL = 'VOTRE_EMAIL@exemple.com';
@@ -471,19 +472,13 @@ const LocalShortLandingPage: React.FC = () => {
           <p className="text-xs font-bold tracking-[0.2em] uppercase text-[#8B5CF6] mb-3">{ui.screensEyebrow}</p>
           <h2 className="text-4xl md:text-5xl font-black tracking-tight">{ui.screensTitle}</h2>
         </div>
-        <div className="flex gap-6 overflow-x-auto scrollbar-hide px-8 pb-4 justify-center">
-          {[screen1, screen2, screen3].map((src, i) => (
-            <motion.div key={i}
-              initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }} transition={{ delay: i * 0.15, duration: 0.6 }}
-              className="flex-shrink-0 relative"
-            >
-              <div className="absolute inset-0 bg-[#8B5CF6]/10 rounded-[32px] blur-2xl scale-95" />
-              <img src={src} alt={`Screenshot ${i + 1}`}
-                className="relative h-[520px] w-auto rounded-[28px] shadow-2xl border border-black/[0.08] dark:border-white/[0.08] object-cover" />
-            </motion.div>
-          ))}
-        </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }} whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }} transition={{ duration: 0.6 }}
+          className="max-w-[280px] mx-auto"
+        >
+          <TabletViewer screenshots={[screen1, screen2, screen3]} />
+        </motion.div>
       </section>
 
       {/* ── Mission ────────────────────────────────────────────── */}

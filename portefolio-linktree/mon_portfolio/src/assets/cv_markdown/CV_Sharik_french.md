@@ -1,77 +1,86 @@
-| ![photo](/cv-assets/pfp.png) | **Sharik Mohamed**<br/>Ingénieur Logiciel · Développeur iOS<br/>📍 Toulouse, France · 📧 [sharikmohamed8@gmail.com](mailto:sharikmohamed8@gmail.com)<br/>🔗 [LinkedIn](https://www.linkedin.com/in/sharik-abubucker-393194205/) · 💻 [GitHub](https://github.com/sharik-dev) · 🌐 [sharik.fr](https://sharik.fr) | ![qr](/cv-assets/qrCode.png) |
-|:---:|:---|:---:|
+# Ingénieur Logiciel — Développement Mobile, Web & CI/CD
+## Sharik Mohamed
+
+Ville : Toulouse, France
+Email : sharikmohamed8@gmail.com
+LinkedIn : linkedin.com/in/sharik-abubucker-393194205
+GitHub : github.com/sharik-dev
+Portfolio : sharik.fr
 
 ---
 
 ## Résumé Professionnel
 
-Ingénieur logiciel spécialisé en développement iOS, avec une expertise en architecture **MVVM**, intégration **MapboxMaps SDK** et CI/CD. Capable de concevoir des applications mobiles robustes, documentées et testées, dans un environnement Agile. Orienté qualité, performance et lisibilité du code.
+Alternant développeur iOS chez Skyconseil depuis janvier 2024, je travaille sur Guidor — une application aviation professionnelle intégrant MapboxMaps SDK v10+, UIKit et architecture MVVM. En parallèle, j'ai publié seul 3 applications sur l'App Store (4.7 à 4.9 étoiles). Profil polyvalent issu d'une reconversion volontaire : Swift, React.js, CI/CD, embarqué C++, avec une appétence pour l'IA mobile et le cloud. Je cherche des environnements techniques exigeants où la qualité du code et la rigueur sont des priorités.
 
 ---
 
 ## Compétences Clés
 
-| Mobile iOS | Architecture | Cartographie |
-|---|---|---|
-| Swift · SwiftUI · UIKit · AVFoundation · Core ML · Vision | MVVM · MVC · Clean Architecture | MapboxMaps v10+ · SDK legacy · filtres JSON · expressions de zoom |
-
-| DevOps / CI/CD | Web & Autres | Méthodes |
-|---|---|---|
-| Git · GitHub Actions · pipelines automatisés · Tests unitaires | React.js · TypeScript · JavaScript · C++ · Python · Arduino | Agile/Scrum · Code Review · Documentation · REST API |
+Mobile iOS : Swift, SwiftUI, UIKit, AVFoundation
+Architecture : MVVM, MVC, Clean Architecture
+Cartographie : MapboxMaps SDK v10+, SDK legacy, filtres JSON, expressions de zoom
+DevOps et CI/CD : Git, GitHub Actions, pipelines automatisés, Tests unitaires
+Web et Cloud : React.js, TypeScript, JavaScript
+Embarqué : C++, Arduino
+Méthodes : Agile/Scrum, REST API
 
 ---
 
 ## Expériences Professionnelles
 
-### ![guidor](/cv-assets/guidor.png) **Développeur Applications iOS** · Skyconseil *(Alternance)*
-*Janvier 2024 – Présent · Toulouse, France*
+### Développeur Applications iOS — Alternance · Skyconseil
+Janvier 2024 – Septembre 2026 · Toulouse, France
 
-- Développement de fonctionnalités iOS (UIKit, MVVM) et intégration du **MapboxMaps SDK v10+** : couches météo multiples, annotations cartographiques et tuiles raster.
-- Rédaction de **documentation technique** à destination des équipes internes et des clients.
-- Travail en méthodologie **Agile/Scrum**.
-
----
-
-### ![comb](/cv-assets/comb.png) **Stagiaire Développeur Embarqué** · Le Facteur Humain & Combustible Numérique *(Stage)*
-*Juin 2023 – Juillet 2023 · Toulouse, France*
-
-- Projet **Guidor** : développement embarqué avec **Arduino** et **C++**. Conception d'un système de guidage avec capteurs, actionneurs et interface de contrôle dans une équipe pluridisciplinaire.
+- Développé et intégré le MapboxMaps SDK v10+ sur Guidor, application aviation iOS en production : 3 couches météo superposées (METAR, TAF, turbulences), annotations cartographiques dynamiques et tuiles raster.
+- Implémenté des fonctionnalités UIKit et SwiftUI suivant l'architecture MVVM au sein d'une équipe Agile/Scrum de 5 personnes.
+- Rédigé la documentation technique interne et client couvrant l'ensemble des modules cartographiques.
+- Mis en place et maintenu des pipelines CI/CD avec GitHub Actions pour l'automatisation des builds et des tests unitaires.
 
 ---
 
-### **Stagiaire** · Ministère de l'Économie et des Finances de Madagascar
-*Mai 2019 · Madagascar*
+### Stagiaire Développeur Embarqué · Le Facteur Humain & Combustible Numérique
+Juin 2023 – Juillet 2023 · Toulouse, France
 
-- Stage d'observation au sein du ministère. Exposition aux systèmes d'information institutionnels et aux processus administratifs numériques.
+- Développé un système de guidage embarqué (projet Guidor) en Arduino et C++, intégrant capteurs, actionneurs et interface de contrôle dans une équipe pluridisciplinaire.
 
 ---
 
 ## Projets
 
-**FocusFast** — *Application iOS vidéo courte (type TikTok)*
-Swift · MVVM · AVFoundation · Feed vertical · Catégories · Commentaires/Notes · Upload vidéo
+Guidor — Application aviation professionnelle iOS · En production jusqu'en septembre 2026 · sharik.fr
+Swift, UIKit, SwiftUI, MVVM, MapboxMaps SDK v10+, couches météo METAR/TAF/turbulences, annotations, tuiles raster, CI/CD GitHub Actions
 
-**MapboxMaps Weather Layers** — *Intégration multicouches météo (Skyconseil)*
-MapboxMaps v10+ · filtres JSON · expressions de zoom · compatibilité SDK legacy
+Meow-Tube — Application iOS sans publicité ni Shorts · App Store · 4.9 étoiles · sharik.fr/meowtube
+Swift, SwiftUI, MVVM, AVFoundation, YouTube Data API
+
+LocalShort — Lecteur de vidéos courtes hors ligne · App Store · 4.7 étoiles · sharik.fr/local-short
+Swift, SwiftUI, AVFoundation, lecture locale, zéro donnée transmise
+
+Islamic Daily Quote — Citation islamique quotidienne multilingue · App Store · 4.8 étoiles · sharik.fr/islamic-daily-quote
+Swift, SwiftUI, Notifications, Mode sombre, arabe et traductions multiples
 
 ---
 
 ## Formation
 
-| | | |
-|:---:|:---|:---|
-| ![epitech](/cv-assets/epitech.png) | **Licence Informatique (BAC+5)** · Epitech | *Août 2023 – Sept. 2026* |
-| ![simplon](/cv-assets/simplon.png) | **AFP Concepteur Développeur d'Applications iOS** · Simplon Auvergne-Rhône-Alpes | *Avr. – Juil. 2023* |
-| ![billiere](/cv-assets/billiere.png) | **BTS Management des Unités Commerciales** · Écoles Billières | *Sept. 2020 – Juil. 2022* |
+Licence Informatique (BAC+5) · Epitech
+Août 2023 – Septembre 2026
+
+AFP Concepteur Développeur d'Applications iOS · Simplon Auvergne-Rhône-Alpes
+Certifié développeur iOS mobile natif · Avril – Juillet 2023
+
+BTS Management des Unités Commerciales · Ecoles Billières
+Reconversion vers l'informatique à l'issue de ce diplôme · Septembre 2020 – Juillet 2022
 
 ---
 
 ## Langues
 
-Français — Natif | Anglais — Avancé (B2/C1)
+Français : Natif | Anglais : Avancé (B2/C1)
 
 ---
 
 ## Mots-clés ATS
 
-`Swift` `iOS` `MVVM` `Mapbox` `MapboxMaps` `Core ML` `Vision` `On-device AI` `CI/CD` `Tests unitaires` `Agile` `Scrum` `JSON` `REST API` `Git` `SwiftUI` `UIKit` `React.js` `C++` `Arduino`
+Swift iOS SwiftUI UIKit MVVM MVC MapboxMaps Mapbox SDK MapboxMaps v10 CI/CD GitHub Actions Tests unitaires Agile Scrum JSON REST API Git AVFoundation React.js TypeScript JavaScript C++ Arduino App Store développeur iOS ingénieur logiciel architecture mobile aviation alternance Toulouse

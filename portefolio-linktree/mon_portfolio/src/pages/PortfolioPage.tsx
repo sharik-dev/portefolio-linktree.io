@@ -36,6 +36,7 @@ const APPS = [
     isNew: false,
     rating: 4.8,
     externalLink: 'https://www.guidor.fr/',
+    appStoreLink: 'https://apps.apple.com/fr/app/guidor/id1072066692',
   },
   {
     id: 'meowtube',
@@ -52,6 +53,7 @@ const APPS = [
     isNew: true,
     rating: 4.9,
     landingPage: '/meowtube',
+    appStoreLink: 'https://apps.apple.com/fr/app/meow-tube/id6760180650',
   },
   {
     id: 'localshort',
@@ -84,7 +86,23 @@ const APPS = [
     isNew: true,
     rating: 4.8,
     landingPage: '/islamic-daily-quote',
+    appStoreLink: 'https://apps.apple.com/fr/app/islamic-daily-quote/id6760481474',
   },
+];
+
+/* ─── In-progress projects ───────────────────────────────────────── */
+const IN_PROGRESS_APPS = [
+  { id: 'focustimes', name: 'focusTimes', subtitle: { fr: 'Minuteur de focus & productivité', en: 'Focus timer & productivity' }, tech: ['iOS', 'Swift'] },
+  { id: 'easygym', name: 'easyGym', subtitle: { fr: 'Suivi d\'entraînement simplifié', en: 'Simplified workout tracker' }, tech: ['iOS', 'Swift'] },
+  { id: 'easyread', name: 'easyRead', subtitle: { fr: 'Lecture rapide & compréhension', en: 'Speed reading & comprehension' }, tech: ['iOS', 'Swift'] },
+  { id: 'skinroutine', name: 'skinRoutine', subtitle: { fr: 'Routine de soins de la peau', en: 'Skin care routine tracker' }, tech: ['iOS', 'Swift'] },
+  { id: 'walkinggame', name: 'walkingGame', subtitle: { fr: 'Jeu de marche & activité physique', en: 'Walking & physical activity game' }, tech: ['iOS', 'Swift'] },
+  { id: 'jeudpoint', name: 'Jeu de point', subtitle: { fr: 'Jeu de points interactif', en: 'Interactive dot game' }, tech: ['iOS', 'Swift'] },
+  { id: 'focusidlegame', name: 'focusIdleGame', subtitle: { fr: 'Jeu idle centré sur la concentration', en: 'Focus-centered idle game' }, tech: ['iOS', 'Swift'] },
+  { id: 'meowtoon', name: 'meow-Toon', subtitle: { fr: 'Dessin animé interactif', en: 'Interactive cartoon app' }, tech: ['iOS', 'Swift'] },
+  { id: 'duobook', name: 'duoBook', subtitle: { fr: 'Lecture en duo & annotations partagées', en: 'Duo reading & shared annotations' }, tech: ['iOS', 'Swift'] },
+  { id: 'duocoran', name: 'duoCoran', subtitle: { fr: 'Apprentissage du Coran en duo', en: 'Duo Quran learning' }, tech: ['iOS', 'Swift'] },
+  { id: 'appstoiresize', name: 'AppStore Image Resize', subtitle: { fr: 'Redimensionnement d\'images App Store', en: 'App Store image resizer' }, tech: ['macOS', 'Swift'] },
 ];
 
 /* ─── UI strings ─────────────────────────────────────────────────── */
@@ -98,6 +116,8 @@ const UI = {
     seeMore: 'Voir', modalClose: 'Fermer',
     features: 'Fonctionnalités', stack: 'Stack technique',
     download: 'Voir le projet', contact: 'Discutons',
+    inProgress: 'Projets en cours', comingSoon: 'Bientôt',
+    appStoreDownload: 'Télécharger',
   },
   en: {
     eyebrow: 'My work', title: 'App Portfolio',
@@ -108,6 +128,8 @@ const UI = {
     seeMore: 'View', modalClose: 'Close',
     features: 'Features', stack: 'Tech stack',
     download: 'See project', contact: "Let's talk",
+    inProgress: 'In progress', comingSoon: 'Coming soon',
+    appStoreDownload: 'Download',
   },
 };
 
@@ -146,16 +168,27 @@ const AppModal: React.FC<{ app: typeof APPS[0]; lang: 'fr' | 'en'; ui: typeof UI
   const { theme } = useTheme();
   const hasLanding = 'landingPage' in app && typeof (app as any).landingPage === 'string';
   const hasExternal = 'externalLink' in app && typeof (app as any).externalLink === 'string';
+  const hasAppStore = 'appStoreLink' in app && typeof (app as any).appStoreLink === 'string';
 
   const actionBtn = hasLanding ? (
     <button onClick={() => { onClose(); navigate((app as any).landingPage); }}
-      className="flex-shrink-0 bg-[#E60000] text-white text-[13px] font-bold px-5 py-2 rounded-full hover:bg-[#CC0000] active:scale-95 transition-all cursor-pointer">
+      className="flex-shrink-0 bg-[#E5E5EA] dark:bg-[#3A3A3C] text-[#1D1D1F] dark:text-white text-[13px] font-semibold px-5 py-2 rounded-full hover:bg-[#D1D1D6] dark:hover:bg-[#48484A] active:scale-95 transition-all cursor-pointer flex items-center gap-1.5">
       {lang === 'fr' ? 'Découvrir' : 'Discover'}
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="9 18 15 12 9 6" /></svg>
     </button>
   ) : hasExternal ? (
     <a href={(app as any).externalLink} target="_blank" rel="noopener noreferrer"
-      className="flex-shrink-0 bg-[#0071E3] text-white text-[13px] font-bold px-5 py-2 rounded-full hover:bg-[#0077ED] active:scale-95 transition-all">
+      className="flex-shrink-0 bg-[#E5E5EA] dark:bg-[#3A3A3C] text-[#1D1D1F] dark:text-white text-[13px] font-semibold px-5 py-2 rounded-full hover:bg-[#D1D1D6] dark:hover:bg-[#48484A] active:scale-95 transition-all flex items-center gap-1.5">
       {lang === 'fr' ? 'Voir' : 'Visit'}
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="9 18 15 12 9 6" /></svg>
+    </a>
+  ) : null;
+
+  const downloadBtn = hasAppStore ? (
+    <a href={(app as any).appStoreLink} target="_blank" rel="noopener noreferrer"
+      className="flex-shrink-0 bg-[#0071E3] text-white text-[13px] font-bold px-5 py-2 rounded-full hover:bg-[#0077ED] active:scale-95 transition-all flex items-center gap-1.5">
+      {lang === 'fr' ? 'Télécharger' : 'Download'}
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg>
     </a>
   ) : null;
 
@@ -228,7 +261,10 @@ const AppModal: React.FC<{ app: typeof APPS[0]; lang: 'fr' | 'en'; ui: typeof UI
             <div className="flex-1 min-w-0">
               <h2 className="text-[22px] font-bold text-[#1D1D1F] dark:text-white tracking-tight leading-tight">{app.name}</h2>
               <p className="text-[14px] text-[#6E6E73] dark:text-[#8E8E93] mt-0.5 mb-3">{t(lang, app.subtitle.fr, app.subtitle.en)}</p>
-              {actionBtn}
+              <div className="flex items-center gap-2 flex-wrap">
+                {actionBtn}
+                {downloadBtn}
+              </div>
             </div>
           </div>
 
@@ -394,6 +430,33 @@ const PortfolioPage: React.FC = () => {
                 </div>
                 <Stars rating={app.rating} />
               </motion.div>
+            ))}
+          </div>
+        </section>
+
+        {/* In-progress projects */}
+        <section>
+          <h2 className="text-2xl font-bold text-[#1D1D1F] dark:text-white tracking-tight mb-4">{ui.inProgress}</h2>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {IN_PROGRESS_APPS.map(app => (
+              <div key={app.id}
+                className="bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl p-4 shadow-sm opacity-80">
+                <div className="w-14 h-14 rounded-2xl mb-3 bg-[#F2F2F7] dark:bg-[#2C2C2E] flex items-center justify-center">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#86868B" strokeWidth="1.8">
+                    <rect x="3" y="3" width="18" height="18" rx="4" /><path d="M9 12h6M12 9v6" />
+                  </svg>
+                </div>
+                <div className="mb-1.5">
+                  <span className="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-[#0071E3]/10 text-[#0071E3]">{ui.comingSoon}</span>
+                </div>
+                <h3 className="text-[13px] font-semibold text-[#1D1D1F] dark:text-white tracking-tight">{app.name}</h3>
+                <p className="text-[11px] text-[#6E6E73] dark:text-[#98989D] mt-0.5 mb-2">{t(lang, app.subtitle.fr, app.subtitle.en)}</p>
+                <div className="flex flex-wrap gap-1">
+                  {app.tech.slice(0, 2).map(tech => (
+                    <span key={tech} className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-[#0071E3]/[0.07] text-[#0071E3]">{tech}</span>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </section>

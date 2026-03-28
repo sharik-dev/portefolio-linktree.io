@@ -5,8 +5,8 @@ const BASE = window.location.origin;
 
 const DATA = {
   fr: {
-    title: 'Ingénieur Logiciel · Développeur iOS',
-    summary: 'Ingénieur logiciel spécialisé en développement iOS, avec une expertise en architecture MVVM, intégration MapboxMaps SDK et CI/CD. Capable de concevoir des applications mobiles robustes, documentées et testées, dans un environnement Agile.',
+    title: 'Ingénieur Logiciel — Développement Mobile, Web & CI/CD',
+    summary: 'Alternant développeur iOS chez Skyconseil depuis janvier 2024, je travaille sur Guidor — une application aviation professionnelle intégrant MapboxMaps SDK v10+, UIKit et architecture MVVM. En parallèle, j\'ai publié seul 3 applications sur l\'App Store (4.7 à 4.9 étoiles). Profil polyvalent issu d\'une reconversion volontaire : Swift, React.js, CI/CD, embarqué C++, avec une appétence pour l\'IA mobile et le cloud.',
     sections: {
       skills: 'Compétences Clés',
       experience: 'Expériences Professionnelles',
@@ -16,24 +16,25 @@ const DATA = {
       keywords: 'Mots-clés ATS',
     },
     skills: [
-      { cat: 'Mobile iOS', tags: 'Swift · SwiftUI · UIKit · AVFoundation · Core ML · Vision' },
-      { cat: 'Architecture', tags: 'MVVM · MVC · Clean Architecture' },
-      { cat: 'Cartographie', tags: 'MapboxMaps v10+ · SDK legacy · filtres JSON' },
-      { cat: 'DevOps / CI/CD', tags: 'Git · GitHub Actions · pipelines automatisés · Tests unitaires' },
-      { cat: 'Web & Autres', tags: 'React.js · TypeScript · JavaScript · C++ · Python · Arduino' },
-      { cat: 'Méthodes', tags: 'Agile/Scrum · Code Review · Documentation · REST API' },
+      { cat: 'Mobile iOS', tags: 'Swift, SwiftUI, UIKit, AVFoundation' },
+      { cat: 'Architecture', tags: 'MVVM, MVC, Clean Architecture' },
+      { cat: 'Cartographie', tags: 'MapboxMaps SDK v10+, SDK legacy, filtres JSON, expressions de zoom' },
+      { cat: 'DevOps / CI/CD', tags: 'Git, GitHub Actions, pipelines automatisés, Tests unitaires' },
+      { cat: 'Web & Cloud', tags: 'React.js, TypeScript, JavaScript' },
+      { cat: 'Embarqué & Méthodes', tags: 'C++, Arduino, Agile/Scrum, REST API' },
     ],
     experiences: [
       {
         logo: `${BASE}/cv-assets/guidor.png`,
-        title: 'Développeur Applications iOS',
+        title: 'Développeur Applications iOS — Alternance',
         company: 'Skyconseil',
         badge: 'Alternance',
-        period: 'Janvier 2024 – Présent · Toulouse, France',
+        period: 'Janvier 2024 – Septembre 2026 · Toulouse, France',
         bullets: [
-          'Développement de fonctionnalités iOS (UIKit, MVVM) et intégration du MapboxMaps SDK v10+ : couches météo multiples, annotations cartographiques et tuiles raster.',
-          'Rédaction de documentation technique à destination des équipes internes et des clients.',
-          'Travail en méthodologie Agile/Scrum.',
+          'Développé et intégré le MapboxMaps SDK v10+ sur Guidor, application aviation iOS en production : 3 couches météo superposées (METAR, TAF, turbulences), annotations cartographiques dynamiques et tuiles raster.',
+          'Implémenté des fonctionnalités UIKit et SwiftUI suivant l\'architecture MVVM au sein d\'une équipe Agile/Scrum de 5 personnes.',
+          'Rédigé la documentation technique interne et client couvrant l\'ensemble des modules cartographiques.',
+          'Mis en place et maintenu des pipelines CI/CD avec GitHub Actions pour l\'automatisation des builds et des tests unitaires.',
         ],
       },
       {
@@ -43,25 +44,27 @@ const DATA = {
         badge: 'Stage',
         period: 'Juin 2023 – Juillet 2023 · Toulouse, France',
         bullets: [
-          'Projet Guidor : développement embarqué avec Arduino et C++. Conception d\'un système de guidage avec capteurs, actionneurs et interface de contrôle dans une équipe pluridisciplinaire.',
+          'Développé un système de guidage embarqué (projet Guidor) en Arduino et C++, intégrant capteurs, actionneurs et interface de contrôle dans une équipe pluridisciplinaire.',
         ],
       },
     ],
     projects: [
-      { title: 'FocusFast', sub: 'Application iOS vidéo courte (type TikTok)', tags: 'Swift · MVVM · AVFoundation · Feed vertical · Catégories · Upload vidéo' },
-      { title: 'MapboxMaps Weather Layers', sub: 'Intégration multicouches météo (Skyconseil)', tags: 'MapboxMaps v10+ · filtres JSON · expressions de zoom · SDK legacy' },
+      { title: 'Guidor', sub: 'Application aviation professionnelle iOS · En production jusqu\'en sept. 2026', tags: 'Swift, UIKit, SwiftUI, MVVM, MapboxMaps SDK v10+, couches météo METAR/TAF, CI/CD' },
+      { title: 'Meow-Tube', sub: 'Application iOS sans publicité ni Shorts · App Store · 4.9 ★', tags: 'Swift, SwiftUI, MVVM, AVFoundation, YouTube Data API' },
+      { title: 'LocalShort', sub: 'Lecteur de vidéos courtes hors ligne · App Store · 4.7 ★', tags: 'Swift, SwiftUI, AVFoundation, lecture locale, zéro donnée transmise' },
+      { title: 'Islamic Daily Quote', sub: 'Citation islamique quotidienne multilingue · App Store · 4.8 ★', tags: 'Swift, SwiftUI, Notifications, Mode sombre, arabe + traductions' },
     ],
     education: [
       { logo: `${BASE}/cv-assets/epitech.png`, title: 'Licence Informatique (BAC+5)', school: 'Epitech', period: 'Août 2023 – Sept. 2026' },
       { logo: `${BASE}/cv-assets/simplon.png`, title: 'AFP Concepteur Développeur d\'Applications iOS', school: 'Simplon Auvergne-Rhône-Alpes', period: 'Avr. – Juil. 2023' },
-      { logo: `${BASE}/cv-assets/billiere.png`, title: 'BTS Management des Unités Commerciales', school: 'Écoles Billières', period: 'Sept. 2020 – Juil. 2022' },
+      { logo: `${BASE}/cv-assets/billiere.png`, title: 'BTS Management des Unités Commerciales', school: 'Écoles Billières', period: 'Sept. 2020 – Juil. 2022 · Reconversion vers l\'informatique' },
     ],
     languages: 'Français — Natif · Anglais — Avancé (B2/C1)',
-    keywords: ['Swift', 'iOS', 'MVVM', 'Mapbox', 'Core ML', 'Vision', 'CI/CD', 'Tests unitaires', 'Agile', 'Scrum', 'JSON', 'REST API', 'Git', 'SwiftUI', 'UIKit', 'React.js', 'C++', 'Arduino'],
+    keywords: ['Swift', 'iOS', 'SwiftUI', 'UIKit', 'MVVM', 'MapboxMaps', 'Mapbox SDK', 'CI/CD', 'GitHub Actions', 'Tests unitaires', 'Agile', 'Scrum', 'JSON', 'REST API', 'Git', 'AVFoundation', 'React.js', 'TypeScript', 'C++', 'Arduino', 'App Store'],
   },
   en: {
-    title: 'Software Engineer · iOS Developer',
-    summary: 'Software Engineer specialized in iOS development with expertise in MVVM architecture, MapboxMaps SDK integration, and CI/CD pipelines. Experienced in building production-grade mobile applications with clean architecture and on-device AI.',
+    title: 'Software Engineer — Mobile, Web & CI/CD',
+    summary: 'Work-study iOS developer at Skyconseil since January 2024, building Guidor — a professional aviation app integrating MapboxMaps SDK v10+, UIKit, and MVVM architecture. Independently published 3 apps on the App Store (4.7 to 4.9 stars). Versatile engineer from a deliberate career switch: Swift, React.js, CI/CD, embedded C++, with a strong interest in mobile AI and cloud.',
     sections: {
       skills: 'Core Skills',
       experience: 'Professional Experience',
@@ -71,24 +74,25 @@ const DATA = {
       keywords: 'Keywords & ATS',
     },
     skills: [
-      { cat: 'iOS Mobile', tags: 'Swift · SwiftUI · UIKit · AVFoundation · Core ML · Vision' },
-      { cat: 'Architecture', tags: 'MVVM · MVC · Clean Architecture' },
-      { cat: 'Mapping & Geospatial', tags: 'MapboxMaps SDK v10+ · Legacy Mapbox SDK · JSON Filters' },
-      { cat: 'DevOps & CI/CD', tags: 'Git · GitHub Actions · Automated Pipelines · Unit Testing' },
-      { cat: 'Web & Other', tags: 'React.js · TypeScript · JavaScript · C++ · Python · Arduino' },
-      { cat: 'Methodologies', tags: 'Agile/Scrum · Code Review · Technical Documentation · REST API' },
+      { cat: 'iOS Mobile', tags: 'Swift, SwiftUI, UIKit, AVFoundation' },
+      { cat: 'Architecture', tags: 'MVVM, MVC, Clean Architecture' },
+      { cat: 'Mapping & Geospatial', tags: 'MapboxMaps SDK v10+, Legacy Mapbox SDK, JSON Filters, Zoom Expressions' },
+      { cat: 'DevOps & CI/CD', tags: 'Git, GitHub Actions, Automated Pipelines, Unit Testing' },
+      { cat: 'Web & Cloud', tags: 'React.js, TypeScript, JavaScript' },
+      { cat: 'Embedded & Methods', tags: 'C++, Arduino, Agile/Scrum, REST API' },
     ],
     experiences: [
       {
         logo: `${BASE}/cv-assets/guidor.png`,
-        title: 'iOS Application Developer',
+        title: 'iOS Application Developer — Work-Study',
         company: 'Skyconseil',
         badge: 'Work-Study',
-        period: 'January 2024 – Present · Toulouse, France',
+        period: 'January 2024 – September 2026 · Toulouse, France',
         bullets: [
-          'Built iOS features (UIKit, MVVM) and integrated MapboxMaps SDK v10+: multiple weather overlay layers, map annotations, and raster tiles.',
-          'Wrote technical documentation for internal teams and clients.',
-          'Worked in an Agile/Scrum environment.',
+          'Developed and integrated MapboxMaps SDK v10+ on Guidor, a production iOS aviation app: 3 stacked weather layers (METAR, TAF, turbulence), dynamic map annotations, and raster tiles.',
+          'Implemented UIKit and SwiftUI features following MVVM architecture within a 5-person Agile/Scrum team.',
+          'Wrote internal and client-facing technical documentation covering all map modules.',
+          'Set up and maintained CI/CD pipelines with GitHub Actions for automated builds and unit testing.',
         ],
       },
       {
@@ -98,21 +102,23 @@ const DATA = {
         badge: 'Internship',
         period: 'June 2023 – July 2023 · Toulouse, France',
         bullets: [
-          'Contributed to the Guidor project: embedded development with Arduino and C++. Built a guidance system integrating hardware sensors and a control interface within a cross-functional team.',
+          'Built an embedded guidance system (Guidor project) in Arduino and C++, integrating hardware sensors, actuators, and a control interface within a cross-functional team.',
         ],
       },
     ],
     projects: [
-      { title: 'FocusFast', sub: 'iOS Short-Video Application (TikTok-style)', tags: 'Swift · MVVM · AVFoundation · Vertical Feed · Categories · Video Upload' },
-      { title: 'MapboxMaps Weather Layers', sub: 'Multi-layer weather integration (Skyconseil)', tags: 'MapboxMaps v10+ · JSON Filters · Zoom Expressions · Legacy SDK' },
+      { title: 'Guidor', sub: 'Professional aviation iOS app · In production through Sept. 2026', tags: 'Swift, UIKit, SwiftUI, MVVM, MapboxMaps SDK v10+, METAR/TAF weather layers, CI/CD' },
+      { title: 'Meow-Tube', sub: 'Ad-free, Shorts-free iOS video app · App Store · 4.9 ★', tags: 'Swift, SwiftUI, MVVM, AVFoundation, YouTube Data API' },
+      { title: 'LocalShort', sub: 'Offline short-form video player · App Store · 4.7 ★', tags: 'Swift, SwiftUI, AVFoundation, local playback, zero data transmitted' },
+      { title: 'Islamic Daily Quote', sub: 'Daily multilingual Islamic quote app · App Store · 4.8 ★', tags: 'Swift, SwiftUI, Notifications, Dark mode, Arabic + multilingual translations' },
     ],
     education: [
       { logo: `${BASE}/cv-assets/epitech.png`, title: "Master's in Computer Science (BAC+5)", school: 'Epitech', period: 'August 2023 – September 2026' },
-      { logo: `${BASE}/cv-assets/simplon.png`, title: 'Professional Qualification – iOS Application Developer', school: 'Simplon Auvergne-Rhône-Alpes', period: 'April – July 2023' },
-      { logo: `${BASE}/cv-assets/billiere.png`, title: 'BTS Management of Commercial Units', school: 'Écoles Billières', period: 'September 2020 – July 2022' },
+      { logo: `${BASE}/cv-assets/simplon.png`, title: 'Professional Qualification — iOS Application Developer', school: 'Simplon Auvergne-Rhône-Alpes', period: 'April – July 2023' },
+      { logo: `${BASE}/cv-assets/billiere.png`, title: 'BTS Management of Commercial Units', school: 'Écoles Billières', period: 'Sept. 2020 – July 2022 · Deliberate career switch into software engineering' },
     ],
     languages: 'French — Native · English — Advanced (B2/C1)',
-    keywords: ['Swift', 'iOS', 'MVVM', 'Mapbox', 'Core ML', 'Vision', 'CI/CD', 'Unit Testing', 'Agile', 'Scrum', 'JSON', 'REST API', 'Git', 'SwiftUI', 'UIKit', 'React.js', 'C++', 'Arduino'],
+    keywords: ['Swift', 'iOS', 'SwiftUI', 'UIKit', 'MVVM', 'MapboxMaps', 'Mapbox SDK', 'CI/CD', 'GitHub Actions', 'Unit Testing', 'Agile', 'Scrum', 'JSON', 'REST API', 'Git', 'AVFoundation', 'React.js', 'TypeScript', 'C++', 'Arduino', 'App Store'],
   },
 };
 
@@ -222,10 +228,10 @@ export function buildCvText(lang: 'fr' | 'en'): string {
   const edu = d.education.map(e => `${e.title}\n${e.school} · ${e.period}`).join('\n\n');
 
   return [
-    'Sharik Mohamed',
     d.title,
-    '📍 Toulouse, France · 📧 sharikmohamed8@gmail.com',
-    '🔗 linkedin.com/in/sharik-abubucker-393194205 · 💻 github.com/sharik-dev · 🌐 sharik.fr',
+    'Sharik Mohamed',
+    'Ville : Toulouse, France | Email : sharikmohamed8@gmail.com',
+    'LinkedIn : linkedin.com/in/sharik-abubucker-393194205 | GitHub : github.com/sharik-dev | Portfolio : sharik.fr',
     '',
     line(),
     s.skills.toUpperCase(),

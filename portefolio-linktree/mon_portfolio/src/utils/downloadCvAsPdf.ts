@@ -1,12 +1,10 @@
-import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
-
 const BASE = window.location.origin;
 
 const DATA = {
   fr: {
-    title: 'Ingénieur Logiciel — Développement Mobile, Web & CI/CD',
-    summary: 'Alternant développeur iOS chez Skyconseil depuis janvier 2024, je travaille sur Guidor — une application aviation professionnelle intégrant MapboxMaps SDK v10+, UIKit et architecture MVVM. En parallèle, j\'ai publié seul 3 applications sur l\'App Store (4.7 à 4.9 étoiles). Profil polyvalent issu d\'une reconversion volontaire : Swift, React.js, CI/CD, embarqué C++, avec une appétence pour l\'IA mobile et le cloud.',
+    title: 'Développeur iOS · Ingénieur Logiciel',
+    subtitle: 'Mobile · Web · CI/CD · IA',
+    summary: 'Alternant développeur iOS chez Skyconseil depuis janvier 2024, je travaille sur Guidor — une application aviation professionnelle intégrant MapboxMaps SDK v10+, UIKit et architecture MVVM. En parallèle, j\'ai publié seul 3 applications sur l\'App Store (4.7 à 4.9 étoiles). Profil full-stack issu d\'une montée en compétences progressive : Swift, React.js, CI/CD, embarqué C++, avec une appétence pour l\'IA mobile et le cloud.',
     sections: {
       skills: 'Compétences Clés',
       experience: 'Expériences Professionnelles',
@@ -18,7 +16,7 @@ const DATA = {
     skills: [
       { cat: 'Mobile iOS', tags: 'Swift, SwiftUI, UIKit, AVFoundation' },
       { cat: 'Architecture', tags: 'MVVM, MVC, Clean Architecture' },
-      { cat: 'Cartographie', tags: 'MapboxMaps SDK v10+, SDK legacy, filtres JSON, expressions de zoom' },
+      { cat: 'Cartographie', tags: 'MapboxMaps SDK v10+, filtres JSON' },
       { cat: 'DevOps / CI/CD', tags: 'Git, GitHub Actions, pipelines automatisés, Tests unitaires' },
       { cat: 'Web & Cloud', tags: 'React.js, TypeScript, JavaScript' },
       { cat: 'Embarqué & Méthodes', tags: 'C++, Arduino, Agile/Scrum, REST API' },
@@ -49,22 +47,22 @@ const DATA = {
       },
     ],
     projects: [
-      { title: 'Guidor', sub: 'Application aviation professionnelle iOS · En production jusqu\'en sept. 2026', tags: 'Swift, UIKit, SwiftUI, MVVM, MapboxMaps SDK v10+, couches météo METAR/TAF, CI/CD' },
-      { title: 'Meow-Tube', sub: 'Application iOS sans publicité ni Shorts · App Store · 4.9 ★', tags: 'Swift, SwiftUI, MVVM, AVFoundation, YouTube Data API' },
-      { title: 'LocalShort', sub: 'Lecteur de vidéos courtes hors ligne · App Store · 4.7 ★', tags: 'Swift, SwiftUI, AVFoundation, lecture locale, zéro donnée transmise' },
-      { title: 'Islamic Daily Quote', sub: 'Citation islamique quotidienne multilingue · App Store · 4.8 ★', tags: 'Swift, SwiftUI, Notifications, Mode sombre, arabe + traductions' },
+      { title: 'Guidor', sub: 'Projet professionnel · Application aviation iOS en production (Skyconseil)', tags: 'Swift, UIKit, SwiftUI, MVVM, MapboxMaps SDK v10+, couches météo METAR/TAF, CI/CD', appStoreUrl: 'https://apps.apple.com/fr/app/guidor/id1072066692' },
+      { title: 'Meow-Tube', sub: 'Projet personnel · App Store · 4.9 ★ — YouTube sans pub ni Shorts, sans abonnement (comme Brave pour le web)', tags: 'Swift, SwiftUI, MVVM, AVFoundation, YouTube Data API', appStoreUrl: 'https://apps.apple.com/fr/app/meow-tube/id6760180650' },
+      { title: 'Islamic Daily Quote', sub: 'Projet personnel · App Store · 4.8 ★ — Citations islamiques quotidiennes, multilingue', tags: 'Swift, SwiftUI, Notifications, Mode sombre', appStoreUrl: 'https://apps.apple.com/fr/app/islamic-daily-quote/id6760481474' },
     ],
     education: [
-      { logo: `${BASE}/cv-assets/epitech.png`, title: 'Licence Informatique (BAC+5)', school: 'Epitech', period: 'Août 2023 – Sept. 2026' },
-      { logo: `${BASE}/cv-assets/simplon.png`, title: 'AFP Concepteur Développeur d\'Applications iOS', school: 'Simplon Auvergne-Rhône-Alpes', period: 'Avr. – Juil. 2023' },
-      { logo: `${BASE}/cv-assets/billiere.png`, title: 'BTS Management des Unités Commerciales', school: 'Écoles Billières', period: 'Sept. 2020 – Juil. 2022 · Reconversion vers l\'informatique' },
+      { title: 'Licence Informatique (BAC+5)', school: 'Epitech', period: 'Août 2023 – Sept. 2026' },
+      { title: 'AFP Concepteur Développeur d\'Applications iOS', school: 'Simplon Auvergne-Rhône-Alpes', period: 'Avr. – Juil. 2023' },
+      { title: 'BTS Management des Unités Commerciales', school: 'Écoles Billières', period: 'Sept. 2020 – Juil. 2022 · Management, Marketing & Commerce · Reconversion vers l\'informatique' },
     ],
-    languages: 'Français — Natif · Anglais — Avancé (B2/C1)',
+    languages: 'Français — Natif · Malgache — Natif · Anglais — Avancé (B2/C1)',
     keywords: ['Swift', 'iOS', 'SwiftUI', 'UIKit', 'MVVM', 'MapboxMaps', 'Mapbox SDK', 'CI/CD', 'GitHub Actions', 'Tests unitaires', 'Agile', 'Scrum', 'JSON', 'REST API', 'Git', 'AVFoundation', 'React.js', 'TypeScript', 'C++', 'Arduino', 'App Store'],
   },
   en: {
-    title: 'Software Engineer — Mobile, Web & CI/CD',
-    summary: 'Work-study iOS developer at Skyconseil since January 2024, building Guidor — a professional aviation app integrating MapboxMaps SDK v10+, UIKit, and MVVM architecture. Independently published 3 apps on the App Store (4.7 to 4.9 stars). Versatile engineer from a deliberate career switch: Swift, React.js, CI/CD, embedded C++, with a strong interest in mobile AI and cloud.',
+    title: 'iOS Developer · Software Engineer',
+    subtitle: 'Mobile · Web · CI/CD · AI',
+    summary: 'Work-study iOS developer at Skyconseil since January 2024, building Guidor — a professional aviation app integrating MapboxMaps SDK v10+, UIKit, and MVVM architecture. Independently published 3 apps on the App Store (4.7 to 4.9 stars). Full-stack profile built through progressive skill development: Swift, React.js, CI/CD, embedded C++, with a strong interest in mobile AI and cloud.',
     sections: {
       skills: 'Core Skills',
       experience: 'Professional Experience',
@@ -76,7 +74,7 @@ const DATA = {
     skills: [
       { cat: 'iOS Mobile', tags: 'Swift, SwiftUI, UIKit, AVFoundation' },
       { cat: 'Architecture', tags: 'MVVM, MVC, Clean Architecture' },
-      { cat: 'Mapping & Geospatial', tags: 'MapboxMaps SDK v10+, Legacy Mapbox SDK, JSON Filters, Zoom Expressions' },
+      { cat: 'Mapping & Geospatial', tags: 'MapboxMaps SDK v10+, JSON Filters' },
       { cat: 'DevOps & CI/CD', tags: 'Git, GitHub Actions, Automated Pipelines, Unit Testing' },
       { cat: 'Web & Cloud', tags: 'React.js, TypeScript, JavaScript' },
       { cat: 'Embedded & Methods', tags: 'C++, Arduino, Agile/Scrum, REST API' },
@@ -107,112 +105,137 @@ const DATA = {
       },
     ],
     projects: [
-      { title: 'Guidor', sub: 'Professional aviation iOS app · In production through Sept. 2026', tags: 'Swift, UIKit, SwiftUI, MVVM, MapboxMaps SDK v10+, METAR/TAF weather layers, CI/CD' },
-      { title: 'Meow-Tube', sub: 'Ad-free, Shorts-free iOS video app · App Store · 4.9 ★', tags: 'Swift, SwiftUI, MVVM, AVFoundation, YouTube Data API' },
-      { title: 'LocalShort', sub: 'Offline short-form video player · App Store · 4.7 ★', tags: 'Swift, SwiftUI, AVFoundation, local playback, zero data transmitted' },
-      { title: 'Islamic Daily Quote', sub: 'Daily multilingual Islamic quote app · App Store · 4.8 ★', tags: 'Swift, SwiftUI, Notifications, Dark mode, Arabic + multilingual translations' },
+      { title: 'Guidor', sub: 'Professional project · Aviation iOS app in production (Skyconseil)', tags: 'Swift, UIKit, SwiftUI, MVVM, MapboxMaps SDK v10+, METAR/TAF weather layers, CI/CD', appStoreUrl: 'https://apps.apple.com/fr/app/guidor/id1072066692' },
+      { title: 'Meow-Tube', sub: 'Personal project · App Store · 4.9 ★ — YouTube without ads or Shorts, no subscription (like Brave for the web)', tags: 'Swift, SwiftUI, MVVM, AVFoundation, YouTube Data API', appStoreUrl: 'https://apps.apple.com/fr/app/meow-tube/id6760180650' },
+      { title: 'Islamic Daily Quote', sub: 'Personal project · App Store · 4.8 ★ — Daily Islamic quotes, multilingual', tags: 'Swift, SwiftUI, Notifications, Dark mode', appStoreUrl: 'https://apps.apple.com/fr/app/islamic-daily-quote/id6760481474' },
     ],
     education: [
-      { logo: `${BASE}/cv-assets/epitech.png`, title: "Master's in Computer Science (BAC+5)", school: 'Epitech', period: 'August 2023 – September 2026' },
-      { logo: `${BASE}/cv-assets/simplon.png`, title: 'Professional Qualification — iOS Application Developer', school: 'Simplon Auvergne-Rhône-Alpes', period: 'April – July 2023' },
-      { logo: `${BASE}/cv-assets/billiere.png`, title: 'BTS Management of Commercial Units', school: 'Écoles Billières', period: 'Sept. 2020 – July 2022 · Deliberate career switch into software engineering' },
+      { title: "Master's in Computer Science (BAC+5)", school: 'Epitech', period: 'August 2023 – September 2026' },
+      { title: 'Professional Qualification — iOS Application Developer', school: 'Simplon Auvergne-Rhône-Alpes', period: 'April – July 2023' },
+      { title: 'BTS Management of Commercial Units', school: 'Écoles Billières', period: 'Sept. 2020 – July 2022 · Management, Marketing & Sales · Career switch into software engineering' },
     ],
-    languages: 'French — Native · English — Advanced (B2/C1)',
+    languages: 'French — Native · Malagasy — Native · English — Advanced (B2/C1)',
     keywords: ['Swift', 'iOS', 'SwiftUI', 'UIKit', 'MVVM', 'MapboxMaps', 'Mapbox SDK', 'CI/CD', 'GitHub Actions', 'Unit Testing', 'Agile', 'Scrum', 'JSON', 'REST API', 'Git', 'AVFoundation', 'React.js', 'TypeScript', 'C++', 'Arduino', 'App Store'],
   },
 };
 
-function buildHtml(lang: 'fr' | 'en'): string {
+function buildPrintHtml(lang: 'fr' | 'en'): string {
   const d = DATA[lang];
-  const sec = (title: string) =>
-    `<div style="font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#86868B;margin:22px 0 8px;padding-bottom:5px;border-bottom:1px solid rgba(0,0,0,.08)">${title}</div>`;
+
+  const sec = (title: string) => `
+    <div style="font-size:8.5px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:#86868B;margin:14px 0 5px;padding-bottom:3px;border-bottom:1px solid #E5E5EA">${title}</div>`;
 
   const expRows = d.experiences.map(e => `
-    <div style="display:flex;gap:12px;align-items:flex-start;margin-bottom:14px">
-      <img src="${e.logo}" width="36" height="36" style="border-radius:8px;object-fit:cover;flex-shrink:0;margin-top:2px" crossorigin="anonymous"/>
-      <div style="flex:1">
-        <div style="display:flex;align-items:baseline;gap:8px;flex-wrap:wrap">
-          <span style="font-size:13px;font-weight:600;color:#1D1D1F">${e.title}</span>
-          <span style="font-size:12px;color:#6E6E73">· ${e.company}</span>
-          <span style="font-size:10px;background:rgba(0,113,227,.08);color:#0071E3;padding:1px 7px;border-radius:20px;font-weight:600">${e.badge}</span>
-        </div>
-        <div style="font-size:11px;color:#86868B;margin:2px 0 6px">${e.period}</div>
-        <ul style="margin:0;padding-left:16px">
-          ${e.bullets.map(b => `<li style="font-size:12px;color:#6E6E73;margin-bottom:3px">${b}</li>`).join('')}
-        </ul>
+    <div style="margin-bottom:9px">
+      <div style="display:flex;align-items:baseline;gap:7px;flex-wrap:wrap">
+        <span style="font-size:11px;font-weight:600;color:#1D1D1F">${e.title}</span>
+        <span style="font-size:10px;color:#6E6E73">· ${e.company}</span>
+        <span style="font-size:8.5px;background:rgba(0,113,227,.08);color:#0071E3;padding:1px 5px;border-radius:20px;font-weight:600">${e.badge}</span>
       </div>
-    </div>
-  `).join('');
+      <div style="font-size:9.5px;color:#86868B;margin:1px 0 4px">${e.period}</div>
+      <ul style="margin:0;padding-left:13px">
+        ${e.bullets.map(b => `<li style="font-size:10px;color:#3A3A3C;margin-bottom:2px;line-height:1.45">${b}</li>`).join('')}
+      </ul>
+    </div>`).join('');
 
-  const skillRows = (() => {
-    const half = Math.ceil(d.skills.length / 2);
-    const rows = [d.skills.slice(0, half), d.skills.slice(half)];
-    return rows.map(row =>
-      `<div style="display:flex;gap:0;margin-bottom:6px">
-        ${row.map(s => `
-          <div style="flex:1;padding-right:12px">
-            <div style="font-size:11px;font-weight:600;color:#1D1D1F;margin-bottom:2px">${s.cat}</div>
-            <div style="font-size:11px;color:#6E6E73">${s.tags}</div>
-          </div>
-        `).join('')}
-      </div>`
-    ).join('');
-  })();
+  const skillRows = d.skills.map(s => `
+    <div style="margin-bottom:3px">
+      <span style="font-size:9.5px;font-weight:600;color:#1D1D1F">${s.cat} : </span>
+      <span style="font-size:9.5px;color:#6E6E73">${s.tags}</span>
+    </div>`).join('');
+
+  const projectRows = (d.projects as Array<{ title: string; sub: string; tags: string; appStoreUrl?: string }>).map(p => `
+    <div style="margin-bottom:5px">
+      <span style="font-size:10px;font-weight:600;color:#1D1D1F">${p.title}</span>
+      ${p.appStoreUrl ? `<a href="${p.appStoreUrl}" style="font-size:9px;color:#0071E3;font-weight:600;margin-left:6px;text-decoration:none">App Store ↗</a>` : ''}
+      <span style="font-size:9.5px;color:#86868B"> — ${p.sub}</span>
+      <div style="font-size:9.5px;color:#6E6E73;margin-top:1px">${p.tags}</div>
+    </div>`).join('');
 
   const eduRows = d.education.map(e => `
-    <div style="display:flex;gap:12px;align-items:center;margin-bottom:10px">
-      <img src="${e.logo}" width="36" height="36" style="border-radius:8px;object-fit:cover;flex-shrink:0" crossorigin="anonymous"/>
-      <div style="flex:1">
-        <div style="font-size:12px;font-weight:600;color:#1D1D1F">${e.title}</div>
-        <div style="font-size:11px;color:#6E6E73">${e.school} · <em style="font-style:normal;color:#86868B">${e.period}</em></div>
-      </div>
-    </div>
-  `).join('');
-
-  const projectRows = d.projects.map(p => `
-    <div style="margin-bottom:8px">
-      <span style="font-size:12px;font-weight:600;color:#1D1D1F">${p.title}</span>
-      <span style="font-size:11px;color:#86868B"> — ${p.sub}</span>
-      <div style="font-size:11px;color:#6E6E73;margin-top:2px">${p.tags}</div>
-    </div>
-  `).join('');
+    <div style="margin-bottom:5px">
+      <div style="font-size:10px;font-weight:600;color:#1D1D1F">${e.title}</div>
+      <div style="font-size:9.5px;color:#6E6E73">${e.school} · ${e.period}</div>
+    </div>`).join('');
 
   const keywords = d.keywords.map(k =>
-    `<span style="display:inline-block;font-size:10px;background:rgba(0,113,227,.07);color:#0071E3;padding:2px 8px;border-radius:4px;margin:2px 3px 2px 0;font-family:monospace">${k}</span>`
+    `<span style="display:inline-block;font-size:9px;background:rgba(0,113,227,.07);color:#0071E3;padding:2px 6px;border-radius:3px;margin:2px 2px 0 0">${k}</span>`
   ).join('');
 
-  return `
-    <div style="display:flex;align-items:flex-start;gap:18px;margin-bottom:4px">
-      <img src="${BASE}/cv-assets/pfp.png" width="80" height="80" style="border-radius:14px;object-fit:cover;flex-shrink:0" crossorigin="anonymous"/>
-      <div style="flex:1">
-        <div style="font-size:22px;font-weight:700;color:#1D1D1F;margin-bottom:2px">Sharik Mohamed</div>
-        <div style="font-size:13px;color:#6E6E73;margin-bottom:6px">${d.title}</div>
-        <div style="font-size:11px;color:#86868B;line-height:1.8">
-          📍 Toulouse, France &nbsp;·&nbsp; 📧 sharikmohamed8@gmail.com<br/>
-          🔗 linkedin.com/in/sharik-abubucker-393194205 &nbsp;·&nbsp; 💻 github.com/sharik-dev &nbsp;·&nbsp; 🌐 sharik.fr
-        </div>
-      </div>
-      <img src="${BASE}/cv-assets/qrCode.png" width="70" height="70" style="border-radius:8px;flex-shrink:0" crossorigin="anonymous"/>
+  return `<!DOCTYPE html>
+<html lang="${lang}">
+<head>
+  <meta charset="UTF-8"/>
+  <title>CV Sharik Abubucker</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+      color: #1D1D1F;
+      background: white;
+      padding: 28px 40px;
+      max-width: 794px;
+      margin: 0 auto;
+      line-height: 1.4;
+    }
+    @media print {
+      @page { margin: 0; size: A4; }
+      body { padding: 1.2cm 1.6cm; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div style="border-bottom:2px solid #1D1D1F;padding-bottom:10px;margin-bottom:4px">
+    <div style="font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.14em;color:#0071E3;margin-bottom:2px">${d.title}</div>
+    <div style="font-size:9.5px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:#6E6E73;margin-bottom:4px">${d.subtitle}</div>
+    <div style="font-size:20px;font-weight:700;color:#1D1D1F;letter-spacing:-.5px">Sharik Abubucker</div>
+    <div style="font-size:9.5px;color:#6E6E73;margin-top:4px;line-height:1.8">
+      Ville : Toulouse, France &nbsp;|&nbsp;
+      Tél : +33 07 50 01 98 34 &nbsp;|&nbsp; Email : sharikmohamed8@gmail.com<br/>
+      LinkedIn : Sharik Mohamed &nbsp;|&nbsp;
+      GitHub : github.com/sharik-dev &nbsp;|&nbsp;
+      Portfolio : sharik.fr
     </div>
+  </div>
 
-    ${sec(d.sections.skills)}
-    ${skillRows}
+  <!-- Summary -->
+  ${sec(lang === 'fr' ? 'Résumé Professionnel' : 'Professional Summary')}
+  <p style="font-size:10px;color:#3A3A3C;line-height:1.5">${d.summary}</p>
 
-    ${sec(d.sections.experience)}
-    ${expRows}
+  <!-- Skills -->
+  ${sec(d.sections.skills)}
+  ${skillRows}
 
-    ${sec(d.sections.projects)}
-    ${projectRows}
+  <!-- Experience -->
+  ${sec(d.sections.experience)}
+  ${expRows}
 
-    ${sec(d.sections.education)}
-    ${eduRows}
+  <!-- Projects -->
+  ${sec(d.sections.projects)}
+  <p style="font-size:9.5px;color:#6E6E73;margin:0 0 6px 0">
+    ${lang === 'fr'
+      ? `Liste exhaustive sur le portfolio : <a href="https://sharik.fr/portefolio" style="color:#0071E3;text-decoration:none">sharik.fr/portefolio</a>`
+      : `Full project list on portfolio: <a href="https://sharik.fr/portefolio" style="color:#0071E3;text-decoration:none">sharik.fr/portefolio</a>`
+    }
+  </p>
+  ${projectRows}
 
-    ${sec(d.sections.languages)}
-    <div style="font-size:12px;color:#6E6E73;margin-bottom:8px">${d.languages}</div>
+  <!-- Education -->
+  ${sec(d.sections.education)}
+  ${eduRows}
 
-    ${sec(d.sections.keywords)}
-    <div style="line-height:2">${keywords}</div>
-  `;
+  <!-- Languages -->
+  ${sec(d.sections.languages)}
+  <p style="font-size:10px;color:#3A3A3C">${d.languages}</p>
+
+  <!-- Keywords -->
+  ${sec(d.sections.keywords)}
+  <div style="line-height:2">${keywords}</div>
+
+  <script>window.onload = function(){ window.print(); }</script>
+</body>
+</html>`;
 }
 
 export function buildCvText(lang: 'fr' | 'en'): string {
@@ -261,54 +284,23 @@ export function buildCvText(lang: 'fr' | 'en'): string {
     line(),
     s.keywords.toUpperCase(),
     line(),
-    d.keywords.join(' · '),
+    d.keywords.join(', '),
   ].join('\n');
 }
 
-export async function downloadCvAsPdf(lang: 'fr' | 'en', filename: string): Promise<void> {
-  const container = document.createElement('div');
-  container.innerHTML = buildHtml(lang);
-  container.style.cssText = [
-    'width:794px',
-    'padding:48px 56px',
-    'background:white',
-    'font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif',
-    'line-height:1.55',
-    'color:#1D1D1F',
-    'position:fixed',
-    'top:-99999px',
-    'left:-99999px',
-    'box-sizing:border-box',
-  ].join(';');
-
-  document.body.appendChild(container);
-
-  await Promise.all(
-    Array.from(container.querySelectorAll('img')).map(
-      img => img.complete ? Promise.resolve() : new Promise(r => { img.onload = r; img.onerror = r; })
-    )
-  );
-
-  try {
-    const canvas = await html2canvas(container, { scale: 2, useCORS: true, allowTaint: false, logging: false });
-
-    const pdf = new jsPDF('p', 'mm', 'a4');
-    const pageW = pdf.internal.pageSize.getWidth();
-    const pageH = pdf.internal.pageSize.getHeight();
-    const imgData = canvas.toDataURL('image/png');
-
-    // Scale to fit exactly one page (width-first, clamp height if needed)
-    const ratio = canvas.width / canvas.height;
-    let finalW = pageW;
-    let finalH = pageW / ratio;
-    if (finalH > pageH) {
-      finalH = pageH;
-      finalW = pageH * ratio;
+export function downloadCvAsPdf(lang: 'fr' | 'en', _filename: string): Promise<void> {
+  return new Promise((resolve) => {
+    const html = buildPrintHtml(lang);
+    const win = window.open('', '_blank', 'width=900,height=700');
+    if (!win) {
+      alert('Autorise les popups pour télécharger le CV en PDF.');
+      resolve();
+      return;
     }
-
-    pdf.addImage(imgData, 'PNG', 0, 0, finalW, finalH);
-    pdf.save(filename);
-  } finally {
-    document.body.removeChild(container);
-  }
+    win.document.open();
+    win.document.write(html);
+    win.document.close();
+    // Resolve after print dialog closes (or after a delay)
+    setTimeout(resolve, 1000);
+  });
 }

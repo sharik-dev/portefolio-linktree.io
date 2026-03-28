@@ -1,9 +1,11 @@
-# Software Engineer — Mobile, Web & CI/CD
-## Sharik Mohamed
+# iOS Developer · Software Engineer
+## Mobile · Web · CI/CD · AI
+## Sharik Abubucker
 
 Location : Toulouse, France
+Phone : +33 07 50 01 98 34
 Email : sharikmohamed8@gmail.com
-LinkedIn : linkedin.com/in/sharik-abubucker-393194205
+LinkedIn : Sharik Mohamed
 GitHub : github.com/sharik-dev
 Portfolio : sharik.fr
 
@@ -11,7 +13,7 @@ Portfolio : sharik.fr
 
 ## Professional Summary
 
-Work-study iOS developer at Skyconseil since January 2024, building Guidor — a professional aviation app integrating MapboxMaps SDK v10+, UIKit, and MVVM architecture. Independently published 3 apps on the App Store (4.7 to 4.9 stars). Versatile engineer from a deliberate career switch: Swift, React.js, CI/CD, embedded C++, with a strong interest in mobile AI and cloud. Looking for technically demanding environments where code quality and engineering rigor are priorities.
+Work-study iOS developer at Skyconseil since January 2024, building Guidor — a professional aviation app integrating MapboxMaps SDK v10+, UIKit, and MVVM architecture. Independently published 3 apps on the App Store (4.7 to 4.9 stars). Full-stack profile built through progressive skill development: Swift, React.js, CI/CD, embedded C++, with a strong interest in mobile AI and cloud. Looking for technically demanding environments where code quality and engineering rigor are priorities.
 
 ---
 
@@ -19,7 +21,7 @@ Work-study iOS developer at Skyconseil since January 2024, building Guidor — a
 
 iOS Mobile : Swift, SwiftUI, UIKit, AVFoundation
 Architecture : MVVM, MVC, Clean Architecture
-Mapping & Geospatial : MapboxMaps SDK v10+, Legacy Mapbox SDK, JSON Filters, Zoom Expressions
+Mapping & Geospatial : MapboxMaps SDK v10+, JSON Filters
 DevOps & CI/CD : Git, GitHub Actions, Automated Pipelines, Unit Testing
 Web & Cloud : React.js, TypeScript, JavaScript
 Embedded : C++, Arduino
@@ -48,17 +50,18 @@ June 2023 – July 2023 · Toulouse, France
 
 ## Projects
 
-Guidor — Professional aviation iOS app · In production through September 2026 · sharik.fr
-Swift, UIKit, SwiftUI, MVVM, MapboxMaps SDK v10+, METAR/TAF/turbulence weather layers, annotations, raster tiles, CI/CD GitHub Actions
+Full project list available on portfolio: [sharik.fr/portefolio](https://sharik.fr/portefolio)
 
-Meow-Tube — Ad-free, Shorts-free iOS video app · App Store · 4.9 stars · sharik.fr/meowtube
+Guidor — Professional project · Aviation iOS app in production (Skyconseil) · apps.apple.com/fr/app/guidor/id1072066692
+Swift, UIKit, SwiftUI, MVVM, MapboxMaps SDK v10+, METAR/TAF weather layers, CI/CD GitHub Actions
+
+Meow-Tube — Personal project · App Store · 4.9 ★ · [App Store ↗](https://apps.apple.com/fr/app/meow-tube/id6760180650)
+YouTube without ads or Shorts, no subscription — like Brave does for the web
 Swift, SwiftUI, MVVM, AVFoundation, YouTube Data API
 
-LocalShort — Offline short-form video player · App Store · 4.7 stars · sharik.fr/local-short
-Swift, SwiftUI, AVFoundation, local playback, zero data transmitted
-
-Islamic Daily Quote — Daily multilingual Islamic quote app · App Store · 4.8 stars · sharik.fr/islamic-daily-quote
-Swift, SwiftUI, Notifications, Dark mode, Arabic + multilingual translations
+Islamic Daily Quote — Personal project · App Store · 4.8 ★ · [App Store ↗](https://apps.apple.com/fr/app/islamic-daily-quote/id6760481474)
+Daily Islamic quotes, multilingual
+Swift, SwiftUI, Notifications, Dark mode
 
 ---
 
@@ -71,13 +74,13 @@ Professional Qualification — iOS Application Developer · Simplon Auvergne-Rho
 Certified native iOS mobile developer · April – July 2023
 
 BTS Management of Commercial Units · Ecoles Billieres
-Deliberate career switch into software engineering following this degree · September 2020 – July 2022
+Management, Marketing & Sales · Career switch into software engineering · September 2020 – July 2022
 
 ---
 
 ## Languages
 
-French : Native | English : Advanced (B2/C1)
+French : Native | Malagasy : Native | English : Advanced (B2/C1)
 
 ---
 

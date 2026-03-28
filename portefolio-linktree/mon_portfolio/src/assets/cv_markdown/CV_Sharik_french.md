@@ -1,9 +1,11 @@
-# Ingénieur Logiciel — Développement Mobile, Web & CI/CD
-## Sharik Mohamed
+# Développeur iOS · Ingénieur Logiciel
+## Mobile · Web · CI/CD · IA
+## Sharik Abubucker
 
 Ville : Toulouse, France
+Téléphone : +33 07 50 01 98 34
 Email : sharikmohamed8@gmail.com
-LinkedIn : linkedin.com/in/sharik-abubucker-393194205
+LinkedIn : Sharik Mohamed
 GitHub : github.com/sharik-dev
 Portfolio : sharik.fr
 
@@ -11,7 +13,7 @@ Portfolio : sharik.fr
 
 ## Résumé Professionnel
 
-Alternant développeur iOS chez Skyconseil depuis janvier 2024, je travaille sur Guidor — une application aviation professionnelle intégrant MapboxMaps SDK v10+, UIKit et architecture MVVM. En parallèle, j'ai publié seul 3 applications sur l'App Store (4.7 à 4.9 étoiles). Profil polyvalent issu d'une reconversion volontaire : Swift, React.js, CI/CD, embarqué C++, avec une appétence pour l'IA mobile et le cloud. Je cherche des environnements techniques exigeants où la qualité du code et la rigueur sont des priorités.
+Alternant développeur iOS chez Skyconseil depuis janvier 2024, je travaille sur Guidor — une application aviation professionnelle intégrant MapboxMaps SDK v10+, UIKit et architecture MVVM. En parallèle, j'ai publié seul 3 applications sur l'App Store (4.7 à 4.9 étoiles). Profil full-stack issu d'une montée en compétences progressive : Swift, React.js, CI/CD, embarqué C++, avec une appétence pour l'IA mobile et le cloud. Je cherche des environnements techniques exigeants où la qualité du code et la rigueur sont des priorités.
 
 ---
 
@@ -19,7 +21,7 @@ Alternant développeur iOS chez Skyconseil depuis janvier 2024, je travaille sur
 
 Mobile iOS : Swift, SwiftUI, UIKit, AVFoundation
 Architecture : MVVM, MVC, Clean Architecture
-Cartographie : MapboxMaps SDK v10+, SDK legacy, filtres JSON, expressions de zoom
+Cartographie : MapboxMaps SDK v10+, filtres JSON
 DevOps et CI/CD : Git, GitHub Actions, pipelines automatisés, Tests unitaires
 Web et Cloud : React.js, TypeScript, JavaScript
 Embarqué : C++, Arduino
@@ -48,17 +50,18 @@ Juin 2023 – Juillet 2023 · Toulouse, France
 
 ## Projets
 
-Guidor — Application aviation professionnelle iOS · En production jusqu'en septembre 2026 · sharik.fr
-Swift, UIKit, SwiftUI, MVVM, MapboxMaps SDK v10+, couches météo METAR/TAF/turbulences, annotations, tuiles raster, CI/CD GitHub Actions
+Liste exhaustive disponible sur le portfolio : [sharik.fr/portefolio](https://sharik.fr/portefolio)
 
-Meow-Tube — Application iOS sans publicité ni Shorts · App Store · 4.9 étoiles · sharik.fr/meowtube
+Guidor — Projet professionnel · Application aviation iOS en production (Skyconseil) · apps.apple.com/fr/app/guidor/id1072066692
+Swift, UIKit, SwiftUI, MVVM, MapboxMaps SDK v10+, couches météo METAR/TAF, CI/CD GitHub Actions
+
+Meow-Tube — Projet personnel · App Store · 4.9 ★ · [App Store ↗](https://apps.apple.com/fr/app/meow-tube/id6760180650)
+YouTube sans publicités ni Shorts, sans abonnement — comme Brave le fait pour le web
 Swift, SwiftUI, MVVM, AVFoundation, YouTube Data API
 
-LocalShort — Lecteur de vidéos courtes hors ligne · App Store · 4.7 étoiles · sharik.fr/local-short
-Swift, SwiftUI, AVFoundation, lecture locale, zéro donnée transmise
-
-Islamic Daily Quote — Citation islamique quotidienne multilingue · App Store · 4.8 étoiles · sharik.fr/islamic-daily-quote
-Swift, SwiftUI, Notifications, Mode sombre, arabe et traductions multiples
+Islamic Daily Quote — Projet personnel · App Store · 4.8 ★ · [App Store ↗](https://apps.apple.com/fr/app/islamic-daily-quote/id6760481474)
+Citations islamiques quotidiennes, multilingue
+Swift, SwiftUI, Notifications, Mode sombre
 
 ---
 
@@ -71,13 +74,13 @@ AFP Concepteur Développeur d'Applications iOS · Simplon Auvergne-Rhône-Alpes
 Certifié développeur iOS mobile natif · Avril – Juillet 2023
 
 BTS Management des Unités Commerciales · Ecoles Billières
-Reconversion vers l'informatique à l'issue de ce diplôme · Septembre 2020 – Juillet 2022
+Management, Marketing & Commerce · Reconversion vers l'informatique · Septembre 2020 – Juillet 2022
 
 ---
 
 ## Langues
 
-Français : Natif | Anglais : Avancé (B2/C1)
+Français : Natif | Malgache : Natif | Anglais : Avancé (B2/C1)
 
 ---
 

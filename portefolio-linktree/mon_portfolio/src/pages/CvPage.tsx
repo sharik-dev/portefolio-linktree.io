@@ -81,8 +81,8 @@ const DATA = {
       school: 'Ecoles Billieres',
       period: { fr: 'Septembre 2020 – Juillet 2022', en: 'September 2020 – July 2022' },
       description: {
-        fr: 'Management et commercial des unités commerciales',
-        en: 'Management and commercial of commercial units'
+        fr: 'Management, Marketing & Commerce. Reconversion vers l\'informatique à l\'issue de ce diplôme.',
+        en: 'Management, Marketing & Sales. Career switch into software engineering following this degree.'
       },
       logo: billiereLogo,
     },
@@ -91,7 +91,7 @@ const DATA = {
     fr: [
       { cat: 'Mobile iOS', tags: ['Swift', 'SwiftUI', 'UIKit', 'Core ML', 'Vision', 'On-device AI', 'Image Processing', 'NLP'] },
       { cat: 'Architecture', tags: ['MVVM', 'MVC'] },
-      { cat: 'Cartographie', tags: ['MapboxMaps SDK v10+', 'SDK Legacy Mapbox', 'Filtres JSON', 'Expressions de zoom'] },
+      { cat: 'Cartographie', tags: ['MapboxMaps SDK v10+', 'Filtres JSON'] },
       { cat: 'DevOps & CI/CD', tags: ['Git', 'GitHub Actions', 'Pipelines automatisés', 'Tests unitaires'] },
       { cat: 'Web & Autres', tags: ['React.js', 'TypeScript', 'JavaScript', 'C++', 'Python', 'Arduino'] },
       { cat: 'Méthodes', tags: ['Agile/Scrum', 'Code Review', 'Documentation technique', 'REST API / JSON'] },
@@ -99,15 +99,15 @@ const DATA = {
     en: [
       { cat: 'iOS Mobile', tags: ['Swift', 'SwiftUI', 'UIKit', 'Core ML', 'Vision', 'On-device AI', 'Image Processing', 'NLP'] },
       { cat: 'Architecture', tags: ['MVVM', 'MVC'] },
-      { cat: 'Mapping & Geospatial', tags: ['MapboxMaps SDK v10+, v6', 'Legacy Mapbox SDK', 'JSON Filters'] },
+      { cat: 'Mapping & Geospatial', tags: ['MapboxMaps SDK v10+', 'JSON Filters'] },
       { cat: 'DevOps & CI/CD', tags: ['Git', 'GitHub Actions', 'Automated Pipelines', 'Unit Testing'] },
       { cat: 'Web & Other', tags: ['React.js', 'TypeScript', 'JavaScript', 'C++', 'Python', 'Arduino'] },
       { cat: 'Methodologies', tags: ['Agile/Scrum', 'Code Review', 'Technical Documentation', 'REST API / JSON'] },
     ],
   },
   languages: {
-    fr: [{ lang: 'Français', level: 'Natif' }, { lang: 'Anglais', level: 'Avancé (B2/C1)' }],
-    en: [{ lang: 'French', level: 'Native' }, { lang: 'English', level: 'Advanced (B2/C1)' }],
+    fr: [{ lang: 'Français', level: 'Natif' }, { lang: 'Malgache', level: 'Natif' }, { lang: 'Anglais', level: 'Avancé (B2/C1)' }],
+    en: [{ lang: 'French', level: 'Native' }, { lang: 'Malagasy', level: 'Native' }, { lang: 'English', level: 'Advanced (B2/C1)' }],
   },
 };
 
@@ -185,8 +185,8 @@ const CvPage: React.FC = () => {
   }, [lang]);
 
   const ui = {
-    fr: { hero: 'Mon CV', sub: 'Ingénieur Logiciel · Développeur iOS · Toulouse', tabs: ['Expériences', 'Formations', 'Compétences', 'Aperçu'], download: 'Télécharger le CV', downloadSub: 'Disponible en français et en anglais', dlFr: 'CV Français', dlEn: 'CV Anglais', copyBtn: 'Copier', copiedBtn: 'Copié !', previewLabel: 'Aperçu brut du CV', previewHint: 'Le contenu switch automatiquement avec la langue sélectionnée.' },
-    en: { hero: 'My CV', sub: 'Software Engineer · iOS Developer · Toulouse', tabs: ['Experience', 'Education', 'Skills', 'Preview'], download: 'Download CV', downloadSub: 'Available in French and English', dlFr: 'French CV', dlEn: 'English CV', copyBtn: 'Copy', copiedBtn: 'Copied!', previewLabel: 'Raw CV Preview', previewHint: 'Content switches automatically with the selected language.' },
+    fr: { hero: 'Mon CV', sub: 'Développeur iOS · Ingénieur Logiciel · Toulouse', tabs: ['Expériences', 'Formations', 'Compétences', 'Aperçu'], download: 'Télécharger le CV', downloadSub: 'Disponible en français et en anglais', dlFr: 'CV Français', dlEn: 'CV Anglais', copyBtn: 'Copier', copiedBtn: 'Copié !', previewLabel: 'Aperçu brut du CV', previewHint: 'Le contenu switch automatiquement avec la langue sélectionnée.' },
+    en: { hero: 'My CV', sub: 'iOS Developer · Software Engineer · Toulouse', tabs: ['Experience', 'Education', 'Skills', 'Preview'], download: 'Download CV', downloadSub: 'Available in French and English', dlFr: 'French CV', dlEn: 'English CV', copyBtn: 'Copy', copiedBtn: 'Copied!', previewLabel: 'Raw CV Preview', previewHint: 'Content switches automatically with the selected language.' },
   }[lang];
 
   const handleCopy = () => {

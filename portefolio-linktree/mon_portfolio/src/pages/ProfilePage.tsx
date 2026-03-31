@@ -53,18 +53,18 @@ const SKILLS = ['Swift', 'iOS', 'MVVM', 'SwiftUI', 'UIKit', 'AVFoundation', 'Cor
 
 const BIO = {
   fr: [
-    <>Ingénieur logiciel spécialisé en développement iOS, avec une expertise en architecture <strong className="text-[#1D1D1F] dark:text-white font-semibold">MVVM</strong>, intégration <strong className="text-[#1D1D1F] dark:text-white font-semibold">MapboxMaps SDK</strong> et CI/CD.</>,
-    <>Orienté qualité, performance et lisibilité du code. Je conçois des applications mobiles robustes, documentées et testées dans un environnement Agile/Scrum.</>
+    <>Ingénieur logiciel passionné par le développement <strong className="text-[#1D1D1F] dark:text-white font-semibold">mobile</strong> et <strong className="text-[#1D1D1F] dark:text-white font-semibold">web</strong>, avec une appétence pour les architectures propres et les pipelines <strong className="text-[#1D1D1F] dark:text-white font-semibold">CI/CD</strong>.</>,
+    <>Orienté qualité, performance et lisibilité du code. Je conçois des applications robustes, documentées et testées dans un environnement Agile/Scrum.</>
   ],
   en: [
-    <>Software Engineer specialized in iOS development with strong expertise in <strong className="text-[#1D1D1F] dark:text-white font-semibold">MVVM architecture</strong>, <strong className="text-[#1D1D1F] dark:text-white font-semibold">MapboxMaps SDK</strong> integration and CI/CD.</>,
-    <>Focused on code quality, performance and readability. I build robust, well-documented, and tested mobile applications in an Agile/Scrum environment.</>
+    <>Software Engineer passionate about <strong className="text-[#1D1D1F] dark:text-white font-semibold">mobile</strong> and <strong className="text-[#1D1D1F] dark:text-white font-semibold">web</strong> development, with a focus on clean architectures and <strong className="text-[#1D1D1F] dark:text-white font-semibold">CI/CD</strong> pipelines.</>,
+    <>Focused on code quality, performance and readability. I build robust, well-documented, and tested applications in an Agile/Scrum environment.</>
   ],
 };
 
 const LANGS = {
-  fr: [{ name: 'Français', level: 'Natif' }, { name: 'Anglais', level: 'B2/C1' }],
-  en: [{ name: 'French', level: 'Native' }, { name: 'English', level: 'B2/C1' }],
+  fr: [{ name: 'Français', level: 'Natif' }, { name: 'Malgache', level: 'Natif' }, { name: 'Anglais', level: 'B2/C1' }],
+  en: [{ name: 'French', level: 'Native' }, { name: 'Malagasy', level: 'Native' }, { name: 'English', level: 'B2/C1' }],
 };
 
 const DETAILS = {
@@ -78,7 +78,7 @@ const DETAILS = {
     { label: 'Email', value: 'sharikmohamed8@gmail.com' },
     { label: 'Location', value: 'Toulouse, France' },
     { label: 'Availability', value: 'Freelance / Full-time' },
-    { label: 'Domain', value: 'iOS / Mobile Engineering' },
+    { label: 'Domain', value: 'Mobile & Web Engineering' },
   ],
 };
 

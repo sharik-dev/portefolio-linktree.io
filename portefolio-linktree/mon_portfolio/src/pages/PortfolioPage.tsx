@@ -173,7 +173,7 @@ const AppModal: React.FC<{ app: typeof APPS[0]; lang: 'fr' | 'en'; ui: typeof UI
   const actionBtn = hasLanding ? (
     <button onClick={() => { onClose(); navigate((app as any).landingPage); }}
       className="flex-shrink-0 bg-[#E5E5EA] dark:bg-[#3A3A3C] text-[#1D1D1F] dark:text-white text-[13px] font-semibold px-5 py-2 rounded-full hover:bg-[#D1D1D6] dark:hover:bg-[#48484A] active:scale-95 transition-all cursor-pointer flex items-center gap-1.5">
-      {lang === 'fr' ? 'Découvrir' : 'Discover'}
+      {lang === 'fr' ? 'Visite' : 'Visit'}
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="9 18 15 12 9 6" /></svg>
     </button>
   ) : hasExternal ? (

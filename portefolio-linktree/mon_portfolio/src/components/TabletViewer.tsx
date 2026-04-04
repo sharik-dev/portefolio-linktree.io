@@ -344,27 +344,27 @@ export default function TabletViewer({ screenshots, landscape = false }: Props) 
   }, [screenshots, landscape]);
 
   const onDown = useCallback((e: React.PointerEvent) => {
+    e.preventDefault();
     rotState.current.dragging = true;
-    rotState.current.isIdle = false; // sort du mode idle pendant l'interaction
+    rotState.current.isIdle = false;
     lastPtr.current = { x: e.clientX, y: e.clientY };
     (e.currentTarget as HTMLElement).setPointerCapture(e.pointerId);
   }, []);
 
   const onMove = useCallback((e: React.PointerEvent) => {
     if (!rotState.current.dragging) return;
+    e.preventDefault();
     const dx = e.clientX - lastPtr.current.x;
     const dy = e.clientY - lastPtr.current.y;
-    // Free 360° rotation on Y, constrained on X
-    rotState.current.y  += dx * 0.008;
-    rotState.current.x   = Math.max(-0.43, Math.min(0.43, rotState.current.x - dy * 0.005));
-    rotState.current.vy  = dx * 0.005;
-    rotState.current.vx  = -dy * 0.003;
+    rotState.current.y  += dx * 0.014;
+    rotState.current.x   = Math.max(-0.43, Math.min(0.43, rotState.current.x - dy * 0.008));
+    rotState.current.vy  = dx * 0.010;
+    rotState.current.vx  = -dy * 0.005;
     lastPtr.current = { x: e.clientX, y: e.clientY };
   }, []);
 
   const onUp = useCallback(() => {
     rotState.current.dragging = false;
-    // Spring handles return to optimal position — no manual vy needed
   }, []);
 
   // Responsive canvas height: adapts to container width
@@ -382,11 +382,11 @@ export default function TabletViewer({ screenshots, landscape = false }: Props) 
     <div ref={containerRef} style={{ userSelect: 'none' }}>
       <CanvasErrorBoundary fallback={fallback}>
         <div
-          style={{ width: '100%', height: `${containerH}px`, cursor: 'grab' }}
+          style={{ width: '100%', height: `${containerH}px`, cursor: 'grab', touchAction: 'none' }}
           onPointerDown={onDown}
           onPointerMove={onMove}
           onPointerUp={onUp}
-          onPointerLeave={onUp}
+          onPointerCancel={onUp}
         >
           <Canvas
             camera={{ position: [0, 0, 5], fov: 36 }}

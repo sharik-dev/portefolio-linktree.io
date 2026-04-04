@@ -1,5 +1,5 @@
 import React from 'react';
-import pfImage from '../assets/pfp.png';
+import pfImage from '../assets/pfp.jpg';
 import { ButtonStyle } from '../components';
 import SocialButton from '../components/SocialButton';
 import { LinkedInIcon, GitHubIcon, EmailIcon, PortfolioIcon } from '../components/icons';

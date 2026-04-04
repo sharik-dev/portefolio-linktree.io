@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { useLang, t } from '../contexts/LangContext';
 import { downloadCvAsPdf } from '../utils/downloadCvAsPdf';
 
-import pfpImage from '../assets/pfp.png';
+import pfpImage from '../assets/pfp.jpg';
 import imgGuidor from '../assets/guidor/imageApp.png';
 import imgMeowTube from '../assets/meowTube/AppHomePage.png';
 import imgLocalShort from '../assets/localShort/screen1.PNG';

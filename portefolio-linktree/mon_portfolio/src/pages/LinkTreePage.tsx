@@ -2,7 +2,7 @@ import React from 'react';
 import pfImage from '../assets/pfp.jpg';
 import { ButtonStyle } from '../components';
 import SocialButton from '../components/SocialButton';
-import { LinkedInIcon, GitHubIcon, EmailIcon, PortfolioIcon } from '../components/icons';
+import { LinkedInIcon, GitHubIcon, EmailIcon, PortfolioIcon, InstagramIcon, TwitterIcon, TikTokIcon, YouTubeIcon } from '../components/icons';
 import { useLang, t } from '../contexts/LangContext';
 
 const LinkTreePage: React.FC = () => {
@@ -12,6 +12,10 @@ const LinkTreePage: React.FC = () => {
     { name: 'Portfolio', url: '/portefolio', icon: <PortfolioIcon />, style: ButtonStyle.Primary },
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/sharik-abubucker-393194205/', icon: <LinkedInIcon />, style: ButtonStyle.Secondary },
     { name: 'GitHub', url: 'https://github.com/sharik-dev', icon: <GitHubIcon />, style: ButtonStyle.Secondary },
+    { name: 'Instagram', url: 'https://www.instagram.com/sharik_mohmd/', icon: <InstagramIcon />, style: ButtonStyle.Secondary },
+    { name: 'X', url: 'https://x.com/sharikm72602?s=21', icon: <TwitterIcon />, style: ButtonStyle.Secondary },
+    { name: 'TikTok', url: 'https://www.tiktok.com/@sharik.dev', icon: <TikTokIcon />, style: ButtonStyle.Secondary },
+    { name: 'YouTube', url: 'https://www.youtube.com/@sharikmohamed9240', icon: <YouTubeIcon />, style: ButtonStyle.Secondary },
     { name: 'Email', url: 'mailto:sharikmohamed8@gmail.com', icon: <EmailIcon />, style: ButtonStyle.Tertiary },
   ];
 

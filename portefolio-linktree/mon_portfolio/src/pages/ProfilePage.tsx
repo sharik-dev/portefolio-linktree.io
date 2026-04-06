@@ -5,9 +5,12 @@ import { useLang, t } from '../contexts/LangContext';
 import { downloadCvAsPdf } from '../utils/downloadCvAsPdf';
 
 import pfpImage from '../assets/pfp.jpg';
-import imgGuidor from '../assets/guidor/imageApp.png';
-import imgMeowTube from '../assets/meowTube/AppHomePage.png';
-import imgJeuDePoint from '../assets/jeu de point/screenshoot/iPhone 17-01_Menu.png';
+import imgGuidor1 from '../assets/guidor/imageApp.png';
+import imgGuidor2 from '../assets/guidor/imageApp2.png';
+import imgMeowTube1 from '../assets/meowTube/AppHomePage.png';
+import imgMeowTube2 from '../assets/meowTube/AppSecondPage.png';
+import imgJeuDePoint1 from '../assets/jeu de point/screenshoot/iPhone 17-01_Menu.png';
+import imgJeuDePoint2 from '../assets/jeu de point/screenshoot/iPhone 17-02_Game.png';
 
 /* ─── Bilingual project data ─────────────────────────────────────── */
 const PROJECTS = [
@@ -19,7 +22,7 @@ const PROJECTS = [
       en: 'Professional iOS app for airline pilots. Real-time weather analysis, route optimization, turbulence alerts and ARINC avionics integration.'
     },
     context: { fr: 'Application professionnelle', en: 'Professional app' },
-    image: imgGuidor,
+    screenshots: [imgGuidor1, imgGuidor2],
     tags: ['Swift', 'iOS', 'Aviation', 'ARINC'],
     route: '/portefolio',
   },
@@ -31,7 +34,7 @@ const PROJECTS = [
       en: 'Ad-free iOS video app without Shorts. Designed for focused viewing, with no screen-time tracking.'
     },
     context: { fr: 'Projet personnel', en: 'Personal project' },
-    image: imgMeowTube,
+    screenshots: [imgMeowTube1, imgMeowTube2],
     tags: ['Swift', 'SwiftUI', 'AVFoundation', 'iOS'],
     route: '/portefolio',
   },
@@ -43,7 +46,7 @@ const PROJECTS = [
       en: 'Traditional Malagasy strategy game. Place your points, create smart connections, and anticipate your opponent\'s moves.'
     },
     context: { fr: 'Projet personnel', en: 'Personal project' },
-    image: imgJeuDePoint,
+    screenshots: [imgJeuDePoint1, imgJeuDePoint2],
     tags: ['Swift', 'SwiftUI', 'iOS'],
     route: '/portefolio',
   },
@@ -192,9 +195,13 @@ const ProfilePage: React.FC = () => {
               <Link key={project.id} to={project.route} className="block group">
                 <motion.div whileHover={{ y: -6 }} whileTap={{ scale: 0.98 }}
                   className="bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow cursor-pointer h-full">
-                  <div className="h-44 overflow-hidden bg-[#E8E8ED]">
-                    <img src={project.image} alt={project.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                  {/* Screenshots scroll */}
+                  <div className="flex gap-2 overflow-x-auto px-3 pt-3 pb-1 scrollbar-hide bg-[#F5F5F7] dark:bg-[#2C2C2E]"
+                    onClick={e => e.preventDefault()}>
+                    {project.screenshots.map((src, idx) => (
+                      <img key={idx} src={src} alt={`${project.title} screen ${idx + 1}`}
+                        className="h-48 w-auto flex-shrink-0 rounded-xl object-cover shadow-sm" />
+                    ))}
                   </div>
                   <div className="p-4">
                     {/* Context badge */}

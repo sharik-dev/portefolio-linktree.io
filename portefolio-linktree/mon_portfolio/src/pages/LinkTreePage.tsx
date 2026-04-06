@@ -16,7 +16,7 @@ const LinkTreePage: React.FC = () => {
     { name: 'X', url: 'https://x.com/sharikm72602?s=21', icon: <TwitterIcon />, style: ButtonStyle.Secondary },
     { name: 'TikTok', url: 'https://www.tiktok.com/@sharik.dev', icon: <TikTokIcon />, style: ButtonStyle.Secondary },
     { name: 'YouTube', url: 'https://www.youtube.com/@sharikmohamed9240', icon: <YouTubeIcon />, style: ButtonStyle.Secondary },
-    { name: 'Email', url: 'mailto:sharikmohamed8@gmail.com', icon: <EmailIcon />, style: ButtonStyle.Tertiary },
+    { name: 'Email', url: 'mailto:sharikmohamed8@gmail.com', icon: <EmailIcon />, style: ButtonStyle.Secondary },
   ];
 
   return (
@@ -48,13 +48,13 @@ const LinkTreePage: React.FC = () => {
         </p>
       </header>
 
-      <main className="w-full max-w-sm flex flex-col gap-3">
+      <main className="w-full flex flex-col gap-3" style={{ maxWidth: '260px' }}>
         {socialLinks.map((link, i) => (
           <SocialButton key={i} name={link.name} url={link.url} icon={link.icon} style={link.style} />
         ))}
 
         <div className="mt-4 flex flex-wrap justify-center gap-2">
-          {['Swift', 'iOS', 'UIKIT', 'SwiftUI', 'Mapbox'].map(tag => (
+          {['Mobile Development', 'Web', 'Cloud', 'AI', 'Video Editing'].map(tag => (
             <span key={tag} className="text-[11px] font-medium px-3 py-1 rounded-full bg-white dark:bg-[#1C1C1E] text-[#6E6E73] dark:text-[#98989D] border border-black/[0.08] dark:border-white/[0.06] shadow-sm">
               {tag}
             </span>

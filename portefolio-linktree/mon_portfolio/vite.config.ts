@@ -6,7 +6,11 @@ export default defineConfig({
   base: process.env.VITE_BASE ?? '/',
   plugins: [
     tailwindcss(),
-    react(),
+    react({
+      babel: {
+        browserslistConfigFile: false,
+      },
+    }),
   ],
   assetsInclude: ['**/*.md', '**/*.glb'],
   server: {

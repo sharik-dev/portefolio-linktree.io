@@ -63,6 +63,10 @@ Islamic Daily Quote — Personal project · App Store · 4.8 ★ · [App Store �
 Daily Islamic quotes, multilingual
 Swift, SwiftUI, Notifications, Dark mode
 
+Jeu de Point — Personal project · App Store · [App Store ↗](https://apps.apple.com/fr/app/jeu-de-point/id6761615625)
+Traditional Malagasy strategy game combining simplicity and tactical depth
+Swift, SwiftUI, iOS
+
 ---
 
 ## Education

@@ -7,7 +7,7 @@ import { downloadCvAsPdf } from '../utils/downloadCvAsPdf';
 import pfpImage from '../assets/pfp.jpg';
 import imgGuidor from '../assets/guidor/imageApp.png';
 import imgMeowTube from '../assets/meowTube/AppHomePage.png';
-import imgLocalShort from '../assets/localShort/screen1.PNG';
+import imgJeuDePoint from '../assets/jeu de point/screenshoot/iPhone 17-01_Menu.png';
 
 /* ─── Bilingual project data ─────────────────────────────────────── */
 const PROJECTS = [
@@ -36,15 +36,15 @@ const PROJECTS = [
     route: '/portefolio',
   },
   {
-    id: 'localshort',
-    title: 'LocalShort',
+    id: 'jeu-de-point',
+    title: 'Jeu de Point',
     description: {
-      fr: 'Lecteur iOS de vidéos courtes entièrement hors ligne. Import depuis la galerie, lecture fluide et aucune donnée transmise.',
-      en: 'Fully offline iOS short-video player. Import from gallery, smooth playback, zero data transmitted.'
+      fr: 'Jeu de stratégie traditionnel malgache. Placez vos points, créez des connexions intelligentes et anticipez les mouvements de votre adversaire.',
+      en: 'Traditional Malagasy strategy game. Place your points, create smart connections, and anticipate your opponent\'s moves.'
     },
     context: { fr: 'Projet personnel', en: 'Personal project' },
-    image: imgLocalShort,
-    tags: ['Swift', 'SwiftUI', 'AVFoundation', 'iOS'],
+    image: imgJeuDePoint,
+    tags: ['Swift', 'SwiftUI', 'iOS'],
     route: '/portefolio',
   },
 ];

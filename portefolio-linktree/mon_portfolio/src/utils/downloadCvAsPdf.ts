@@ -50,6 +50,7 @@ const DATA = {
       { title: 'Guidor', sub: 'Projet professionnel · Application aviation iOS en production (Skyconseil)', tags: 'Swift, UIKit, SwiftUI, MVVM, MapboxMaps SDK v10+, couches météo METAR/TAF, CI/CD', appStoreUrl: 'https://apps.apple.com/fr/app/guidor/id1072066692' },
       { title: 'Meow-Tube', sub: 'Projet personnel · App Store · 4.9 ★ — YouTube sans pub ni Shorts, sans abonnement (comme Brave pour le web)', tags: 'Swift, SwiftUI, MVVM, AVFoundation, YouTube Data API', appStoreUrl: 'https://apps.apple.com/fr/app/meow-tube/id6760180650' },
       { title: 'Islamic Daily Quote', sub: 'Projet personnel · App Store · 4.8 ★ — Citations islamiques quotidiennes, multilingue', tags: 'Swift, SwiftUI, Notifications, Mode sombre', appStoreUrl: 'https://apps.apple.com/fr/app/islamic-daily-quote/id6760481474' },
+      { title: 'Jeu de Point', sub: 'Projet personnel · App Store — Jeu de stratégie traditionnel malgache, simplicité et profondeur tactique', tags: 'Swift, SwiftUI, iOS', appStoreUrl: 'https://apps.apple.com/fr/app/jeu-de-point/id6761615625' },
     ],
     education: [
       { title: 'Licence Informatique (BAC+5)', school: 'Epitech', period: 'Août 2023 – Sept. 2026' },
@@ -108,6 +109,7 @@ const DATA = {
       { title: 'Guidor', sub: 'Professional project · Aviation iOS app in production (Skyconseil)', tags: 'Swift, UIKit, SwiftUI, MVVM, MapboxMaps SDK v10+, METAR/TAF weather layers, CI/CD', appStoreUrl: 'https://apps.apple.com/fr/app/guidor/id1072066692' },
       { title: 'Meow-Tube', sub: 'Personal project · App Store · 4.9 ★ — YouTube without ads or Shorts, no subscription (like Brave for the web)', tags: 'Swift, SwiftUI, MVVM, AVFoundation, YouTube Data API', appStoreUrl: 'https://apps.apple.com/fr/app/meow-tube/id6760180650' },
       { title: 'Islamic Daily Quote', sub: 'Personal project · App Store · 4.8 ★ — Daily Islamic quotes, multilingual', tags: 'Swift, SwiftUI, Notifications, Dark mode', appStoreUrl: 'https://apps.apple.com/fr/app/islamic-daily-quote/id6760481474' },
+      { title: 'Jeu de Point', sub: 'Personal project · App Store — Traditional Malagasy strategy game combining simplicity and tactical depth', tags: 'Swift, SwiftUI, iOS', appStoreUrl: 'https://apps.apple.com/fr/app/jeu-de-point/id6761615625' },
     ],
     education: [
       { title: "Master's in Computer Science (BAC+5)", school: 'Epitech', period: 'August 2023 – September 2026' },

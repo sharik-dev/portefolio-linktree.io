@@ -11,10 +11,9 @@ import guidorImg2 from '../assets/guidor/imageApp2.png';
 import meowTubeIcon from '../assets/meowTube/appLogo.png';
 import meowTubeHome from '../assets/meowTube/AppHomePage.png';
 import meowTubeSecond from '../assets/meowTube/AppSecondPage.png';
-import localShortIcon from '../assets/localShort/logo.png';
-import localShortScreen1 from '../assets/localShort/screen1.PNG';
-import localShortScreen2 from '../assets/localShort/screen2.PNG';
 import islamicIcon from '../assets/islamic daily quote/logo.png';
+import jeuDePointScreen1 from '../assets/jeu de point/screenshoot/iPhone 17-01_Menu.png';
+import jeuDePointScreen2 from '../assets/jeu de point/screenshoot/iPhone 17-02_Game.png';
 import islamicScreen1 from '../assets/islamic daily quote/firstImage.png';
 import islamicScreen2 from '../assets/islamic daily quote/second image.png';
 import islamicScreen3 from '../assets/islamic daily quote/thirst image.png';
@@ -56,22 +55,6 @@ const APPS = [
     appStoreLink: 'https://apps.apple.com/fr/app/meow-tube/id6760180650',
   },
   {
-    id: 'localshort',
-    name: 'LocalShort',
-    subtitle: { fr: 'Lecteur de vidéos courtes en local', en: 'Offline short-form video player' },
-    description: { fr: 'LocalShort est une application iOS permettant de consulter vos vidéos courtes (TikTok, Reels, Shorts) stockées localement sur votre appareil. Sans connexion, sans algorithme, avec un respect total de votre vie privée.', en: 'LocalShort is an iOS app for browsing your short-form videos (TikTok, Reels, Shorts) stored locally on your device. No internet, no algorithm, with total privacy.' },
-    features: { fr: ['Lecture hors ligne totale', 'Zéro donnée transmise', 'Import depuis la galerie', 'Interface fluide & rapide', 'Lecture en boucle', 'Aucun algorithme'], en: ['Fully offline playback', 'Zero data transmitted', 'Import from gallery', 'Smooth & fast interface', 'Loop playback', 'No algorithm'] },
-    price: { fr: 'Projet personnel', en: 'Personal project' },
-    category: { fr: 'Vidéo & Productivité', en: 'Video & Productivity' },
-    icon: localShortIcon,
-    screenshots: [localShortScreen1, localShortScreen2],
-    tech: ['Swift', 'SwiftUI', 'AVFoundation', 'iOS'],
-    featured: true,
-    isNew: true,
-    rating: 4.7,
-    landingPage: '/local-short',
-  },
-  {
     id: 'islamic-daily-quote',
     name: 'Islamic Daily Quote',
     subtitle: { fr: 'Citation islamique quotidienne', en: 'Daily Islamic quote' },
@@ -97,33 +80,19 @@ const APPS = [
     price: { fr: 'Gratuit', en: 'Free' },
     category: { fr: 'Jeux & Stratégie', en: 'Games & Strategy' },
     icon: 'https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b5/9c/a3/b59ca3fd-fa0a-6ecf-c7b0-89b0beb9a74e/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg',
-    screenshots: [],
+    screenshots: [jeuDePointScreen1, jeuDePointScreen2],
     tech: ['Swift', 'SwiftUI', 'iOS'],
-    featured: false,
+    featured: true,
     isNew: true,
     rating: 0,
     appStoreLink: 'https://apps.apple.com/fr/app/jeu-de-point/id6761615625',
-  },
-  {
-    id: 'easy-gym',
-    name: 'easy-Gym',
-    subtitle: { fr: 'Sport à domicile pour tous niveaux', en: 'Home workout for all fitness levels' },
-    description: { fr: 'Restez en forme sans quitter votre domicile ! easy-Gym propose une variété d\'exercices adaptés à tous les niveaux. Aucun équipement requis — juste votre motivation.', en: 'Stay in shape without leaving your home! easy-Gym offers a variety of exercises tailored for all fitness levels. No equipment required — just your motivation.' },
-    features: { fr: ['Exercices sans équipement', 'Tous niveaux de fitness', 'Entraînement à domicile', 'Interface simple & claire', 'Zéro donnée collectée'], en: ['No equipment needed', 'All fitness levels', 'Home workout', 'Simple & clean interface', 'Zero data collected'] },
-    price: { fr: 'Gratuit', en: 'Free' },
-    category: { fr: 'Lifestyle & Sport', en: 'Lifestyle & Sport' },
-    icon: 'https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ea/fa/36/eafa360a-2f26-376e-f372-60b7b4332f0d/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg',
-    screenshots: [],
-    tech: ['Swift', 'SwiftUI', 'iOS'],
-    featured: false,
-    isNew: true,
-    rating: 0,
-    appStoreLink: 'https://apps.apple.com/fr/app/easy-gym/id6761538853',
   },
 ];
 
 /* ─── In-progress projects ───────────────────────────────────────── */
 const IN_PROGRESS_APPS = [
+  { id: 'localshort', name: 'LocalShort', subtitle: { fr: 'Lecteur de vidéos courtes en local', en: 'Offline short-form video player' }, tech: ['iOS', 'Swift', 'SwiftUI'] },
+  { id: 'easy-gym', name: 'easy-Gym', subtitle: { fr: 'Sport à domicile pour tous niveaux', en: 'Home workout for all fitness levels' }, tech: ['iOS', 'Swift', 'SwiftUI'] },
   { id: 'focustimes', name: 'focusTimes', subtitle: { fr: 'Minuteur de focus & productivité', en: 'Focus timer & productivity' }, tech: ['iOS', 'Swift'] },
   { id: 'easyread', name: 'easyRead', subtitle: { fr: 'Lecture rapide & compréhension', en: 'Speed reading & comprehension' }, tech: ['iOS', 'Swift'] },
   { id: 'skinroutine', name: 'skinRoutine', subtitle: { fr: 'Routine de soins de la peau', en: 'Skin care routine tracker' }, tech: ['iOS', 'Swift'] },

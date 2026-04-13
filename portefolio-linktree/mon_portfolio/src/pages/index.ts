@@ -5,3 +5,4 @@ export { default as ProfilePage } from './ProfilePage';
 export { default as MeowTubeLandingPage } from './MeowTubeLandingPage';
 export { default as IslamicDailyQuoteLandingPage } from './IslamicDailyQuoteLandingPage';
 export { default as LocalShortLandingPage } from './LocalShortLandingPage';
+export { default as DashboardPage } from './DashboardPage';

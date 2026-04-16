@@ -45,8 +45,8 @@ const DATA = {
       period: { fr: 'juin – Juillet 2023 · Toulouse', en: 'June – July 2023 · Toulouse' },
       current: false,
       description: {
-        fr: 'Projet Guidor : développement embarqué avec Arduino et C++. Conception d\'un système de guidage avec capteurs, actionneurs et interface de contrôle dans une équipe pluridisciplinaire.',
-        en: 'Guidor project: embedded development with Arduino and C++. Built guidance system integrating hardware sensors and control interface within a cross-functional team.'
+        fr: 'Développement embarqué avec Arduino et C++. Conception d\'un système de guidage avec capteurs, actionneurs et interface de contrôle dans une équipe pluridisciplinaire.',
+        en: 'Embedded development with Arduino and C++. Built guidance system integrating hardware sensors and control interface within a cross-functional team.'
       },
       tags: ['C++', 'Arduino', 'Embarqué'],
       logo: combLogo,

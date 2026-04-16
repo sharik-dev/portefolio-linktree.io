@@ -1,6 +1,6 @@
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { PortfolioPage, LinkTreePage, CvPage, ProfilePage, MeowTubeLandingPage, IslamicDailyQuoteLandingPage, LocalShortLandingPage } from '../pages';
+import { PortfolioPage, LinkTreePage, CvPage, ProfilePage, MeowTubeLandingPage, IslamicDailyQuoteLandingPage, LocalShortLandingPage, DashboardPage } from '../pages';
 import { Layout } from '../components/layout';
 
 const AppRoutes: React.FC = () => {
@@ -13,6 +13,7 @@ const AppRoutes: React.FC = () => {
       <Route path="/meowtube" element={<MeowTubeLandingPage />} />
       <Route path="/islamic-daily-quote" element={<IslamicDailyQuoteLandingPage />} />
       <Route path="/local-short" element={<LocalShortLandingPage />} />
+      <Route path="/dash" element={<DashboardPage />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );

@@ -59,13 +59,8 @@ Meow-Tube — Personal project · App Store · 4.9 ★ · [App Store ↗](https:
 YouTube without ads or Shorts, no subscription — like Brave does for the web
 Swift, SwiftUI, MVVM, AVFoundation, YouTube Data API
 
-Islamic Daily Quote — Personal project · App Store · 4.8 ★ · [App Store ↗](https://apps.apple.com/fr/app/islamic-daily-quote/id6760481474)
-Daily Islamic quotes, multilingual
-Swift, SwiftUI, Notifications, Dark mode
-
-Jeu de Point — Personal project · App Store · [App Store ↗](https://apps.apple.com/fr/app/jeu-de-point/id6761615625)
-Traditional Malagasy strategy game combining simplicity and tactical depth
-Swift, SwiftUI, iOS
+LocalShort — Personal project · App Store · 4.7 ★ · [sharik.fr/local-short](https://sharik.fr/local-short)
+Swift, SwiftUI
 
 ---
 

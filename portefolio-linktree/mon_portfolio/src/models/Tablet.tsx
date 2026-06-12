@@ -78,25 +78,19 @@ const Tablet: React.FC<TabletProps> = ({
       
       {/* Bordures d'écran */}
       <mesh position={[0, 0, 0.051]}>
-        <planeGeometry args={[1.95, 2.8]} />
+        <planeGeometry args={[1.96, 2.96]} />
         <meshStandardMaterial color="#222222" />
       </mesh>
-      
+
       {/* Écran */}
       <mesh ref={screenRef} position={[0, 0, 0.052]}>
-        <planeGeometry args={[1.85, 2.7]} />
+        <planeGeometry args={[1.9, 2.88]} />
         <meshBasicMaterial map={textureToUse} />
       </mesh>
-      
-      {/* Bouton home */}
-      <mesh position={[0, -1.4, 0.051]}>
-        <circleGeometry args={[0.1, 32]} />
-        <meshStandardMaterial color="#333333" />
-      </mesh>
-      
+
       {/* Caméra */}
-      <mesh position={[0, 1.4, 0.051]}>
-        <circleGeometry args={[0.03, 32]} />
+      <mesh position={[0, 1.46, 0.052]}>
+        <circleGeometry args={[0.02, 32]} />
         <meshStandardMaterial color="#111111" />
       </mesh>
       

@@ -46,8 +46,8 @@ export interface VisitorData {
   connectionRtt?: number;
 }
 
-const STORAGE_KEY = 'portfolio_visitors';
-const MAX_VISITORS = 500;
+const API_BASE = '/api/visitors';
+const TOKEN = import.meta.env.VITE_VISITORS_TOKEN as string;
 
 export function parseUserAgent(ua: string): {
   browser: string;
@@ -55,7 +55,6 @@ export function parseUserAgent(ua: string): {
   os: string;
   device: string;
 } {
-  // Browser
   let browser = 'Unknown';
   let version = '';
 
@@ -79,7 +78,6 @@ export function parseUserAgent(ua: string): {
     version = ua.match(/(?:MSIE |rv:)([\d.]+)/i)?.[1] ?? '';
   }
 
-  // OS
   let os = 'Unknown';
   if (/Windows NT 10\.0/i.test(ua)) os = 'Windows 10/11';
   else if (/Windows NT 6\.3/i.test(ua)) os = 'Windows 8.1';
@@ -100,7 +98,6 @@ export function parseUserAgent(ua: string): {
   } else if (/Linux/i.test(ua)) os = 'Linux';
   else if (/CrOS/i.test(ua)) os = 'ChromeOS';
 
-  // Device type
   let device = 'Desktop';
   if (/iPhone/i.test(ua)) device = 'iPhone';
   else if (/iPad/i.test(ua)) device = 'iPad';
@@ -141,7 +138,6 @@ export async function trackVisit(): Promise<void> {
     doNotTrack: navigator.doNotTrack,
   };
 
-  // Connection info
   const nav = navigator as Navigator & {
     connection?: { type?: string; effectiveType?: string; downlink?: number; rtt?: number };
     mozConnection?: { type?: string; effectiveType?: string; downlink?: number; rtt?: number };
@@ -155,9 +151,7 @@ export async function trackVisit(): Promise<void> {
     visitor.connectionRtt = conn.rtt;
   }
 
-  // IP + Geo via public free API — save immediately then update with geo
-  _saveVisitor(visitor);
-
+  // Enrichissement géo via ipapi.co, puis envoi au serveur
   try {
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 6000);
@@ -176,55 +170,34 @@ export async function trackVisit(): Promise<void> {
       visitor.isp = geo.org;
       visitor.asn = geo.asn;
       if (!visitor.timezone && geo.timezone) visitor.timezone = geo.timezone;
-
-      // Update stored record with enriched geo data
-      _updateVisitor(visitor);
     }
   } catch {
-    // Geo lookup failed — keep the basic record that was already saved
+    // Geo lookup failed — on envoie quand même les données sans géo
   }
-}
 
-function _saveVisitor(visitor: VisitorData): void {
-  const list = getVisitors();
-  list.push(visitor);
-  const trimmed = list.slice(-MAX_VISITORS);
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(trimmed));
+    await fetch(API_BASE, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(visitor),
+    });
   } catch {
-    // localStorage quota exceeded
+    // Silently fail — ne pas perturber l'expérience utilisateur
   }
 }
 
-function _updateVisitor(visitor: VisitorData): void {
-  const list = getVisitors();
-  const idx = list.findIndex(v => v.id === visitor.id);
-  if (idx !== -1) {
-    list[idx] = visitor;
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
-    } catch {
-      // quota exceeded
-    }
-  }
+export async function getVisitors(): Promise<VisitorData[]> {
+  const res = await fetch(`${API_BASE}?token=${TOKEN}`);
+  if (!res.ok) return [];
+  return res.json();
 }
 
-export function getVisitors(): VisitorData[] {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    return raw ? (JSON.parse(raw) as VisitorData[]) : [];
-  } catch {
-    return [];
-  }
+export async function clearVisitors(): Promise<void> {
+  await fetch(`${API_BASE}?token=${TOKEN}`, { method: 'DELETE' });
 }
 
-export function clearVisitors(): void {
-  localStorage.removeItem(STORAGE_KEY);
-}
-
-export function exportVisitorsAsJson(): void {
-  const data = getVisitors();
-  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+export function exportVisitorsAsJson(visitors: VisitorData[]): void {
+  const blob = new Blob([JSON.stringify(visitors, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;

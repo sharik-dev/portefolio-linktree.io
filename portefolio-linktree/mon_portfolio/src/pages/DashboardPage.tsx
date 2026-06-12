@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { getVisitors, clearVisitors, exportVisitorsAsJson, VisitorData } from '../utils/visitorTracker';
 
 // ─── Icons ───────────────────────────────────────────────────────────────────
@@ -241,15 +241,19 @@ const DashboardPage: React.FC = () => {
   const [search, setSearch] = useState('');
   const [sortDesc, setSortDesc] = useState(true);
   const [confirmClear, setConfirmClear] = useState(false);
+  const [loading, setLoading] = useState(true);
 
-  const reload = () => setVisitors(getVisitors());
+  const reload = useCallback(async () => {
+    const data = await getVisitors();
+    setVisitors(data);
+    setLoading(false);
+  }, []);
 
   useEffect(() => {
     reload();
-    // Poll for new entries (IP geo enrichment happens async after page load)
-    const id = setInterval(reload, 3000);
+    const id = setInterval(reload, 10_000);
     return () => clearInterval(id);
-  }, []);
+  }, [reload]);
 
   // Stats
   const uniqueIPs = useMemo(() => new Set(visitors.map(v => v.ip).filter(Boolean)).size, [visitors]);
@@ -284,10 +288,10 @@ const DashboardPage: React.FC = () => {
       });
   }, [visitors, search, sortDesc]);
 
-  const handleClear = () => {
+  const handleClear = async () => {
     if (confirmClear) {
-      clearVisitors();
-      reload();
+      await clearVisitors();
+      setVisitors([]);
       setConfirmClear(false);
     } else {
       setConfirmClear(true);
@@ -317,7 +321,7 @@ const DashboardPage: React.FC = () => {
               Actualiser
             </button>
             <button
-              onClick={exportVisitorsAsJson}
+              onClick={() => exportVisitorsAsJson(visitors)}
               className="h-8 px-3 flex items-center gap-1.5 rounded-lg bg-white dark:bg-[#1C1C1E] border border-black/[0.08] dark:border-white/[0.08] text-[12px] font-medium text-[#0071E3] hover:bg-[#E8F2FC] dark:hover:bg-[#0A2540] transition-colors"
             >
               <IconDownload />
@@ -375,7 +379,11 @@ const DashboardPage: React.FC = () => {
             </span>
           </div>
 
-          {filtered.length === 0 ? (
+          {loading ? (
+            <div className="flex items-center justify-center py-16 text-[13px] text-[#86868B] dark:text-[#636366]">
+              Chargement…
+            </div>
+          ) : filtered.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-16 gap-3 text-[#86868B] dark:text-[#636366]">
               <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" />
@@ -409,7 +417,7 @@ const DashboardPage: React.FC = () => {
         </div>
 
         <footer className="mt-8 text-center text-[11px] text-[#86868B] dark:text-[#636366]">
-          Données stockées localement · Aucune donnée envoyée vers un serveur
+          Données stockées sur le VPS · API <code className="font-mono">/api/visitors</code>
         </footer>
       </div>
     </div>

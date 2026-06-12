@@ -1,2 +1,3 @@
 node_modules/
 .env
+visitor-api/visitors.json

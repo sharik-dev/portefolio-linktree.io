@@ -2,6 +2,7 @@ import React from 'react';
 import pfImage from '../assets/pfp.jpg';
 import { ButtonStyle } from '../components';
 import SocialButton from '../components/SocialButton';
+import { ShoppingBag, User } from 'lucide-react';
 import { LinkedInIcon, GitHubIcon, EmailIcon, PortfolioIcon } from '../components/icons';
 import { useLang, t } from '../contexts/LangContext';
 
@@ -10,6 +11,8 @@ const LinkTreePage: React.FC = () => {
 
   const socialLinks = [
     { name: 'Portfolio', url: '/portefolio', icon: <PortfolioIcon />, style: ButtonStyle.Primary },
+    { name: 'Store', url: '/store', icon: <ShoppingBag size={24} strokeWidth={1.8} />, style: ButtonStyle.Secondary },
+    { name: lang === 'fr' ? 'Profil' : 'Profile', url: '/profil', icon: <User size={24} strokeWidth={1.8} />, style: ButtonStyle.Secondary },
     { name: 'LinkedIn', url: 'https://www.linkedin.com/in/sharik-abubucker-393194205/', icon: <LinkedInIcon />, style: ButtonStyle.Secondary },
     { name: 'GitHub', url: 'https://github.com/sharik-dev', icon: <GitHubIcon />, style: ButtonStyle.Secondary },
     // Masqués temporairement

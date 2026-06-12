@@ -91,17 +91,11 @@ const APPS = [
 
 /* ─── In-progress projects ───────────────────────────────────────── */
 const IN_PROGRESS_APPS = [
-  { id: 'localshort', name: 'LocalShort', subtitle: { fr: 'Lecteur de vidéos courtes en local', en: 'Offline short-form video player' }, tech: ['iOS', 'Swift', 'SwiftUI'] },
-  { id: 'easy-gym', name: 'easy-Gym', subtitle: { fr: 'Sport à domicile pour tous niveaux', en: 'Home workout for all fitness levels' }, tech: ['iOS', 'Swift', 'SwiftUI'] },
-  { id: 'focustimes', name: 'focusTimes', subtitle: { fr: 'Minuteur de focus & productivité', en: 'Focus timer & productivity' }, tech: ['iOS', 'Swift'] },
-  { id: 'easyread', name: 'easyRead', subtitle: { fr: 'Lecture rapide & compréhension', en: 'Speed reading & comprehension' }, tech: ['iOS', 'Swift'] },
-  { id: 'skinroutine', name: 'skinRoutine', subtitle: { fr: 'Routine de soins de la peau', en: 'Skin care routine tracker' }, tech: ['iOS', 'Swift'] },
-  { id: 'walkinggame', name: 'walkingGame', subtitle: { fr: 'Jeu de marche & activité physique', en: 'Walking & physical activity game' }, tech: ['iOS', 'Swift'] },
-  { id: 'focusidlegame', name: 'focusIdleGame', subtitle: { fr: 'Jeu idle centré sur la concentration', en: 'Focus-centered idle game' }, tech: ['iOS', 'Swift'] },
-  { id: 'meowtoon', name: 'meow-Toon', subtitle: { fr: 'Dessin animé interactif', en: 'Interactive cartoon app' }, tech: ['iOS', 'Swift'] },
-  { id: 'duobook', name: 'duoBook', subtitle: { fr: 'Lecture en duo & annotations partagées', en: 'Duo reading & shared annotations' }, tech: ['iOS', 'Swift'] },
-  { id: 'duocoran', name: 'duoCoran', subtitle: { fr: 'Apprentissage du Coran en duo', en: 'Duo Quran learning' }, tech: ['iOS', 'Swift'] },
-  { id: 'appstoiresize', name: 'AppStore Image Resize', subtitle: { fr: 'Redimensionnement d\'images App Store', en: 'App Store image resizer' }, tech: ['macOS', 'Swift'] },
+  { id: 'localshort', name: 'LocalShort', subtitle: { fr: 'Lecteur de vidéos courtes en local', en: 'Offline short-form video player' }, tech: ['iOS', 'Swift', 'SwiftUI'], done: true },
+  { id: 'easy-gym', name: 'easy-Gym', subtitle: { fr: 'Sport à domicile pour tous niveaux', en: 'Home workout for all fitness levels' }, tech: ['iOS', 'Swift', 'SwiftUI'], done: true },
+  { id: 'meowtoon', name: 'meow-Toon', subtitle: { fr: 'Dessin animé interactif', en: 'Interactive cartoon app' }, tech: ['iOS', 'Swift'], done: false },
+  { id: 'focusidlegame', name: 'focusIdleGame', subtitle: { fr: 'Jeu idle centré sur la concentration', en: 'Focus-centered idle game' }, tech: ['iOS', 'Swift'], done: false },
+  { id: 'duobook', name: 'duoBook', subtitle: { fr: 'Lecture en duo & annotations partagées', en: 'Duo reading & shared annotations' }, tech: ['iOS', 'Swift'], done: false },
 ];
 
 /* ─── UI strings ─────────────────────────────────────────────────── */
@@ -115,7 +109,7 @@ const UI = {
     seeMore: 'Voir', modalClose: 'Fermer',
     features: 'Fonctionnalités', stack: 'Stack technique',
     download: 'Voir le projet', contact: 'Discutons',
-    inProgress: 'Projets en cours', comingSoon: 'Bientôt',
+    inProgress: 'Projets en cours', comingSoon: 'Bientôt', completed: 'Terminé',
     appStoreDownload: 'Télécharger',
   },
   en: {
@@ -127,7 +121,7 @@ const UI = {
     seeMore: 'View', modalClose: 'Close',
     features: 'Features', stack: 'Tech stack',
     download: 'See project', contact: "Let's talk",
-    inProgress: 'In progress', comingSoon: 'Coming soon',
+    inProgress: 'In progress', comingSoon: 'Coming soon', completed: 'Completed',
     appStoreDownload: 'Download',
   },
 };
@@ -440,14 +434,22 @@ const PortfolioPage: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {IN_PROGRESS_APPS.map(app => (
               <div key={app.id}
-                className="bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl p-4 shadow-sm opacity-80">
+                className={`bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl p-4 shadow-sm ${app.done ? '' : 'opacity-80'}`}>
                 <div className="w-14 h-14 rounded-2xl mb-3 bg-[#F2F2F7] dark:bg-[#2C2C2E] flex items-center justify-center">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#86868B" strokeWidth="1.8">
-                    <rect x="3" y="3" width="18" height="18" rx="4" /><path d="M9 12h6M12 9v6" />
-                  </svg>
+                  {app.done ? (
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#34C759" strokeWidth="1.8">
+                      <rect x="3" y="3" width="18" height="18" rx="4" /><path d="M8 12.5l2.5 2.5L16 9.5" />
+                    </svg>
+                  ) : (
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#86868B" strokeWidth="1.8">
+                      <rect x="3" y="3" width="18" height="18" rx="4" /><path d="M9 12h6M12 9v6" />
+                    </svg>
+                  )}
                 </div>
                 <div className="mb-1.5">
-                  <span className="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-[#0071E3]/10 text-[#0071E3]">{ui.comingSoon}</span>
+                  <span className={`text-[9px] font-semibold px-2 py-0.5 rounded-full ${app.done ? 'bg-[#34C759]/10 text-[#34C759]' : 'bg-[#0071E3]/10 text-[#0071E3]'}`}>
+                    {app.done ? ui.completed : ui.comingSoon}
+                  </span>
                 </div>
                 <h3 className="text-[13px] font-semibold text-[#1D1D1F] dark:text-white tracking-tight">{app.name}</h3>
                 <p className="text-[11px] text-[#6E6E73] dark:text-[#98989D] mt-0.5 mb-2">{t(lang, app.subtitle.fr, app.subtitle.en)}</p>

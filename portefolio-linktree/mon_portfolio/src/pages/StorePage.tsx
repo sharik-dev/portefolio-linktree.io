@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import {
+  Palette, LayoutDashboard, Clapperboard, BookOpen, Rocket,
+  Smartphone, Globe, BrainCircuit, MessagesSquare, BarChart3, ServerCog,
+  ArrowUpRight, Mail, Clock,
+} from 'lucide-react';
 import { useLang, t } from '../contexts/LangContext';
 
 // ── Produits ────────────────────────────────────────────────────────────────
@@ -15,9 +20,11 @@ const CATEGORIES: Record<CategoryKey, { fr: string; en: string }> = {
   saas:   { fr: 'SaaS',             en: 'SaaS' },
 };
 
+type IconType = React.ComponentType<{ size?: number | string; strokeWidth?: number | string; className?: string }>;
+
 interface Product {
   id: string;
-  emoji: string;
+  icon: IconType;
   name: { fr: string; en: string };
   description: { fr: string; en: string };
   category: CategoryKey;
@@ -29,7 +36,7 @@ interface Product {
 const PRODUCTS: Product[] = [
   {
     id: 'canva-social-pack',
-    emoji: '🎨',
+    icon: Palette,
     name: { fr: 'Pack Réseaux Sociaux', en: 'Social Media Pack' },
     description: {
       fr: 'Templates Canva prêts à l\'emploi pour vos posts, stories et carrousels.',
@@ -40,7 +47,7 @@ const PRODUCTS: Product[] = [
   },
   {
     id: 'notion-productivity-os',
-    emoji: '🗂️',
+    icon: LayoutDashboard,
     name: { fr: 'Productivity OS', en: 'Productivity OS' },
     description: {
       fr: 'Un espace Notion tout-en-un pour organiser tâches, projets, objectifs et notes au même endroit.',
@@ -51,7 +58,7 @@ const PRODUCTS: Product[] = [
   },
   {
     id: 'course-ios-basics',
-    emoji: '🎬',
+    icon: Clapperboard,
     name: { fr: 'Mini-cours : créer son app iOS', en: 'Mini-course: build your iOS app' },
     description: {
       fr: 'Un mini-cours vidéo pas à pas pour créer et publier votre première app sur l\'App Store.',
@@ -62,7 +69,7 @@ const PRODUCTS: Product[] = [
   },
   {
     id: 'ebook-app-store-launch',
-    emoji: '📕',
+    icon: BookOpen,
     name: { fr: 'Ebook : réussir son lancement App Store', en: 'Ebook: nail your App Store launch' },
     description: {
       fr: 'Un guide ultra spécialisé : ASO, screenshots, pricing et stratégie de lancement.',
@@ -73,7 +80,7 @@ const PRODUCTS: Product[] = [
   },
   {
     id: 'saas-coming-soon',
-    emoji: '🚀',
+    icon: Rocket,
     name: { fr: 'SaaS — en préparation', en: 'SaaS — in the works' },
     description: {
       fr: 'Des outils en ligne par abonnement, conçus pour des besoins précis. Premier lancement à venir.',
@@ -87,7 +94,7 @@ const PRODUCTS: Product[] = [
 // ── Prestations freelance ───────────────────────────────────────────────────
 interface Service {
   id: string;
-  emoji: string;
+  icon: IconType;
   name: { fr: string; en: string };
   description: { fr: string; en: string };
 }
@@ -95,7 +102,7 @@ interface Service {
 const SERVICES: Service[] = [
   {
     id: 'ios-dev',
-    emoji: '📱',
+    icon: Smartphone,
     name: { fr: 'Développement iOS', en: 'iOS Development' },
     description: {
       fr: 'Conception et développement d\'apps natives en Swift / SwiftUI, de l\'idée jusqu\'à la publication sur l\'App Store.',
@@ -104,7 +111,7 @@ const SERVICES: Service[] = [
   },
   {
     id: 'web-tools',
-    emoji: '🛠️',
+    icon: Globe,
     name: { fr: 'Sites & outils pour commerces et entreprises', en: 'Websites & tools for businesses' },
     description: {
       fr: 'Sites vitrines, outils métier et applications web sur mesure, adaptés à votre activité.',
@@ -113,7 +120,7 @@ const SERVICES: Service[] = [
   },
   {
     id: 'ai-management',
-    emoji: '🤖',
+    icon: BrainCircuit,
     name: { fr: 'IA pour la gestion', en: 'AI for management' },
     description: {
       fr: 'Intégration de l\'IA dans vos processus de gestion : automatisation des tâches répétitives, tri et synthèse de documents, aide à la décision.',
@@ -122,7 +129,7 @@ const SERVICES: Service[] = [
   },
   {
     id: 'ai-support',
-    emoji: '💬',
+    icon: MessagesSquare,
     name: { fr: 'SAV assisté par IA', en: 'AI-powered customer support' },
     description: {
       fr: 'Mise en place d\'assistants IA pour votre support client : réponses automatiques pertinentes, escalade vers un humain quand il le faut.',
@@ -131,7 +138,7 @@ const SERVICES: Service[] = [
   },
   {
     id: 'internal-tools',
-    emoji: '📊',
+    icon: BarChart3,
     name: { fr: 'Outils internes', en: 'Internal tools' },
     description: {
       fr: 'Dashboards, automatisations et petits outils internes pour faire gagner du temps à vos équipes.',
@@ -140,7 +147,7 @@ const SERVICES: Service[] = [
   },
   {
     id: 'claude-setup',
-    emoji: '⚙️',
+    icon: ServerCog,
     name: { fr: 'Setup Claude & architecture serveur', en: 'Claude setup & server architecture' },
     description: {
       fr: 'Déploiement de Claude dans votre entreprise (API, Claude Code, agents) avec l\'architecture serveur qui va avec : hébergement, sécurité, accès.',
@@ -148,6 +155,13 @@ const SERVICES: Service[] = [
     },
   },
 ];
+
+// ── UI ──────────────────────────────────────────────────────────────────────
+const IconTile: React.FC<{ icon: IconType }> = ({ icon: Icon }) => (
+  <div className="w-11 h-11 rounded-xl bg-[#0071E3]/10 dark:bg-[#0A84FF]/15 flex items-center justify-center">
+    <Icon size={21} strokeWidth={1.8} className="text-[#0071E3] dark:text-[#0A84FF]" />
+  </div>
+);
 
 const StorePage: React.FC = () => {
   const { lang } = useLang();
@@ -205,14 +219,12 @@ const StorePage: React.FC = () => {
           {visible.map(p => (
             <div
               key={p.id}
-              className="bg-white dark:bg-[#1C1C1E] rounded-3xl border border-black/[0.10] dark:border-white/[0.06] shadow-sm p-6 flex flex-col"
+              className="group bg-white dark:bg-[#1C1C1E] rounded-3xl border border-black/[0.10] dark:border-white/[0.06] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 p-6 flex flex-col"
             >
               <div className="flex items-start justify-between mb-4">
-                <div className="w-12 h-12 rounded-2xl bg-[#F5F5F7] dark:bg-[#2C2C2E] flex items-center justify-center text-[24px]">
-                  {p.emoji}
-                </div>
+                <IconTile icon={p.icon} />
                 {p.badge && (
-                  <span className="text-[11px] font-semibold text-[#0071E3] bg-[#0071E3]/10 px-2.5 py-1 rounded-full">
+                  <span className="text-[11px] font-semibold text-[#0071E3] dark:text-[#0A84FF] bg-[#0071E3]/10 dark:bg-[#0A84FF]/15 px-2.5 py-1 rounded-full">
                     {p.badge[lang]}
                   </span>
                 )}
@@ -235,12 +247,14 @@ const StorePage: React.FC = () => {
                     href={p.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#0071E3] text-white text-[13px] font-medium px-5 py-2 rounded-full hover:bg-[#0077ED] transition-colors"
+                    className="inline-flex items-center gap-1.5 bg-[#0071E3] text-white text-[13px] font-medium pl-5 pr-4 py-2 rounded-full hover:bg-[#0077ED] transition-colors"
                   >
                     {t(lang, 'Obtenir', 'Get it')}
+                    <ArrowUpRight size={14} strokeWidth={2} />
                   </a>
                 ) : (
-                  <span className="text-[13px] font-medium text-[#86868B] bg-[#F5F5F7] dark:bg-[#2C2C2E] px-5 py-2 rounded-full cursor-default">
+                  <span className="inline-flex items-center gap-1.5 text-[13px] font-medium text-[#86868B] bg-[#F5F5F7] dark:bg-[#2C2C2E] px-4 py-2 rounded-full cursor-default">
+                    <Clock size={13} strokeWidth={2} />
                     {t(lang, 'Bientôt disponible', 'Coming soon')}
                   </span>
                 )}
@@ -265,10 +279,10 @@ const StorePage: React.FC = () => {
             {SERVICES.map(s => (
               <div
                 key={s.id}
-                className="bg-white dark:bg-[#1C1C1E] rounded-3xl border border-black/[0.10] dark:border-white/[0.06] shadow-sm p-6 flex flex-col"
+                className="group bg-white dark:bg-[#1C1C1E] rounded-3xl border border-black/[0.10] dark:border-white/[0.06] shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 p-6 flex flex-col"
               >
-                <div className="w-12 h-12 rounded-2xl bg-[#F5F5F7] dark:bg-[#2C2C2E] flex items-center justify-center text-[24px] mb-4">
-                  {s.emoji}
+                <div className="mb-4">
+                  <IconTile icon={s.icon} />
                 </div>
                 <h3 className="font-semibold text-[#1D1D1F] dark:text-white text-[17px] mb-2">
                   {s.name[lang]}
@@ -278,8 +292,9 @@ const StorePage: React.FC = () => {
                 </p>
                 <a
                   href={`mailto:sharikmohamed8@gmail.com?subject=${encodeURIComponent(t(lang, 'Demande freelance — ', 'Freelance request — ') + s.name[lang])}`}
-                  className="self-start bg-[#0071E3] text-white text-[13px] font-medium px-5 py-2 rounded-full hover:bg-[#0077ED] transition-colors"
+                  className="self-start inline-flex items-center gap-1.5 bg-[#0071E3] text-white text-[13px] font-medium pl-4 pr-5 py-2 rounded-full hover:bg-[#0077ED] transition-colors"
                 >
+                  <Mail size={14} strokeWidth={2} />
                   {t(lang, 'Me contacter', 'Contact me')}
                 </a>
               </div>

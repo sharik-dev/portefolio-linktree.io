@@ -2,6 +2,7 @@ import React, { Suspense, useRef, useState, useEffect, useCallback, useMemo } fr
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { RoundedBox, useTexture } from '@react-three/drei';
 import * as THREE from 'three';
+import { useTheme } from '../contexts/ThemeContext';
 
 // ── Error boundary ─────────────────────────────────────────────────────────
 class CanvasErrorBoundary extends React.Component<
@@ -88,16 +89,18 @@ function makeTex(color: string): THREE.CanvasTexture {
 
 // ── 3D Device model ────────────────────────────────────────────────────────
 function DeviceModel({
-  screenshot, landscape, rotState,
+  screenshot, landscape, rotState, dark,
 }: {
-  screenshot: string; landscape: boolean;
+  screenshot: string; landscape: boolean; dark: boolean;
   rotState: React.MutableRefObject<RotState>;
 }) {
   const groupRef = useRef<THREE.Group>(null!);
 
   const logoTex = useMemo(() =>
-    makeTex(landscape ? 'rgba(180,180,180,0.35)' : 'rgba(255,255,255,0.28)'),
-  [landscape]);
+    makeTex(landscape
+      ? (dark ? 'rgba(180,180,180,0.35)' : 'rgba(120,120,120,0.40)')
+      : 'rgba(255,255,255,0.28)'),
+  [landscape, dark]);
 
   const W   = landscape ? 2.50  : 1.00;
   const H   = landscape ? 1.785 : 2.065;
@@ -173,10 +176,11 @@ function DeviceModel({
     groupRef.current.rotation.x = s.x;
   });
 
-  const bodyCol = landscape ? '#1d1d1f' : '#cac8c2';
-  const bodyMet = landscape ? 0.85 : 0.72;
-  const bodyRgh = landscape ? 0.18 : 0.22;
-  const btnCol  = landscape ? '#2e2e30' : '#c0bdb7';
+  // iPad : châssis assorti au fond du container (bg-white / dark:bg-[#1C1C1E])
+  const bodyCol = landscape ? (dark ? '#1d1d1f' : '#ffffff') : '#cac8c2';
+  const bodyMet = landscape ? (dark ? 0.85 : 0.45) : 0.72;
+  const bodyRgh = landscape ? (dark ? 0.18 : 0.35) : 0.22;
+  const btnCol  = landscape ? (dark ? '#2e2e30' : '#e2e2e6') : '#c0bdb7';
 
   const zFront = Dd / 2 + bev + 0.001;
   const zBack  = -(Dd / 2 + bev) - 0.001;
@@ -300,7 +304,7 @@ function DeviceModel({
         {landscape && (
           <mesh position={[W * 0.35, H / 2 + Dd * 0.25, 0]}>
             <boxGeometry args={[0.130, Dd * 0.6, Dd * 0.4]} />
-            <meshStandardMaterial color="#2e2e30" metalness={0.85} roughness={0.15} />
+            <meshStandardMaterial color={dark ? '#2e2e30' : '#e2e2e6'} metalness={0.85} roughness={0.15} />
           </mesh>
         )}
 
@@ -313,6 +317,7 @@ function DeviceModel({
 export default function TabletViewer({ screenshots, landscape = false }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerW, setContainerW] = useState(340);
+  const { theme } = useTheme();
 
   // Measure actual container width for responsive sizing
   useEffect(() => {
@@ -400,6 +405,7 @@ export default function TabletViewer({ screenshots, landscape = false }: Props) 
               screenshot={screenshots[0]}
               landscape={landscape}
               rotState={rotState}
+              dark={theme === 'dark'}
             />
           </Canvas>
         </div>

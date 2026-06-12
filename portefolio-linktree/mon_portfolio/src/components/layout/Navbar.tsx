@@ -38,9 +38,9 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { to: '/', label: lang === 'fr' ? 'LinkTree' : 'LinkTree' },
     { to: '/portefolio', label: lang === 'fr' ? 'Portfolio' : 'Portfolio' },
+    { to: '/store', label: 'Store' },
     { to: '/cv', label: 'CV' },
     { to: '/profil', label: lang === 'fr' ? 'Profil' : 'Profile' },
-    { to: '/store', label: 'Store' },
   ];
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>

@@ -5,12 +5,22 @@ import { useLang, t } from '../contexts/LangContext';
 // Pour ajouter un produit : ajouter une entrée ici. `url` = lien d'achat
 // (Gumroad, Lemon Squeezy, lien Notion…). Sans `url`, le produit s'affiche
 // en « Bientôt disponible ».
+type CategoryKey = 'canva' | 'notion' | 'course' | 'ebook' | 'saas';
+
+const CATEGORIES: Record<CategoryKey, { fr: string; en: string }> = {
+  canva:  { fr: 'Templates Canva',  en: 'Canva Templates' },
+  notion: { fr: 'Templates Notion', en: 'Notion Templates' },
+  course: { fr: 'Mini-cours vidéo', en: 'Video Mini-courses' },
+  ebook:  { fr: 'Ebooks',           en: 'Ebooks' },
+  saas:   { fr: 'SaaS',             en: 'SaaS' },
+};
+
 interface Product {
   id: string;
   emoji: string;
   name: { fr: string; en: string };
   description: { fr: string; en: string };
-  category: { fr: string; en: string };
+  category: CategoryKey;
   price: string;          // ex. '9 €' ou 'Gratuit'
   url?: string;
   badge?: { fr: string; en: string };
@@ -18,46 +28,67 @@ interface Product {
 
 const PRODUCTS: Product[] = [
   {
-    id: 'productivity-os',
+    id: 'canva-social-pack',
+    emoji: '🎨',
+    name: { fr: 'Pack Réseaux Sociaux', en: 'Social Media Pack' },
+    description: {
+      fr: 'Templates Canva prêts à l\'emploi pour vos posts, stories et carrousels.',
+      en: 'Ready-to-use Canva templates for your posts, stories and carousels.',
+    },
+    category: 'canva',
+    price: '—',
+  },
+  {
+    id: 'notion-productivity-os',
     emoji: '🗂️',
     name: { fr: 'Productivity OS', en: 'Productivity OS' },
     description: {
       fr: 'Un espace Notion tout-en-un pour organiser tâches, projets, objectifs et notes au même endroit.',
       en: 'An all-in-one Notion workspace to organize tasks, projects, goals and notes in one place.',
     },
-    category: { fr: 'Productivité', en: 'Productivity' },
+    category: 'notion',
     price: '—',
   },
   {
-    id: 'finance-tracker',
-    emoji: '💰',
-    name: { fr: 'Finance Tracker', en: 'Finance Tracker' },
+    id: 'course-ios-basics',
+    emoji: '🎬',
+    name: { fr: 'Mini-cours : créer son app iOS', en: 'Mini-course: build your iOS app' },
     description: {
-      fr: 'Suivez vos dépenses, budgets et abonnements avec des tableaux de bord clairs dans Notion.',
-      en: 'Track your spending, budgets and subscriptions with clean dashboards in Notion.',
+      fr: 'Un mini-cours vidéo pas à pas pour créer et publier votre première app sur l\'App Store.',
+      en: 'A step-by-step video mini-course to build and ship your first app to the App Store.',
     },
-    category: { fr: 'Finances', en: 'Finance' },
+    category: 'course',
     price: '—',
   },
   {
-    id: 'job-hunt-kit',
-    emoji: '🎯',
-    name: { fr: 'Job Hunt Kit', en: 'Job Hunt Kit' },
+    id: 'ebook-app-store-launch',
+    emoji: '📕',
+    name: { fr: 'Ebook : réussir son lancement App Store', en: 'Ebook: nail your App Store launch' },
     description: {
-      fr: 'Pipeline de candidatures, suivi des entretiens et préparation — tout pour votre recherche d\'emploi.',
-      en: 'Application pipeline, interview tracking and prep — everything for your job search.',
+      fr: 'Un guide ultra spécialisé : ASO, screenshots, pricing et stratégie de lancement.',
+      en: 'An ultra-specialized guide: ASO, screenshots, pricing and launch strategy.',
     },
-    category: { fr: 'Carrière', en: 'Career' },
+    category: 'ebook',
+    price: '—',
+  },
+  {
+    id: 'saas-coming-soon',
+    emoji: '🚀',
+    name: { fr: 'SaaS — en préparation', en: 'SaaS — in the works' },
+    description: {
+      fr: 'Des outils en ligne par abonnement, conçus pour des besoins précis. Premier lancement à venir.',
+      en: 'Subscription web tools built for specific needs. First launch coming soon.',
+    },
+    category: 'saas',
     price: '—',
   },
 ];
 
 const StorePage: React.FC = () => {
   const { lang } = useLang();
-  const [filter, setFilter] = useState<string | null>(null);
+  const [filter, setFilter] = useState<CategoryKey | null>(null);
 
-  const categories = [...new Set(PRODUCTS.map(p => p.category[lang]))];
-  const visible = filter ? PRODUCTS.filter(p => p.category[lang] === filter) : PRODUCTS;
+  const visible = filter ? PRODUCTS.filter(p => p.category === filter) : PRODUCTS;
 
   return (
     <div className="min-h-screen bg-[#E8E8ED] dark:bg-black transition-colors duration-300">
@@ -66,12 +97,12 @@ const StorePage: React.FC = () => {
       <header className="bg-white dark:bg-[#1D1D1F] border-b border-black/[0.06] dark:border-white/[0.06] px-6 py-12 text-center">
         <p className="text-[12px] font-semibold text-[#0071E3] uppercase tracking-[0.12em] mb-2">Store</p>
         <h1 className="text-4xl md:text-5xl font-bold text-[#1D1D1F] dark:text-white tracking-tight mb-3">
-          {t(lang, 'Templates Notion', 'Notion Templates')}
+          {t(lang, 'Produits digitaux', 'Digital Goods')}
         </h1>
         <p className="text-base text-[#6E6E73] dark:text-[#98989D] max-w-md mx-auto">
           {t(lang,
-            'Des templates pensés pour s\'organiser simplement et efficacement.',
-            'Templates designed to get organized simply and efficiently.')}
+            'Templates Canva & Notion, mini-cours vidéo, ebooks ultra spécialisés et SaaS.',
+            'Canva & Notion templates, video mini-courses, ultra-specialized ebooks and SaaS.')}
         </p>
       </header>
 
@@ -89,17 +120,17 @@ const StorePage: React.FC = () => {
           >
             {t(lang, 'Tout', 'All')}
           </button>
-          {categories.map(cat => (
+          {(Object.keys(CATEGORIES) as CategoryKey[]).map(key => (
             <button
-              key={cat}
-              onClick={() => setFilter(f => (f === cat ? null : cat))}
+              key={key}
+              onClick={() => setFilter(f => (f === key ? null : key))}
               className={`px-4 py-1.5 rounded-full text-[13px] font-medium transition-colors ${
-                filter === cat
+                filter === key
                   ? 'bg-[#0071E3] text-white'
                   : 'bg-white dark:bg-[#1C1C1E] text-[#6E6E73] dark:text-[#98989D] border border-black/[0.10] dark:border-white/[0.06] hover:text-[#1D1D1F] dark:hover:text-white'
               }`}
             >
-              {cat}
+              {CATEGORIES[key][lang]}
             </button>
           ))}
         </div>
@@ -123,7 +154,7 @@ const StorePage: React.FC = () => {
               </div>
 
               <p className="text-[11px] font-semibold text-[#86868B] uppercase tracking-[0.08em] mb-1">
-                {p.category[lang]}
+                {CATEGORIES[p.category][lang]}
               </p>
               <h3 className="font-semibold text-[#1D1D1F] dark:text-white text-[17px] mb-2">
                 {p.name[lang]}
@@ -155,7 +186,7 @@ const StorePage: React.FC = () => {
 
         {/* Note de contact */}
         <p className="text-center text-[13px] text-[#86868B] mt-12">
-          {t(lang, 'Une question ou une demande de template sur mesure ?', 'A question or a custom template request?')}{' '}
+          {t(lang, 'Une question ou une demande sur mesure ?', 'A question or a custom request?')}{' '}
           <a href="mailto:sharikmohamed8@gmail.com" className="text-[#0071E3] hover:underline">
             sharikmohamed8@gmail.com
           </a>

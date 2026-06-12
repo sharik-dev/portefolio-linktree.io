@@ -40,6 +40,7 @@ const Navbar: React.FC = () => {
     { to: '/portefolio', label: lang === 'fr' ? 'Portfolio' : 'Portfolio' },
     { to: '/cv', label: 'CV' },
     { to: '/profil', label: lang === 'fr' ? 'Profil' : 'Profile' },
+    { to: '/store', label: 'Store' },
   ];
 
   const linkClass = ({ isActive }: { isActive: boolean }) =>

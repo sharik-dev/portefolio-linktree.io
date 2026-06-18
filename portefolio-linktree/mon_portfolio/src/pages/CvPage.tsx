@@ -89,14 +89,14 @@ const DATA = {
   ],
   skills: {
     fr: [
-      { cat: 'Mobile iOS', tags: ['Swift', 'SwiftUI', 'UIKit', 'Core ML', 'Vision', 'On-device AI', 'Image Processing', 'NLP'] },
+      { cat: 'Mobile iOS', tags: ['Swift', 'SwiftUI', 'UIKit', 'AVFoundation'] },
       { cat: 'Architecture', tags: ['MVVM', 'MVC'] },
       { cat: 'Cartographie', tags: ['MapboxMaps SDK v6 → v11', 'Legacy & moderne'] },
       { cat: 'DevOps & CI/CD', tags: ['Git', 'GitHub Actions', 'Pipelines automatisés', 'Tests unitaires'] },
       { cat: 'Web & Autres', tags: ['React.js', 'TypeScript', 'JavaScript', 'Python'] },
     ],
     en: [
-      { cat: 'iOS Mobile', tags: ['Swift', 'SwiftUI', 'UIKit', 'Core ML', 'Vision', 'On-device AI', 'Image Processing', 'NLP'] },
+      { cat: 'iOS Mobile', tags: ['Swift', 'SwiftUI', 'UIKit', 'AVFoundation'] },
       { cat: 'Architecture', tags: ['MVVM', 'MVC'] },
       { cat: 'Mapping & Geospatial', tags: ['MapboxMaps SDK v6 → v11', 'Legacy & modern'] },
       { cat: 'DevOps & CI/CD', tags: ['Git', 'GitHub Actions', 'Automated Pipelines', 'Unit Testing'] },

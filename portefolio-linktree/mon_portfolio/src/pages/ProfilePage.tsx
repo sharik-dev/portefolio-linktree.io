@@ -66,7 +66,7 @@ const PROJECTS = [
   },
 ];
 
-const SKILLS = ['Swift', 'iOS', 'MVVM', 'SwiftUI', 'UIKit', 'AVFoundation', 'Core ML', 'Vision', 'MapboxMaps', 'Git', 'GitHub Actions', 'React.js', 'TypeScript', 'C++'];
+const SKILLS = ['Swift', 'iOS', 'MVVM', 'SwiftUI', 'UIKit', 'AVFoundation', 'MapboxMaps', 'Git', 'GitHub Actions', 'React.js', 'TypeScript', 'C++'];
 
 const BIO = {
   fr: [

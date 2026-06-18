@@ -77,8 +77,8 @@ Certified native iOS mobile developer · April – July 2023
 Intensive Swift training: native iOS application design and development, agile methods.
 
 BTS Management of Commercial Units · Ecoles Billieres
-Management, Marketing & Sales · September 2020 – July 2022
-Project management, team management, sales performance and operational marketing.
+September 2020 – July 2022
+Project management and team management.
 
 ---
 

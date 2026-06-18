@@ -77,8 +77,8 @@ Certifié développeur iOS mobile natif · Avril – Juillet 2023
 Formation intensive en Swift : conception et développement d'applications iOS natives, méthodes agiles.
 
 BTS Management des Unités Commerciales · Ecoles Billières
-Management, Marketing & Commerce · Septembre 2020 – Juillet 2022
-Gestion de projet, management d'équipe, pilotage commercial et marketing opérationnel.
+Septembre 2020 – Juillet 2022
+Gestion de projet et management d'équipe.
 
 ---
 

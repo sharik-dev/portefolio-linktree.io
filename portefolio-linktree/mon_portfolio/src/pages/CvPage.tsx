@@ -81,8 +81,8 @@ const DATA = {
       school: 'Ecoles Billieres',
       period: { fr: 'Septembre 2020 – Juillet 2022', en: 'September 2020 – July 2022' },
       description: {
-        fr: 'Gestion de projet, management d\'équipe, pilotage commercial et marketing opérationnel.',
-        en: 'Project management, team management, sales performance and operational marketing.'
+        fr: 'Gestion de projet et management d\'équipe.',
+        en: 'Project management and team management.'
       },
       logo: billiereLogo,
     },

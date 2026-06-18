@@ -51,8 +51,8 @@ const DATA = {
       { title: 'Jeu de Point', sub: 'Projet personnel — Jeu de stratégie traditionnel malgache', tags: 'Swift, SwiftUI, iOS', appStoreUrl: 'itms-apps://apps.apple.com/fr/app/jeu-de-point/id6761615625' },
     ],
     education: [
-      { title: 'Licence Informatique (BAC+5)', school: 'Epitech', period: 'Août 2023 – Sept. 2026' },
-      { title: 'AFP Concepteur Développeur d\'Applications iOS', school: 'Simplon Auvergne-Rhône-Alpes', period: 'Avr. – Juil. 2023' },
+      { title: 'Licence Informatique (BAC+5)', school: 'Epitech', period: 'Août 2023 – Sept. 2026 · Algorithmique, JavaScript, React.js, développement de projets en équipe (approche par projets)' },
+      { title: 'AFP Concepteur Développeur d\'Applications iOS', school: 'Simplon Auvergne-Rhône-Alpes', period: 'Avr. – Juil. 2023 · Swift, conception & développement d\'applications iOS natives, méthodes agiles' },
       { title: 'BTS Management des Unités Commerciales', school: 'Écoles Billières', period: 'Sept. 2020 – Juil. 2022 · Management, Marketing & Commerce · Reconversion vers l\'informatique' },
     ],
     languages: 'Français — Natif · Malgache — Natif · Anglais — Avancé (B2/C1)',
@@ -108,8 +108,8 @@ const DATA = {
       { title: 'Jeu de Point', sub: 'Personal project — Traditional Malagasy strategy game', tags: 'Swift, SwiftUI, iOS', appStoreUrl: 'itms-apps://apps.apple.com/fr/app/jeu-de-point/id6761615625' },
     ],
     education: [
-      { title: "Master's in Computer Science (BAC+5)", school: 'Epitech', period: 'August 2023 – September 2026' },
-      { title: 'Professional Qualification — iOS Application Developer', school: 'Simplon Auvergne-Rhône-Alpes', period: 'April – July 2023' },
+      { title: "Master's in Computer Science (BAC+5)", school: 'Epitech', period: 'August 2023 – September 2026 · Algorithms, JavaScript, React.js, collaborative team projects (project-based learning)' },
+      { title: 'Professional Qualification — iOS Application Developer', school: 'Simplon Auvergne-Rhône-Alpes', period: 'April – July 2023 · Swift, native iOS application design & development, agile methods' },
       { title: 'BTS Management of Commercial Units', school: 'Écoles Billières', period: 'Sept. 2020 – July 2022 · Management, Marketing & Sales · Career switch into software engineering' },
     ],
     languages: 'French — Native · Malagasy — Native · English — Advanced (B2/C1)',

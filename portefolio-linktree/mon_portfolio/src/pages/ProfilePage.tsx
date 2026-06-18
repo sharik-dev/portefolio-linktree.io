@@ -11,6 +11,8 @@ import imgMeowTube1 from '../assets/meowTube/AppHomePage.png';
 import imgMeowTube2 from '../assets/meowTube/AppSecondPage.png';
 import imgJeuDePoint1 from '../assets/jeu de point/screenshoot/iPhone 17-01_Menu.png';
 import imgJeuDePoint2 from '../assets/jeu de point/screenshoot/iPhone 17-02_Game.png';
+import imgEasyGym1 from '../assets/easygym/screen1.png';
+import imgEasyGym2 from '../assets/easygym/screen2.png';
 
 /* ─── Bilingual project data ─────────────────────────────────────── */
 const PROJECTS = [
@@ -47,6 +49,18 @@ const PROJECTS = [
     },
     context: { fr: 'Projet personnel', en: 'Personal project' },
     screenshots: [imgJeuDePoint1, imgJeuDePoint2],
+    tags: ['Swift', 'SwiftUI', 'iOS'],
+    route: '/portefolio',
+  },
+  {
+    id: 'easy-gym',
+    title: 'easy-Gym',
+    description: {
+      fr: 'Application iOS de sport à domicile pour tous niveaux. Exercices sans équipement, suivi des séries, reps et repos, et ciblage musculaire détaillé.',
+      en: 'Home-workout iOS app for all fitness levels. Equipment-free exercises, sets/reps/rest tracking, and detailed muscle targeting.'
+    },
+    context: { fr: 'Projet personnel', en: 'Personal project' },
+    screenshots: [imgEasyGym1, imgEasyGym2],
     tags: ['Swift', 'SwiftUI', 'iOS'],
     route: '/portefolio',
   },

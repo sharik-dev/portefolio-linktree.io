@@ -11,12 +11,12 @@ import guidorImg2 from '../assets/guidor/imageApp2.png';
 import meowTubeIcon from '../assets/meowTube/appLogo.png';
 import meowTubeHome from '../assets/meowTube/AppHomePage.png';
 import meowTubeSecond from '../assets/meowTube/AppSecondPage.png';
-import islamicIcon from '../assets/islamic daily quote/logo.png';
 import jeuDePointScreen1 from '../assets/jeu de point/screenshoot/iPhone 17-01_Menu.png';
 import jeuDePointScreen2 from '../assets/jeu de point/screenshoot/iPhone 17-02_Game.png';
-import islamicScreen1 from '../assets/islamic daily quote/firstImage.png';
-import islamicScreen2 from '../assets/islamic daily quote/second image.png';
-import islamicScreen3 from '../assets/islamic daily quote/thirst image.png';
+import easyGymIcon from '../assets/easygym/logo.png';
+import easyGymScreen1 from '../assets/easygym/screen1.png';
+import easyGymScreen2 from '../assets/easygym/screen2.png';
+import easyGymScreen3 from '../assets/easygym/screen3.png';
 
 /* ─── Bilingual app data ─────────────────────────────────────────── */
 const APPS = [
@@ -52,24 +52,23 @@ const APPS = [
     isNew: true,
     rating: 4.9,
     landingPage: '/meowtube',
-    appStoreLink: 'https://apps.apple.com/fr/app/meow-tube/id6760180650',
+    appStoreLink: 'itms-apps://apps.apple.com/fr/app/meow-tube/id6760180650',
   },
   {
-    id: 'islamic-daily-quote',
-    name: 'Islamic Daily Quote',
-    subtitle: { fr: 'Citation islamique quotidienne', en: 'Daily Islamic quote' },
-    description: { fr: 'Application iOS proposant chaque jour une citation islamique tirée du Coran ou des Hadiths, en arabe et en plusieurs langues. Conçue pour le bien-être spirituel et la pratique quotidienne.', en: 'iOS app offering a new Islamic quote every day from the Quran or Hadiths, in Arabic and multiple languages. Designed for spiritual wellness and daily practice.' },
-    features: { fr: ['Citation quotidienne (Coran & Hadiths)', 'Arabe + traduction multilingue', 'Interface épurée & apaisante', 'Notifications journalières', 'Partage de citations', 'Mode sombre'], en: ['Daily quote (Quran & Hadiths)', 'Arabic + multilingual translation', 'Clean & calming interface', 'Daily notifications', 'Share quotes', 'Dark mode'] },
-    price: { fr: 'Projet personnel', en: 'Personal project' },
-    category: { fr: 'Spiritualité & Bien-être', en: 'Spirituality & Wellness' },
-    icon: islamicIcon,
-    screenshots: [islamicScreen1, islamicScreen2, islamicScreen3],
+    id: 'easy-gym',
+    name: 'easy-Gym',
+    subtitle: { fr: 'Sport à domicile pour tous niveaux', en: 'Home workout for all fitness levels' },
+    description: { fr: 'Restez en forme sans quitter votre domicile. easy-Gym propose une variété d\'exercices adaptés à tous les niveaux, sans aucun équipement. Suivez vos progrès et améliorez votre force, votre souplesse et votre endurance avec des routines simples à suivre.', en: 'Stay fit without leaving home. easy-Gym offers a variety of exercises suited to all levels, with no equipment needed. Track your progress and improve your strength, flexibility, and endurance with easy-to-follow routines.' },
+    features: { fr: ['Exercices pour tous les niveaux', 'Aucun équipement requis', 'Suivi des séries, reps & repos', 'Ciblage musculaire détaillé', 'Routines simples à suivre', 'Mode sombre'], en: ['Exercises for all levels', 'No equipment required', 'Sets, reps & rest tracking', 'Detailed muscle targeting', 'Easy-to-follow routines', 'Dark mode'] },
+    price: { fr: 'Gratuit', en: 'Free' },
+    category: { fr: 'Forme & Bien-être', en: 'Health & Fitness' },
+    icon: easyGymIcon,
+    screenshots: [easyGymScreen1, easyGymScreen2, easyGymScreen3],
     tech: ['Swift', 'SwiftUI', 'iOS'],
     featured: true,
     isNew: true,
-    rating: 4.8,
-    landingPage: '/islamic-daily-quote',
-    appStoreLink: 'https://apps.apple.com/fr/app/islamic-daily-quote/id6760481474',
+    rating: 0,
+    appStoreLink: 'itms-apps://apps.apple.com/fr/app/easy-gym/id6761538853?l=en-GB',
   },
   {
     id: 'jeu-de-point',
@@ -85,17 +84,14 @@ const APPS = [
     featured: true,
     isNew: true,
     rating: 0,
-    appStoreLink: 'https://apps.apple.com/fr/app/jeu-de-point/id6761615625',
+    appStoreLink: 'itms-apps://apps.apple.com/fr/app/jeu-de-point/id6761615625',
   },
 ];
 
 /* ─── In-progress projects ───────────────────────────────────────── */
 const IN_PROGRESS_APPS = [
   { id: 'localshort', name: 'LocalShort', subtitle: { fr: 'Lecteur de vidéos courtes en local', en: 'Offline short-form video player' }, tech: ['iOS', 'Swift', 'SwiftUI'], done: true },
-  { id: 'easy-gym', name: 'easy-Gym', subtitle: { fr: 'Sport à domicile pour tous niveaux', en: 'Home workout for all fitness levels' }, tech: ['iOS', 'Swift', 'SwiftUI'], done: true },
   { id: 'meowtoon', name: 'meow-Toon', subtitle: { fr: 'Dessin animé interactif', en: 'Interactive cartoon app' }, tech: ['iOS', 'Swift'], done: false },
-  { id: 'focusidlegame', name: 'focusIdleGame', subtitle: { fr: 'Jeu idle centré sur la concentration', en: 'Focus-centered idle game' }, tech: ['iOS', 'Swift'], done: false },
-  { id: 'duobook', name: 'duoBook', subtitle: { fr: 'Lecture en duo & annotations partagées', en: 'Duo reading & shared annotations' }, tech: ['iOS', 'Swift'], done: false },
 ];
 
 /* ─── UI strings ─────────────────────────────────────────────────── */

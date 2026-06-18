@@ -68,9 +68,9 @@ const DATA = {
       { title: 'Jeu de Point',        sub: 'Projet personnel — Jeu de stratégie traditionnel malgache',                 tags: 'Swift, SwiftUI, iOS',                                          appStoreUrl: 'itms-apps://apps.apple.com/fr/app/jeu-de-point/id6761615625' },
     ],
     education: [
-      { title: 'Licence Informatique (BAC+5)',                    school: 'Epitech',                       period: 'Août 2023 – Sept. 2026 · Algorithmique, JavaScript, React.js, développement de projets en équipe (approche par projets)' },
+      { title: 'Licence Informatique (BAC+5)',                    school: 'Epitech',                       period: 'Août 2023 – Sept. 2026 · Spécialisations cybersécurité, cloud et IoT, algorithmique, JavaScript, React.js et projets en équipe' },
       { title: "AFP Concepteur Développeur d'Applications iOS",   school: 'Simplon Auvergne-Rhône-Alpes',  period: "Avr. – Juil. 2023 · Swift, conception & développement d'applications iOS natives, méthodes agiles" },
-      { title: 'BTS Management des Unités Commerciales',          school: 'Écoles Billières',               period: 'Sept. 2020 – Juil. 2022 · Management, Marketing & Commerce · Reconversion vers l\'informatique' },
+      { title: 'BTS Management des Unités Commerciales',          school: 'Écoles Billières',               period: "Sept. 2020 – Juil. 2022 · Gestion de projet, management d'équipe, pilotage commercial et marketing" },
     ],
     languages: 'Français — Natif · Malgache — Natif · Anglais — Avancé (B2/C1)',
     keywords: ['Swift','iOS','SwiftUI','UIKit','MVVM','MVC','MapboxMaps','Mapbox SDK','MapboxMaps v10','CI/CD','GitHub Actions','Tests unitaires','Agile','Scrum','JSON','REST API','Git','AVFoundation','React.js','TypeScript','JavaScript','C++','Arduino','App Store','développeur iOS','ingénieur logiciel','architecture mobile','aviation','alternance','Toulouse'],
@@ -116,9 +116,9 @@ const DATA = {
       { title: 'Jeu de Point',        sub: 'Personal project — Traditional Malagasy strategy game',                 tags: 'Swift, SwiftUI, iOS',                                        appStoreUrl: 'itms-apps://apps.apple.com/fr/app/jeu-de-point/id6761615625' },
     ],
     education: [
-      { title: "Master's in Computer Science (BAC+5)",                  school: 'Epitech',                      period: 'August 2023 – September 2026 · Algorithms, JavaScript, React.js, collaborative team projects (project-based learning)' },
+      { title: "Master's in Computer Science (BAC+5)",                  school: 'Epitech',                      period: 'August 2023 – September 2026 · Specializations in cybersecurity, cloud and IoT, algorithms, JavaScript, React.js and team projects' },
       { title: 'Professional Qualification — iOS Application Developer', school: 'Simplon Auvergne-Rhône-Alpes', period: 'April – July 2023 · Swift, native iOS application design & development, agile methods' },
-      { title: 'BTS Management of Commercial Units',                     school: 'Écoles Billières',              period: 'Sept. 2020 – July 2022 · Management, Marketing & Sales · Career switch into software engineering' },
+      { title: 'BTS Management of Commercial Units',                     school: 'Écoles Billières',              period: 'Sept. 2020 – July 2022 · Project management, team management, sales performance and marketing' },
     ],
     languages: 'French — Native · Malagasy — Native · English — Advanced (B2/C1)',
     keywords: ['Swift','iOS','SwiftUI','UIKit','MVVM','MVC','MapboxMaps','Mapbox SDK','MapboxMaps v10','CI/CD','GitHub Actions','Unit Testing','Agile','Scrum','JSON','REST API','Git','AVFoundation','React.js','TypeScript','JavaScript','C++','Arduino','App Store','iOS Developer','Software Engineer','mobile architecture','aviation','work-study','Toulouse'],

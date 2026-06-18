@@ -70,15 +70,15 @@ Swift, SwiftUI, iOS
 
 Master's in Computer Science (BAC+5) · Epitech
 August 2023 – September 2026
-Algorithms, JavaScript, React.js and collaborative team projects — hands-on, project-based learning.
+Specializations in cybersecurity, cloud and IoT. Algorithms, JavaScript, React.js and collaborative team projects (project-based learning).
 
 Professional Qualification — iOS Application Developer · Simplon Auvergne-Rhone-Alpes
 Certified native iOS mobile developer · April – July 2023
 Intensive Swift training: native iOS application design and development, agile methods.
 
 BTS Management of Commercial Units · Ecoles Billieres
-Management, Marketing & Sales · Career switch into software engineering · September 2020 – July 2022
-Customer relationship management, operational marketing, team management and sales performance.
+Management, Marketing & Sales · September 2020 – July 2022
+Project management, team management, sales performance and operational marketing.
 
 ---
 

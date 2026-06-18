@@ -70,15 +70,15 @@ Swift, SwiftUI, iOS
 
 Licence Informatique (BAC+5) · Epitech
 Août 2023 – Septembre 2026
-Algorithmique, JavaScript, React.js et développement de projets en équipe — pédagogie par projets pratiques.
+Spécialisations cybersécurité, cloud et IoT. Algorithmique, JavaScript, React.js et développement de projets en équipe (pédagogie par projets).
 
 AFP Concepteur Développeur d'Applications iOS · Simplon Auvergne-Rhône-Alpes
 Certifié développeur iOS mobile natif · Avril – Juillet 2023
 Formation intensive en Swift : conception et développement d'applications iOS natives, méthodes agiles.
 
 BTS Management des Unités Commerciales · Ecoles Billières
-Management, Marketing & Commerce · Reconversion vers l'informatique · Septembre 2020 – Juillet 2022
-Gestion de la relation client, marketing opérationnel, management d'équipe et pilotage commercial.
+Management, Marketing & Commerce · Septembre 2020 – Juillet 2022
+Gestion de projet, management d'équipe, pilotage commercial et marketing opérationnel.
 
 ---
 

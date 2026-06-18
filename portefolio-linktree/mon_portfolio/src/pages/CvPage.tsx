@@ -59,8 +59,8 @@ const DATA = {
       school: 'Epitech',
       period: { fr: 'Août 2023 – Septembre 2026', en: 'August 2023 – September 2026' },
       description: {
-        fr: 'Formation en informatique couvrant algorithmique, JavaScript, React.js et développement de projets en équipe. Approche par projets pratiques.',
-        en: 'Computer science curriculum covering algorithms, JavaScript, React.js and collaborative project development. Project-driven learning approach.'
+        fr: 'Spécialisations cybersécurité, cloud et IoT. Algorithmique, JavaScript, React.js et développement de projets en équipe (pédagogie par projets).',
+        en: 'Specializations in cybersecurity, cloud and IoT. Algorithms, JavaScript, React.js and collaborative team projects (project-based learning).'
       },
       logo: epitechLogo,
     },
@@ -81,8 +81,8 @@ const DATA = {
       school: 'Ecoles Billieres',
       period: { fr: 'Septembre 2020 – Juillet 2022', en: 'September 2020 – July 2022' },
       description: {
-        fr: 'Management, Marketing & Commerce. Reconversion vers l\'informatique à l\'issue de ce diplôme.',
-        en: 'Management, Marketing & Sales. Career switch into software engineering following this degree.'
+        fr: 'Gestion de projet, management d\'équipe, pilotage commercial et marketing opérationnel.',
+        en: 'Project management, team management, sales performance and operational marketing.'
       },
       logo: billiereLogo,
     },

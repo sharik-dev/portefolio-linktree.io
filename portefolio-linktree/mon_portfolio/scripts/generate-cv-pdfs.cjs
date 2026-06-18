@@ -63,10 +63,9 @@ const DATA = {
     ],
     projects: [
       { title: 'Guidor',              sub: 'Projet professionnel · Application aviation iOS en production (Skyconseil)', tags: 'Swift, UIKit, SwiftUI, MVVM, MapboxMaps SDK v10+, CI/CD',     appStoreUrl: 'https://apps.apple.com/fr/app/guidor/id1072066692' },
-      { title: 'Meow-Tube',           sub: 'Projet personnel · 4.9 ★ — YouTube sans pub ni Shorts, sans abonnement',    tags: 'Swift, SwiftUI, MVVM, AVFoundation, YouTube Data API',         appStoreUrl: 'https://apps.apple.com/fr/app/meow-tube/id6760180650' },
-      { title: 'LocalShort',          sub: 'Projet personnel · 4.7 ★',                                                  tags: 'Swift, SwiftUI',                                               appStoreUrl: 'https://sharik.fr/local-short' },
-      { title: 'Islamic Daily Quote', sub: 'Projet personnel · 4.8 ★ — Citations islamiques quotidiennes, multilingue', tags: 'Swift, SwiftUI, Notifications, Mode sombre',                   appStoreUrl: 'https://apps.apple.com/fr/app/islamic-daily-quote/id6760481474' },
-      { title: 'Jeu de Point',        sub: 'Projet personnel — Jeu de stratégie traditionnel malgache',                 tags: 'Swift, SwiftUI, iOS',                                          appStoreUrl: 'https://apps.apple.com/fr/app/jeu-de-point/id6761615625' },
+      { title: 'Meow-Tube',           sub: 'Projet personnel · 4.9 ★ — YouTube sans pub ni Shorts, sans abonnement',    tags: 'Swift, SwiftUI, MVVM, AVFoundation, YouTube Data API',         appStoreUrl: 'itms-apps://apps.apple.com/fr/app/meow-tube/id6760180650' },
+      { title: 'easy-Gym',            sub: 'Projet personnel — Sport à domicile pour tous niveaux, sans équipement',    tags: 'Swift, SwiftUI, iOS',                                          appStoreUrl: 'itms-apps://apps.apple.com/fr/app/easy-gym/id6761538853?l=en-GB' },
+      { title: 'Jeu de Point',        sub: 'Projet personnel — Jeu de stratégie traditionnel malgache',                 tags: 'Swift, SwiftUI, iOS',                                          appStoreUrl: 'itms-apps://apps.apple.com/fr/app/jeu-de-point/id6761615625' },
     ],
     education: [
       { title: 'Licence Informatique (BAC+5)',                    school: 'Epitech',                       period: 'Août 2023 – Sept. 2026' },
@@ -112,10 +111,9 @@ const DATA = {
     ],
     projects: [
       { title: 'Guidor',              sub: 'Professional project · Aviation iOS app in production (Skyconseil)',    tags: 'Swift, UIKit, SwiftUI, MVVM, MapboxMaps SDK v10+, CI/CD',    appStoreUrl: 'https://apps.apple.com/fr/app/guidor/id1072066692' },
-      { title: 'Meow-Tube',           sub: 'Personal project · 4.9 ★ — YouTube without ads or Shorts, no subscription', tags: 'Swift, SwiftUI, MVVM, AVFoundation, YouTube Data API',   appStoreUrl: 'https://apps.apple.com/fr/app/meow-tube/id6760180650' },
-      { title: 'LocalShort',          sub: 'Personal project · 4.7 ★',                                             tags: 'Swift, SwiftUI',                                              appStoreUrl: 'https://sharik.fr/local-short' },
-      { title: 'Islamic Daily Quote', sub: 'Personal project · 4.8 ★ — Daily Islamic quotes, multilingual',        tags: 'Swift, SwiftUI, Notifications, Dark mode',                   appStoreUrl: 'https://apps.apple.com/fr/app/islamic-daily-quote/id6760481474' },
-      { title: 'Jeu de Point',        sub: 'Personal project — Traditional Malagasy strategy game',                 tags: 'Swift, SwiftUI, iOS',                                        appStoreUrl: 'https://apps.apple.com/fr/app/jeu-de-point/id6761615625' },
+      { title: 'Meow-Tube',           sub: 'Personal project · 4.9 ★ — YouTube without ads or Shorts, no subscription', tags: 'Swift, SwiftUI, MVVM, AVFoundation, YouTube Data API',   appStoreUrl: 'itms-apps://apps.apple.com/fr/app/meow-tube/id6760180650' },
+      { title: 'easy-Gym',            sub: 'Personal project — Home workout for all fitness levels, no equipment',  tags: 'Swift, SwiftUI, iOS',                                        appStoreUrl: 'itms-apps://apps.apple.com/fr/app/easy-gym/id6761538853?l=en-GB' },
+      { title: 'Jeu de Point',        sub: 'Personal project — Traditional Malagasy strategy game',                 tags: 'Swift, SwiftUI, iOS',                                        appStoreUrl: 'itms-apps://apps.apple.com/fr/app/jeu-de-point/id6761615625' },
     ],
     education: [
       { title: "Master's in Computer Science (BAC+5)",                  school: 'Epitech',                      period: 'August 2023 – September 2026' },

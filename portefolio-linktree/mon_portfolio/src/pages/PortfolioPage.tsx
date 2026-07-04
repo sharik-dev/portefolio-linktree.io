@@ -11,6 +11,10 @@ import guidorImg2 from '../assets/guidor/imageApp2.png';
 import meowTubeIcon from '../assets/meowTube/appLogo.png';
 import meowTubeHome from '../assets/meowTube/AppHomePage.png';
 import meowTubeSecond from '../assets/meowTube/AppSecondPage.png';
+import islamicIcon from '../assets/islamic daily quote/logo.png';
+import islamicScreen1 from '../assets/islamic daily quote/firstImage.png';
+import islamicScreen2 from '../assets/islamic daily quote/second image.png';
+import islamicScreen3 from '../assets/islamic daily quote/thirst image.png';
 import jeuDePointScreen1 from '../assets/jeu de point/screenshoot/iPhone 17-01_Menu.png';
 import jeuDePointScreen2 from '../assets/jeu de point/screenshoot/iPhone 17-02_Game.png';
 import easyGymIcon from '../assets/easygym/logo.png';
@@ -55,6 +59,23 @@ const APPS = [
     appStoreLink: 'itms-apps://apps.apple.com/fr/app/meow-tube/id6760180650',
   },
   {
+    id: 'islamic-daily-quote',
+    name: 'Islamic Daily Quote',
+    subtitle: { fr: 'Citation islamique quotidienne', en: 'Daily Islamic quote' },
+    description: { fr: 'Application iOS proposant chaque jour une citation islamique tirée du Coran ou des Hadiths, en plusieurs langues. Conçue pour le bien-être spirituel et la pratique quotidienne.', en: 'iOS app offering a new Islamic quote every day from the Quran or Hadiths, in multiple languages. Designed for spiritual wellness and daily practice.' },
+    features: { fr: ['Citation quotidienne (Coran & Hadiths)', 'Traduction multilingue', 'Interface épurée & apaisante', 'Notifications journalières', 'Partage de citations', 'Mode sombre'], en: ['Daily quote (Quran & Hadiths)', 'Multilingual translation', 'Clean & calming interface', 'Daily notifications', 'Share quotes', 'Dark mode'] },
+    price: { fr: 'Projet personnel', en: 'Personal project' },
+    category: { fr: 'Spiritualité & Bien-être', en: 'Spirituality & Wellness' },
+    icon: islamicIcon,
+    screenshots: [islamicScreen1, islamicScreen2, islamicScreen3],
+    tech: ['Swift', 'SwiftUI', 'iOS'],
+    featured: true,
+    isNew: true,
+    rating: 4.8,
+    landingPage: '/islamic-daily-quote',
+    appStoreLink: 'https://apps.apple.com/fr/app/islamic-daily-quote/id6760481474',
+  },
+  {
     id: 'easy-gym',
     name: 'easy-Gym',
     subtitle: { fr: 'Sport à domicile pour tous niveaux', en: 'Home workout for all fitness levels' },
@@ -97,8 +118,8 @@ const IN_PROGRESS_APPS = [
 /* ─── UI strings ─────────────────────────────────────────────────── */
 const UI = {
   fr: {
-    eyebrow: 'Mes réalisations', title: 'App Portfolio',
-    subtitle: 'Applications iOS et projets développés avec Swift, MVVM et Mapbox',
+    eyebrow: 'Mes réalisations', title: 'App Mobile',
+    subtitle: 'Applications iOS développées avec Swift, SwiftUI, MVVM et Mapbox',
     preview3d: 'Aperçu 3D', hint: '↔ Rotation automatique · Cliquez-glissez',
     details: 'Voir les détails', featured: 'À la une', allProjects: 'Tous les projets',
     getFeatured: 'À la une', getNew: 'Nouveau',
@@ -109,8 +130,8 @@ const UI = {
     appStoreDownload: 'Télécharger',
   },
   en: {
-    eyebrow: 'My work', title: 'App Portfolio',
-    subtitle: 'iOS apps & projects built with Swift, MVVM and Mapbox',
+    eyebrow: 'My work', title: 'Mobile Apps',
+    subtitle: 'iOS apps built with Swift, SwiftUI, MVVM and Mapbox',
     preview3d: '3D Preview', hint: '↔ Auto-rotate · Click & drag',
     details: 'See details', featured: 'Featured', allProjects: 'All projects',
     getFeatured: 'Featured', getNew: 'New',

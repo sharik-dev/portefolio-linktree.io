@@ -105,9 +105,9 @@ function DeviceModel({
   const R   = landscape ? 0.055 : 0.110;
   const bev = 0.005;
 
-  const bSide = landscape ? 0.058 : 0.039;
-  const bTop  = landscape ? 0.051 : 0.038;
-  const bBot  = landscape ? 0.046 : 0.038;
+  const bSide = landscape ? 0.032 : 0.039;
+  const bTop  = landscape ? 0.032 : 0.038;
+  const bBot  = landscape ? 0.032 : 0.038;
 
   const SW  = W - bSide * 2;
   const SH  = H - bTop - bBot;

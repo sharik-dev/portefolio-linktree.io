@@ -36,8 +36,10 @@ const Navbar: React.FC = () => {
   const { lang, toggleLang } = useLang();
 
   const navLinks = [
-    { to: '/', label: lang === 'fr' ? 'LinkTree' : 'LinkTree' },
-    { to: '/portefolio', label: lang === 'fr' ? 'Portfolio' : 'Portfolio' },
+    { to: '/', label: 'LinkTree' },
+    { to: '/portefolio', label: lang === 'fr' ? 'App Mobile' : 'Mobile Apps' },
+    { to: '/desktop', label: lang === 'fr' ? 'App Desktop' : 'Desktop Apps' },
+    { to: '/jeux', label: lang === 'fr' ? 'Jeux' : 'Games' },
     { to: '/store', label: 'Store' },
     { to: '/cv', label: 'CV' },
     { to: '/profil', label: lang === 'fr' ? 'Profil' : 'Profile' },
@@ -62,7 +64,7 @@ const Navbar: React.FC = () => {
           </NavLink>
 
           {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-7">
+          <div className="hidden md:flex items-center gap-5 lg:gap-6">
             {navLinks.map(link => (
               <NavLink key={link.to} to={link.to} className={linkClass} end={link.to === '/'}>
                 {link.label}

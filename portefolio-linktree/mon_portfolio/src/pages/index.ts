@@ -8,4 +8,5 @@ export { default as MeowTubeLandingPage } from './MeowTubeLandingPage';
 export { default as IslamicDailyQuoteLandingPage } from './IslamicDailyQuoteLandingPage';
 export { default as LocalShortLandingPage } from './LocalShortLandingPage';
 export { default as DashboardPage } from './DashboardPage';
+export { default as GameAnalyticsPage } from './GameAnalyticsPage';
 export { default as StorePage } from './StorePage';

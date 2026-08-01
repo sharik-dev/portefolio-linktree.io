@@ -1,5 +1,10 @@
 # Instructions pour Claude Code — Projet Portfolio Sharik Abubucker
 
+## 🔐 Credentials
+
+Toutes les clés API / secrets sont centralisés dans **`/home/ubuntu/.credentials/credentials.md`**.
+Avant de redemander une clé, lis ce fichier. Ne jamais le committer ni l'afficher publiquement.
+
 ## CV — Règle de synchronisation OBLIGATOIRE
 
 Le CV existe en **4 endroits distincts** qui doivent toujours être identiques.

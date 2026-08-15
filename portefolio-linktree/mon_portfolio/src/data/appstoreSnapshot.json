@@ -1,0 +1,542 @@
+{
+  "artistId": "1816768480",
+  "generatedAt": "2026-08-15T16:53:28.262Z",
+  "storefronts": {
+    "fr": [
+      {
+        "trackId": 6760180650,
+        "trackName": "Meow-Tube:No ad & Music Player",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "This app allows users to watch multimedia content while tracking their screen time to help them stay focused and productive. It reduces distractions and lets users save videos to their favorites so they can watch them later. Users can also listen to videos in the background.",
+        "primaryGenreName": "Entertainment",
+        "genres": [
+          "Divertissement"
+        ],
+        "price": 0,
+        "formattedPrice": "Gratuit",
+        "currency": "EUR",
+        "averageUserRating": 4.59999,
+        "userRatingCount": 5,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6a/48/3e/6a483edf-df5e-86cc-546c-40963b24bbf1/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6a/48/3e/6a483edf-df5e-86cc-546c-40963b24bbf1/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c6/e0/72/c6e072d7-5c1c-8397-00c8-99ced5bbf558/01-slide1-1284x2778.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/aa/1a/53/aa1a5324-7922-8347-2b89-4f8459832b99/02-slide2-1284x2778.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/43/83/d9/4383d9c0-5719-c694-8372-785a6f889c63/03-slide3-1284x2778.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/be/93/96/be939670-c6a1-c992-6a6f-4ddd451f7ce3/iPad_Air_M3_Screenshot_Mar_6.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/34/26/31/34263185-801f-ac73-c35d-57e6464a82ee/iPad_Air_M3_Screenshot_Mar_6__U00281_U0029.png/360x480bb.jpg"
+        ],
+        "version": "2.1",
+        "releaseDate": "2026-03-18T07:00:00Z",
+        "currentVersionReleaseDate": "2026-05-29T18:50:14Z",
+        "trackViewUrl": "https://apps.apple.com/fr/app/meow-tube-no-ad-music-player/id6760180650?uo=4",
+        "minimumOsVersion": "17.0"
+      },
+      {
+        "trackId": 6781363751,
+        "trackName": "Vocabulaire Anglais Widget",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Vocabulaire Anglais t'aide à enrichir ton anglais sans effort, un mot à la fois — directement depuis ton écran d'accueil et ton écran verrouillé.\n\nLe cœur de l'app, ce sont ses widgets élégants : un nouveau mot anglais et sa traduction française apparaissent chaque heure, adaptés à ton niveau, du débutant (A1) à l'avancé (B2).\n\nCE QUE TU PEUX FAIRE\n• Widgets écran d'accueil ET écran verrouillé\n• Un mot qui change toutes les heures\n• Quatre niveaux : A1, A2, B1, B2\n• Glisse pour découvrir d'autres mots du jour\n• Marque les mots comme « appris » et suis ta progression\n• Rappel quotidien optionnel\n• Design soigné, ambiance carnet de cours\n\nSIMPLE ET RESPECTUEUX\n• 100 % hors ligne\n• Aucun compte requis\n• Aucune publicité, aucun pistage\n\nInstalle le widget, et apprends l'anglais sans même ouvrir l'app.",
+        "primaryGenreName": "Education",
+        "genres": [
+          "Éducation",
+          "Références"
+        ],
+        "price": 0,
+        "formattedPrice": "Gratuit",
+        "currency": "EUR",
+        "averageUserRating": 4.5,
+        "userRatingCount": 2,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/58/5a/b0/585ab0db-ffc2-4ac5-5ee0-d2281c52e42a/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/58/5a/b0/585ab0db-ffc2-4ac5-5ee0-d2281c52e42a/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e3/3b/47/e33b47ea-94e1-6913-a39f-a7e49594c4d4/iphone_1.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/50/58/bf/5058bfc1-3c3a-8390-7f7a-6a66b551c6b9/iphone_2.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/79/82/bd/7982bde6-b98d-a6f1-e42d-d258777e1809/iphone_3.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/80/e9/18/80e918d2-921b-1354-4971-8fc946807dcd/iphone_4.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/16/c0/ef/16c0ef71-aa36-04b0-df2b-71a9bcdd20a5/iphone_5.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/1f/bb/b9/1fbbb972-5f41-892d-6caf-edee9757a8b1/iphone_6.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/bf/85/ee/bf85ee40-910c-c2ee-9040-ae68b1c87a66/ipad_1.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f3/46/25/f34625dd-66bb-bffc-7a76-57b7eed280b4/ipad_2.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e8/71/6b/e8716b64-519d-ea4e-d4b6-f8c61f008a04/ipad_3.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f1/c7/4a/f1c74a64-3e61-3fc1-7595-6dace2edc027/ipad_4.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a5/fa/1d/a5fa1de2-071a-1355-d8c5-d49a5d73b2a6/ipad_5.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b5/d5/ff/b5d5ffac-49f8-32c5-1141-a20c0bd41706/ipad_6.png/360x480bb.jpg"
+        ],
+        "version": "1.1",
+        "releaseDate": "2026-06-19T07:00:00Z",
+        "currentVersionReleaseDate": "2026-06-25T21:59:32Z",
+        "trackViewUrl": "https://apps.apple.com/fr/app/vocabulaire-anglais-widget/id6781363751?uo=4",
+        "minimumOsVersion": "16.0"
+      },
+      {
+        "trackId": 6786755599,
+        "trackName": "Strategic wars",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Strategic Wars est un jeu de tactique tour par tour dans l'esprit des classiques : capturez villes et usines, produisez des unités grâce aux fonds qu'elles génèrent, et déjouez votre adversaire sur un champ de bataille en 3D.\n\nFONCTIONNALITÉS\n- Environ 20 types d'unités (infanterie, chars, hélicoptères, navires, bombardiers), chacune avec sa portée, son arme et ses contres\n- 7 terrains (herbe, routes, eau, ponts, villes, forêts, montagnes) qui modifient défense et déplacement\n- Capturez Villes, Usines, Aéroports et Ports pour financer votre armée\n- Campagne complète avec missions scénarisées et un nombre croissant de cartes\n- Duel local 1 contre 1 en passe-et-joue, ou affrontez une IA tactique\n- Multijoueur en ligne via Game Center — défiez vos amis directement\n- Mode classé en ligne avec un vrai classement ELO et un leaderboard sur serveur dédié, impossible à tricher\n- Parties personnalisées en ligne — choisissez votre carte, jouez en public ou invitez des amis avec un code de salon\n\nSans pay-to-win, sans publicité pour interrompre vos batailles. Juste de la stratégie tour par tour pure.",
+        "primaryGenreName": "Games",
+        "genres": [
+          "Jeux",
+          "Stratégie",
+          "Action",
+          "Éducation"
+        ],
+        "price": 0,
+        "formattedPrice": "Gratuit",
+        "currency": "EUR",
+        "averageUserRating": 0,
+        "userRatingCount": 0,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/87/02/e4/8702e4b2-af9e-0bb6-bfff-77a319dcf6e8/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/87/02/e4/8702e4b2-af9e-0bb6-bfff-77a319dcf6e8/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/41/a7/55/41a7557d-6e25-7cb8-d9be-9a0f104e2d87/iphone_01_01_missile.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/65/c3/72/65c372f3-8100-19ce-a64f-e1593913abf2/iphone_02_02_airstrike.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/50/55/8e/50558e0d-bbaf-c238-63f4-8716dc49c89f/iphone_03_03_naval.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/f1/63/47/f163476d-b585-b2eb-593d-55ee0f6086d0/iphone_04_04_frontline.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/14/e4/56/14e4566f-e7b0-0e85-972a-24c4d4bbbbbf/iphone_05_05_warmap.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2a/dc/d2/2adcd296-f3a1-6610-8f9f-47f916fa25fc/iphone_06_06_menu.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/6a/2e/19/6a2e19c4-2df8-017f-23e8-e2d22f936b0a/iphone_07_07_units.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/d5/b0/2e/d5b02e06-9653-cb56-651e-940a09ec1ba0/ipad_01_01_missile.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f8/54/51/f854515c-4b29-7cc9-6e48-ba9f8c68b1d7/ipad_02_02_airstrike.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/30/e4/bc/30e4bc12-ee58-a4e2-35ee-c35682cd2915/ipad_03_03_naval.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/1a/78/14/1a7814dc-10c5-9a79-fde1-2cc4b782fbc8/ipad_04_04_frontline.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c0/dd/be/c0ddbecb-84db-6cca-b8e3-7851fe74f046/ipad_05_05_warmap.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/df/1f/cc/df1fcca0-613b-0f47-f801-275e1d3bbf0a/ipad_06_06_menu.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2b/ee/a9/2beea984-f8b7-c604-8179-eaef655eaa40/ipad_07_07_units.png/360x480bb.jpg"
+        ],
+        "version": "1.1",
+        "releaseDate": "2026-07-16T07:00:00Z",
+        "currentVersionReleaseDate": "2026-07-27T14:12:22Z",
+        "trackViewUrl": "https://apps.apple.com/fr/app/strategic-wars/id6786755599?uo=4",
+        "minimumOsVersion": "13.0"
+      },
+      {
+        "trackId": 6761538853,
+        "trackName": "easy-Gym",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Restez en forme sans quitter votre domicile ! Notre application propose une variété d’exercices adaptés à tous les niveaux. Aucun équipement n’est nécessaire — seulement votre motivation. Suivez vos progrès, profitez de routines faciles à comprendre et améliorez votre force, votre souplesse et votre endurance. Parfait pour les emplois du temps chargés et les entraînements à la maison. Soyez en forme à tout moment, où que vous soyez !",
+        "primaryGenreName": "Lifestyle",
+        "genres": [
+          "Style de vie"
+        ],
+        "price": 0,
+        "formattedPrice": "Gratuit",
+        "currency": "EUR",
+        "averageUserRating": 0,
+        "userRatingCount": 0,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fa/6a/24/fa6a2432-8dc8-95d4-28fd-f6b3f15e3051/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fa/6a/24/fa6a2432-8dc8-95d4-28fd-f6b3f15e3051/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/35/39/ed/3539ed5c-aef8-8955-d069-2600bba7a586/01_home_promax.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/81/ba/59/81ba59ff-7eab-cc7e-b545-4e435d034438/02_quete_promax.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/94/f5/60/94f560a9-69f4-0b80-aadd-5d69463b25b6/03_seance_promax.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/4d/10/25/4d102553-3c8e-6b4c-1d6b-30009afc7fee/04_profil_promax.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8c/30/38/8c303887-8582-7727-7fcb-a9a4906c07ed/01_home_ipad13.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/75/23/9d/75239db4-481c-7d15-b464-54369e37a88a/02_quete_ipad13.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a6/dc/6c/a6dc6c74-a724-3f2c-d0d0-cecb1d207af2/03_seance_ipad13.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/73/02/6c/73026ca2-80be-ab19-08f6-85c9019b8e7d/04_profil_ipad13.png/360x480bb.jpg"
+        ],
+        "version": "2",
+        "releaseDate": "2026-04-03T07:00:00Z",
+        "currentVersionReleaseDate": "2026-08-05T15:36:45Z",
+        "trackViewUrl": "https://apps.apple.com/fr/app/easy-gym/id6761538853?uo=4",
+        "minimumOsVersion": "26.2"
+      },
+      {
+        "trackId": 6761615625,
+        "trackName": "online strategy dot war",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Découvrez un jeu de points traditionnel malgache qui allie simplicité et profondeur stratégique. Placez vos points, créez des connexions intelligentes et anticipez les mouvements de votre adversaire pour prendre l’avantage.\n\nConçu pour les débutants comme pour les joueurs expérimentés, le jeu propose des contrôles intuitifs, une expérience fluide et une interface épurée pour rester concentré sur l’essentiel. Que vous cherchiez une partie rapide ou un défi stratégique plus long, ce jeu vous offre une expérience captivante inspirée de la culture malgache.\n\nJouez, réfléchissez et maîtrisez l’art de la connexion.",
+        "primaryGenreName": "Games",
+        "genres": [
+          "Jeux"
+        ],
+        "price": 0,
+        "formattedPrice": "Gratuit",
+        "currency": "EUR",
+        "averageUserRating": 5,
+        "userRatingCount": 1,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9d/a4/ed/9da4ed80-e54a-0e39-e3a7-263a19550603/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9d/a4/ed/9da4ed80-e54a-0e39-e3a7-263a19550603/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9b/52/d9/9b52d912-a529-7d3a-5ff7-b9d24cb19c2a/01-hero-1242x2688.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/5a/2f/26/5a2f2644-685c-b4e1-f839-2cbd79aeb9c3/02-modes-1242x2688.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2c/8e/22/2c8e222c-97f2-e666-f0d9-aa75b3a57ac8/03-gameplay-1242x2688.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ea/9d/66/ea9d665e-f969-62b6-817d-1a27821bfabd/04-competition-1242x2688.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/c2/eb/db/c2ebdb80-6a19-e649-e345-423d4cb61069/Simulator_Screenshot_-_iPad__U0028A16_U0029_-_2026-04-03_at_14.39.16_2064x2752.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/08/3b/1d/083b1d2c-f8ce-c0eb-3e50-da550d20aa90/Simulator_Screenshot_-_iPad__U0028A16_U0029_-_2026-04-03_at_14.39.03_2064x2752.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9d/ae/a0/9daea0d3-07dc-3b29-fb95-5851d7046d89/Simulator_Screenshot_-_iPad__U0028A16_U0029_-_2026-04-03_at_14.39.01_2064x2752.png/360x480bb.jpg"
+        ],
+        "version": "1.1",
+        "releaseDate": "2026-04-03T07:00:00Z",
+        "currentVersionReleaseDate": "2026-06-27T12:06:41Z",
+        "trackViewUrl": "https://apps.apple.com/fr/app/online-strategy-dot-war/id6761615625?uo=4",
+        "minimumOsVersion": "26.2"
+      },
+      {
+        "trackId": 6760481474,
+        "trackName": "Islamic Daily Quote",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "This app delivers daily Islamic inspiration directly to your phone through carefully selected quotes from authentic hadith and uplifting Islamic messages. Every day, users receive a comforting and motivating notification designed to strengthen faith, encourage patience, and bring peace to the heart.\n\nThe app includes a collection of hundreds of preloaded quotes drawn from authentic sources and meaningful Islamic teachings. Each quote is short, clear, and powerful, perfect for reflecting during a busy day or starting the morning with spiritual motivation.\n\nWith a simple and clean design, the app focuses on what matters most: daily reminders that encourage gratitude, perseverance, kindness, and trust in Allah. Whether you are going through a difficult moment or simply want to stay connected to Islamic wisdom every day, this app provides gentle reminders that inspire reflection and inner strength.\n\nKey features include daily notifications, a large library of authentic hadith quotes, random quote generation, and support for both English and French.",
+        "primaryGenreName": "Productivity",
+        "genres": [
+          "Productivité"
+        ],
+        "price": 0,
+        "formattedPrice": "Gratuit",
+        "currency": "EUR",
+        "averageUserRating": 5,
+        "userRatingCount": 1,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c8/dc/93/c8dc93d4-ce58-4f1e-8731-4ab4fce5c8e9/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c8/dc/93/c8dc93d4-ce58-4f1e-8731-4ab4fce5c8e9/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ed/8f/87/ed8f87e5-dedd-301f-4661-5c3468faac86/iPhone_16_Pro_Max-01_hero.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/eb/f1/85/ebf1857c-20be-5b43-5673-ee3f7364c3b1/iPhone_16_Pro_Max-02_home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d5/fe/9b/d5fe9bc4-8ac2-8d12-af5d-7ce2b313f7f9/iPhone_16_Pro_Max-03_bookmarks.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/98/71/67/98716713-c748-c902-d49d-0bea09a06f69/iPhone_16_Pro_Max-04_history.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9f/d6/2e/9fd62e35-b7e8-53e0-54ac-88866a5a69df/iPad_Pro__U002812.9-inch_U0029__U00286th_generation_U0029-01_hero.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/03/1b/8f/031b8f0d-1000-30b5-64b0-483fd2e8a513/iPad_Pro__U002812.9-inch_U0029__U00286th_generation_U0029-02_home.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/bd/08/e3/bd08e330-7729-0299-992a-cdf654402fc7/iPad_Pro__U002812.9-inch_U0029__U00286th_generation_U0029-03_bookmarks.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b9/a4/1c/b9a41c11-a4ed-633a-2e24-08562ea24288/iPad_Pro__U002812.9-inch_U0029__U00286th_generation_U0029-04_history.png/360x480bb.jpg"
+        ],
+        "version": "1.1",
+        "releaseDate": "2026-03-17T07:00:00Z",
+        "currentVersionReleaseDate": "2026-06-25T23:14:16Z",
+        "trackViewUrl": "https://apps.apple.com/fr/app/islamic-daily-quote/id6760481474?uo=4",
+        "minimumOsVersion": "26.1"
+      },
+      {
+        "trackId": 6791636773,
+        "trackName": "DuoBook : read every day",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "DuoBook transforme votre bibliothèque de PDF en habitude de lecture quotidienne. Importez n'importe quel PDF, fixez un objectif de pages par jour tout simple, et laissez DuoBook vous tenir responsable — à la Duolingo — grâce à un streak qui grandit chaque jour où vous atteignez votre objectif.\n\nAucun compte, aucune inscription, aucune publicité. Vos livres et votre progression ne quittent jamais votre appareil.\n\nCOMMENT ÇA MARCHE\n\nAjoutez vos propres PDF — romans, manuels, rapports, tout ce que vous lisez. DuoBook copie chaque fichier en local, génère une couverture, et l'ajoute à votre étagère. Ouvrez un livre, lisez à votre rythme dans une visionneuse PDF plein écran épurée, et DuoBook comptabilise discrètement les pages lues chaque jour.\n\nDéfinissez votre objectif quotidien (10 pages par jour par défaut, entièrement modifiable) et regardez un anneau de progression se remplir au fil de votre lecture. Atteignez votre objectif et un feu de camp pixel-art s'allume pour célébrer — ratez un jour et votre streak repart à zéro, comme dans les applications d'habitudes que vous connaissez déjà.\n\nRESTEZ MOTIVÉ\n\n- Streak de lecture quotidien avec un record de meilleur streak, pour toujours connaître votre record personnel\n- Un écran Statistiques dédié : un calendrier d'activité sur les 5 dernières semaines et un graphique en barres de vos 7 derniers jours, pour voir votre habitude se construire\n- Un widget d'écran d'accueil (via WidgetKit) qui affiche votre streak actuel et le nombre de pages restantes aujourd'hui — pas besoin d'ouvrir l'app pour rester dans le rythme\n- Un écran de profil avec votre avatar, votre nom et votre bio\n\nPENSÉ POUR VOUS\n\n- Importez un nombre illimité de PDF depuis n'importe où sur votre appareil\n- Suivi automatique de la progression page par page — reprenez exactement où vous vous étiez arrêté\n- Mode clair et sombre, modifiable à tout moment\n- Un look rétro « terminal vert » bien distinctif : vert néon sur fond noir, police pixel, icônes pixel-art sur mesure et barre de navigation en pointillés animée — DuoBook ne ressemble à rien d'autre sur l'App Store\n\nCONFIDENTIALITÉ D'ABORD\n\nDuoBook ne demande aucun compte et n'affiche aucune publicité. Vos PDF, vos statistiques de lecture et votre streak sont stockés entièrement sur votre appareil (et synchronisés avec votre widget via le stockage App Group d'Apple). Rien n'est envoyé en ligne, rien n'est tracké.\n\nQue vous avanciez dans un manuel, rattrapiez une pile de romans en retard, ou cherchiez simplement à lire plus régulièrement, DuoBook vous donne le petit coup de pouce quotidien — et le streak pour le prouver — pour enfin terminer ce que vous commencez.\n\nTéléchargez DuoBook et lancez votre streak dès aujourd'hui.",
+        "primaryGenreName": "Book",
+        "genres": [
+          "Livres",
+          "Productivité"
+        ],
+        "price": 0,
+        "formattedPrice": "Gratuit",
+        "currency": "EUR",
+        "averageUserRating": 0,
+        "userRatingCount": 0,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/66/d1/8a/66d18aa2-6c6f-888d-1c10-f6aef3ac04f7/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/66/d1/8a/66d18aa2-6c6f-888d-1c10-f6aef3ac04f7/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/98/64/be/9864bee5-bc9c-675d-6038-4f70827a3197/iphone_01_Home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b6/38/78/b638783b-10ce-3347-736d-a9558050acd2/iphone_01_Home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/98/1b/d3/981bd367-40fd-253c-8d4e-fad9df57e9d2/iphone_02_Reader.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/48/7f/2d/487f2d48-498c-6745-31dc-b2ac639b6061/iphone_02_Reader.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/00/11/34/0011345d-82a9-56c8-17e0-32aae3c5b47a/iphone_03_Statistics.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a2/31/01/a231010c-a032-0d99-ab45-2c5cde6f394e/iphone_03_Statistics.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/1e/d4/ae/1ed4ae86-d38e-9937-c21d-f94faaeb0041/iphone_04_Profile.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/72/91/dd/7291dda2-3924-941b-6cd2-f7feb4d1fe70/iphone_04_Profile.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/6c/17/cd/6c17cdef-56f6-7bd5-4c8e-5514a04c441c/ipad_01_Home.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/4e/6e/43/4e6e4329-98c4-1d28-2529-819188701ee1/ipad_02_Reader.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/5a/f0/57/5af057d7-b53b-c9b5-6b2e-9ac4a2ee9e90/ipad_03_Statistics.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/fc/7e/f0/fc7ef0f0-8fca-8d27-cb23-e8b890dd9f52/ipad_03_Statistics.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/3a/65/9e/3a659e4c-caae-c7cb-0789-b418ecebddde/ipad_04_Profile.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/51/58/f1/5158f1fd-48af-f534-fe1a-1760d35ff73d/ipad_04_Profile.png/360x480bb.jpg"
+        ],
+        "version": "1.0",
+        "releaseDate": "2026-07-20T07:00:00Z",
+        "currentVersionReleaseDate": "2026-07-20T11:25:02Z",
+        "trackViewUrl": "https://apps.apple.com/fr/app/duobook-read-every-day/id6791636773?uo=4",
+        "minimumOsVersion": "18.5"
+      }
+    ],
+    "us": [
+      {
+        "trackId": 6760180650,
+        "trackName": "Meow-Tube:No ad & Music Player",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "This app allows users to watch multimedia content while tracking their screen time to help them stay focused and productive. It reduces distractions and lets users save videos to their favorites so they can watch them later. Users can also listen to videos in the background.",
+        "primaryGenreName": "Entertainment",
+        "genres": [
+          "Entertainment"
+        ],
+        "price": 0,
+        "formattedPrice": "Free",
+        "currency": "USD",
+        "averageUserRating": 0,
+        "userRatingCount": 0,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6a/48/3e/6a483edf-df5e-86cc-546c-40963b24bbf1/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6a/48/3e/6a483edf-df5e-86cc-546c-40963b24bbf1/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c6/e0/72/c6e072d7-5c1c-8397-00c8-99ced5bbf558/01-slide1-1284x2778.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/aa/1a/53/aa1a5324-7922-8347-2b89-4f8459832b99/02-slide2-1284x2778.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/43/83/d9/4383d9c0-5719-c694-8372-785a6f889c63/03-slide3-1284x2778.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/be/93/96/be939670-c6a1-c992-6a6f-4ddd451f7ce3/iPad_Air_M3_Screenshot_Mar_6.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/34/26/31/34263185-801f-ac73-c35d-57e6464a82ee/iPad_Air_M3_Screenshot_Mar_6__U00281_U0029.png/360x480bb.jpg"
+        ],
+        "version": "2.1",
+        "releaseDate": "2026-03-18T07:00:00Z",
+        "currentVersionReleaseDate": "2026-05-29T18:50:14Z",
+        "trackViewUrl": "https://apps.apple.com/us/app/meow-tube-no-ad-music-player/id6760180650?uo=4",
+        "minimumOsVersion": "17.0"
+      },
+      {
+        "trackId": 6786755599,
+        "trackName": "Military Strategic War 2026",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Strategic Wars is a turn-based tactics game in the spirit of the classics: capture cities and factories, produce units with the funds they generate, and out-maneuver your opponent on a 3D battlefield.\n\nFEATURES\n- ~20 unit types across infantry, tanks, helicopters, ships and bombers, each with its own range, weapon and counters\n- 7 terrain types (grass, roads, water, bridges, cities, forests, mountains) that change defense and movement\n- Capture Cities, Factories, Airports and Ports to fund your army\n- Full campaign with story missions and a growing roster of maps\n- Local 1v1 pass-and-play, or battle a tactical AI\n- Online multiplayer via Game Center — challenge friends directly\n- Ranked online mode with a real ELO rating and leaderboard on a dedicated server, so nobody can cheat their rank\n- Custom online matches — pick your map, play public or invite friends with a room code\n\nNo pay-to-win, no ads interrupting your battles. Just pure turn-based strategy.",
+        "primaryGenreName": "Games",
+        "genres": [
+          "Games",
+          "Strategy",
+          "Action",
+          "Education"
+        ],
+        "price": 0,
+        "formattedPrice": "Free",
+        "currency": "USD",
+        "averageUserRating": 0,
+        "userRatingCount": 0,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/87/02/e4/8702e4b2-af9e-0bb6-bfff-77a319dcf6e8/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/87/02/e4/8702e4b2-af9e-0bb6-bfff-77a319dcf6e8/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/73/5d/59/735d5922-bef1-1fd2-4047-c3dded0bd5dd/iphone_01_01_missile.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2a/37/a4/2a37a4df-0615-2c47-f769-fa20a233bb59/iphone_02_02_airstrike.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/34/f8/53/34f85370-075d-11c2-5757-ecca4c7f2498/iphone_03_03_naval.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/d1/9d/ce/d19dcef8-34a0-8124-c544-7e2ee714ab02/iphone_04_04_frontline.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/94/91/a7/9491a773-3210-db25-12b5-a0cac033aff0/iphone_05_05_warmap.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2c/36/51/2c365133-4993-b451-e825-e0164657d9b5/iphone_06_06_menu.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a9/c7/37/a9c737b3-4f47-3b40-1dee-827a31ef77e9/iphone_07_07_units.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/65/f7/3c/65f73cbd-524b-e0f7-ed48-44a9b344d956/ipad_01_01_missile.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/09/0b/2d/090b2d23-1c02-41ea-c960-4635ece2b1b3/ipad_02_02_airstrike.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/5a/22/07/5a2207cb-cd0d-5850-d3cf-80cea41ae081/ipad_03_03_naval.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4b/5a/ee/4b5aeef4-3ca1-d10f-17c8-c565f52d17e6/ipad_04_04_frontline.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b4/35/8b/b4358be4-ab3d-46ed-bcee-d10c6b1f7ebd/ipad_05_05_warmap.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7a/f2/7e/7af27eb8-84ee-910f-d325-45992b896e2e/ipad_06_06_menu.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/2c/44/1d/2c441db2-e28e-3239-1c80-0096327a37bb/ipad_07_07_units.png/360x480bb.jpg"
+        ],
+        "version": "1.1",
+        "releaseDate": "2026-07-16T07:00:00Z",
+        "currentVersionReleaseDate": "2026-07-27T14:12:22Z",
+        "trackViewUrl": "https://apps.apple.com/us/app/military-strategic-war-2026/id6786755599?uo=4",
+        "minimumOsVersion": "13.0"
+      },
+      {
+        "trackId": 6760481474,
+        "trackName": "Islamic Daily Quote",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "This app delivers daily Islamic inspiration directly to your phone through carefully selected quotes from authentic hadith and uplifting Islamic messages. Every day, users receive a comforting and motivating notification designed to strengthen faith, encourage patience, and bring peace to the heart.\n\nThe app includes a collection of hundreds of preloaded quotes drawn from authentic sources and meaningful Islamic teachings. Each quote is short, clear, and powerful, perfect for reflecting during a busy day or starting the morning with spiritual motivation.\n\nWith a simple and clean design, the app focuses on what matters most: daily reminders that encourage gratitude, perseverance, kindness, and trust in Allah. Whether you are going through a difficult moment or simply want to stay connected to Islamic wisdom every day, this app provides gentle reminders that inspire reflection and inner strength.\n\nKey features include daily notifications, a large library of authentic hadith quotes, random quote generation, and support for both English and French.",
+        "primaryGenreName": "Productivity",
+        "genres": [
+          "Productivity"
+        ],
+        "price": 0,
+        "formattedPrice": "Free",
+        "currency": "USD",
+        "averageUserRating": 0,
+        "userRatingCount": 0,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c8/dc/93/c8dc93d4-ce58-4f1e-8731-4ab4fce5c8e9/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/c8/dc/93/c8dc93d4-ce58-4f1e-8731-4ab4fce5c8e9/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ed/8f/87/ed8f87e5-dedd-301f-4661-5c3468faac86/iPhone_16_Pro_Max-01_hero.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/eb/f1/85/ebf1857c-20be-5b43-5673-ee3f7364c3b1/iPhone_16_Pro_Max-02_home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d5/fe/9b/d5fe9bc4-8ac2-8d12-af5d-7ce2b313f7f9/iPhone_16_Pro_Max-03_bookmarks.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/98/71/67/98716713-c748-c902-d49d-0bea09a06f69/iPhone_16_Pro_Max-04_history.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9f/d6/2e/9fd62e35-b7e8-53e0-54ac-88866a5a69df/iPad_Pro__U002812.9-inch_U0029__U00286th_generation_U0029-01_hero.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/03/1b/8f/031b8f0d-1000-30b5-64b0-483fd2e8a513/iPad_Pro__U002812.9-inch_U0029__U00286th_generation_U0029-02_home.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/bd/08/e3/bd08e330-7729-0299-992a-cdf654402fc7/iPad_Pro__U002812.9-inch_U0029__U00286th_generation_U0029-03_bookmarks.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b9/a4/1c/b9a41c11-a4ed-633a-2e24-08562ea24288/iPad_Pro__U002812.9-inch_U0029__U00286th_generation_U0029-04_history.png/360x480bb.jpg"
+        ],
+        "version": "1.1",
+        "releaseDate": "2026-03-17T07:00:00Z",
+        "currentVersionReleaseDate": "2026-06-25T23:14:16Z",
+        "trackViewUrl": "https://apps.apple.com/us/app/islamic-daily-quote/id6760481474?uo=4",
+        "minimumOsVersion": "26.1"
+      },
+      {
+        "trackId": 6761538853,
+        "trackName": "FitGame : Gamify gym and sport",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Stay in shape without leaving your home! Our app offers a variety of exercises tailored for all fitness levels. No equipment is required—just your motivation. Track your progress, follow easy-to-understand routines, and improve strength, flexibility, and endurance. Perfect for busy schedules and home workouts. Get fit anytime, anywhere!",
+        "primaryGenreName": "Lifestyle",
+        "genres": [
+          "Lifestyle"
+        ],
+        "price": 0,
+        "formattedPrice": "Free",
+        "currency": "USD",
+        "averageUserRating": 0,
+        "userRatingCount": 0,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fa/6a/24/fa6a2432-8dc8-95d4-28fd-f6b3f15e3051/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fa/6a/24/fa6a2432-8dc8-95d4-28fd-f6b3f15e3051/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/aa/c2/e2/aac2e2ca-af16-746f-096c-60331a1f9453/01_home_promax.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c9/de/9c/c9de9c33-74ff-82d9-9e09-a392e1d9d2c9/02_quete_promax.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/0c/f6/27/0cf62763-dddb-5ace-3b15-697e609da14c/03_seance_promax.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/22/0d/a9/220da9d0-753b-8dde-d79a-e5f29f8ad2ee/04_profil_promax.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/3e/4d/57/3e4d5767-6f13-13f9-8959-f5ceda8a486e/01_home_ipad13.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/66/44/37/66443791-aa32-b694-de46-0caa200fe213/02_quete_ipad13.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/40/99/79/409979c2-4de4-d1c2-7845-192aeff39593/03_seance_ipad13.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/dc/a1/35/dca13552-c4e7-1cc6-8626-873b8b4ba45b/04_profil_ipad13.png/360x480bb.jpg"
+        ],
+        "version": "2",
+        "releaseDate": "2026-04-03T07:00:00Z",
+        "currentVersionReleaseDate": "2026-08-05T15:36:45Z",
+        "trackViewUrl": "https://apps.apple.com/us/app/fitgame-gamify-gym-and-sport/id6761538853?uo=4",
+        "minimumOsVersion": "26.2"
+      },
+      {
+        "trackId": 6761615625,
+        "trackName": "online strategy dot war",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Découvrez un jeu de points traditionnel malgache qui allie simplicité et profondeur stratégique. Placez vos points, créez des connexions intelligentes et anticipez les mouvements de votre adversaire pour prendre l’avantage.\n\nConçu pour les débutants comme pour les joueurs expérimentés, le jeu propose des contrôles intuitifs, une expérience fluide et une interface épurée pour rester concentré sur l’essentiel. Que vous cherchiez une partie rapide ou un défi stratégique plus long, ce jeu vous offre une expérience captivante inspirée de la culture malgache.\n\nJouez, réfléchissez et maîtrisez l’art de la connexion.",
+        "primaryGenreName": "Games",
+        "genres": [
+          "Games"
+        ],
+        "price": 0,
+        "formattedPrice": "Free",
+        "currency": "USD",
+        "averageUserRating": 0,
+        "userRatingCount": 0,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9d/a4/ed/9da4ed80-e54a-0e39-e3a7-263a19550603/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9d/a4/ed/9da4ed80-e54a-0e39-e3a7-263a19550603/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9b/52/d9/9b52d912-a529-7d3a-5ff7-b9d24cb19c2a/01-hero-1242x2688.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/5a/2f/26/5a2f2644-685c-b4e1-f839-2cbd79aeb9c3/02-modes-1242x2688.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2c/8e/22/2c8e222c-97f2-e666-f0d9-aa75b3a57ac8/03-gameplay-1242x2688.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ea/9d/66/ea9d665e-f969-62b6-817d-1a27821bfabd/04-competition-1242x2688.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/c2/eb/db/c2ebdb80-6a19-e649-e345-423d4cb61069/Simulator_Screenshot_-_iPad__U0028A16_U0029_-_2026-04-03_at_14.39.16_2064x2752.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/08/3b/1d/083b1d2c-f8ce-c0eb-3e50-da550d20aa90/Simulator_Screenshot_-_iPad__U0028A16_U0029_-_2026-04-03_at_14.39.03_2064x2752.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9d/ae/a0/9daea0d3-07dc-3b29-fb95-5851d7046d89/Simulator_Screenshot_-_iPad__U0028A16_U0029_-_2026-04-03_at_14.39.01_2064x2752.png/360x480bb.jpg"
+        ],
+        "version": "1.1",
+        "releaseDate": "2026-04-03T07:00:00Z",
+        "currentVersionReleaseDate": "2026-06-27T12:06:41Z",
+        "trackViewUrl": "https://apps.apple.com/us/app/online-strategy-dot-war/id6761615625?uo=4",
+        "minimumOsVersion": "26.2"
+      },
+      {
+        "trackId": 6781363751,
+        "trackName": "Vocabulaire Anglais Widget",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Vocabulaire Anglais t'aide à enrichir ton anglais sans effort, un mot à la fois — directement depuis ton écran d'accueil et ton écran verrouillé.\n\nLe cœur de l'app, ce sont ses widgets élégants : un nouveau mot anglais et sa traduction française apparaissent chaque heure, adaptés à ton niveau, du débutant (A1) à l'avancé (B2).\n\nCE QUE TU PEUX FAIRE\n• Widgets écran d'accueil ET écran verrouillé\n• Un mot qui change toutes les heures\n• Quatre niveaux : A1, A2, B1, B2\n• Glisse pour découvrir d'autres mots du jour\n• Marque les mots comme « appris » et suis ta progression\n• Rappel quotidien optionnel\n• Design soigné, ambiance carnet de cours\n\nSIMPLE ET RESPECTUEUX\n• 100 % hors ligne\n• Aucun compte requis\n• Aucune publicité, aucun pistage\n\nInstalle le widget, et apprends l'anglais sans même ouvrir l'app.",
+        "primaryGenreName": "Education",
+        "genres": [
+          "Education",
+          "Reference"
+        ],
+        "price": 0,
+        "formattedPrice": "Free",
+        "currency": "USD",
+        "averageUserRating": 0,
+        "userRatingCount": 0,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/58/5a/b0/585ab0db-ffc2-4ac5-5ee0-d2281c52e42a/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/58/5a/b0/585ab0db-ffc2-4ac5-5ee0-d2281c52e42a/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e3/3b/47/e33b47ea-94e1-6913-a39f-a7e49594c4d4/iphone_1.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/50/58/bf/5058bfc1-3c3a-8390-7f7a-6a66b551c6b9/iphone_2.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/79/82/bd/7982bde6-b98d-a6f1-e42d-d258777e1809/iphone_3.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/80/e9/18/80e918d2-921b-1354-4971-8fc946807dcd/iphone_4.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/16/c0/ef/16c0ef71-aa36-04b0-df2b-71a9bcdd20a5/iphone_5.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/1f/bb/b9/1fbbb972-5f41-892d-6caf-edee9757a8b1/iphone_6.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/bf/85/ee/bf85ee40-910c-c2ee-9040-ae68b1c87a66/ipad_1.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f3/46/25/f34625dd-66bb-bffc-7a76-57b7eed280b4/ipad_2.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e8/71/6b/e8716b64-519d-ea4e-d4b6-f8c61f008a04/ipad_3.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f1/c7/4a/f1c74a64-3e61-3fc1-7595-6dace2edc027/ipad_4.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a5/fa/1d/a5fa1de2-071a-1355-d8c5-d49a5d73b2a6/ipad_5.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b5/d5/ff/b5d5ffac-49f8-32c5-1141-a20c0bd41706/ipad_6.png/360x480bb.jpg"
+        ],
+        "version": "1.1",
+        "releaseDate": "2026-06-19T07:00:00Z",
+        "currentVersionReleaseDate": "2026-06-25T21:59:32Z",
+        "trackViewUrl": "https://apps.apple.com/us/app/vocabulaire-anglais-widget/id6781363751?uo=4",
+        "minimumOsVersion": "16.0"
+      },
+      {
+        "trackId": 6791636773,
+        "trackName": "Addicted to Reading: Gamified",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "DuoBook turns your PDF library into a daily reading habit. Import any PDF you own, set a simple daily page goal, and let DuoBook keep you accountable — Duolingo-style — with a win streak that grows every day you hit your target.\n\nNo account, no sign-up, no ads. Your books and your progress never leave your device.\n\nHOW IT WORKS\n\nDrop in your own PDFs — novels, textbooks, reports, whatever you're working through. DuoBook copies each file locally, generates a cover, and adds it to your shelf. Open a book, read at your own pace in a clean full-page PDF viewer, and DuoBook quietly tracks the pages you've read today.\n\nSet your daily objective (10 pages a day by default, fully adjustable) and watch a progress ring fill up as you read. Hit your goal and a pixel-art campfire lights up to celebrate — miss a day and your streak resets, just like the habit apps you already know.\n\nSTAY MOTIVATED\n\n- Daily win streak with a best-streak record, so you always know your all-time high\n- A dedicated Statistics screen: an activity calendar for the last 5 weeks and a bar chart of your last 7 days, so you can see your habit take shape\n- A home screen widget (via WidgetKit) that shows your current streak and how many pages are left today — no need to open the app to stay on track\n- A profile screen with your own avatar, name, and bio\n\nBUILT YOUR WAY\n\n- Import unlimited PDFs from anywhere on your device\n- Automatic page-by-page progress tracking as you read — pick up exactly where you left off\n- Light and dark mode, switchable anytime\n- A distinctive retro \"green terminal\" look: neon green on black, a pixel font, hand-picked pixel-art icons, and an animated dot-matrix navigation bar — DuoBook feels like nothing else on the App Store\n\nPRIVACY FIRST\n\nDuoBook doesn't ask for an account and doesn't show ads. Your PDFs, your reading stats, and your streak are stored entirely on your device (and synced to your widget through Apple's own App Group storage). Nothing is uploaded, nothing is tracked.\n\nWhether you're chipping away at a textbook, working through a backlog of novels, or just trying to read more consistently, DuoBook gives you the small daily nudge — and the streak to prove it — to actually finish what you start.\n\nDownload DuoBook and start your streak today.",
+        "primaryGenreName": "Book",
+        "genres": [
+          "Books",
+          "Productivity"
+        ],
+        "price": 0,
+        "formattedPrice": "Free",
+        "currency": "USD",
+        "averageUserRating": 0,
+        "userRatingCount": 0,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/66/d1/8a/66d18aa2-6c6f-888d-1c10-f6aef3ac04f7/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/66/d1/8a/66d18aa2-6c6f-888d-1c10-f6aef3ac04f7/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d9/c3/46/d9c34665-0c83-e4a7-87a3-1be6c8548aa8/iphone_01_Home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/96/a5/ab/96a5ab9e-1eec-014d-c806-d156ab3fb1ea/iphone_02_Reader.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/0c/98/97/0c989796-43fd-6c34-0f28-6ff76d466a50/iphone_03_Statistics.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/0b/0f/f0/0b0ff0a5-f130-2944-52fa-7ffa93fca048/iphone_04_Profile.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/54/7d/88/547d88ac-f87a-5ddc-2137-2ac86ec89b37/ipad_01_Home.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/af/68/20/af682052-9f2f-6223-5f54-77511894a9b6/ipad_02_Reader.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/10/01/68/10016897-ab7f-0875-4e26-9f712498d324/ipad_03_Statistics.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/8f/8c/9a/8f8c9aa5-2bbb-56cb-25a8-525f80979579/ipad_04_Profile.png/360x480bb.jpg"
+        ],
+        "version": "1.0",
+        "releaseDate": "2026-07-20T07:00:00Z",
+        "currentVersionReleaseDate": "2026-07-20T11:25:02Z",
+        "trackViewUrl": "https://apps.apple.com/us/app/addicted-to-reading-gamified/id6791636773?uo=4",
+        "minimumOsVersion": "18.5"
+      }
+    ]
+  }
+}

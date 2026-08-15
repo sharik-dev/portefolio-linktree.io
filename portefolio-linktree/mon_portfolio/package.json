@@ -12,7 +12,9 @@
     "deploy": "gh-pages -d dist",
     "deploy:vps": "npm run build && scp -P 2222 -r dist/* ubuntu@51.91.125.99:/var/www/sharik.fr/",
     "cv:generate": "node scripts/generate-cv-pdfs.cjs",
-    "cv:watch": "node scripts/generate-cv-pdfs.cjs --watch"
+    "cv:watch": "node scripts/generate-cv-pdfs.cjs --watch",
+    "apps:sync": "node scripts/fetch-appstore-apps.cjs",
+    "prebuild": "node scripts/fetch-appstore-apps.cjs || true"
   },
   "dependencies": {
     "@react-three/drei": "^10.0.7",

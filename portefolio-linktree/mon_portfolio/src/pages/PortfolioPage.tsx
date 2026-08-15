@@ -5,109 +5,8 @@ import TabletViewer from '../components/TabletViewer';
 import { useLang, t } from '../contexts/LangContext';
 import { useTheme } from '../contexts/ThemeContext';
 
-import guidorLogo from '../assets/guidor/logo.png';
-import guidorImg1 from '../assets/guidor/imageApp.png';
-import guidorImg2 from '../assets/guidor/imageApp2.png';
-import meowTubeIcon from '../assets/meowTube/appLogo.png';
-import meowTubeHome from '../assets/meowTube/AppHomePage.png';
-import meowTubeSecond from '../assets/meowTube/AppSecondPage.png';
-import islamicIcon from '../assets/islamic daily quote/logo.png';
-import islamicScreen1 from '../assets/islamic daily quote/firstImage.png';
-import islamicScreen2 from '../assets/islamic daily quote/second image.png';
-import islamicScreen3 from '../assets/islamic daily quote/thirst image.png';
-import jeuDePointScreen1 from '../assets/jeu de point/screenshoot/iPhone 17-01_Menu.png';
-import jeuDePointScreen2 from '../assets/jeu de point/screenshoot/iPhone 17-02_Game.png';
-import easyGymIcon from '../assets/easygym/logo.png';
-import easyGymScreen1 from '../assets/easygym/screen1.png';
-import easyGymScreen2 from '../assets/easygym/screen2.png';
-import easyGymScreen3 from '../assets/easygym/screen3.png';
-
-/* ─── Bilingual app data ─────────────────────────────────────────── */
-const APPS = [
-  {
-    id: 'guidor',
-    name: 'Guidor',
-    subtitle: { fr: 'Application aviation professionnelle', en: 'Professional aviation app' },
-    description: { fr: 'Guidor est une application aviation professionnelle destinée aux pilotes de ligne et opérateurs de vol. Elle analyse la route et l\'environnement en temps réel pour optimiser la planification et améliorer la sécurité à chaque phase du vol.', en: 'Guidor is a professional aviation app designed for airline pilots and flight operators. It analyzes the route and surrounding environment in real time to optimize flight planning and improve safety at every stage of the flight.' },
-    features: { fr: ['Visualisation route & profil vertical', 'Météo aviation (METAR, TAF, turbulences)', 'Mises à jour en temps réel (Wi-Fi bord)', 'Optimisation de route & altitude', 'Alertes turbulences & météo dangereuse', 'Intégration standards ARINC & avionique'], en: ['Route & vertical profile visualization', 'Aviation weather (METAR, TAF, turbulence)', 'Real-time updates (onboard Wi-Fi)', 'Route & altitude optimization', 'Turbulence & dangerous weather alerts', 'ARINC avionics integration'] },
-    price: { fr: 'Application professionnelle', en: 'Professional application' },
-    category: { fr: 'Aviation & Navigation', en: 'Aviation & Navigation' },
-    icon: guidorLogo,
-    screenshots: [guidorImg1, guidorImg2],
-    tech: ['iOS', 'Swift', 'Aviation APIs', 'ARINC'],
-    featured: true,
-    isNew: false,
-    rating: 4.8,
-    externalLink: 'https://www.guidor.fr/',
-    appStoreLink: 'https://apps.apple.com/fr/app/guidor/id1072066692',
-  },
-  {
-    id: 'meowtube',
-    name: 'Meow-Tube',
-    subtitle: { fr: 'Vidéo sans distraction, axé productivité', en: 'Distraction-free, productivity-first video' },
-    description: { fr: 'Application iOS de consultation de contenu multimédia type YouTube, sans Shorts, sans publicités et sans timer de temps passé. Conçue pour une consommation saine et productive de vidéos.', en: 'iOS app for browsing YouTube-style content — no Shorts, no ads, no screen-time tracking. Built for focused, healthy video consumption.' },
-    features: { fr: ['Zéro publicité', 'Sans vidéos courtes', 'Aucun suivi du temps', 'Interface épurée', 'Axé productivité'], en: ['Zero ads', 'No short-form content', 'No time tracking', 'Clean interface', 'Productivity focused'] },
-    price: { fr: 'Projet personnel', en: 'Personal project' },
-    category: { fr: 'Productivité & Vidéo', en: 'Productivity & Video' },
-    icon: meowTubeIcon,
-    screenshots: [meowTubeHome, meowTubeSecond],
-    tech: ['Swift', 'SwiftUI', 'AVFoundation', 'iOS'],
-    featured: true,
-    isNew: true,
-    rating: 4.9,
-    landingPage: '/meowtube',
-    appStoreLink: 'itms-apps://apps.apple.com/fr/app/meow-tube/id6760180650',
-  },
-  {
-    id: 'islamic-daily-quote',
-    name: 'Islamic Daily Quote',
-    subtitle: { fr: 'Citation islamique quotidienne', en: 'Daily Islamic quote' },
-    description: { fr: 'Application iOS proposant chaque jour une citation islamique tirée du Coran ou des Hadiths, en plusieurs langues. Conçue pour le bien-être spirituel et la pratique quotidienne.', en: 'iOS app offering a new Islamic quote every day from the Quran or Hadiths, in multiple languages. Designed for spiritual wellness and daily practice.' },
-    features: { fr: ['Citation quotidienne (Coran & Hadiths)', 'Traduction multilingue', 'Interface épurée & apaisante', 'Notifications journalières', 'Partage de citations', 'Mode sombre'], en: ['Daily quote (Quran & Hadiths)', 'Multilingual translation', 'Clean & calming interface', 'Daily notifications', 'Share quotes', 'Dark mode'] },
-    price: { fr: 'Projet personnel', en: 'Personal project' },
-    category: { fr: 'Spiritualité & Bien-être', en: 'Spirituality & Wellness' },
-    icon: islamicIcon,
-    screenshots: [islamicScreen1, islamicScreen2, islamicScreen3],
-    tech: ['Swift', 'SwiftUI', 'iOS'],
-    featured: true,
-    isNew: true,
-    rating: 4.8,
-    landingPage: '/islamic-daily-quote',
-    appStoreLink: 'https://apps.apple.com/fr/app/islamic-daily-quote/id6760481474',
-  },
-  {
-    id: 'easy-gym',
-    name: 'easy-Gym',
-    subtitle: { fr: 'Sport à domicile pour tous niveaux', en: 'Home workout for all fitness levels' },
-    description: { fr: 'Restez en forme sans quitter votre domicile. easy-Gym propose une variété d\'exercices adaptés à tous les niveaux, sans aucun équipement. Suivez vos progrès et améliorez votre force, votre souplesse et votre endurance avec des routines simples à suivre.', en: 'Stay fit without leaving home. easy-Gym offers a variety of exercises suited to all levels, with no equipment needed. Track your progress and improve your strength, flexibility, and endurance with easy-to-follow routines.' },
-    features: { fr: ['Exercices pour tous les niveaux', 'Aucun équipement requis', 'Suivi des séries, reps & repos', 'Ciblage musculaire détaillé', 'Routines simples à suivre', 'Mode sombre'], en: ['Exercises for all levels', 'No equipment required', 'Sets, reps & rest tracking', 'Detailed muscle targeting', 'Easy-to-follow routines', 'Dark mode'] },
-    price: { fr: 'Gratuit', en: 'Free' },
-    category: { fr: 'Forme & Bien-être', en: 'Health & Fitness' },
-    icon: easyGymIcon,
-    screenshots: [easyGymScreen1, easyGymScreen2, easyGymScreen3],
-    tech: ['Swift', 'SwiftUI', 'iOS'],
-    featured: true,
-    isNew: true,
-    rating: 0,
-    appStoreLink: 'itms-apps://apps.apple.com/fr/app/easy-gym/id6761538853?l=en-GB',
-  },
-  {
-    id: 'jeu-de-point',
-    name: 'Jeu de Point',
-    subtitle: { fr: 'Jeu de points traditionnel malgache', en: 'Traditional Malagasy strategy game' },
-    description: { fr: 'Découvrez un jeu de points traditionnel malgache qui allie simplicité et profondeur stratégique. Placez vos points, créez des connexions intelligentes et anticipez les mouvements de votre adversaire.', en: 'Discover a traditional Malagasy point-based game combining simplicity and strategic depth. Place your points, create intelligent connections, and anticipate your opponent\'s moves.' },
-    features: { fr: ['Jeu de stratégie traditionnel', 'Contrôles intuitifs', 'Interface épurée', 'Parties rapides ou longues', 'Zéro donnée collectée'], en: ['Traditional strategy game', 'Intuitive controls', 'Clean interface', 'Quick or lengthy matches', 'Zero data collected'] },
-    price: { fr: 'Gratuit', en: 'Free' },
-    category: { fr: 'Jeux & Stratégie', en: 'Games & Strategy' },
-    icon: 'https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b5/9c/a3/b59ca3fd-fa0a-6ecf-c7b0-89b0beb9a74e/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg',
-    screenshots: [jeuDePointScreen1, jeuDePointScreen2],
-    tech: ['Swift', 'SwiftUI', 'iOS'],
-    featured: true,
-    isNew: true,
-    rating: 0,
-    appStoreLink: 'itms-apps://apps.apple.com/fr/app/jeu-de-point/id6761615625',
-  },
-];
+import { useAppStoreApps } from '../hooks/useAppStoreApps';
+import type { PortfolioApp } from '../data/appstoreApps';
 
 /* ─── In-progress projects ───────────────────────────────────────── */
 const IN_PROGRESS_APPS = [
@@ -128,6 +27,9 @@ const UI = {
     download: 'Voir le projet', contact: 'Discutons',
     inProgress: 'Projets en cours', comingSoon: 'Bientôt', completed: 'Terminé',
     appStoreDownload: 'Télécharger',
+    syncing: 'Synchronisation avec l\u2019App Store…',
+    synced: 'Synchronisé avec l\u2019App Store',
+    appsCount: 'apps publiées',
   },
   en: {
     eyebrow: 'My work', title: 'Mobile Apps',
@@ -140,6 +42,9 @@ const UI = {
     download: 'See project', contact: "Let's talk",
     inProgress: 'In progress', comingSoon: 'Coming soon', completed: 'Completed',
     appStoreDownload: 'Download',
+    syncing: 'Syncing with the App Store…',
+    synced: 'Synced with the App Store',
+    appsCount: 'published apps',
   },
 };
 
@@ -156,16 +61,16 @@ const Stars: React.FC<{ rating: number }> = ({ rating }) => (
   </div>
 );
 
-const AppCard: React.FC<{ app: typeof APPS[0]; lang: 'fr' | 'en'; ui: typeof UI['fr']; onClick: () => void }> = ({ app, lang, ui, onClick }) => (
+const AppCard: React.FC<{ app: PortfolioApp; lang: 'fr' | 'en'; ui: typeof UI['fr']; onClick: () => void }> = ({ app, lang, ui, onClick }) => (
   <motion.div whileHover={{ y: -4 }} whileTap={{ scale: 0.97 }} onClick={onClick}
     className="bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl p-4 cursor-pointer shadow-sm hover:shadow-md transition-shadow duration-200 inline-block w-[156px] mr-4 align-top">
-    <img src={app.icon} alt={app.name} className="w-20 h-20 rounded-[20px] object-cover shadow-sm mb-3 mx-auto" />
+    <img src={app.icon} alt={t(lang, app.name.fr, app.name.en)} className="w-20 h-20 rounded-[20px] object-cover shadow-sm mb-3 mx-auto" />
     <div className="text-center">
       <div className="flex justify-center gap-1 mb-1.5 flex-wrap">
         {app.featured && <span className="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-[#FF9F0A]/10 text-[#CC7A00]">{ui.getFeatured}</span>}
         {app.isNew && <span className="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-[#34C759]/10 text-[#27AE60]">{ui.getNew}</span>}
       </div>
-      <h3 className="text-[13px] font-semibold text-[#1D1D1F] dark:text-white tracking-tight mb-0.5">{app.name}</h3>
+      <h3 className="text-[13px] font-semibold text-[#1D1D1F] dark:text-white tracking-tight mb-0.5">{t(lang, app.name.fr, app.name.en)}</h3>
       <p className="text-[11px] text-[#6E6E73] dark:text-[#98989D] leading-tight mb-2">{t(lang, app.subtitle.fr, app.subtitle.en)}</p>
       <Stars rating={app.rating} />
       <p className="text-[11px] text-[#0071E3] font-medium mt-1.5">{t(lang, app.price.fr, app.price.en)}</p>
@@ -173,7 +78,7 @@ const AppCard: React.FC<{ app: typeof APPS[0]; lang: 'fr' | 'en'; ui: typeof UI[
   </motion.div>
 );
 
-const AppModal: React.FC<{ app: typeof APPS[0]; lang: 'fr' | 'en'; ui: typeof UI['fr']; onClose: () => void }> = ({ app, lang, ui, onClose }) => {
+const AppModal: React.FC<{ app: PortfolioApp; lang: 'fr' | 'en'; ui: typeof UI['fr']; onClose: () => void }> = ({ app, lang, ui, onClose }) => {
   const navigate = useNavigate();
   const { theme } = useTheme();
   const hasLanding = 'landingPage' in app && typeof (app as any).landingPage === 'string';
@@ -266,10 +171,10 @@ const AppModal: React.FC<{ app: typeof APPS[0]; lang: 'fr' | 'en'; ui: typeof UI
 
           {/* ── Header ── */}
           <div className="flex items-start gap-4 mb-5 pr-8">
-            <img src={app.icon} alt={app.name}
+            <img src={app.icon} alt={t(lang, app.name.fr, app.name.en)}
               className="w-[88px] h-[88px] rounded-[20px] shadow-xl flex-shrink-0 object-cover" />
             <div className="flex-1 min-w-0">
-              <h2 className="text-[22px] font-bold text-[#1D1D1F] dark:text-white tracking-tight leading-tight">{app.name}</h2>
+              <h2 className="text-[22px] font-bold text-[#1D1D1F] dark:text-white tracking-tight leading-tight">{t(lang, app.name.fr, app.name.en)}</h2>
               <p className="text-[14px] text-[#6E6E73] dark:text-[#8E8E93] mt-0.5 mb-3">{t(lang, app.subtitle.fr, app.subtitle.en)}</p>
               <div className="flex items-center gap-2 flex-wrap">
                 {actionBtn}
@@ -350,8 +255,12 @@ const AppModal: React.FC<{ app: typeof APPS[0]; lang: 'fr' | 'en'; ui: typeof UI
 const PortfolioPage: React.FC = () => {
   const { lang } = useLang();
   const ui = UI[lang];
-  const [selectedApp, setSelectedApp] = useState<typeof APPS[0] | null>(null);
+  const { apps: APPS, refreshing } = useAppStoreApps();
+  const [selectedApp, setSelectedApp] = useState<PortfolioApp | null>(null);
   const [tabletIndex, setTabletIndex] = useState(0);
+
+  // La liste vient d'Apple : sa taille peut changer entre deux rendus.
+  const tabletApp = APPS[Math.min(tabletIndex, Math.max(APPS.length - 1, 0))];
 
   return (
     <div className="min-h-screen bg-[#E8E8ED] dark:bg-black transition-colors duration-300">
@@ -361,12 +270,16 @@ const PortfolioPage: React.FC = () => {
         <p className="text-[12px] font-semibold text-[#0071E3] uppercase tracking-[0.12em] mb-2">{ui.eyebrow}</p>
         <h1 className="text-4xl md:text-5xl font-bold text-[#1D1D1F] dark:text-white tracking-tight mb-3">{ui.title}</h1>
         <p className="text-base text-[#6E6E73] dark:text-[#98989D] max-w-md mx-auto">{ui.subtitle}</p>
+        <p className="text-[11px] text-[#86868B] dark:text-[#636366] mt-3 flex items-center justify-center gap-1.5">
+          <span className={`w-1.5 h-1.5 rounded-full ${refreshing ? 'bg-[#FF9F0A] animate-pulse' : 'bg-[#34C759]'}`} />
+          {refreshing ? ui.syncing : `${ui.synced} · ${APPS.length} ${ui.appsCount}`}
+        </p>
       </header>
 
       <div className="max-w-5xl mx-auto px-5 md:px-8 py-10 space-y-14">
 
         {/* 3D Tablet */}
-        <section>
+        {tabletApp && <section>
           <h2 className="text-2xl font-bold text-[#1D1D1F] dark:text-white tracking-tight mb-5">{ui.preview3d}</h2>
           <div className="bg-white dark:bg-[#1C1C1E] rounded-3xl border border-black/[0.10] dark:border-white/[0.06] shadow-sm p-6">
 
@@ -390,8 +303,8 @@ const PortfolioPage: React.FC = () => {
               <div className="mx-12 sm:mx-14 flex justify-center">
                 <div className="w-full max-w-[340px]">
                   <TabletViewer
-                    screenshots={APPS[tabletIndex].screenshots}
-                    landscape={APPS[tabletIndex].id === 'guidor'}
+                    screenshots={tabletApp.screenshots}
+                    landscape={tabletApp.landscape ?? false}
                   />
                 </div>
               </div>
@@ -399,16 +312,16 @@ const PortfolioPage: React.FC = () => {
 
             {/* Infos app — hors du wrapper pour que top-1/2 des flèches reste sur le viewer */}
             <div className="text-center mt-3">
-              <h3 className="font-semibold text-[#1D1D1F] dark:text-white text-[15px]">{APPS[tabletIndex].name}</h3>
-              <p className="text-[12px] text-[#6E6E73] dark:text-[#98989D]">{t(lang, APPS[tabletIndex].subtitle.fr, APPS[tabletIndex].subtitle.en)}</p>
+              <h3 className="font-semibold text-[#1D1D1F] dark:text-white text-[15px]">{t(lang, tabletApp.name.fr, tabletApp.name.en)}</h3>
+              <p className="text-[12px] text-[#6E6E73] dark:text-[#98989D]">{t(lang, tabletApp.subtitle.fr, tabletApp.subtitle.en)}</p>
               <p className="text-[10px] text-[#86868B] mt-1">{ui.hint}</p>
-              <button onClick={() => setSelectedApp(APPS[tabletIndex])}
+              <button onClick={() => setSelectedApp(tabletApp)}
                 className="mt-3 bg-[#0071E3] text-white text-[13px] font-medium px-5 py-2 rounded-full hover:bg-[#0077ED] transition-colors">
                 {ui.details}
               </button>
             </div>
           </div>
-        </section>
+        </section>}
 
         {/* Featured */}
         <section>
@@ -430,8 +343,8 @@ const PortfolioPage: React.FC = () => {
               <motion.div key={app.id} whileHover={{ y: -4 }} whileTap={{ scale: 0.97 }}
                 onClick={() => setSelectedApp(app)}
                 className="bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl p-4 cursor-pointer shadow-sm hover:shadow-md transition-shadow">
-                <img src={app.icon} alt={app.name} className="w-14 h-14 rounded-2xl object-cover shadow-sm mb-3" />
-                <h3 className="text-[13px] font-semibold text-[#1D1D1F] dark:text-white tracking-tight">{app.name}</h3>
+                <img src={app.icon} alt={t(lang, app.name.fr, app.name.en)} className="w-14 h-14 rounded-2xl object-cover shadow-sm mb-3" />
+                <h3 className="text-[13px] font-semibold text-[#1D1D1F] dark:text-white tracking-tight">{t(lang, app.name.fr, app.name.en)}</h3>
                 <p className="text-[11px] text-[#6E6E73] dark:text-[#98989D] mt-0.5 mb-2">{t(lang, app.subtitle.fr, app.subtitle.en)}</p>
                 <div className="flex flex-wrap gap-1 mb-2">
                   {app.tech.slice(0, 2).map(t => (

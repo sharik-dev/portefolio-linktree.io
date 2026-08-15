@@ -28,6 +28,9 @@ jobs:
         working-directory: ./portefolio-linktree/mon_portfolio
         env:
           VITE_BASE: /
+          # Sans ce secret, le bundle part avec token=undefined et /dash
+          # se retrouve vide (l'API visitors répond 401).
+          VITE_VISITORS_TOKEN: ${{ secrets.VISITORS_TOKEN }}
         run: npm run build
 
       - name: Clear target folder

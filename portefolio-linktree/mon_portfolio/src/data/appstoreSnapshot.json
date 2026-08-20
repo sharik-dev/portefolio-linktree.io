@@ -1,6 +1,6 @@
 {
   "artistId": "1816768480",
-  "generatedAt": "2026-08-15T16:53:28.262Z",
+  "generatedAt": "2026-08-20T08:48:12.087Z",
   "storefronts": {
     "fr": [
       {
@@ -271,6 +271,46 @@
         "currentVersionReleaseDate": "2026-07-20T11:25:02Z",
         "trackViewUrl": "https://apps.apple.com/fr/app/duobook-read-every-day/id6791636773?uo=4",
         "minimumOsVersion": "18.5"
+      },
+      {
+        "trackId": 6801350476,
+        "trackName": "Last Soldier: Crowd Runner",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Rien, sur ce pont, ne vaut quoi que ce soit tant qu'on ne lui a pas tiré dessus.\n\nVotre foule avance seule, à vitesse constante, sans fin. Le pouce ne fait que la déplacer en travers. Et tout le jeu tient dans une seule question, posée en continu : où j'envoie mes balles ?\n\nLES PORTES NE SONT PAS DES PIÈGES, CE SONT DES CHANTIERS\nUne porte arrive à zéro, ou en négatif. On la mitraille et elle monte d'un cran : +1, +2, +3. La foule tire droit devant elle : la seule façon d'en nourrir une est de se mettre en face. Une porte rouge n'est donc pas quelque chose à éviter. C'est un chantier, et c'est la seule chose que ce jeu ait à vous apprendre.\n\nChaque porte donne aussi une troupe : fusilier, bazooka, éclaireur, char, hélicoptère, bombardier. Elle l'annonce par une carte qui flotte au-dessus du portique, portant le vrai modèle, figé de trois quarts. Parce que +2 de chars ne se compare pas à +3 de fusiliers, et qu'une rangée de portes ne doit pas être une addition.\n\nLES CAISSES ARRIVENT PAR DEUX, DONC IL FAUT RENONCER\nLes armes sont enfermées dans des piles de pneus, le prix écrit dessus. Ramasser deux fois la même arme la fait monter d'un niveau. En ramasser une autre remet le compteur à un.\nElles tombent à deux, dans deux voies différentes. La foule ne tire que sur trois mètres de front, et deux voies voisines en font davantage. On en prend donc une et on perd l'autre, à chaque fois. C'est la seule décision à long terme du jeu, et elle tire contre la curiosité.\n\nSEPT ARMES QUI NE SONT PAS D'ACCORD ENTRE ELLES\nLe bazooka et le mortier portent une ogive qui emporte tout ce que le disque couvre, le dégât décroissant vers le bord. Le rayon est l'autre bout du même axe : trois bouches, la cadence la plus rapide du jeu, un dégât ridicule par trait, et huit corps enfilés d'une seule ligne. La pire arme du catalogue sur une porte isolée. La meilleure sur une colonne.\nUne arme lourde change aussi le corps qui la porte. Des roquettes qui sortent d'un fusil d'assaut étaient la dernière chose de la piste qui ne se lisait pas.\n\nLES HORDES RIPOSTENT\nLes vagues arrivent sans fin et foncent droit sur vous. Un ennemi au contact emporte un coureur et meurt avec lui : l'échange est toujours de un pour un, parce que l'effectif EST la barre de vie. Et elles tirent, dans une fenêtre étroite devant la foule.\n\nPortes, caisses et hordes se disputent le même feu, et ce feu est fini. Toute la tension vient de cette concurrence. Elle ne demande ni boss, ni niveaux, ni ligne d'arrivée.\n\nAUCUNE PARTIE NE RESSEMBLE À LA PRÉCÉDENTE\nLa piste est tirée au sort à chaque partie : rien à apprendre par cœur. Quand l'effectif tombe à zéro, c'est fini, et le score est la seule note. Le meilleur score et la plus longue marche sont conservés.\n\nPortrait, un pouce, sans compte. Sept langues.",
+        "primaryGenreName": "Games",
+        "genres": [
+          "Jeux",
+          "Parties rapides",
+          "Action"
+        ],
+        "price": 0,
+        "formattedPrice": "Gratuit",
+        "currency": "EUR",
+        "averageUserRating": 5,
+        "userRatingCount": 1,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e3/70/34/e370344d-709b-6117-1fb8-7f7614811e73/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e3/70/34/e370344d-709b-6117-1fb8-7f7614811e73/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/50/80/11/508011a8-3d97-ff9e-017d-7dbb120eb4e9/1_gates.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a8/5f/0d/a85f0db3-6a88-afb0-2694-31a26f134cf7/2_bazooka.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b9/ff/d5/b9ffd585-6980-a2a9-771c-066a8f7ebecc/3_laser.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ee/c1/1e/eec11e09-a622-7705-a0d6-775e0b72374d/4_crowd.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/e1/53/04/e15304af-03b8-4fc6-1e6a-c75013f8388b/5_title.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/02/23/bd/0223bdda-841c-9615-f87e-08ff53c02e72/1_gates_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4c/7e/7b/4c7e7bc1-3495-85ed-2463-abce9e82b244/2_bazooka_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a0/99/2d/a0992dc0-8e85-4501-3921-939f3ea30d2b/3_laser_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a2/09/97/a20997a5-0671-08dd-04ad-046ad47e3957/4_crowd_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/0e/a2/a6/0ea2a649-2e57-7b47-ac72-fbf16e9ae16b/5_title_ipad.png/360x480bb.jpg"
+        ],
+        "version": "1.0",
+        "releaseDate": "2026-08-18T07:00:00Z",
+        "currentVersionReleaseDate": "2026-08-18T15:02:06Z",
+        "trackViewUrl": "https://apps.apple.com/fr/app/last-soldier-crowd-runner/id6801350476?uo=4",
+        "minimumOsVersion": "15.0"
       }
     ],
     "us": [
@@ -353,6 +393,43 @@
         "minimumOsVersion": "13.0"
       },
       {
+        "trackId": 6791636773,
+        "trackName": "Addicted to Reading: Gamified",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "DuoBook turns your PDF library into a daily reading habit. Import any PDF you own, set a simple daily page goal, and let DuoBook keep you accountable — Duolingo-style — with a win streak that grows every day you hit your target.\n\nNo account, no sign-up, no ads. Your books and your progress never leave your device.\n\nHOW IT WORKS\n\nDrop in your own PDFs — novels, textbooks, reports, whatever you're working through. DuoBook copies each file locally, generates a cover, and adds it to your shelf. Open a book, read at your own pace in a clean full-page PDF viewer, and DuoBook quietly tracks the pages you've read today.\n\nSet your daily objective (10 pages a day by default, fully adjustable) and watch a progress ring fill up as you read. Hit your goal and a pixel-art campfire lights up to celebrate — miss a day and your streak resets, just like the habit apps you already know.\n\nSTAY MOTIVATED\n\n- Daily win streak with a best-streak record, so you always know your all-time high\n- A dedicated Statistics screen: an activity calendar for the last 5 weeks and a bar chart of your last 7 days, so you can see your habit take shape\n- A home screen widget (via WidgetKit) that shows your current streak and how many pages are left today — no need to open the app to stay on track\n- A profile screen with your own avatar, name, and bio\n\nBUILT YOUR WAY\n\n- Import unlimited PDFs from anywhere on your device\n- Automatic page-by-page progress tracking as you read — pick up exactly where you left off\n- Light and dark mode, switchable anytime\n- A distinctive retro \"green terminal\" look: neon green on black, a pixel font, hand-picked pixel-art icons, and an animated dot-matrix navigation bar — DuoBook feels like nothing else on the App Store\n\nPRIVACY FIRST\n\nDuoBook doesn't ask for an account and doesn't show ads. Your PDFs, your reading stats, and your streak are stored entirely on your device (and synced to your widget through Apple's own App Group storage). Nothing is uploaded, nothing is tracked.\n\nWhether you're chipping away at a textbook, working through a backlog of novels, or just trying to read more consistently, DuoBook gives you the small daily nudge — and the streak to prove it — to actually finish what you start.\n\nDownload DuoBook and start your streak today.",
+        "primaryGenreName": "Book",
+        "genres": [
+          "Books",
+          "Productivity"
+        ],
+        "price": 0,
+        "formattedPrice": "Free",
+        "currency": "USD",
+        "averageUserRating": 0,
+        "userRatingCount": 0,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/66/d1/8a/66d18aa2-6c6f-888d-1c10-f6aef3ac04f7/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/66/d1/8a/66d18aa2-6c6f-888d-1c10-f6aef3ac04f7/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d9/c3/46/d9c34665-0c83-e4a7-87a3-1be6c8548aa8/iphone_01_Home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/96/a5/ab/96a5ab9e-1eec-014d-c806-d156ab3fb1ea/iphone_02_Reader.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/0c/98/97/0c989796-43fd-6c34-0f28-6ff76d466a50/iphone_03_Statistics.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/0b/0f/f0/0b0ff0a5-f130-2944-52fa-7ffa93fca048/iphone_04_Profile.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/54/7d/88/547d88ac-f87a-5ddc-2137-2ac86ec89b37/ipad_01_Home.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/af/68/20/af682052-9f2f-6223-5f54-77511894a9b6/ipad_02_Reader.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/10/01/68/10016897-ab7f-0875-4e26-9f712498d324/ipad_03_Statistics.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/8f/8c/9a/8f8c9aa5-2bbb-56cb-25a8-525f80979579/ipad_04_Profile.png/360x480bb.jpg"
+        ],
+        "version": "1.0",
+        "releaseDate": "2026-07-20T07:00:00Z",
+        "currentVersionReleaseDate": "2026-07-20T11:25:02Z",
+        "trackViewUrl": "https://apps.apple.com/us/app/addicted-to-reading-gamified/id6791636773?uo=4",
+        "minimumOsVersion": "18.5"
+      },
+      {
         "trackId": 6760481474,
         "trackName": "Islamic Daily Quote",
         "artistId": 1816768480,
@@ -389,6 +466,41 @@
         "minimumOsVersion": "26.1"
       },
       {
+        "trackId": 6761615625,
+        "trackName": "online strategy dot war",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Découvrez un jeu de points traditionnel malgache qui allie simplicité et profondeur stratégique. Placez vos points, créez des connexions intelligentes et anticipez les mouvements de votre adversaire pour prendre l’avantage.\n\nConçu pour les débutants comme pour les joueurs expérimentés, le jeu propose des contrôles intuitifs, une expérience fluide et une interface épurée pour rester concentré sur l’essentiel. Que vous cherchiez une partie rapide ou un défi stratégique plus long, ce jeu vous offre une expérience captivante inspirée de la culture malgache.\n\nJouez, réfléchissez et maîtrisez l’art de la connexion.",
+        "primaryGenreName": "Games",
+        "genres": [
+          "Games"
+        ],
+        "price": 0,
+        "formattedPrice": "Free",
+        "currency": "USD",
+        "averageUserRating": 0,
+        "userRatingCount": 0,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9d/a4/ed/9da4ed80-e54a-0e39-e3a7-263a19550603/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9d/a4/ed/9da4ed80-e54a-0e39-e3a7-263a19550603/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9b/52/d9/9b52d912-a529-7d3a-5ff7-b9d24cb19c2a/01-hero-1242x2688.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/5a/2f/26/5a2f2644-685c-b4e1-f839-2cbd79aeb9c3/02-modes-1242x2688.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2c/8e/22/2c8e222c-97f2-e666-f0d9-aa75b3a57ac8/03-gameplay-1242x2688.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ea/9d/66/ea9d665e-f969-62b6-817d-1a27821bfabd/04-competition-1242x2688.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/c2/eb/db/c2ebdb80-6a19-e649-e345-423d4cb61069/Simulator_Screenshot_-_iPad__U0028A16_U0029_-_2026-04-03_at_14.39.16_2064x2752.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/08/3b/1d/083b1d2c-f8ce-c0eb-3e50-da550d20aa90/Simulator_Screenshot_-_iPad__U0028A16_U0029_-_2026-04-03_at_14.39.03_2064x2752.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9d/ae/a0/9daea0d3-07dc-3b29-fb95-5851d7046d89/Simulator_Screenshot_-_iPad__U0028A16_U0029_-_2026-04-03_at_14.39.01_2064x2752.png/360x480bb.jpg"
+        ],
+        "version": "1.1",
+        "releaseDate": "2026-04-03T07:00:00Z",
+        "currentVersionReleaseDate": "2026-06-27T12:06:41Z",
+        "trackViewUrl": "https://apps.apple.com/us/app/online-strategy-dot-war/id6761615625?uo=4",
+        "minimumOsVersion": "26.2"
+      },
+      {
         "trackId": 6761538853,
         "trackName": "FitGame : Gamify gym and sport",
         "artistId": 1816768480,
@@ -422,41 +534,6 @@
         "releaseDate": "2026-04-03T07:00:00Z",
         "currentVersionReleaseDate": "2026-08-05T15:36:45Z",
         "trackViewUrl": "https://apps.apple.com/us/app/fitgame-gamify-gym-and-sport/id6761538853?uo=4",
-        "minimumOsVersion": "26.2"
-      },
-      {
-        "trackId": 6761615625,
-        "trackName": "online strategy dot war",
-        "artistId": 1816768480,
-        "artistName": "Abubucker Siddeek Mohamed Sharik",
-        "sellerName": "Abubucker Siddeek Mohamed Sharik",
-        "description": "Découvrez un jeu de points traditionnel malgache qui allie simplicité et profondeur stratégique. Placez vos points, créez des connexions intelligentes et anticipez les mouvements de votre adversaire pour prendre l’avantage.\n\nConçu pour les débutants comme pour les joueurs expérimentés, le jeu propose des contrôles intuitifs, une expérience fluide et une interface épurée pour rester concentré sur l’essentiel. Que vous cherchiez une partie rapide ou un défi stratégique plus long, ce jeu vous offre une expérience captivante inspirée de la culture malgache.\n\nJouez, réfléchissez et maîtrisez l’art de la connexion.",
-        "primaryGenreName": "Games",
-        "genres": [
-          "Games"
-        ],
-        "price": 0,
-        "formattedPrice": "Free",
-        "currency": "USD",
-        "averageUserRating": 0,
-        "userRatingCount": 0,
-        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9d/a4/ed/9da4ed80-e54a-0e39-e3a7-263a19550603/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
-        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9d/a4/ed/9da4ed80-e54a-0e39-e3a7-263a19550603/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
-        "screenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9b/52/d9/9b52d912-a529-7d3a-5ff7-b9d24cb19c2a/01-hero-1242x2688.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/5a/2f/26/5a2f2644-685c-b4e1-f839-2cbd79aeb9c3/02-modes-1242x2688.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2c/8e/22/2c8e222c-97f2-e666-f0d9-aa75b3a57ac8/03-gameplay-1242x2688.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ea/9d/66/ea9d665e-f969-62b6-817d-1a27821bfabd/04-competition-1242x2688.png/320x480bb.jpg"
-        ],
-        "ipadScreenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/c2/eb/db/c2ebdb80-6a19-e649-e345-423d4cb61069/Simulator_Screenshot_-_iPad__U0028A16_U0029_-_2026-04-03_at_14.39.16_2064x2752.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/08/3b/1d/083b1d2c-f8ce-c0eb-3e50-da550d20aa90/Simulator_Screenshot_-_iPad__U0028A16_U0029_-_2026-04-03_at_14.39.03_2064x2752.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9d/ae/a0/9daea0d3-07dc-3b29-fb95-5851d7046d89/Simulator_Screenshot_-_iPad__U0028A16_U0029_-_2026-04-03_at_14.39.01_2064x2752.png/360x480bb.jpg"
-        ],
-        "version": "1.1",
-        "releaseDate": "2026-04-03T07:00:00Z",
-        "currentVersionReleaseDate": "2026-06-27T12:06:41Z",
-        "trackViewUrl": "https://apps.apple.com/us/app/online-strategy-dot-war/id6761615625?uo=4",
         "minimumOsVersion": "26.2"
       },
       {
@@ -501,41 +578,44 @@
         "minimumOsVersion": "16.0"
       },
       {
-        "trackId": 6791636773,
-        "trackName": "Addicted to Reading: Gamified",
+        "trackId": 6801350476,
+        "trackName": "Last Soldier: Crowd Runner",
         "artistId": 1816768480,
         "artistName": "Abubucker Siddeek Mohamed Sharik",
         "sellerName": "Abubucker Siddeek Mohamed Sharik",
-        "description": "DuoBook turns your PDF library into a daily reading habit. Import any PDF you own, set a simple daily page goal, and let DuoBook keep you accountable — Duolingo-style — with a win streak that grows every day you hit your target.\n\nNo account, no sign-up, no ads. Your books and your progress never leave your device.\n\nHOW IT WORKS\n\nDrop in your own PDFs — novels, textbooks, reports, whatever you're working through. DuoBook copies each file locally, generates a cover, and adds it to your shelf. Open a book, read at your own pace in a clean full-page PDF viewer, and DuoBook quietly tracks the pages you've read today.\n\nSet your daily objective (10 pages a day by default, fully adjustable) and watch a progress ring fill up as you read. Hit your goal and a pixel-art campfire lights up to celebrate — miss a day and your streak resets, just like the habit apps you already know.\n\nSTAY MOTIVATED\n\n- Daily win streak with a best-streak record, so you always know your all-time high\n- A dedicated Statistics screen: an activity calendar for the last 5 weeks and a bar chart of your last 7 days, so you can see your habit take shape\n- A home screen widget (via WidgetKit) that shows your current streak and how many pages are left today — no need to open the app to stay on track\n- A profile screen with your own avatar, name, and bio\n\nBUILT YOUR WAY\n\n- Import unlimited PDFs from anywhere on your device\n- Automatic page-by-page progress tracking as you read — pick up exactly where you left off\n- Light and dark mode, switchable anytime\n- A distinctive retro \"green terminal\" look: neon green on black, a pixel font, hand-picked pixel-art icons, and an animated dot-matrix navigation bar — DuoBook feels like nothing else on the App Store\n\nPRIVACY FIRST\n\nDuoBook doesn't ask for an account and doesn't show ads. Your PDFs, your reading stats, and your streak are stored entirely on your device (and synced to your widget through Apple's own App Group storage). Nothing is uploaded, nothing is tracked.\n\nWhether you're chipping away at a textbook, working through a backlog of novels, or just trying to read more consistently, DuoBook gives you the small daily nudge — and the streak to prove it — to actually finish what you start.\n\nDownload DuoBook and start your streak today.",
-        "primaryGenreName": "Book",
+        "description": "Nothing on this bridge is worth anything until you have shot at it.\n\nYour crowd runs forward on its own, at a constant speed, forever. Your thumb only moves it sideways. And the whole game is one question, asked without pause: where do I send my fire?\n\nGATES ARE NOT TRAPS, THEY ARE WORK\nA gate arrives at zero, or below it. Shoot it and it climbs: +1, +2, +3. Your crowd only fires straight ahead, so the only way to feed a gate is to stand in front of it. A red gate is not something to dodge. It is a building site, and it is the only thing this game has to teach you.\n\nEvery gate also hands you a troop: rifleman, bazooka, scout, tank, helicopter, bomber. It announces which one on a card floating above the frame, carrying the real model, turned three-quarters. Because +2 tanks does not compare to +3 riflemen by arithmetic, and a row of gates should not be a sum.\n\nCRATES COME IN PAIRS, SO YOU HAVE TO GIVE ONE UP\nWeapons are locked in stacks of tyres with the price written on them. Take the same weapon twice and it levels up. Take a different one and the counter drops back to one.\nThey land two at a time, in two different lanes. Your crowd only fires across three metres of front, and two neighbouring lanes are wider than that. So you take one and you lose the other, every time. That is the only long-term decision in the game, and it pulls against your curiosity.\n\nSEVEN WEAPONS THAT DISAGREE WITH EACH OTHER\nThe bazooka and the mortar carry a blast that takes everything the disc covers, damage falling off toward the edge. The laser is the far end of the same axis: three barrels, the fastest rate of fire in the game, a ridiculous damage per shot, and eight bodies threaded on a single line. The worst weapon in the catalogue against one gate. The best one against a column.\nA heavy weapon also changes the body carrying it. Rockets coming out of an assault rifle was the last thing on this bridge that did not read.\n\nTHE HORDES SHOOT BACK\nWaves arrive without end and run straight at you. An enemy who reaches you takes one runner with him and dies: the trade is always one for one, because your headcount IS your health bar. And they fire back, into a narrow window right in front of your crowd.\n\nGates, crates and hordes all compete for the same fire, and your fire is finite. The tension comes from that competition alone. It needs no boss, no levels and no finish line.\n\nNO TWO RUNS ARE THE SAME\nThe track is drawn fresh every game, so there is nothing to learn by heart. When your headcount hits zero, that is the end, and your score is the only mark. Your best run and your longest march are both kept.\n\nPortrait, one thumb, no account. Seven languages.",
+        "primaryGenreName": "Games",
         "genres": [
-          "Books",
-          "Productivity"
+          "Games",
+          "Casual",
+          "Action"
         ],
         "price": 0,
         "formattedPrice": "Free",
         "currency": "USD",
         "averageUserRating": 0,
         "userRatingCount": 0,
-        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/66/d1/8a/66d18aa2-6c6f-888d-1c10-f6aef3ac04f7/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
-        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/66/d1/8a/66d18aa2-6c6f-888d-1c10-f6aef3ac04f7/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e3/70/34/e370344d-709b-6117-1fb8-7f7614811e73/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e3/70/34/e370344d-709b-6117-1fb8-7f7614811e73/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
         "screenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d9/c3/46/d9c34665-0c83-e4a7-87a3-1be6c8548aa8/iphone_01_Home.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/96/a5/ab/96a5ab9e-1eec-014d-c806-d156ab3fb1ea/iphone_02_Reader.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/0c/98/97/0c989796-43fd-6c34-0f28-6ff76d466a50/iphone_03_Statistics.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/0b/0f/f0/0b0ff0a5-f130-2944-52fa-7ffa93fca048/iphone_04_Profile.png/320x480bb.jpg"
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8c/30/2d/8c302df8-f6d3-e294-69c1-72f3e9baa938/1_gates.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a7/66/2d/a7662d43-be3a-5c37-a19f-59dec57ffebb/2_bazooka.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/f8/e2/4b/f8e24b3c-ef80-bcc0-d5f2-6e8ec2b723b1/3_laser.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/6a/2a/b1/6a2ab1fd-def8-2ef7-b78a-302cc43d275c/4_crowd.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/90/1c/a7/901ca7fa-35bc-5271-0997-68f08812d22c/5_title.png/320x480bb.jpg"
         ],
         "ipadScreenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/54/7d/88/547d88ac-f87a-5ddc-2137-2ac86ec89b37/ipad_01_Home.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/af/68/20/af682052-9f2f-6223-5f54-77511894a9b6/ipad_02_Reader.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/10/01/68/10016897-ab7f-0875-4e26-9f712498d324/ipad_03_Statistics.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/8f/8c/9a/8f8c9aa5-2bbb-56cb-25a8-525f80979579/ipad_04_Profile.png/360x480bb.jpg"
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/5b/6a/8e/5b6a8ed2-ce0a-637f-3c88-ac924c6187e8/1_gates_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/18/f4/da/18f4da86-2942-efd4-c7af-4dfc01d51cc3/2_bazooka_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ce/0d/75/ce0d7589-817e-6638-4e98-f603ceed04c6/3_laser_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/03/6c/75/036c7580-2740-66a6-9ffd-beee8259bab5/4_crowd_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/17/bc/ff/17bcff8b-1cd4-7911-5bfd-0fa48aa2445c/5_title_ipad.png/360x480bb.jpg"
         ],
         "version": "1.0",
-        "releaseDate": "2026-07-20T07:00:00Z",
-        "currentVersionReleaseDate": "2026-07-20T11:25:02Z",
-        "trackViewUrl": "https://apps.apple.com/us/app/addicted-to-reading-gamified/id6791636773?uo=4",
-        "minimumOsVersion": "18.5"
+        "releaseDate": "2026-08-18T07:00:00Z",
+        "currentVersionReleaseDate": "2026-08-18T15:02:06Z",
+        "trackViewUrl": "https://apps.apple.com/us/app/last-soldier-crowd-runner/id6801350476?uo=4",
+        "minimumOsVersion": "15.0"
       }
     ]
   }

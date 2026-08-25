@@ -262,6 +262,9 @@ const PortfolioPage: React.FC = () => {
   // La liste vient d'Apple : sa taille peut changer entre deux rendus.
   const tabletApp = APPS[Math.min(tabletIndex, Math.max(APPS.length - 1, 0))];
 
+  // « À la une » : uniquement Guidor (projet pro), mis en avant seul.
+  const featuredApps = APPS.filter(a => a.id === 'guidor');
+
   return (
     <div className="min-h-screen bg-[#E8E8ED] dark:bg-black transition-colors duration-300">
 
@@ -328,7 +331,7 @@ const PortfolioPage: React.FC = () => {
           <h2 className="text-2xl font-bold text-[#1D1D1F] dark:text-white tracking-tight mb-4">{ui.featured}</h2>
           <div className="overflow-x-auto scrollbar-hide">
             <div className="inline-flex pb-2">
-              {APPS.filter(a => a.featured).map(app => (
+              {featuredApps.map(app => (
                 <AppCard key={app.id} app={app} lang={lang} ui={ui} onClick={() => setSelectedApp(app)} />
               ))}
             </div>

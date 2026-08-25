@@ -39,8 +39,9 @@ const Navbar: React.FC = () => {
     { to: '/', label: 'LinkTree' },
     { to: '/portefolio', label: lang === 'fr' ? 'App Mobile' : 'Mobile Apps' },
     { to: '/desktop', label: lang === 'fr' ? 'App Desktop' : 'Desktop Apps' },
-    { to: '/jeux', label: lang === 'fr' ? 'Jeux' : 'Games' },
-    { to: '/store', label: 'Store' },
+    // Masqués temporairement
+    // { to: '/jeux', label: lang === 'fr' ? 'Jeux' : 'Games' },
+    // { to: '/store', label: 'Store' },
     { to: '/cv', label: 'CV' },
     { to: '/profil', label: lang === 'fr' ? 'Profil' : 'Profile' },
   ];

@@ -10,6 +10,7 @@ const DATA = {
       experience: 'Expériences Professionnelles',
       projects: 'Projets',
       education: 'Formation',
+      awards: 'Distinctions',
       languages: 'Langues',
       keywords: 'Mots-clés ATS',
     },
@@ -51,9 +52,12 @@ const DATA = {
       { title: 'Jeu de Point', sub: 'Projet personnel — Jeu de stratégie traditionnel malgache', tags: 'Swift, SwiftUI, iOS', appStoreUrl: 'itms-apps://apps.apple.com/fr/app/jeu-de-point/id6761615625' },
     ],
     education: [
-      { title: 'Licence Informatique (BAC+5)', school: 'Epitech', period: 'Août 2023 – Sept. 2026 · Spécialisations cybersécurité, cloud et IoT, algorithmique, JavaScript, React.js et projets en équipe' },
+      { title: 'Master Informatique (BAC+5, niveau ingénieur)', school: 'Epitech', period: 'Août 2023 – Sept. 2026 · Spécialisations cybersécurité, cloud et IoT, algorithmique, JavaScript, React.js et projets en équipe' },
       { title: 'AFP Concepteur Développeur d\'Applications iOS', school: 'Simplon Auvergne-Rhône-Alpes', period: 'Avr. – Juil. 2023 · Swift, conception & développement d\'applications iOS natives, méthodes agiles' },
       { title: 'BTS Management des Unités Commerciales', school: 'Écoles Billières', period: 'Sept. 2020 – Juil. 2022 · Gestion de projet, management d\'équipe' },
+    ],
+    awards: [
+      { title: 'Prix Coup de Cœur — Hackathon « IA for Impact » #2', school: 'La Mêlée × Toulouse INP-N7', period: '9 & 10 oct. 2026 · Festival du Numérique et de l\'Innovation d\'Occitanie, défi SNCF Groupe' },
     ],
     languages: 'Français — Natif · Malgache — Natif · Anglais — Avancé (B2/C1)',
     keywords: ['Swift', 'iOS', 'SwiftUI', 'UIKit', 'MVVM', 'MVC', 'MapboxMaps', 'Mapbox SDK', 'MapboxMaps v6', 'MapboxMaps v11', 'Mapbox legacy', 'CI/CD', 'GitHub Actions', 'Tests unitaires', 'Agile', 'Scrum', 'JSON', 'REST API', 'Git', 'AVFoundation', 'React.js', 'TypeScript', 'JavaScript', 'C++', 'Arduino', 'App Store', 'développeur iOS', 'ingénieur logiciel', 'architecture mobile', 'aviation', 'alternance', 'Toulouse'],
@@ -67,6 +71,7 @@ const DATA = {
       experience: 'Professional Experience',
       projects: 'Projects',
       education: 'Education',
+      awards: 'Awards',
       languages: 'Languages',
       keywords: 'Keywords & ATS',
     },
@@ -108,9 +113,12 @@ const DATA = {
       { title: 'Jeu de Point', sub: 'Personal project — Traditional Malagasy strategy game', tags: 'Swift, SwiftUI, iOS', appStoreUrl: 'itms-apps://apps.apple.com/fr/app/jeu-de-point/id6761615625' },
     ],
     education: [
-      { title: "Master's in Computer Science (BAC+5)", school: 'Epitech', period: 'August 2023 – September 2026 · Specializations in cybersecurity, cloud and IoT, algorithms, JavaScript, React.js and team projects' },
+      { title: "Master's in Computer Science (BAC+5, engineering level)", school: 'Epitech', period: 'August 2023 – September 2026 · Specializations in cybersecurity, cloud and IoT, algorithms, JavaScript, React.js and team projects' },
       { title: 'Professional Qualification — iOS Application Developer', school: 'Simplon Auvergne-Rhône-Alpes', period: 'April – July 2023 · Swift, native iOS application design & development, agile methods' },
       { title: 'BTS Management of Commercial Units', school: 'Écoles Billières', period: 'Sept. 2020 – July 2022 · Project management, team management' },
+    ],
+    awards: [
+      { title: "Jury's Favourite Award — “IA for Impact” Hackathon #2", school: 'La Mêlée × Toulouse INP-N7', period: 'Oct. 9–10, 2026 · Occitanie Digital & Innovation Festival, SNCF Group challenge' },
     ],
     languages: 'French — Native · Malagasy — Native · English — Advanced (B2/C1)',
     keywords: ['Swift', 'iOS', 'SwiftUI', 'UIKit', 'MVVM', 'MVC', 'MapboxMaps', 'Mapbox SDK', 'MapboxMaps v6', 'MapboxMaps v11', 'Mapbox legacy', 'CI/CD', 'GitHub Actions', 'Unit Testing', 'Agile', 'Scrum', 'JSON', 'REST API', 'Git', 'AVFoundation', 'React.js', 'TypeScript', 'JavaScript', 'C++', 'Arduino', 'App Store', 'iOS Developer', 'Software Engineer', 'mobile architecture', 'aviation', 'work-study', 'Toulouse'],
@@ -154,6 +162,12 @@ function buildPrintHtml(lang: 'fr' | 'en'): string {
     <div style="margin-bottom:5px">
       <div style="font-size:10px;font-weight:600;color:#1D1D1F">${e.title}</div>
       <div style="font-size:9.5px;color:#6E6E73">${e.school} · ${e.period}</div>
+    </div>`).join('');
+
+  const awardRows = d.awards.map(a => `
+    <div style="margin-bottom:5px">
+      <div style="font-size:10px;font-weight:600;color:#1D1D1F">${a.title}</div>
+      <div style="font-size:9.5px;color:#6E6E73">${a.school} · ${a.period}</div>
     </div>`).join('');
 
   const keywords = d.keywords.join(' ');
@@ -221,6 +235,10 @@ function buildPrintHtml(lang: 'fr' | 'en'): string {
   ${sec(d.sections.education)}
   ${eduRows}
 
+  <!-- Awards -->
+  ${sec(d.sections.awards)}
+  ${awardRows}
+
   <!-- Languages -->
   ${sec(d.sections.languages)}
   <p style="font-size:10px;color:#3A3A3C">${d.languages}</p>
@@ -244,6 +262,7 @@ export function buildCvText(lang: 'fr' | 'en'): string {
   ).join('\n\n');
   const projs = d.projects.map(p => `${p.title} — ${p.sub}\n  ${p.tags}`).join('\n\n');
   const edu = d.education.map(e => `${e.title}\n${e.school} · ${e.period}`).join('\n\n');
+  const awards = d.awards.map(a => `${a.title}\n${a.school} · ${a.period}`).join('\n\n');
 
   return [
     d.title,
@@ -270,6 +289,11 @@ export function buildCvText(lang: 'fr' | 'en'): string {
     s.education.toUpperCase(),
     line(),
     edu,
+    '',
+    line(),
+    s.awards.toUpperCase(),
+    line(),
+    awards,
     '',
     line(),
     s.languages.toUpperCase(),

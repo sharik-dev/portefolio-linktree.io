@@ -7,11 +7,27 @@ import { useTheme } from '../contexts/ThemeContext';
 
 import { useAppStoreApps } from '../hooks/useAppStoreApps';
 import type { PortfolioApp } from '../data/appstoreApps';
+import hackathonPrize from '../assets/awards/hackathon-ia-for-impact.jpg';
 
 /* ─── In-progress projects ───────────────────────────────────────── */
 const IN_PROGRESS_APPS = [
   { id: 'localshort', name: 'LocalShort', subtitle: { fr: 'Lecteur de vidéos courtes en local', en: 'Offline short-form video player' }, tech: ['iOS', 'Swift', 'SwiftUI'], done: true },
   { id: 'meowtoon', name: 'meow-Toon', subtitle: { fr: 'Dessin animé interactif', en: 'Interactive cartoon app' }, tech: ['iOS', 'Swift'], done: false },
+];
+
+/* ─── Awards ──────────────────────────────────────────────────────── */
+const AWARDS = [
+  {
+    id: 'hackathon-ia-for-impact-2026',
+    image: hackathonPrize,
+    title: { fr: 'Prix Coup de Cœur', en: "Jury's Favourite Award" },
+    event: { fr: 'Hackathon « IA for Impact » #2', en: '“IA for Impact” Hackathon #2' },
+    detail: {
+      fr: 'Festival du Numérique et de l\u2019Innovation d\u2019Occitanie · La Mêlée × Toulouse INP-N7 · Défi SNCF Groupe, équipe 1',
+      en: 'Occitanie Digital & Innovation Festival · La Mêlée × Toulouse INP-N7 · SNCF Group challenge, team 1',
+    },
+    date: { fr: '9 & 10 octobre 2026', en: 'October 9–10, 2026' },
+  },
 ];
 
 /* ─── UI strings ─────────────────────────────────────────────────── */
@@ -30,6 +46,7 @@ const UI = {
     syncing: 'Synchronisation avec l\u2019App Store…',
     synced: 'Synchronisé avec l\u2019App Store',
     appsCount: 'apps publiées',
+    awards: 'Distinctions',
   },
   en: {
     eyebrow: 'My work', title: 'Mobile Apps',
@@ -45,6 +62,7 @@ const UI = {
     syncing: 'Syncing with the App Store…',
     synced: 'Synced with the App Store',
     appsCount: 'published apps',
+    awards: 'Awards',
   },
 };
 
@@ -335,6 +353,28 @@ const PortfolioPage: React.FC = () => {
                 <AppCard key={app.id} app={app} lang={lang} ui={ui} onClick={() => setSelectedApp(app)} />
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Awards */}
+        <section>
+          <h2 className="text-2xl font-bold text-[#1D1D1F] dark:text-white tracking-tight mb-4">{ui.awards}</h2>
+          <div className="space-y-4">
+            {AWARDS.map(award => (
+              <div key={award.id}
+                className="bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-3xl shadow-sm overflow-hidden md:flex">
+                <img src={award.image} alt={`${t(lang, award.title.fr, award.title.en)} — ${t(lang, award.event.fr, award.event.en)}`}
+                  className="w-full md:w-1/2 object-cover" loading="lazy" />
+                <div className="p-5 md:p-7 flex flex-col justify-center">
+                  <span className="self-start text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[#FF9F0A]/10 text-[#FF9F0A] mb-2">
+                    {t(lang, award.date.fr, award.date.en)}
+                  </span>
+                  <h3 className="text-xl font-bold text-[#1D1D1F] dark:text-white tracking-tight">{t(lang, award.title.fr, award.title.en)}</h3>
+                  <p className="text-[14px] font-medium text-[#0071E3] mt-0.5">{t(lang, award.event.fr, award.event.en)}</p>
+                  <p className="text-[12px] text-[#6E6E73] dark:text-[#98989D] mt-2 leading-relaxed">{t(lang, award.detail.fr, award.detail.en)}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 

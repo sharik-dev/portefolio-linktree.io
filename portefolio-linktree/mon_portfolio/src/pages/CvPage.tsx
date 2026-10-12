@@ -13,6 +13,7 @@ import simplonLogo from '../assets/formation/simplon.png';
 import billiereLogo from '../assets/formation/billiere.png';
 import combLogo from '../assets/company/comb.png';
 import guidorLogo from '../assets/company/guidor.png';
+import hackathonPrize from '../assets/awards/hackathon-ia-for-impact.jpg';
 
 /* ─── CV markdown URLs ────────────────────────────────────────────── */
 const CV_URLS = {
@@ -55,7 +56,7 @@ const DATA = {
   formations: [
     {
       id: 'epitech',
-      title: { fr: 'BAC + 5 en Informatique', en: "Master's in Computer Science" },
+      title: { fr: 'Master Informatique (BAC+5, niveau ingénieur)', en: "Master's in Computer Science (BAC+5, engineering level)" },
       school: 'Epitech',
       period: { fr: 'Août 2023 – Septembre 2026', en: 'August 2023 – September 2026' },
       description: {
@@ -85,6 +86,19 @@ const DATA = {
         en: 'Project management and team management.'
       },
       logo: billiereLogo,
+    },
+  ],
+  awards: [
+    {
+      id: 'hackathon-ia-for-impact-2026',
+      title: { fr: 'Prix Coup de Cœur — Hackathon « IA for Impact » #2', en: "Jury's Favourite Award — “IA for Impact” Hackathon #2" },
+      school: 'La Mêlée × Toulouse INP-N7',
+      period: { fr: '9 & 10 octobre 2026', en: 'October 9–10, 2026' },
+      description: {
+        fr: 'Festival du Numérique et de l\'Innovation d\'Occitanie. Prix remis à l\'équipe 1 du défi SNCF Groupe.',
+        en: 'Occitanie Digital & Innovation Festival. Award given to team 1 of the SNCF Group challenge.'
+      },
+      logo: hackathonPrize,
     },
   ],
   skills: {
@@ -266,6 +280,18 @@ const CvPage: React.FC = () => {
                 subtitle={f.school}
                 meta={t(lang, f.period.fr, f.period.en)}
                 description={t(lang, f.description.fr, f.description.en)}
+                tags={[]}
+              />
+            ))}
+            <h2 className="text-[13px] font-semibold text-[#86868B] uppercase tracking-[0.08em] pt-4">{t(lang, 'Distinctions', 'Awards')}</h2>
+            {DATA.awards.map(a => (
+              <ExpandableCard
+                key={a.id}
+                logo={a.logo}
+                title={t(lang, a.title.fr, a.title.en)}
+                subtitle={a.school}
+                meta={t(lang, a.period.fr, a.period.en)}
+                description={t(lang, a.description.fr, a.description.en)}
                 tags={[]}
               />
             ))}

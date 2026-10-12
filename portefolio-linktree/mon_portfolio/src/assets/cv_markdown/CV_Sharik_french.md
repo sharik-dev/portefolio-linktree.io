@@ -94,7 +94,7 @@ Swift, SwiftUI, API tierces
 
 ## Formation
 
-Licence Informatique (BAC+5) · Epitech
+Master Informatique (BAC+5, niveau ingénieur) · Epitech
 Août 2023 – Septembre 2026
 Spécialisations cybersécurité, cloud et IoT. Algorithmique, JavaScript, React.js et développement de projets en équipe (pédagogie par projets).
 
@@ -105,6 +105,14 @@ Formation intensive au développement d'applications natives et aux méthodes ag
 BTS Management des Unités Commerciales · Ecoles Billières
 Septembre 2020 – Juillet 2022
 Gestion de projet et management d'équipe.
+
+---
+
+## Distinctions
+
+Prix Coup de Cœur — Hackathon « IA for Impact » #2 · La Mêlée × Toulouse INP-N7
+9 & 10 octobre 2026
+Festival du Numérique et de l'Innovation d'Occitanie. Prix remis à l'équipe 1 du défi SNCF Groupe.
 
 ---
 

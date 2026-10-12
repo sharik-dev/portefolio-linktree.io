@@ -68,7 +68,7 @@ Swift, SwiftUI, iOS
 
 ## Education
 
-Master's in Computer Science (BAC+5) · Epitech
+Master's in Computer Science (BAC+5, engineering level) · Epitech
 August 2023 – September 2026
 Specializations in cybersecurity, cloud and IoT. Algorithms, JavaScript, React.js and collaborative team projects (project-based learning).
 
@@ -79,6 +79,14 @@ Intensive Swift training: native iOS application design and development, agile m
 BTS Management of Commercial Units · Ecoles Billieres
 September 2020 – July 2022
 Project management and team management.
+
+---
+
+## Awards
+
+Jury's Favourite Award — “IA for Impact” Hackathon #2 · La Mêlée × Toulouse INP-N7
+October 9–10, 2026
+Occitanie Digital & Innovation Festival. Award given to team 1 of the SNCF Group challenge.
 
 ---
 

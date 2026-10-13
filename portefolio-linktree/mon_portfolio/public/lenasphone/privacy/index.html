@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy Policy · Lena's Phone</title>
+<meta name="description" content="Privacy policy for Lena's Phone: no data collected, no account, no analytics, no ads.">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<style>
+  :root {
+    --bg: #000; --panel: #0e0e10; --line: #1f1f23; --text: #f2f2f5;
+    --muted: #8e8e93; --accent: #FF375F; --accent-dim: rgba(255,55,95,.14);
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: ""; position: fixed; inset: 0; pointer-events: none; z-index: -1;
+    background: radial-gradient(120% 50% at 50% -10%, rgba(255,55,95,.14), transparent 60%);
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 16px; }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; }
+  .brand { font-weight: 700; letter-spacing: .02em; color: var(--text); display: flex; align-items: center; gap: 10px; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); }
+  .lang { display: flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+  .lang button {
+    background: none; border: 0; color: var(--muted); font-family: inherit; font-size: 13px; font-weight: 600;
+    padding: 8px 12px; cursor: pointer;
+  }
+  .lang button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+  .top { padding: 40px 0 24px; }
+  .eyebrow { color: var(--accent); font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+  h1 { font-size: clamp(32px, 8vw, 46px); line-height: 1.08; margin: 12px 0 10px; letter-spacing: -.02em; }
+  .date { color: var(--muted); font-size: 15px; margin: 0; }
+  .summary { background: var(--accent-dim); border: 1px solid rgba(255,55,95,.35); border-radius: 16px; padding: 18px 20px; margin: 24px 0 8px; }
+  .summary p { margin: 0; color: #f2f2f5; font-weight: 500; }
+  section { padding: 22px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 20px; margin: 0 0 10px; letter-spacing: -.01em; }
+  section p { margin: 0 0 10px; color: #c7c7cc; }
+  section p:last-child { margin-bottom: 0; }
+  footer { padding: 28px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 8px 18px; }
+  footer a { color: var(--muted); }
+  .mail { word-break: break-all; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="../"><span class="dot" aria-hidden="true"></span>Lena's Phone</a>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="top">
+      <div class="eyebrow" data-i18n="eyebrow">Lena's Phone</div>
+      <h1 data-i18n="title">Privacy Policy</h1>
+      <p class="date" data-i18n="date">Last updated: October 13, 2026</p>
+      <div class="summary"><p data-i18n="summary">In short: Lena's Phone collects no data. No account, no analytics, no ads, no tracking. Everything you do in the game stays on your device.</p></div>
+    </div>
+
+    <section>
+      <h2 data-i18n="h1">What we collect</h2>
+      <p data-i18n="p1">Nothing. Lena's Phone does not collect, store on a server, sell or share any personal data. There is no sign-up and no account. The game contains no analytics, no crash-reporting service, no advertising and no third-party tracking tools.</p>
+    </section>
+
+    <section>
+      <h2 data-i18n="h2">What stays on your device</h2>
+      <p data-i18n="p2">Your progress, the clues you find and what you write to the characters in the game are saved only on your device. They never leave it. Deleting the app, or choosing “Start over” in the game's Settings app, erases them.</p>
+    </section>
+
+    <section>
+      <h2 data-i18n="h3">The friends' AI (optional)</h2>
+      <p data-i18n="p3">Lena's friends answer you through an AI model that runs entirely on your device. If you agree to it, the game downloads this model once (about 0.9 GB) from Hugging Face, a public model-hosting service. This download is the only network request the game makes. It contains no personal data: no account, no identifier, nothing you have typed. As with any download, the hosting service technically receives your IP address to deliver the file; its own privacy policy applies to that.</p>
+      <p data-i18n="p3b">Once downloaded, the model works offline. Your messages to the characters are processed on your device and are never sent anywhere. You can delete the model at any time in the game's Settings app.</p>
+    </section>
+
+    <section>
+      <h2 data-i18n="h4">Notifications</h2>
+      <p data-i18n="p4">The game uses local notifications only: they are scheduled on your device so the story can reach you when the app is closed. No push server is involved and no device token is collected. You can turn them off at any time in your device's Settings.</p>
+    </section>
+
+    <section>
+      <h2 data-i18n="h5">Children</h2>
+      <p data-i18n="p5">Lena's Phone is a thriller intended for players aged 16 and over. Since the game collects no data from anyone, it does not knowingly collect data from children either.</p>
+    </section>
+
+    <section>
+      <h2 data-i18n="h6">Changes</h2>
+      <p data-i18n="p6">If this policy ever changes, the new version will be published on this page with an updated date.</p>
+    </section>
+
+    <section>
+      <h2 data-i18n="h7">Contact</h2>
+      <p data-i18n="p7">Questions about this policy? Write to Sharik Mohamed, the developer:</p>
+      <p><a class="mail" href="mailto:sharikmohamed8@gmail.com?subject=Lena's%20Phone%20privacy">sharikmohamed8@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Sharik Mohamed</span>
+    <a href="../" data-i18n="back">Support &amp; FAQ</a>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var dict = {
+    en: {
+      eyebrow: "Lena's Phone",
+      title: "Privacy Policy",
+      date: "Last updated: October 13, 2026",
+      summary: "In short: Lena's Phone collects no data. No account, no analytics, no ads, no tracking. Everything you do in the game stays on your device.",
+      h1: "What we collect",
+      p1: "Nothing. Lena's Phone does not collect, store on a server, sell or share any personal data. There is no sign-up and no account. The game contains no analytics, no crash-reporting service, no advertising and no third-party tracking tools.",
+      h2: "What stays on your device",
+      p2: "Your progress, the clues you find and what you write to the characters in the game are saved only on your device. They never leave it. Deleting the app, or choosing “Start over” in the game's Settings app, erases them.",
+      h3: "The friends' AI (optional)",
+      p3: "Lena's friends answer you through an AI model that runs entirely on your device. If you agree to it, the game downloads this model once (about 0.9 GB) from Hugging Face, a public model-hosting service. This download is the only network request the game makes. It contains no personal data: no account, no identifier, nothing you have typed. As with any download, the hosting service technically receives your IP address to deliver the file; its own privacy policy applies to that.",
+      p3b: "Once downloaded, the model works offline. Your messages to the characters are processed on your device and are never sent anywhere. You can delete the model at any time in the game's Settings app.",
+      h4: "Notifications",
+      p4: "The game uses local notifications only: they are scheduled on your device so the story can reach you when the app is closed. No push server is involved and no device token is collected. You can turn them off at any time in your device's Settings.",
+      h5: "Children",
+      p5: "Lena's Phone is a thriller intended for players aged 16 and over. Since the game collects no data from anyone, it does not knowingly collect data from children either.",
+      h6: "Changes",
+      p6: "If this policy ever changes, the new version will be published on this page with an updated date.",
+      h7: "Contact",
+      p7: "Questions about this policy? Write to Sharik Mohamed, the developer:",
+      back: "Support & FAQ",
+      docTitle: "Privacy Policy · Lena's Phone",
+      docDesc: "Privacy policy for Lena's Phone: no data collected, no account, no analytics, no ads."
+    },
+    fr: {
+      eyebrow: "Lena's Phone",
+      title: "Politique de confidentialité",
+      date: "Dernière mise à jour : 13 octobre 2026",
+      summary: "En bref : Lena's Phone ne collecte aucune donnée. Pas de compte, pas de statistiques, pas de publicité, pas de pistage. Tout ce que tu fais dans le jeu reste sur ton appareil.",
+      h1: "Ce que nous collectons",
+      p1: "Rien. Lena's Phone ne collecte, ne stocke sur un serveur, ne vend et ne partage aucune donnée personnelle. Il n'y a ni inscription ni compte. Le jeu ne contient aucun outil de statistiques, aucun service de rapport de plantage, aucune publicité et aucun traceur tiers.",
+      h2: "Ce qui reste sur ton appareil",
+      p2: "Ta progression, les indices que tu trouves et ce que tu écris aux personnages du jeu sont enregistrés uniquement sur ton appareil. Ils n'en sortent jamais. Supprimer l'app, ou choisir « Recommencer » dans l'app Réglages du jeu, les efface.",
+      h3: "L'IA des amis (facultative)",
+      p3: "Les amis de Lena te répondent grâce à un modèle d'IA qui tourne entièrement sur ton appareil. Si tu l'acceptes, le jeu télécharge ce modèle une seule fois (environ 0,9 Go) depuis Hugging Face, un service public d'hébergement de modèles. Ce téléchargement est la seule requête réseau du jeu. Il ne contient aucune donnée personnelle : ni compte, ni identifiant, ni rien de ce que tu as écrit. Comme pour tout téléchargement, l'hébergeur reçoit techniquement ton adresse IP pour t'envoyer le fichier ; sa propre politique de confidentialité s'applique à cet égard.",
+      p3b: "Une fois téléchargé, le modèle fonctionne hors ligne. Tes messages aux personnages sont traités sur ton appareil et ne sont jamais envoyés nulle part. Tu peux supprimer le modèle à tout moment dans l'app Réglages du jeu.",
+      h4: "Notifications",
+      p4: "Le jeu utilise uniquement des notifications locales : elles sont programmées sur ton appareil pour que l'histoire puisse te joindre quand l'app est fermée. Aucun serveur d'envoi n'intervient et aucun identifiant d'appareil n'est collecté. Tu peux les désactiver à tout moment dans les Réglages de ton appareil.",
+      h5: "Enfants",
+      p5: "Lena's Phone est un thriller destiné aux joueurs de 16 ans et plus. Comme le jeu ne collecte aucune donnée, il n'en collecte pas non plus auprès d'enfants.",
+      h6: "Modifications",
+      p6: "Si cette politique change un jour, la nouvelle version sera publiée sur cette page avec une date mise à jour.",
+      h7: "Contact",
+      p7: "Une question sur cette politique ? Écris à Sharik Mohamed, le développeur :",
+      back: "Aide & FAQ",
+      docTitle: "Politique de confidentialité · Lena's Phone",
+      docDesc: "Politique de confidentialité de Lena's Phone : aucune donnée collectée, pas de compte, pas de statistiques, pas de publicité."
+    }
+  };
+  var KEY = "lenasphone.lang";
+
+  function detect() {
+    try { var saved = localStorage.getItem(KEY); if (saved && dict[saved]) return saved; } catch (e) {}
+    var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "en"];
+    for (var i = 0; i < langs.length; i++) {
+      var code = String(langs[i]).toLowerCase().split("-")[0];
+      if (dict[code]) return code;
+    }
+    return "en";
+  }
+
+  function apply(lang) {
+    var t = dict[lang] || dict.en;
+    document.documentElement.lang = lang;
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      var k = el.getAttribute("data-i18n");
+      if (t[k] != null) el.textContent = t[k];
+    });
+    document.title = t.docTitle;
+    var meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute("content", t.docDesc);
+    document.querySelectorAll(".lang button").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-lang") === lang));
+    });
+  }
+
+  document.querySelectorAll(".lang button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var lang = b.getAttribute("data-lang");
+      try { localStorage.setItem(KEY, lang); } catch (e) {}
+      apply(lang);
+    });
+  });
+
+  apply(detect());
+})();
+</script>
+</body>
+</html>

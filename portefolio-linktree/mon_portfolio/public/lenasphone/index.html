@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lena's Phone</title>
+<meta name="description" content="Lena's Phone: a mystery thriller told through a missing woman's phone. Support, FAQ and contact.">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<style>
+  :root {
+    --bg: #000; --panel: #0e0e10; --line: #1f1f23; --text: #f2f2f5;
+    --muted: #8e8e93; --accent: #FF375F; --accent-dim: rgba(255,55,95,.14);
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: ""; position: fixed; inset: 0; pointer-events: none; z-index: -1;
+    background: radial-gradient(120% 60% at 50% -10%, rgba(255,55,95,.18), transparent 60%);
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 16px; }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; }
+  .brand { font-weight: 700; letter-spacing: .02em; color: var(--text); display: flex; align-items: center; gap: 10px; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); animation: pulse 2s infinite; }
+  @keyframes pulse { 50% { opacity: .35; } }
+  @media (prefers-reduced-motion: reduce) { .dot { animation: none; } }
+  .lang { display: flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+  .lang button {
+    background: none; border: 0; color: var(--muted); font-family: inherit; font-size: 13px; font-weight: 600; line-height: 1;
+    padding: 8px 12px; cursor: pointer;
+  }
+  .lang button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+  .hero { padding: 48px 0 36px; }
+  .eyebrow { color: var(--accent); font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+  h1 { font-size: clamp(36px, 9vw, 56px); line-height: 1.05; margin: 12px 0 18px; letter-spacing: -.02em; }
+  .lead { color: #c7c7cc; font-size: 19px; margin: 0; }
+  .notif {
+    margin: 32px 0 0; background: rgba(28,28,30,.85); border: 1px solid var(--line); border-radius: 18px;
+    padding: 14px 16px; display: flex; gap: 12px; align-items: flex-start;
+  }
+  .notif .ico { flex: none; width: 38px; height: 38px; border-radius: 10px; background: #2c2c2e; display: grid; place-items: center; color: var(--accent); font-weight: 700; }
+  .notif b { display: block; font-size: 15px; }
+  .notif span { color: #c7c7cc; font-size: 15px; }
+  .notif small { color: var(--muted); float: right; font-size: 12px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 28px 0 0; padding: 0; list-style: none; }
+  .tags li { border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; font-size: 14px; color: #c7c7cc; }
+  section { padding: 28px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 22px; margin: 0 0 16px; letter-spacing: -.01em; }
+  details { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; margin: 0 0 10px; }
+  summary { cursor: pointer; padding: 16px 44px 16px 16px; font-weight: 600; list-style: none; position: relative; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; position: absolute; right: 18px; top: 13px; color: var(--accent); font-size: 22px; font-weight: 400; }
+  details[open] summary::after { content: "–"; }
+  details p { margin: 0; padding: 0 16px 16px; color: #c7c7cc; }
+  .contact { background: var(--accent-dim); border: 1px solid rgba(255,55,95,.35); border-radius: 16px; padding: 20px; }
+  .contact p { margin: 0 0 8px; color: #e5e5ea; }
+  .contact a { font-weight: 600; word-break: break-all; }
+  footer { padding: 28px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 8px 18px; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="./"><span class="dot" aria-hidden="true"></span>Lena's Phone</a>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="eyebrow" data-i18n="eyebrow">A mystery thriller for iPhone</div>
+      <h1 data-i18n="title">Her phone is your only lead.</h1>
+      <p class="lead" data-i18n="lead">Lena went for a run and never came home. At dawn you find her phone under a park bench. Unlock it, dig through her life, talk to her friends, and answer the stranger who's texting you riddles before the clock runs out.</p>
+      <div class="notif" aria-hidden="true">
+        <div class="ico">?</div>
+        <div><small data-i18n="notifTime">now</small><b data-i18n="notifFrom">Unknown number</b><span data-i18n="notifText">You found her phone. Good. Let's play a game, Alex.</span></div>
+      </div>
+      <ul class="tags">
+        <li data-i18n="tag1">Free</li>
+        <li data-i18n="tag2">No ads</li>
+        <li data-i18n="tag3">No account</li>
+        <li data-i18n="tag4">No tracking</li>
+        <li data-i18n="tag5">English &amp; French</li>
+        <li data-i18n="tag6">16+</li>
+      </ul>
+    </div>
+
+    <section>
+      <h2 data-i18n="faqTitle">Help &amp; FAQ</h2>
+      <details>
+        <summary data-i18n="q1">How do I unlock Lena's phone?</summary>
+        <p data-i18n="a1">You don't need to guess. Even a locked phone shows a stranger what to do in an emergency, and that's exactly the kind of information that can tell you a lot about its owner. Look carefully at what the lock screen lets you open. The code is something personal.</p>
+      </details>
+      <details>
+        <summary data-i18n="q2">Her friends don't answer, or only answer briefly.</summary>
+        <p data-i18n="a2">Maya, Jess and Tom reply through an AI that runs entirely on your iPhone. It needs a one-time download of about 0.9 GB, which waits for Wi-Fi by default. Check its progress in the game's Settings app, under “Friends' AI”. It keeps going in the background. Without it, her friends still answer, just more briefly.</p>
+      </details>
+      <details>
+        <summary data-i18n="q3">The unknown number isn't writing back.</summary>
+        <p data-i18n="a3">That's part of the game: he only writes on the quarter hour (:00, :15, :30, :45), in real time, and stays online for two minutes. Anything he has to say waits for his next slot.</p>
+      </details>
+      <details>
+        <summary data-i18n="q4">I'm not getting notifications.</summary>
+        <p data-i18n="a4">The story keeps going when the game is closed: his messages arrive as notifications. If you declined them, open the game's Settings app and tap “Allow notifications”, or turn them on in your iPhone's Settings → Notifications → Lena's Phone. Notifications are created on your phone; nothing is sent from a server.</p>
+      </details>
+      <details>
+        <summary data-i18n="q5">I failed a riddle. What now?</summary>
+        <p data-i18n="a5">A wrong answer or a timer running out ends the game, but you can try that riddle again right away. If you're stuck, wait a little: her friends will nudge you, one clue at a time.</p>
+      </details>
+      <details>
+        <summary data-i18n="q6">How do I start the story over?</summary>
+        <p data-i18n="a6">Open the Settings app inside the game and tap “Start over”. This erases your clues and conversations on this device.</p>
+      </details>
+      <details>
+        <summary data-i18n="q7">How do I change the language?</summary>
+        <p data-i18n="a7">The game follows your iPhone's language by default (English or French). You can also pick one in the game's Settings app.</p>
+      </details>
+    </section>
+
+    <section>
+      <h2 data-i18n="contactTitle">Contact</h2>
+      <div class="contact">
+        <p data-i18n="contactText">A bug, a question, an idea? Write to me, I read everything.</p>
+        <a href="mailto:sharikmohamed8@gmail.com?subject=Lena's%20Phone">sharikmohamed8@gmail.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Sharik Mohamed</span>
+    <a href="privacy/" data-i18n="privacyLink">Privacy policy</a>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var dict = {
+    en: {
+      eyebrow: "A mystery thriller for iPhone",
+      title: "Her phone is your only lead.",
+      lead: "Lena went for a run and never came home. At dawn you find her phone under a park bench. Unlock it, dig through her life, talk to her friends, and answer the stranger who's texting you riddles before the clock runs out.",
+      notifTime: "now",
+      notifFrom: "Unknown number",
+      notifText: "You found her phone. Good. Let's play a game, Alex.",
+      tag1: "Free", tag2: "No ads", tag3: "No account", tag4: "No tracking", tag5: "English & French", tag6: "16+",
+      faqTitle: "Help & FAQ",
+      q1: "How do I unlock Lena's phone?",
+      a1: "You don't need to guess. Even a locked phone shows a stranger what to do in an emergency, and that's exactly the kind of information that can tell you a lot about its owner. Look carefully at what the lock screen lets you open. The code is something personal.",
+      q2: "Her friends don't answer, or only answer briefly.",
+      a2: "Maya, Jess and Tom reply through an AI that runs entirely on your iPhone. It needs a one-time download of about 0.9 GB, which waits for Wi-Fi by default. Check its progress in the game's Settings app, under “Friends' AI”. It keeps going in the background. Without it, her friends still answer, just more briefly.",
+      q3: "The unknown number isn't writing back.",
+      a3: "That's part of the game: he only writes on the quarter hour (:00, :15, :30, :45), in real time, and stays online for two minutes. Anything he has to say waits for his next slot.",
+      q4: "I'm not getting notifications.",
+      a4: "The story keeps going when the game is closed: his messages arrive as notifications. If you declined them, open the game's Settings app and tap “Allow notifications”, or turn them on in your iPhone's Settings → Notifications → Lena's Phone. Notifications are created on your phone; nothing is sent from a server.",
+      q5: "I failed a riddle. What now?",
+      a5: "A wrong answer or a timer running out ends the game, but you can try that riddle again right away. If you're stuck, wait a little: her friends will nudge you, one clue at a time.",
+      q6: "How do I start the story over?",
+      a6: "Open the Settings app inside the game and tap “Start over”. This erases your clues and conversations on this device.",
+      q7: "How do I change the language?",
+      a7: "The game follows your iPhone's language by default (English or French). You can also pick one in the game's Settings app.",
+      contactTitle: "Contact",
+      contactText: "A bug, a question, an idea? Write to me, I read everything.",
+      privacyLink: "Privacy policy",
+      docTitle: "Lena's Phone",
+      docDesc: "Lena's Phone: a mystery thriller told through a missing woman's phone. Support, FAQ and contact."
+    },
+    fr: {
+      eyebrow: "Un thriller à résoudre sur iPhone",
+      title: "Son téléphone est ta seule piste.",
+      lead: "Lena est partie courir et n'est jamais rentrée. À l'aube, tu retrouves son téléphone sous un banc du parc. Déverrouille-le, fouille sa vie, parle à ses amis, et réponds à l'inconnu qui t'envoie des énigmes avant la fin du compte à rebours.",
+      notifTime: "maintenant",
+      notifFrom: "Numéro inconnu",
+      notifText: "Tu as trouvé son téléphone. Bien. On va jouer à un jeu, Alex.",
+      tag1: "Gratuit", tag2: "Sans pub", tag3: "Sans compte", tag4: "Sans pistage", tag5: "Français & anglais", tag6: "16+",
+      faqTitle: "Aide & FAQ",
+      q1: "Comment déverrouiller le téléphone de Lena ?",
+      a1: "Inutile de deviner au hasard. Même verrouillé, un téléphone montre à un inconnu quoi faire en cas d'urgence, et c'est précisément le genre d'information qui en dit long sur sa propriétaire. Regarde bien ce que l'écran verrouillé te laisse ouvrir. Le code est quelque chose de personnel.",
+      q2: "Ses amis ne répondent pas, ou très brièvement.",
+      a2: "Maya, Jess et Tom répondent grâce à une IA qui tourne entièrement sur ton iPhone. Elle demande un téléchargement unique d'environ 0,9 Go, qui attend le Wi-Fi par défaut. Suis sa progression dans l'app Réglages du jeu, rubrique « IA des amis ». Il continue en arrière-plan. Sans elle, ses amis répondent quand même, simplement plus brièvement.",
+      q3: "Le numéro inconnu ne répond pas.",
+      a3: "C'est voulu : il n'écrit qu'aux quarts d'heure (h 00, h 15, h 30, h 45), en temps réel, et reste en ligne deux minutes. Tout ce qu'il a à dire attend son prochain créneau.",
+      q4: "Je ne reçois pas de notifications.",
+      a4: "L'histoire continue quand le jeu est fermé : ses messages arrivent en notifications. Si tu les as refusées, ouvre l'app Réglages du jeu et touche « Autoriser les notifications », ou active-les dans Réglages → Notifications → Lena's Phone sur ton iPhone. Les notifications sont créées sur ton téléphone ; aucun serveur ne t'envoie quoi que ce soit.",
+      q5: "J'ai raté une énigme. Et maintenant ?",
+      a5: "Une mauvaise réponse ou un chrono écoulé, et c'est perdu, mais tu peux retenter l'énigme tout de suite. Si tu bloques, patiente un peu : ses amis vont te mettre sur la voie, un indice à la fois.",
+      q6: "Comment recommencer l'histoire ?",
+      a6: "Ouvre l'app Réglages dans le jeu et touche « Recommencer ». Tes indices et tes conversations seront effacés de cet appareil.",
+      q7: "Comment changer de langue ?",
+      a7: "Le jeu suit la langue de ton iPhone (français ou anglais). Tu peux aussi la choisir dans l'app Réglages du jeu.",
+      contactTitle: "Contact",
+      contactText: "Un bug, une question, une idée ? Écris-moi, je lis tout.",
+      privacyLink: "Politique de confidentialité",
+      docTitle: "Lena's Phone",
+      docDesc: "Lena's Phone : un thriller raconté à travers le téléphone d'une femme disparue. Aide, FAQ et contact."
+    }
+  };
+  var KEY = "lenasphone.lang";
+
+  function detect() {
+    try { var saved = localStorage.getItem(KEY); if (saved && dict[saved]) return saved; } catch (e) {}
+    var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "en"];
+    for (var i = 0; i < langs.length; i++) {
+      var code = String(langs[i]).toLowerCase().split("-")[0];
+      if (dict[code]) return code;
+    }
+    return "en";
+  }
+
+  function apply(lang) {
+    var t = dict[lang] || dict.en;
+    document.documentElement.lang = lang;
+    document.querySelectorAll("[data-i18n]").forEach(function (el) {
+      var k = el.getAttribute("data-i18n");
+      if (t[k] != null) el.textContent = t[k];
+    });
+    document.title = t.docTitle;
+    var meta = document.querySelector('meta[name="description"]');
+    if (meta) meta.setAttribute("content", t.docDesc);
+    document.querySelectorAll(".lang button").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.getAttribute("data-lang") === lang));
+    });
+  }
+
+  document.querySelectorAll(".lang button").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var lang = b.getAttribute("data-lang");
+      try { localStorage.setItem(KEY, lang); } catch (e) {}
+      apply(lang);
+    });
+  });
+
+  apply(detect());
+})();
+</script>
+</body>
+</html>

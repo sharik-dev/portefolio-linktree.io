@@ -82,6 +82,49 @@ const LEGAL = {
   cgu: {
     title: { fr: "Conditions Générales d'Utilisation", en: 'Terms of Service' },
     content: {
+      fr: `**Dernière mise à jour : mars 2026**
+
+**1. Objet**
+Les présentes CGU régissent l'utilisation de l'application mobile Meow-Tube.
+
+**2. Accès à l'Application**
+L'Application est accessible gratuitement. L'utilisateur s'engage à ne pas l'utiliser à des fins illicites.
+
+**3. Propriété intellectuelle**
+L'ensemble des éléments constituant l'Application est la propriété exclusive du développeur.
+
+**4. Limitation de responsabilité**
+L'Application est fournie « en l'état », sans garantie d'aucune sorte.
+
+**5. Modification des CGU**
+Le développeur se réserve le droit de modifier les présentes CGU à tout moment.
+
+**6. Droit applicable**
+Les présentes CGU sont soumises au droit français.`,
+      en: `**Last updated: March 2026**
+
+**1. Purpose**
+These Terms govern the use of the Meow-Tube mobile application.
+
+**2. Access**
+The app is free to use. Users agree not to use it for unlawful purposes.
+
+**3. Intellectual property**
+All elements of the app are the exclusive property of the developer.
+
+**4. Limitation of liability**
+The app is provided "as is", without warranty of any kind.
+
+**5. Amendments**
+The developer reserves the right to modify these terms at any time.
+
+**6. Governing law**
+These terms are governed by French law.`,
+    },
+  },
+  privacy: {
+    title: { fr: 'Politique de Confidentialité', en: 'Privacy Policy' },
+    content: {
       fr: `**Dernière mise à jour : 20 octobre 2026**
 
 Version complète : sharik.fr/meowtube/privacy

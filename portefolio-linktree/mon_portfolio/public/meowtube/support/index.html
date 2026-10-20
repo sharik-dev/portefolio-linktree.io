@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Support · MeowTube</title>
+<meta name="description" content="MeowTube support: help, subscriptions and contact.">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<style>
+  :root {
+    --bg: #000; --panel: #0e0e10; --line: #1f1f23; --text: #f2f2f5;
+    --muted: #8e8e93; --accent: #FF2D2D; --accent-dim: rgba(255,45,45,.12);
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body::before {
+    content: ""; position: fixed; inset: 0; pointer-events: none; z-index: -1;
+    background: radial-gradient(120% 50% at 50% -10%, rgba(255,45,45,.14), transparent 60%);
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 16px; }
+  header { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; }
+  .brand { font-weight: 700; letter-spacing: .02em; color: var(--text); display: flex; align-items: center; gap: 10px; }
+  .dot { width: 9px; height: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); }
+  .lang { display: flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; }
+  header { flex-wrap: wrap; gap: 12px; }
+  .lang button { padding: 8px 10px; }
+  p { overflow-wrap: anywhere; }
+  [dir=rtl] section ul { padding-left: 0; padding-right: 1.2em; }
+  .lang button {
+    background: none; border: 0; color: var(--muted); font-family: inherit; font-size: 13px; font-weight: 600;
+    padding: 8px 12px; cursor: pointer;
+  }
+  .lang button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+  .top { padding: 40px 0 24px; }
+  .eyebrow { color: var(--accent); font-size: 13px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+  h1 { font-size: clamp(32px, 8vw, 46px); line-height: 1.08; margin: 12px 0 10px; letter-spacing: -.02em; }
+  .date { color: var(--muted); font-size: 15px; margin: 0; }
+  .summary { background: var(--accent-dim); border: 1px solid rgba(255,45,45,.35); border-radius: 16px; padding: 18px 20px; margin: 24px 0 8px; }
+  .summary p { margin: 0; color: #f2f2f5; font-weight: 500; }
+  section { padding: 22px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 20px; margin: 0 0 10px; letter-spacing: -.01em; }
+  section p { margin: 0 0 10px; color: #c7c7cc; }
+  section p:last-child { margin-bottom: 0; }
+  footer { padding: 28px 0 48px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 8px 18px; }
+  footer a { color: var(--muted); }
+  .mail { word-break: break-all; font-weight: 600; }
+  section ul { margin: 0 0 10px; padding-left: 1.2em; color: #c7c7cc; }
+  section li { margin: 4px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="brand"><span class="dot" aria-hidden="true"></span>MeowTube</span>
+    <div class="lang" role="group" aria-label="Language">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>
+      <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+      <button type="button" data-lang="es" aria-pressed="false">ES</button>
+      <button type="button" data-lang="ar" aria-pressed="false">AR</button>
+      <button type="button" data-lang="hi" aria-pressed="false">HI</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="top">
+      <div class="eyebrow" data-i18n="eyebrow">MeowTube</div>
+      <h1 data-i18n="title">Support</h1>
+      <div class="summary"><p data-i18n="summary">Need help with MeowTube? Write to us at sharikmohamed8@gmail.com, or use Home › Feedback in the app. We usually reply within a few days.</p></div>
+    </div>
+
+    <section>
+      <h2 data-i18n="q1">How do I hide Shorts and Reels?</h2>
+      <p data-i18n="a1">There's nothing to set up: MeowTube removes Shorts, Reels and short-video feeds automatically on the sites you open from its Home screen.</p>
+    </section>
+    <section>
+      <h2 data-i18n="q2">How do I set a daily time limit?</h2>
+      <p data-i18n="a2">Open Settings in the app, turn on the session gauge and choose your daily limit. With MeowTube Pro, the app can also lock when the limit is reached.</p>
+    </section>
+    <section>
+      <h2 data-i18n="q3">How do I manage or cancel my subscription?</h2>
+      <p data-i18n="a3">Subscriptions are handled by Apple: open the iPhone Settings › your name › Subscriptions › MeowTube. You can cancel at any time.</p>
+    </section>
+    <section>
+      <h2 data-i18n="q4">I changed phone: how do I get Pro back?</h2>
+      <p data-i18n="a4">Open Settings in the app, then MeowTube Pro › Restore purchases, with the same Apple account.</p>
+    </section>
+    <section>
+      <h2 data-i18n="q5">How do I change the language?</h2>
+      <p data-i18n="a5">Open Settings › Language. MeowTube is available in English, French, Spanish, Arabic and Hindi.</p>
+    </section>
+    <section>
+      <h2 data-i18n="q6">How do I delete my account?</h2>
+      <p data-i18n="a6">Signing in is optional. To delete your account, open Settings › Account › Delete account.</p>
+    </section>
+
+    <section>
+      <h2 data-i18n="contactH">Contact</h2>
+      <p data-i18n="contactP">Bug, idea, question: we read every message.</p>
+      <p><a class="mail" href="mailto:sharikmohamed8@gmail.com?subject=MeowTube%20support">sharikmohamed8@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Sharik Mohamed</span>
+    <a href="../privacy/" data-i18n="privacy">Privacy policy</a>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var dict = {"en": {"eyebrow": "MeowTube", "title": "Support", "summary": "Need help with MeowTube? Write to us at sharikmohamed8@gmail.com, or use Home › Feedback in the app. We usually reply within a few days.", "q1": "How do I hide Shorts and Reels?", "a1": "There's nothing to set up: MeowTube removes Shorts, Reels and short-video feeds automatically on the sites you open from its Home screen.", "q2": "How do I set a daily time limit?", "a2": "Open Settings in the app, turn on the session gauge and choose your daily limit. With MeowTube Pro, the app can also lock when the limit is reached.", "q3": "How do I manage or cancel my subscription?", "a3": "Subscriptions are handled by Apple: open the iPhone Settings › your name › Subscriptions › MeowTube. You can cancel at any time.", "q4": "I changed phone: how do I get Pro back?", "a4": "Open Settings in the app, then MeowTube Pro › Restore purchases, with the same Apple account.", "q5": "How do I change the language?", "a5": "Open Settings › Language. MeowTube is available in English, French, Spanish, Arabic and Hindi.", "q6": "How do I delete my account?", "a6": "Signing in is optional. To delete your account, open Settings › Account › Delete account.", "contactH": "Contact", "contactP": "Bug, idea, question: we read every message.", "privacy": "Privacy policy", "docTitle": "Support · MeowTube", "docDesc": "MeowTube support: help, subscriptions and contact."}, "fr": {"eyebrow": "MeowTube", "title": "Assistance", "summary": "Besoin d'aide avec MeowTube ? Écris-nous à sharikmohamed8@gmail.com, ou passe par Accueil › Avis dans l'app. Nous répondons en général sous quelques jours.", "q1": "Comment masquer les Shorts et les Reels ?", "a1": "Il n'y a rien à régler : MeowTube retire automatiquement les Shorts, les Reels et les fils de vidéos courtes sur les sites ouverts depuis son accueil.", "q2": "Comment fixer une limite de temps par jour ?", "a2": "Ouvre les Réglages de l'app, active la jauge et choisis ta limite journalière. Avec MeowTube Pro, l'app peut aussi se verrouiller quand la limite est atteinte.", "q3": "Comment gérer ou résilier mon abonnement ?", "a3": "Les abonnements sont gérés par Apple : Réglages de l'iPhone › ton nom › Abonnements › MeowTube. Tu peux résilier à tout moment.", "q4": "J'ai changé de téléphone : comment retrouver Pro ?", "a4": "Dans les Réglages de l'app, ouvre MeowTube Pro › Restaurer les achats, avec le même compte Apple.", "q5": "Comment changer de langue ?", "a5": "Réglages › Langue. MeowTube est disponible en anglais, français, espagnol, arabe et hindi.", "q6": "Comment supprimer mon compte ?", "a6": "La connexion est facultative. Pour supprimer ton compte : Réglages › Compte › Supprimer le compte.", "contactH": "Contact", "contactP": "Bug, idée, question : nous lisons chaque message.", "privacy": "Politique de confidentialité", "docTitle": "Assistance · MeowTube", "docDesc": "Assistance MeowTube : aide, abonnements et contact."}, "es": {"eyebrow": "MeowTube", "title": "Soporte", "summary": "¿Necesitas ayuda con MeowTube? Escríbenos a sharikmohamed8@gmail.com o usa Inicio › Opinión en la app. Solemos responder en pocos días.", "q1": "¿Cómo oculto los Shorts y los Reels?", "a1": "No hay nada que configurar: MeowTube quita automáticamente los Shorts, los Reels y los feeds de videos cortos en los sitios que abres desde su inicio.", "q2": "¿Cómo pongo un límite de tiempo diario?", "a2": "Abre Ajustes en la app, activa el indicador y elige tu límite diario. Con MeowTube Pro, la app también puede bloquearse al alcanzar el límite.", "q3": "¿Cómo gestiono o cancelo mi suscripción?", "a3": "Las suscripciones las gestiona Apple: Ajustes del iPhone › tu nombre › Suscripciones › MeowTube. Puedes cancelar cuando quieras.", "q4": "Cambié de teléfono: ¿cómo recupero Pro?", "a4": "En los Ajustes de la app, abre MeowTube Pro › Restaurar compras, con la misma cuenta de Apple.", "q5": "¿Cómo cambio el idioma?", "a5": "Ajustes › Idioma. MeowTube está disponible en inglés, francés, español, árabe e hindi.", "q6": "¿Cómo elimino mi cuenta?", "a6": "Iniciar sesión es opcional. Para eliminar tu cuenta: Ajustes › Cuenta › Eliminar cuenta.", "contactH": "Contacto", "contactP": "Error, idea, pregunta: leemos cada mensaje.", "privacy": "Política de privacidad", "docTitle": "Soporte · MeowTube", "docDesc": "Soporte de MeowTube: ayuda, suscripciones y contacto."}, "ar": {"eyebrow": "MeowTube", "title": "الدعم", "summary": "تحتاج مساعدة في MeowTube؟ راسلنا على sharikmohamed8@gmail.com أو استخدم الرئيسية › ملاحظات داخل التطبيق. نرد عادةً خلال أيام قليلة.", "q1": "كيف أخفي Shorts وReels؟", "a1": "لا شيء لضبطه: يزيل MeowTube تلقائيًا Shorts وReels وخلاصات الفيديوهات القصيرة في المواقع التي تفتحها من شاشته الرئيسية.", "q2": "كيف أضع حدًا يوميًا للوقت؟", "a2": "افتح الإعدادات في التطبيق، وفعّل المؤشر واختر حدك اليومي. مع MeowTube Pro يمكن للتطبيق أيضًا أن يُقفل عند بلوغ الحد.", "q3": "كيف أدير اشتراكي أو ألغيه؟", "a3": "تدير Apple الاشتراكات: إعدادات iPhone › اسمك › الاشتراكات › MeowTube. يمكنك الإلغاء في أي وقت.", "q4": "غيّرت هاتفي: كيف أستعيد Pro؟", "a4": "في إعدادات التطبيق، افتح MeowTube Pro › استعادة المشتريات، بنفس حساب Apple.", "q5": "كيف أغيّر اللغة؟", "a5": "الإعدادات › اللغة. يتوفر MeowTube بالإنجليزية والفرنسية والإسبانية والعربية والهندية.", "q6": "كيف أحذف حسابي؟", "a6": "تسجيل الدخول اختياري. لحذف حسابك: الإعدادات › الحساب › حذف الحساب.", "contactH": "تواصل معنا", "contactP": "خطأ، فكرة، سؤال: نقرأ كل رسالة.", "privacy": "سياسة الخصوصية", "docTitle": "الدعم · MeowTube", "docDesc": "دعم MeowTube: مساعدة واشتراكات وتواصل."}, "hi": {"eyebrow": "MeowTube", "title": "सहायता", "summary": "MeowTube में मदद चाहिए? हमें sharikmohamed8@gmail.com पर लिखें, या ऐप में होम › फ़ीडबैक इस्तेमाल करें। हम आमतौर पर कुछ दिनों में जवाब देते हैं।", "q1": "Shorts और Reels कैसे छिपाएँ?", "a1": "कुछ सेट नहीं करना है: MeowTube अपने होम से खोली गई साइट्स पर Shorts, Reels और शॉर्ट वीडियो फ़ीड अपने-आप हटा देता है।", "q2": "रोज़ की टाइम लिमिट कैसे सेट करें?", "a2": "ऐप की सेटिंग्स खोलें, गेज चालू करें और अपनी डेली लिमिट चुनें। MeowTube Pro के साथ लिमिट पूरी होने पर ऐप लॉक भी हो सकता है।", "q3": "सब्सक्रिप्शन कैसे मैनेज या कैंसल करें?", "a3": "सब्सक्रिप्शन Apple संभालता है: iPhone सेटिंग्स › आपका नाम › सब्सक्रिप्शन › MeowTube। आप कभी भी कैंसल कर सकते हैं।", "q4": "फ़ोन बदल लिया: Pro वापस कैसे पाएँ?", "a4": "ऐप की सेटिंग्स में MeowTube Pro › खरीदारी रीस्टोर करें खोलें, उसी Apple अकाउंट के साथ।", "q5": "भाषा कैसे बदलें?", "a5": "सेटिंग्स › भाषा। MeowTube अंग्रेज़ी, फ़्रेंच, स्पैनिश, अरबी और हिंदी में उपलब्ध है।", "q6": "अपना अकाउंट कैसे डिलीट करें?", "a6": "साइन इन करना ज़रूरी नहीं है। अकाउंट डिलीट करने के लिए: सेटिंग्स › अकाउंट › अकाउंट डिलीट करें।", "contactH": "संपर्क", "contactP": "बग, आइडिया, सवाल: हम हर मैसेज पढ़ते हैं।", "privacy": "प्राइवेसी पॉलिसी", "docTitle": "सहायता · MeowTube", "docDesc": "MeowTube सहायता: मदद, सब्सक्रिप्शन और संपर्क।"}};
+  var RTL = { ar: true };
+  var KEY = "meowtube.lang";
+  function detect() {
+    var q = new URLSearchParams(location.search).get("lang"); if (q && dict[q]) return q;
+    try { var saved = localStorage.getItem(KEY); if (saved && dict[saved]) return saved; } catch (e) {}
+    var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "en"];
+    for (var i = 0; i < langs.length; i++) { var code = String(langs[i]).toLowerCase().split("-")[0]; if (dict[code]) return code; }
+    return "en";
+  }
+  function apply(lang) {
+    var t = dict[lang] || dict.en;
+    document.documentElement.lang = lang;
+    document.documentElement.dir = RTL[lang] ? "rtl" : "ltr";
+    document.querySelectorAll("[data-i18n]").forEach(function (el) { var k = el.getAttribute("data-i18n"); if (t[k] != null) el.textContent = t[k]; });
+    document.title = t.docTitle;
+    var meta = document.querySelector('meta[name="description"]'); if (meta) meta.setAttribute("content", t.docDesc);
+    document.querySelectorAll(".lang button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-lang") === lang)); });
+  }
+  document.querySelectorAll(".lang button").forEach(function (b) {
+    b.addEventListener("click", function () { var lang = b.getAttribute("data-lang"); try { localStorage.setItem(KEY, lang); } catch (e) {} apply(lang); });
+  });
+  apply(detect());
+})();
+</script>
+</body>
+</html>

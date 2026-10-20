@@ -11,7 +11,7 @@ import redDecoration from '../assets/meowTube/redCatDecoration.png';
 import TabletViewer from '../components/TabletViewer';
 
 /* ─── Contact form ────────────────────────────────────────────── */
-const CONTACT_EMAIL = 'VOTRE_EMAIL@exemple.com'; // TODO: remplace par ton adresse
+const CONTACT_EMAIL = 'sharikmohamed8@gmail.com';
 
 /* ─── UI strings ──────────────────────────────────────────────── */
 const UI = {
@@ -82,81 +82,42 @@ const LEGAL = {
   cgu: {
     title: { fr: "Conditions Générales d'Utilisation", en: 'Terms of Service' },
     content: {
-      fr: `**Dernière mise à jour : mars 2026**
+      fr: `**Dernière mise à jour : 20 octobre 2026**
 
-**1. Objet**
-Les présentes CGU régissent l'utilisation de l'application mobile Meow-Tube.
+Version complète : sharik.fr/meowtube/privacy
 
-**2. Accès à l'Application**
-L'Application est accessible gratuitement. L'utilisateur s'engage à ne pas l'utiliser à des fins illicites.
+**1. Pas de publicité, pas de pistage**
+MeowTube n'affiche aucune publicité, ne te piste pas et ne vend aucune donnée.
 
-**3. Propriété intellectuelle**
-L'ensemble des éléments constituant l'Application est la propriété exclusive du développeur.
+**2. Statistiques anonymes**
+L'app envoie des statistiques d'usage anonymes (sessions, temps par type de site, version), jamais reliées à ton identité, sans adresse web ni contenu.
 
-**4. Limitation de responsabilité**
-L'Application est fournie « en l'état », sans garantie d'aucune sorte.
+**3. E-mail, seulement si tu le choisis**
+Ton adresse ne quitte l'appareil que pour recevoir une réponse à un avis, ou si tu coches « Recevoir les nouveautés par e-mail ». Désinscription à tout moment ; effacée au plus tard après 3 ans.
 
-**5. Modification des CGU**
-Le développeur se réserve le droit de modifier les présentes CGU à tout moment.
+**4. Compte**
+La connexion Apple ou Google est facultative ; le compte reste sur ton appareil.
 
-**6. Droit applicable**
-Les présentes CGU sont soumises au droit français.`,
-      en: `**Last updated: March 2026**
+**5. Tes droits**
+Conformément au RGPD : accès, rectification, effacement, opposition et retrait du consentement, à sharikmohamed8@gmail.com. Réclamation possible auprès de la CNIL.`,
+      en: `**Last updated: October 20, 2026**
 
-**1. Purpose**
-These Terms govern the use of the Meow-Tube mobile application.
+Full policy: sharik.fr/meowtube/privacy
 
-**2. Access**
-The app is free to use. Users agree not to use it for unlawful purposes.
+**1. No ads, no tracking**
+MeowTube shows no ads, does not track you and never sells data.
 
-**3. Intellectual property**
-All elements of the app are the exclusive property of the developer.
+**2. Anonymous statistics**
+The app sends anonymous usage statistics (sessions, time per kind of site, version), never linked to your identity, with no web address or content.
 
-**4. Limitation of liability**
-The app is provided "as is", without warranty of any kind.
+**3. Email, only if you choose**
+Your address only leaves your device to get a reply to feedback, or if you tick “Get MeowTube news by email”. Unsubscribe anytime; deleted after 3 years at the latest.
 
-**5. Amendments**
-The developer reserves the right to modify these terms at any time.
-
-**6. Governing law**
-These terms are governed by French law.`,
-    },
-  },
-  privacy: {
-    title: { fr: 'Politique de Confidentialité', en: 'Privacy Policy' },
-    content: {
-      fr: `**Dernière mise à jour : mars 2026**
-
-**1. Collecte de données**
-Meow-Tube ne collecte aucune donnée personnelle à des fins publicitaires ou de profilage.
-
-**2. Données techniques**
-Des données techniques anonymisées peuvent être collectées pour améliorer les performances.
-
-**3. Données de connexion**
-Vos identifiants sont traités directement par les fournisseurs concernés.
-
-**4. Cookies et traceurs**
-L'Application n'utilise pas de cookies à des fins de ciblage publicitaire.
-
-**5. Vos droits**
-Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression.`,
-      en: `**Last updated: March 2026**
-
-**1. Data collection**
-Meow-Tube does not collect personal data for advertising or profiling.
-
-**2. Technical data**
-Anonymized technical data may be collected to improve performance.
-
-**3. Login data**
-Your credentials are processed directly by the relevant service providers.
-
-**4. Cookies**
-The app does not use cookies for advertising targeting.
+**4. Account**
+Signing in with Apple or Google is optional; the account stays on your device.
 
 **5. Your rights**
-Under GDPR, you have the right to access, rectify, and delete your data.`,
+Under the GDPR: access, rectification, erasure, objection and withdrawal of consent, at sharikmohamed8@gmail.com. You may also complain to the CNIL.`,
     },
   },
   mentions: {

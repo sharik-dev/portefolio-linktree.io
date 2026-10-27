@@ -105,3 +105,20 @@ Hors compte : Guidor (Skyconseil). LocalShort et meow-Toon restent dans
 
 ⚠️ Le CV (les 4 fichiers synchronisés ci-dessus) garde sa liste d'apps écrite à la
 main — il n'est pas branché sur ce flux.
+
+## CV par spécialité (iCloud Drive/CV)
+
+Sept CV ciblés, FR + EN, dérivés du CV principal : **Swift, CI-CD, Web, Backend, Cyber, IA, Ingenieur-Logiciel** (ce dernier = profil généraliste architecte full-stack + mobile, dossier `CV Ingénieur Logiciel`).
+Ils ne font **pas** partie des 4 fichiers synchronisés ci-dessus : ce sont des déclinaisons.
+
+| Fichier | Rôle |
+|---|---|
+| `scripts/cv-variants.cjs` | Données des 7 variantes (titre, résumé, compétences, puces, projets, mots-clés) + `COMMON` (coordonnées d'alternance, stage, formation, langues) |
+| `scripts/lib/cv-print-html.cjs` | Gabarit HTML partagé avec `generate-cv-pdfs.cjs` (même rendu que le PDF du site) |
+| `scripts/generate-cv-variants.cjs` | `npm run cv:variants` → `~/Library/Mobile Documents/com~apple~CloudDocs/CV/CV <X>/CV_Sharik_<X>_<FR|EN>.pdf` |
+
+- Rendu par le Chrome installé en headless (pas besoin de `node_modules`). `--only Web` pour une seule variante, `--out <dir>` pour un autre dossier.
+- Le script signale ⚠️ tout CV qui dépasse **une page** : raccourcir alors la variante concernée.
+- Si une donnée commune change dans le CV principal (dates, écoles, contact), la reporter dans `COMMON`.
+- `COMMON.aeroBullet` ajoute en tête de l'alternance une puce sur l'aéronautique (Guidor, British Airways, Japan Airlines) dans les 7 variantes, volontairement légère car elles servent aussi hors aéro. `aeroBullet: false` la désactive (les CV par entreprise ont leurs propres puces aéro).
+- **CV par entreprise** (salon Aéro & Spatial Synergie, 30/09/2026) : `scripts/cv-salon-aero.cjs`, FR seul, profil qui reste polyvalent ; seuls l'accroche, l'ordre des compétences et les projets changent. `node scripts/generate-cv-variants.cjs --set salon` → `iCloud/CV/CV Spécifique/Salon Aéro Toulouse 2026/`.

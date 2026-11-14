@@ -138,6 +138,7 @@ Pages d'apps posées dans `public/` (URL des fiches App Store, à ne jamais supp
 
 | Dossier | Source | Note |
 |---|---|---|
+| `public/privacy/`, `public/support/` | **ici** | **pages générales**, URL par défaut de toute nouvelle app (skill `publier-app-store`) |
 | `public/blockgallery/` | `~/Documents/IOS/BlockGallery/site/` | recopier si la source change |
 | `public/flightadvisor/` | `~/Documents/IOS/SelfTransfer/site/` | idem |
 | `public/salsa/` | `~/Documents/IOS/salsa/site/` | idem (`#privacy`, `#support`) |

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Support · Sharik Mohamed apps</title>
+<style>
+:root{--bg:#F5F5F7;--card:#fff;--ink:#1D1D1F;--muted:#55555C;--sky:#0071E3;--sun:#FFC83D;--line:#E0E0E6}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#000;--card:#1C1C1E;--ink:#F5F5F7;--muted:#AEAEB2;--line:#38383A}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,system-ui,sans-serif}
+main{max-width:680px;margin:0 auto;padding:32px 16px 64px}
+nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+.brand{font-weight:800;font-size:20px} .brand b{color:var(--sky)}
+nav button{background:var(--card);border:2px solid var(--line);color:var(--ink);border-radius:20px;padding:4px 12px;margin-left:6px;font:600 14px system-ui;cursor:pointer}
+.card{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:20px 22px;box-shadow:0 5px 0 var(--line)}
+h1{font-size:32px;margin:0 0 12px} h2{font-size:20px;margin:24px 0 6px}
+p,li{color:var(--muted)} a{color:var(--sky)}
+[data-l]{display:none} html[lang=en] [data-l=en],html[lang=fr] [data-l=fr]{display:block}
+</style>
+</head>
+<body><main>
+<nav><a class="brand" href="/" style="text-decoration:none;color:inherit">Sharik <b>Mohamed</b></a><span><button onclick="setL('en')">EN</button><button onclick="setL('fr')">FR</button></span></nav>
+<div class="card">
+<div data-l="en">
+<h1>Support</h1>
+<p>Help for every app and game by Sharik Mohamed. A question, a bug, an idea? Write to <a href="mailto:sharikmohamed8@gmail.com">sharikmohamed8@gmail.com</a> with the app's name and, if you can, your device model — we answer every message.</p>
+<h2>Frequently asked</h2>
+<p><b>Restore a purchase.</b> Open the app's shop or subscription screen and tap Restore. Purchases are tied to your Apple ID.</p>
+<p><b>Cancel a subscription.</b> iPhone Settings → your name → Subscriptions. Only Apple can cancel or refund.</p>
+<p><b>Progress lost after reinstalling.</b> Progress is stored on the device unless the app offers iCloud sync; check that iCloud is turned on for the app in Settings.</p>
+<p><a href="../privacy/">Privacy policy</a></p>
+</div>
+<div data-l="fr">
+<h1>Assistance</h1>
+<p>L'aide de toutes les apps et de tous les jeux de Sharik Mohamed. Une question, un bug, une idée ? Écrivez à <a href="mailto:sharikmohamed8@gmail.com">sharikmohamed8@gmail.com</a> en précisant le nom de l'app et, si possible, votre modèle d'appareil — chaque message reçoit une réponse.</p>
+<h2>Questions fréquentes</h2>
+<p><b>Restaurer un achat.</b> Ouvrez la boutique ou l'écran d'abonnement de l'app et touchez Restaurer. Les achats sont liés à votre identifiant Apple.</p>
+<p><b>Résilier un abonnement.</b> Réglages de l'iPhone → votre nom → Abonnements. Seul Apple peut résilier ou rembourser.</p>
+<p><b>Progression perdue après réinstallation.</b> La progression est enregistrée sur l'appareil, sauf si l'app propose la synchronisation iCloud : vérifiez qu'iCloud est activé pour l'app dans Réglages.</p>
+<p><a href="../privacy/">Politique de confidentialité</a></p>
+</div>
+</div></main>
+<script>
+function setL(l){document.documentElement.lang=l;try{localStorage.setItem('lang',l)}catch(e){}}
+var s=null;try{s=localStorage.getItem('lang')}catch(e){}
+setL(s||((navigator.language||'en').toLowerCase().indexOf('fr')===0?'fr':'en'));
+</script>
+</body></html>

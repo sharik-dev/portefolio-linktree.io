@@ -4,11 +4,29 @@ import { useLang, t } from '../contexts/LangContext';
 
 import occitanieTrainDesktop from '../assets/web-projects/occitanie-train-desktop.jpg';
 import occitanieTrainMobile from '../assets/web-projects/occitanie-train-mobile.jpg';
+import clipetIcon from '../assets/clipet/icon.png';
+import clipetShot from '../assets/clipet/og-image.png';
 
 /* ─── Web projects ──────────────────────────────────────────────── */
 const OCCITANIE_TRAIN_URL = 'https://ia-impact.51-91-125-99.sslip.io/';
 
-const WEB_PROJECTS = [
+type Bi = { fr: string; en: string };
+type WebProject = {
+  id: string;
+  name: string;
+  url: string;
+  desktop: string;
+  mobile?: string;
+  icon?: string;
+  context: Bi;
+  subtitle: Bi;
+  description: Bi;
+  features: { fr: string[]; en: string[] };
+  tech: string[];
+  award?: Bi;
+};
+
+const WEB_PROJECTS: WebProject[] = [
   {
     id: 'occitanie-train',
     name: 'Occitanie en train',
@@ -27,6 +45,24 @@ const WEB_PROJECTS = [
     },
     tech: ['React', 'TypeScript', 'MapLibre', 'Three.js', 'Python', 'FastAPI', 'OpenAI'],
     award: { fr: 'Prix Coup de Cœur', en: "Jury's Favourite Award" },
+  },
+  {
+    id: 'clipet',
+    name: 'cliPet',
+    url: 'https://clipet.sharik.fr/',
+    desktop: clipetShot,
+    icon: clipetIcon,
+    context: { fr: 'App macOS · site dédié', en: 'macOS app · dedicated site' },
+    subtitle: { fr: 'Un chat en pixel art qui vit sur votre Mac', en: 'A pixel-art cat that lives on your Mac' },
+    description: {
+      fr: 'Compagnon natif macOS qui se balade en bas de votre écran, poursuit votre curseur et garde un œil sur votre presse-papiers. Léger, 100 % local, adorable.',
+      en: 'Native macOS companion that strolls along the bottom of your screen, chases your cursor and keeps an eye on your clipboard. Light, fully local, adorable.',
+    },
+    features: {
+      fr: ['Chat pixel art animé sur le bureau', 'Poursuit le curseur et réagit aux fenêtres', 'Gestionnaire de presse-papiers intégré', '100 % local, aucune donnée envoyée'],
+      en: ['Animated pixel-art cat on your desktop', 'Chases the cursor and reacts to windows', 'Built-in clipboard manager', '100% local, no data sent'],
+    },
+    tech: ['macOS', 'Swift', 'SwiftUI', 'AppKit'],
   },
 ];
 
@@ -75,22 +111,29 @@ const WebPage: React.FC = () => {
               className="relative block bg-[#F5F5F7] dark:bg-[#2C2C2E] px-4 pt-4 md:px-8 md:pt-8">
               <img src={project.desktop} alt={project.name}
                 className="w-full md:w-[85%] rounded-t-xl border border-b-0 border-black/[0.08] dark:border-white/[0.08] shadow-md" />
-              <img src={project.mobile} alt="" loading="lazy"
-                className="hidden md:block absolute right-8 bottom-0 w-[18%] max-h-[90%] object-cover object-top rounded-t-2xl border-[5px] border-b-0 border-[#1D1D1F] shadow-xl" />
+              {project.mobile && (
+                <img src={project.mobile} alt="" loading="lazy"
+                  className="hidden md:block absolute right-8 bottom-0 w-[18%] max-h-[90%] object-cover object-top rounded-t-2xl border-[5px] border-b-0 border-[#1D1D1F] shadow-xl" />
+              )}
             </a>
             <div className="p-5 md:p-7">
               <div className="flex flex-wrap gap-1.5 mb-2">
-                <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[#FF9F0A]/10 text-[#FF9F0A]">
-                  {t(lang, project.award.fr, project.award.en)}
-                </span>
+                {project.award && (
+                  <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[#FF9F0A]/10 text-[#FF9F0A]">
+                    {t(lang, project.award.fr, project.award.en)}
+                  </span>
+                )}
                 <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[#0071E3]/10 text-[#0071E3]">
                   {t(lang, project.context.fr, project.context.en)}
                 </span>
               </div>
               <div className="flex flex-wrap items-start justify-between gap-3">
-                <div className="min-w-0">
+                <div className="min-w-0 flex items-center gap-3">
+                  {project.icon && <img src={project.icon} alt="" className="w-12 h-12 rounded-[12px] shadow-sm flex-shrink-0 object-cover" />}
+                  <div className="min-w-0">
                   <h2 className="text-xl font-bold text-[#1D1D1F] dark:text-white tracking-tight">{project.name}</h2>
                   <p className="text-[14px] text-[#6E6E73] dark:text-[#98989D] mt-0.5">{t(lang, project.subtitle.fr, project.subtitle.en)}</p>
+                  </div>
                 </div>
                 <a href={project.url} target="_blank" rel="noopener noreferrer"
                   className="flex-shrink-0 bg-[#0071E3] text-white text-[13px] font-bold px-5 py-2 rounded-full hover:bg-[#0077ED] active:scale-95 transition-all flex items-center gap-1.5">

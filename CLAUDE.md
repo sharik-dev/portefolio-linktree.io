@@ -127,6 +127,25 @@ d'Apple sert n'importe quelle taille, l'API ne renvoie qu'une vignette 320 px).
 ⚠️ Le CV (les 4 fichiers synchronisés ci-dessus) garde sa liste d'apps écrite à la
 main — il n'est pas branché sur ce flux.
 
+## Déploiement — ⚠️ le push EFFACE tout ce qui n'est pas dans `dist/`
+
+`.github/workflows/deploy-vps.yml` tourne à chaque push sur `main` : `rm -rf /var/www/sharik.fr`
+puis copie de `dist/`. Toute page servie sur sharik.fr **doit donc vivre dans `public/`**, sinon
+elle disparaît au push suivant (arrivé le 14/11/2026 : pages de confidentialité/support d'apps en
+revue Apple effacées).
+
+Pages d'apps posées dans `public/` (URL des fiches App Store, à ne jamais supprimer) :
+
+| Dossier | Source | Note |
+|---|---|---|
+| `public/blockgallery/` | `~/Documents/IOS/BlockGallery/site/` | recopier si la source change |
+| `public/flightadvisor/` | `~/Documents/IOS/SelfTransfer/site/` | idem |
+| `public/salsa/` | `~/Documents/IOS/salsa/site/` | idem (`#privacy`, `#support`) |
+| `public/doodlenest/` | **ici** (recréée le 14/11/2026, aucune source ailleurs) | Draw Your Family : aucune donnée collectée, iCloud de la famille, abonnement Plus |
+
+Une nouvelle app qui a besoin d'une page sur sharik.fr : la poser dans `public/<app>/`.
+Vérifier en ligne par le `<title>`, pas par le code HTTP : une URL inconnue renvoie le portfolio en 200.
+
 ## CV par spécialité (iCloud Drive/CV)
 
 Sept CV ciblés, FR + EN, dérivés du CV principal : **Swift, CI-CD, Web, Backend, Cyber, IA, Ingenieur-Logiciel** (ce dernier = profil généraliste architecte full-stack + mobile, dossier `CV Ingénieur Logiciel`).

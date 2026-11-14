@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Support · Draw Your Family</title>
+<style>
+:root{--bg:#FFF6EC;--card:#fff;--ink:#3A2A1E;--muted:#6E5644;--sky:#E8743B;--sun:#FFC83D;--line:#F3D9C4}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1E1611;--card:#2B2019;--ink:#FFF1E4;--muted:#D6BFAA;--line:#4A3627}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,system-ui,sans-serif}
+main{max-width:680px;margin:0 auto;padding:32px 16px 64px}
+nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+.brand{font-weight:800;font-size:20px} .brand b{color:var(--sky)}
+nav button{background:var(--card);border:2px solid var(--line);color:var(--ink);border-radius:20px;padding:4px 12px;margin-left:6px;font:600 14px system-ui;cursor:pointer}
+.card{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:20px 22px;box-shadow:0 5px 0 var(--line)}
+h1{font-size:32px;margin:0 0 12px} h2{font-size:20px;margin:24px 0 6px}
+p,li{color:var(--muted)} a{color:var(--sky)}
+[data-l]{display:none} html[lang=en] [data-l=en],html[lang=fr] [data-l=fr]{display:block}
+</style>
+</head>
+<body><main>
+<nav><span class="brand">Draw Your <b>Family</b></span><span><button onclick="setL('en')">EN</button><button onclick="setL('fr')">FR</button></span></nav>
+<div class="card">
+<div data-l="en">
+<h1>Support</h1>
+<p>Your child's drawings, right on your Home Screen: family portrait, aquarium and garden widgets. Questions, a bug, an idea? Write to <a href="mailto:sharikmohamed8@gmail.com">sharikmohamed8@gmail.com</a>, we answer every message.</p>
+<h2>Frequently asked</h2>
+<p><b>The widget doesn't show the new drawing.</b> Widgets refresh on their own after a moment; long-press the widget to pick its style.</p>
+<p><b>Family members don't see the drawings.</b> Check that everyone is signed in to iCloud and accepted the invitation sent from the Family area.</p>
+<p><b>Restore a subscription.</b> Open the Family area, then Draw Your Family Plus, and tap Restore.</p>
+<p><a href="../privacy/">Privacy policy</a></p>
+</div>
+<div data-l="fr">
+<h1>Support</h1>
+<p>Les dessins de votre enfant sur votre écran d'accueil : widgets portrait de famille, aquarium et jardin. Une question, un bug, une idée ? Écrivez à <a href="mailto:sharikmohamed8@gmail.com">sharikmohamed8@gmail.com</a>, chaque message reçoit une réponse.</p>
+<h2>Questions fréquentes</h2>
+<p><b>Le widget n'affiche pas le nouveau dessin.</b> Les widgets se rafraîchissent seuls après un instant ; un appui long sur le widget permet de choisir son style.</p>
+<p><b>La famille ne voit pas les dessins.</b> Vérifiez que chacun est connecté à iCloud et a accepté l'invitation envoyée depuis l'espace Famille.</p>
+<p><b>Restaurer un abonnement.</b> Ouvrez l'espace Famille, puis Dessine ta famille Plus, et touchez Restaurer.</p>
+<p><a href="../privacy/">Politique de confidentialité</a></p>
+</div>
+</div></main>
+<script>
+function setL(l){document.documentElement.lang=l;try{localStorage.setItem('lang',l)}catch(e){}}
+var s=null;try{s=localStorage.getItem('lang')}catch(e){}
+setL(s||((navigator.language||'en').toLowerCase().indexOf('fr')===0?'fr':'en'));
+</script>
+</body></html>

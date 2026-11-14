@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy Policy · Draw Your Family</title>
+<style>
+:root{--bg:#FFF6EC;--card:#fff;--ink:#3A2A1E;--muted:#6E5644;--sky:#E8743B;--sun:#FFC83D;--line:#F3D9C4}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#1E1611;--card:#2B2019;--ink:#FFF1E4;--muted:#D6BFAA;--line:#4A3627}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,system-ui,sans-serif}
+main{max-width:680px;margin:0 auto;padding:32px 16px 64px}
+nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+.brand{font-weight:800;font-size:20px} .brand b{color:var(--sky)}
+nav button{background:var(--card);border:2px solid var(--line);color:var(--ink);border-radius:20px;padding:4px 12px;margin-left:6px;font:600 14px system-ui;cursor:pointer}
+.card{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:20px 22px;box-shadow:0 5px 0 var(--line)}
+h1{font-size:32px;margin:0 0 12px} h2{font-size:20px;margin:24px 0 6px}
+p,li{color:var(--muted)} a{color:var(--sky)}
+[data-l]{display:none} html[lang=en] [data-l=en],html[lang=fr] [data-l=fr]{display:block}
+</style>
+</head>
+<body><main>
+<nav><span class="brand">Draw Your <b>Family</b></span><span><button onclick="setL('en')">EN</button><button onclick="setL('fr')">FR</button></span></nav>
+<div class="card">
+<div data-l="en">
+<h1>Privacy policy</h1>
+<p>Draw Your Family (DoodleNest) is a drawing app for children by Sharik Mohamed. <b>We collect no data.</b> There is no account, no advertising, no analytics and no tracking: we never see your child's drawings, name or any personal information.</p>
+<h2>Where drawings are stored</h2>
+<p>Drawings are saved on your device. If you turn on family sharing, they sync through your own iCloud account (Apple CloudKit) with the family members you invite from the Family area. This data stays in your iCloud and is never sent to us or to any third party.</p>
+<h2>Subscription</h2>
+<p>Draw Your Family Plus is an optional subscription handled entirely by Apple. We receive no payment details. Purchases are behind a parental gate.</p>
+<h2>Children</h2>
+<p>The app is designed for children and complies with Apple's Kids Category rules: no third-party advertising or analytics, and links outside the app are behind a parental gate.</p>
+<h2>Contact</h2>
+<p><a href="mailto:sharikmohamed8@gmail.com">sharikmohamed8@gmail.com</a></p>
+<p>Last updated: November 14, 2026.</p>
+</div>
+<div data-l="fr">
+<h1>Politique de confidentialité</h1>
+<p>Dessine ta famille (DoodleNest) est une app de dessin pour enfants de Sharik Mohamed. <b>Nous ne collectons aucune donnée.</b> Ni compte, ni publicité, ni statistiques, ni pistage : nous ne voyons jamais les dessins de votre enfant, son nom ni aucune information personnelle.</p>
+<h2>Où sont rangés les dessins</h2>
+<p>Les dessins sont enregistrés sur votre appareil. Si vous activez le partage familial, ils se synchronisent par votre propre compte iCloud (Apple CloudKit) avec les membres de la famille que vous invitez depuis l'espace Famille. Ces données restent dans votre iCloud et ne nous sont jamais envoyées, ni à aucun tiers.</p>
+<h2>Abonnement</h2>
+<p>Dessine ta famille Plus est un abonnement facultatif entièrement géré par Apple. Nous ne recevons aucune donnée de paiement. Les achats sont protégés par une porte parentale.</p>
+<h2>Enfants</h2>
+<p>L'app est conçue pour les enfants et respecte les règles de la catégorie Enfants d'Apple : aucune publicité ni statistique tierce, et les liens hors de l'app passent par une porte parentale.</p>
+<h2>Contact</h2>
+<p><a href="mailto:sharikmohamed8@gmail.com">sharikmohamed8@gmail.com</a></p>
+<p>Dernière mise à jour : 14 novembre 2026.</p>
+</div>
+</div></main>
+<script>
+function setL(l){document.documentElement.lang=l;try{localStorage.setItem('lang',l)}catch(e){}}
+var s=null;try{s=localStorage.getItem('lang')}catch(e){}
+setL(s||((navigator.language||'en').toLowerCase().indexOf('fr')===0?'fr':'en'));
+</script>
+</body></html>

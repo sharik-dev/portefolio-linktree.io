@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salsa Steps</title>
+<style>
+:root{--bg:#12020a;--ink:#f5eef0;--muted:#c9b3bb;--pink:#ff4090;--gold:#ffb826}
+body{margin:0;background:linear-gradient(180deg,#5a0419,#12020a 60%);background-color:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,system-ui,sans-serif;min-height:100vh}
+main{max-width:680px;margin:0 auto;padding:48px 16px}
+h1{font-size:40px;margin:0 0 4px;background:linear-gradient(var(--gold),var(--pink));-webkit-background-clip:text;color:transparent}
+h2{color:var(--gold);margin-top:36px}
+a{color:var(--pink)} p,li{color:var(--muted)}
+nav button{background:none;border:1px solid var(--muted);color:var(--ink);border-radius:20px;padding:4px 12px;margin-right:6px;cursor:pointer}
+[data-l]{display:none} html[lang=en] [data-l=en], html[lang=fr] [data-l=fr]{display:block}
+</style>
+</head>
+<body>
+<main>
+<nav><button onclick="setL('en')">EN</button><button onclick="setL('fr')">FR</button></nav>
+<h1>Salsa Steps</h1>
+<div data-l="en">
+<p>Learn salsa count by count: a rhythm game and a salsa wiki with every step traced on the floor.</p>
+<h2 id="support">Support</h2>
+<p>Questions, bugs or ideas: <a href="mailto:sharikmohamed8@gmail.com">sharikmohamed8@gmail.com</a>.</p>
+<h2 id="privacy">Privacy policy</h2>
+<p>Salsa Steps collects no personal data. There is no account, no analytics, no advertising and no tracking. Your scores and language choice are stored only on your device and never leave it. Video links open YouTube in your browser, which is governed by YouTube's own privacy policy.</p>
+<p>Last updated: October 6, 2026.</p>
+</div>
+<div data-l="fr">
+<p>Apprends la salsa temps par temps : un jeu de rythme et un wiki salsa avec tous les pas tracés au sol.</p>
+<h2>Support</h2>
+<p>Questions, bugs ou idées : <a href="mailto:sharikmohamed8@gmail.com">sharikmohamed8@gmail.com</a>.</p>
+<h2>Politique de confidentialité</h2>
+<p>Salsa Steps ne collecte aucune donnée personnelle. Pas de compte, pas de statistiques, pas de publicité, aucun pistage. Tes scores et ton choix de langue restent uniquement sur ton appareil. Les liens vidéo ouvrent YouTube dans ton navigateur, soumis à la politique de confidentialité de YouTube.</p>
+<p>Dernière mise à jour : 6 octobre 2026.</p>
+</div>
+</main>
+<script>
+function setL(l){document.documentElement.lang=l;try{localStorage.setItem('lang',l)}catch(e){}}
+var s=null;try{s=localStorage.getItem('lang')}catch(e){}
+setL(s||((navigator.language||'en').slice(0,2)==='fr'?'fr':'en'));
+</script>
+</body>
+</html>

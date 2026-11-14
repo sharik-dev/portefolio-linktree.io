@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Support · Flight Advisor</title>
+<style>
+:root{--bg:#EAF6FF;--card:#fff;--ink:#16324F;--muted:#4D6B88;--sky:#1A8FE3;--line:#C9E3F7}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0B1B2B;--card:#13283D;--ink:#EAF4FF;--muted:#A9C2DA;--line:#23405E}}
+:root[data-theme="dark"]{--bg:#0B1B2B;--card:#13283D;--ink:#EAF4FF;--muted:#A9C2DA;--line:#23405E}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,system-ui,sans-serif}
+main{max-width:680px;margin:0 auto;padding:32px 16px 64px}
+nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+.brand{font-weight:800;font-size:20px} .brand b{color:var(--sky)}
+nav button{background:var(--card);border:2px solid var(--line);color:var(--ink);border-radius:20px;padding:4px 12px;margin-left:6px;font:600 14px system-ui;cursor:pointer}
+.card{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:20px 22px;box-shadow:0 5px 0 var(--line)}
+h1{font-size:32px;margin:0 0 12px} h2{font-size:20px;margin:24px 0 6px}
+p,li{color:var(--muted)} a{color:var(--sky)} b{color:var(--ink)}
+[data-l]{display:none} html[lang=en] [data-l=en],html[lang=fr] [data-l=fr]{display:block}
+</style>
+</head>
+<body><main>
+<nav><span class="brand">Flight <b>Advisor</b></span><span><button onclick="setL('en')">EN</button><button onclick="setL('fr')">FR</button></span></nav>
+<div class="card">
+<div data-l="en">
+<h1>Support</h1>
+<p>Flight Advisor follows a connection on separate tickets: both flights, the real time you need at the layover, a risk score, reminders and a Live Activity. Questions, a bug, an idea? Write to <a href="mailto:sharikmohamed8@gmail.com">sharikmohamed8@gmail.com</a>, we answer every message.</p>
+<h2>Frequently asked</h2>
+<p><b>Is my bag transferred?</b> Not with separate tickets: you collect it at the layover and drop it again for the second flight. The app shows when the bag drop closes.</p>
+<p><b>Will the second airline wait if I am late?</b> No. With separate tickets, the second airline does not know about your first flight. That is why the app checks your margin.</p>
+<p><b>No reminder or Live Activity?</b> Check that notifications and Live Activities are allowed for Flight Advisor in Settings.</p>
+<p><a href="../privacy/">Privacy policy</a></p>
+</div>
+<div data-l="fr">
+<h1>Assistance</h1>
+<p>Flight Advisor suit une correspondance sur billets séparés : les deux vols, le temps réellement nécessaire à l'escale, un score de risque, des rappels et une Live Activity. Une question, un bug, une idée ? Écrivez à <a href="mailto:sharikmohamed8@gmail.com">sharikmohamed8@gmail.com</a>, chaque message reçoit une réponse.</p>
+<h2>Questions fréquentes</h2>
+<p><b>Ma valise est-elle transférée ?</b> Pas avec des billets séparés : vous la récupérez à l'escale et la déposez à nouveau pour le second vol. L'app indique l'heure de fermeture du dépôt.</p>
+<p><b>La seconde compagnie m'attendra-t-elle en cas de retard ?</b> Non. Avec des billets séparés, elle ignore tout de votre premier vol. C'est pour ça que l'app surveille votre marge.</p>
+<p><b>Pas de rappel ni de Live Activity ?</b> Vérifiez dans Réglages que les notifications et les Live Activities sont autorisées pour Flight Advisor.</p>
+<p><a href="../privacy/">Politique de confidentialité</a></p>
+</div>
+</div></main>
+<script>
+function setL(l){document.documentElement.lang=l;try{localStorage.setItem('lang',l)}catch(e){}}
+var s=null;try{s=localStorage.getItem('lang')}catch(e){}
+setL(s||((navigator.language||'en').toLowerCase().indexOf('fr')===0?'fr':'en'));
+</script>
+</body></html>

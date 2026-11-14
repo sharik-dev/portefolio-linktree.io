@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Privacy Policy · Block Gallery</title>
+<style>
+:root{--bg:#EAF6FF;--card:#fff;--ink:#16324F;--muted:#4D6B88;--sky:#1A8FE3;--sun:#FFC83D;--line:#C9E3F7}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0B1B2B;--card:#13283D;--ink:#EAF4FF;--muted:#A9C2DA;--line:#23405E}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 -apple-system,system-ui,sans-serif}
+main{max-width:680px;margin:0 auto;padding:32px 16px 64px}
+nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}
+.brand{font-weight:800;font-size:20px} .brand b{color:var(--sky)}
+nav button{background:var(--card);border:2px solid var(--line);color:var(--ink);border-radius:20px;padding:4px 12px;margin-left:6px;font:600 14px system-ui;cursor:pointer}
+.card{background:var(--card);border:2px solid var(--line);border-radius:18px;padding:20px 22px;box-shadow:0 5px 0 var(--line)}
+h1{font-size:32px;margin:0 0 12px} h2{font-size:20px;margin:24px 0 6px}
+p,li{color:var(--muted)} a{color:var(--sky)}
+[data-l]{display:none} html[lang=en] [data-l=en],html[lang=fr] [data-l=fr]{display:block}
+</style>
+</head>
+<body><main>
+<nav><span class="brand">Block <b>Gallery</b></span><span><button onclick="setL('en')">EN</button><button onclick="setL('fr')">FR</button></span></nav>
+<div class="card">
+<div data-l="en">
+<h1>Privacy policy</h1>
+<p>Block Gallery is a block puzzle game by Sharik Mohamed. There is no account and we never ask for your name, email or contacts. Your progress, scores and settings stay on your device.</p>
+<h2>No advertising, no purchases</h2>
+<p>This version of Block Gallery shows no ads and has no in-app purchases. If ads are added in a future update, this page will be updated first.</p>
+<h2>Anonymous usage statistics</h2>
+<p>The app sends anonymous usage events (sessions, games played, paintings completed) with a random installation ID created by the app, the app version and the language. It contains no personal data and no device identifier; deleting the app erases the ID. These statistics only help improve the game.</p>
+<h2>Children</h2>
+<p>Block Gallery is not directed at children under 13 and does not knowingly collect their data.</p>
+<h2>Contact</h2>
+<p><a href="mailto:sharikmohamed8@gmail.com">sharikmohamed8@gmail.com</a></p>
+<p>Last updated: November 13, 2026.</p>
+</div>
+<div data-l="fr">
+<h1>Politique de confidentialité</h1>
+<p>Block Gallery est un jeu de puzzle de blocs de Sharik Mohamed. Il n'y a pas de compte et nous ne demandons jamais votre nom, votre e-mail ni vos contacts. Votre progression, vos scores et vos réglages restent sur votre appareil.</p>
+<h2>Ni publicité, ni achat</h2>
+<p>Cette version de Block Gallery n'affiche aucune publicité et ne contient aucun achat intégré. Si des publicités arrivent dans une prochaine mise à jour, cette page sera mise à jour avant.</p>
+<h2>Statistiques d'usage anonymes</h2>
+<p>L'app envoie des évènements d'usage anonymes (sessions, parties jouées, tableaux terminés) avec un identifiant d'installation tiré au hasard par l'app, la version et la langue. Aucune donnée personnelle, aucun identifiant d'appareil ; supprimer l'app efface l'identifiant. Ces statistiques servent uniquement à améliorer le jeu.</p>
+<h2>Enfants</h2>
+<p>Block Gallery ne s'adresse pas aux enfants de moins de 13 ans et ne collecte pas sciemment leurs données.</p>
+<h2>Contact</h2>
+<p><a href="mailto:sharikmohamed8@gmail.com">sharikmohamed8@gmail.com</a></p>
+<p>Dernière mise à jour : 13 novembre 2026.</p>
+</div>
+</div></main>
+<script>
+function setL(l){document.documentElement.lang=l;try{localStorage.setItem('lang',l)}catch(e){}}
+var s=null;try{s=localStorage.getItem('lang')}catch(e){}
+setL(s||((navigator.language||'en').toLowerCase().indexOf('fr')===0?'fr':'en'));
+</script>
+</body></html>

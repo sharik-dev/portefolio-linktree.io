@@ -1,0 +1,385 @@
+{
+  "generatedAt": "2026-11-14T14:29:26.599Z",
+  "apps": [
+    {
+      "trackId": 6834720283,
+      "bundleId": "com.selftransfer.app",
+      "status": "review",
+      "submittedAt": "2026-11-13T23:49:00-08:00",
+      "name": {
+        "fr": "Flight Advisor: Connections",
+        "en": "Flight Advisor: Connections"
+      },
+      "subtitle": {
+        "fr": "Billets séparés, zéro stress",
+        "en": "Separate tickets, no stress"
+      },
+      "description": {
+        "fr": "Deux vols moins chers en billets séparés peuvent te faire économiser beaucoup, à condition de ne pas rater ta correspondance. Flight Advisor est fait pour ça.\n\nTROUVE UN TRAJET MOINS CHER\n• De vrais vols combinés en billets séparés, classés par prix, durée totale et risque\n• Choisis ce qui compte : le moins cher, le plus rapide ou le plus sûr\n• Un lien de réservation par vol, clairement signalé comme lien partenaire\n\nNE RATE PLUS TA CORRESPONDANCE\n• Ta vraie marge de sécurité à l'escale : dépôt des bagages, sécurité, changement de terminal et contrôle des passeports, tout est compté\n• Un niveau de risque clair avant de réserver, et pendant le voyage\n• Des rappels de visa de transit selon ta nationalité\n\nUNE ÉTAPE À LA FOIS\n• Ton voyage devient un chemin simple : se préparer, aéroport, vol, escale, vol suivant, arrivée\n• Coche chaque étape et vois où tu en es\n• Une vue d'ensemble quand tu veux tout voir\n\nCHAQUE VOL EN DIRECT\n• Statut, terminal et porte de tes deux vols\n• Tes deux vols et ton escale sur une carte, avec une vue en globe\n• Des photos des aéroports pour t'y retrouver\n\nRIEN D'OUBLIÉ\n• Une checklist prête : passeport, enregistrement de chaque billet, visa, eSIM, assurance voyage\n• Les cartes d'embarquement lues depuis leur code-barres et affichées en plein écran, même hors ligne\n\nUN ASSISTANT PRIVÉ\n• Pose tes questions sur ton voyage à un assistant IA qui tourne entièrement sur ton iPhone\n• Tes voyages restent sur ton téléphone. Pas de compte, pas de pub, pas de pistage.\n\nDonnées de vol : AeroDataBox. Données cartographiques © contributeurs OpenStreetMap.",
+        "en": "Two cheaper flights on separate tickets can save you a lot, as long as you make your connection. Flight Advisor is built for exactly that.\n\nFIND A CHEAPER ROUTE\n• Real flights combined on separate tickets, ranked by price, total time and risk\n• Choose what matters: cheapest, fastest or safest\n• Booking links for each flight, clearly marked as partner links\n\nNEVER MISS YOUR CONNECTION\n• Your real safety margin at the layover: bag drop, security, terminal change and passport control are all counted\n• A clear risk level before you book, and while you travel\n• Transit visa reminders based on your nationality\n\nONE STEP AT A TIME\n• Your journey becomes a simple path: get ready, airport, flight, layover, next flight, arrival\n• Check off each step and see where you are\n• An overview whenever you want the full picture\n\nEVERY FLIGHT, LIVE\n• Status, terminal and gate for both flights\n• Both flights and your layover on a map, with a globe view\n• Airport photos to find your way\n\nNOTHING FORGOTTEN\n• A ready-made checklist: passport, check-in for each ticket, visa, eSIM, travel insurance\n• Boarding passes read from their barcode and shown full screen, even offline\n\nA PRIVATE ASSISTANT\n• Ask questions about your trip to an AI assistant that runs entirely on your iPhone\n• Your trips stay on your device. No account, no ads, no tracking.\n\nFlight data by AeroDataBox. Map data © OpenStreetMap contributors."
+      },
+      "category": "TRAVEL",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/45/53/c3/4553c349-5398-8432-ac18-9428c48c557a/AppIcon60x60@2x.png/512x512bb.webp",
+      "screenshots": {
+        "iphone": {
+          "fr": [
+            "https://is1-ssl.mzstatic.com/image/thumb/FXI3vegbOgIFhkFEUvZaeQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/GbjWKLAv8X8IO5RumCqj4Q/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/rvsfy0QQzpOm6Ph5HDn6-w/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/DGilsVyEMc9sw02sM7SHLw/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/Q5LZDsJxJl-qiTkYmEFiLg/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/EOY3uUOIM4UIb27qmJGPxQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/DDS-nzay-YN8lZlRtePjXA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/FMj1k-7aysOXgM6RCc5mFg/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/308_KFTkBC3tu3U1hArzmA/1400x1400bb.webp"
+          ],
+          "en": [
+            "https://is1-ssl.mzstatic.com/image/thumb/ALd93q5XBNXCXtSRtx-v1Q/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/tSrgYkfJfh_OzX3jElswhw/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/KBaChNFIKqJms4cgyRnDBw/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/juJ3m_OoXT4JIAOjIEzKVw/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/0iyRjDzWy6m2Yr59tQiRLA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/mTA9BLzzDXc6_oKQSiFFDw/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/AV56w5EhmTADFvzanRbcXg/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/prbv2jAbHG9Ey3uBB3QRfw/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/4FFxZRizSeJz93QfPjEGWQ/1400x1400bb.webp"
+          ]
+        }
+      }
+    },
+    {
+      "trackId": 6834633674,
+      "bundleId": "com.sharik.doodlenest",
+      "status": "review",
+      "submittedAt": "2026-11-13T17:29:34-08:00",
+      "name": {
+        "fr": "Dessine ta famille: art enfant",
+        "en": "Draw Your Family: Kids Art"
+      },
+      "subtitle": {
+        "fr": "Leurs dessins sur votre écran",
+        "en": "Kids' art on your Home Screen"
+      },
+      "description": {
+        "fr": "Les dessins de vos enfants, directement sur votre écran d'accueil.\n\n« Dessine ta famille » transforme leurs petits chefs-d'œuvre en widgets vivants. Vos enfants dessinent dans l'app — le portrait de famille, un poisson, un arbre, un coloriage — et toute la famille le voit apparaître sur son iPhone et son iPad.\n\nLE PORTRAIT DE FAMILLE\nLe cœur de « Dessine ta famille ». Votre enfant dessine la famille, et le portrait s'accroche dans un cadre doré sur votre écran d'accueil. Un nouveau quand il veut.\n\nUN MUR DE FAMILLE\nHuit cadres à remplir, chacun avec sa petite consigne : moi, ma plus belle journée, notre maison, papi et mamie, notre animal… Une bonne raison de redessiner demain.\n\nDES WIDGETS QUI BOUGENT\n• Tableau de famille : le dernier portrait ou dessin, dans un cadre mouluré.\n• Aquarium : chaque poisson dessiné nage sur votre écran d'accueil.\n• Jardin : les arbres dessinés se balancent dans la brise, papillons compris.\n\nUN VRAI ATELIER DE DESSIN\nUne grande feuille, 12 couleurs vives, trois tailles de pinceau, une gomme et l'annulation. Pensé pour les petits doigts, sur iPhone et iPad.\n\nDES COLORIAGES\n18 coloriages gratuits — baleine, dinosaure, lion, fusée et bien d'autres.\n\nLE TABLEAU PARTAGÉ\nTout le monde dessine sur la même feuille, chacun depuis son appareil.\n\nDESSINÉ ENSEMBLE, VU ENSEMBLE\nInvitez les grands-parents et l'autre parent : chacun reçoit les dessins sur son propre widget, synchronisés par iCloud.\n\nDESSINE TA FAMILLE PLUS (abonnement facultatif)\n• 18 coloriages en plus : sirène, dragon, robot, panda, Noël et d'autres\n• Widget Carrousel : les dessins se succèdent sur votre écran d'accueil\n• Widget Mosaïque : tout un mur de dessins d'un coup d'œil\nUn seul abonnement pour toute la famille grâce au Partage familial. Le paiement est débité sur votre compte Apple. L'abonnement se renouvelle automatiquement sauf résiliation au moins 24 heures avant la fin de la période en cours. Gérez-le ou résiliez-le à tout moment dans les réglages de votre compte Apple.\n\nFAIT POUR LES ENFANTS, PENSÉ POUR LES PARENTS\nAucune publicité. Aucune discussion avec des inconnus. Achats, partage et réglages sont derrière une porte parentale. Les dessins restent dans l'iCloud de votre famille.\n\nConditions d'utilisation : https://www.apple.com/legal/internet-services/itunes/dev/stdeula/\nPolitique de confidentialité : https://sharik.fr/doodlenest/privacy/",
+        "en": "Your child's drawings, right on your Home Screen.\n\nDraw Your Family turns little masterpieces into living widgets. Your kids draw in the app — the family portrait, a fish, a tree, a colouring page — and the whole family sees it appear on their iPhone and iPad.\n\nTHE FAMILY PORTRAIT\nThe heart of Draw Your Family. Your child draws the family, and it hangs in a golden frame on your Home Screen. A new one whenever they like.\n\nA FAMILY WALL\nEight frames to fill, each with its own little prompt: me, my best day, our home, grandma and grandpa, our pet… A gentle reason to draw again tomorrow.\n\nWIDGETS THAT MOVE\n• Family frame: the latest portrait or drawing, in a moulded frame.\n• Aquarium: every fish your child draws swims across your Home Screen.\n• Garden: the trees they draw sway in the breeze, butterflies included.\n\nA REAL DRAWING STUDIO\nA big sheet of paper, 12 bright colours, three brush sizes, an eraser and undo. Designed for small fingers, on iPhone and iPad.\n\nCOLOURING PAGES\n18 free colouring pages — whale, dinosaur, lion, rocket and more.\n\nSHARED BOARD\nEveryone draws on the same sheet, each from their own device.\n\nDRAWN TOGETHER, SEEN TOGETHER\nInvite the grandparents and the other parent: everyone gets the drawings on their own widget, synced through iCloud.\n\nDRAW YOUR FAMILY PLUS (optional subscription)\n• 18 extra colouring pages: mermaid, dragon, robot, panda, Christmas and more\n• Carousel widget: the drawings take turns on your Home Screen\n• Mosaic widget: a whole wall of drawings at a glance\nOne subscription for the whole family through Family Sharing. Payment is charged to your Apple Account. The subscription renews automatically unless cancelled at least 24 hours before the end of the current period. Manage or cancel it any time in your Apple Account settings.\n\nMADE FOR KIDS, BUILT FOR PARENTS\nNo ads. No chat with strangers. Purchases, sharing and settings sit behind a parental gate. Drawings stay in your family's iCloud.\n\nTerms of Use: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/\nPrivacy Policy: https://sharik.fr/doodlenest/privacy/"
+      },
+      "category": "ENTERTAINMENT",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/62/10/0e/62100e89-83b2-a90f-514b-8d4444c53ba9/AppIcon76x76@2x_U007eipad.png/512x512bb.webp",
+      "screenshots": {
+        "iphone": {
+          "fr": [
+            "https://is1-ssl.mzstatic.com/image/thumb/Ss4no6mUO9wka3rqqraZ8w/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/GczclT4rVbUruWyzqbWMxQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/sSmsFS1XGgp3FeZwohnhVQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/Ca8hJyisiKkiWfllBMzslQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/8n_ujGwKg_uVWNqFfIK3-A/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/CL9TspMo5HS9-jIyC_tS9g/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/RfxbGPJEmb8dyKAUX6kzpQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/9mrRMeyShPGH414RkZb35A/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/9GslSzU5Wm0XUTdACbsw3A/1400x1400bb.webp"
+          ],
+          "en": [
+            "https://is1-ssl.mzstatic.com/image/thumb/TYwCwVQqPnCCCy3lRvWuRQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/ipj-iSbr9yyY-j4s7A_TlA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/_-CEI_QWojm9kf-ycc_PLg/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/qTZLLEjtELPmHainKkaX1w/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/YEXEXCtCYydVifMMHZQFAA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/5QDV7LWAbwmQ2E2nkV6ZYg/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/JFjCZ0io1heIjrLoHLCGWA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/eOjYi9OJI2UTVygd-AUsww/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/qan2BjlkkBJm5jmh3Yjdng/1400x1400bb.webp"
+          ]
+        },
+        "ipad": {
+          "fr": [
+            "https://is1-ssl.mzstatic.com/image/thumb/Lz_JNnO_TQeOAEDToMA5iQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/98dRLBJAsm1UR8Q5OvaGwg/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/bSKgpjh21kJ3JUBPjWi_Sw/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/TmmoqLlkwsTAT-7NLfjUwA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/o-pv2DLYjJOX0RN0wGFAqQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/mL7BgRTdd70VoxOvjiDR3w/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/F4Bx9K6tfbwJIkWDjulbvA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/8SHR4G_AaYU3km2ITCX7OA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/XoK3t1Or5jiHzOYsv0Pk2w/1400x1400bb.webp"
+          ],
+          "en": [
+            "https://is1-ssl.mzstatic.com/image/thumb/vmx05Uw_5_c-uJ6C7Ueubg/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/SffdUvBUA1iB7-Qho_p7iA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/xjGP3oCMpfkNi78Iediq4w/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/BTKS7HLUc65Fblpz3HKt0A/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/CezXfsOiwcvO8-7c2x-zPQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/OLx6GetaVUYp0wTtv0wNng/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/pWFldxaxB8lRc110Lc3fYw/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/EMeWJVyzBtyXQSd8QfXY_Q/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/AtZGiBbeVTQ6oP2HRWcLGg/1400x1400bb.webp"
+          ]
+        }
+      }
+    },
+    {
+      "trackId": 6834604507,
+      "bundleId": "com.sharik.blockgems",
+      "status": "review",
+      "submittedAt": "2026-11-13T15:32:39-08:00",
+      "name": {
+        "fr": "Block Gallery : Puzzle d'Art",
+        "en": "Block Gallery: Art Puzzle"
+      },
+      "subtitle": {
+        "fr": "Cassez des blocs, voyez l'art",
+        "en": "Clear blocks, reveal paintings"
+      },
+      "description": {
+        "fr": "Un puzzle de blocs tout en calme, avec une vraie récompense : chaque ligne cassée dévoile un morceau d'un tableau célèbre.\n\nCOMMENT JOUER\nGlissez les pièces sur la grille 8×8. Remplissez une ligne ou une colonne pour la casser : le tableau caché dessous apparaît un peu plus. Pas de chrono, rien ne presse : prenez le temps de réfléchir.\n\nMODE GALERIE\nDévoilez 20 chefs-d'œuvre du domaine public, l'un après l'autre : la Grande Vague, les Iris, les Nymphéas et bien d'autres. Chaque tableau terminé rejoint votre galerie, avec son titre, son peintre et une courte histoire. Un tableau ne se perd jamais : si la grille se remplit, on recommence simplement la toile.\n\nMODE CLASSIQUE\nUne partie sans fin, un seul but : battre son record. Enchaînez les lignes pour des combos.\n\nPENSÉ POUR LE CONFORT\n• Grandes pièces et contrastes nets, reposant pour les yeux\n• Annuler le dernier coup\n• Sons et vibrations doux, réglables\n• Option Réduire les animations\n• Fonctionne entièrement hors ligne, sans compte\n• En français, anglais, espagnol, allemand, portugais, japonais et chinois\n\nGratuit, sans publicité ni achat intégré.",
+        "en": "A calm block puzzle with a reward worth playing for: every line you clear reveals a piece of a famous painting.\n\nHOW TO PLAY\nDrag the pieces onto the 8×8 grid. Fill a full row or column to clear it, and the painting hiding underneath appears a little more. No timer, no rush: think as long as you like.\n\nGALLERY MODE\nUncover 20 masterpieces from the public domain, one after another: the Great Wave, Irises, Water Lilies and many more. Each finished painting joins your personal gallery with its title, artist and a short story. You can never lose a painting: if the board fills up, you simply start that canvas again.\n\nCLASSIC MODE\nEndless play, one goal: beat your best score. Chain clears for combos.\n\nMADE TO BE COMFORTABLE\n• Large pieces and clear contrast, easy on the eyes\n• Undo your last move\n• Gentle sounds and haptics, all adjustable\n• Reduce motion option\n• Plays fully offline, no account needed\n• Available in English, French, Spanish, German, Portuguese, Japanese and Chinese\n\nFree, with no ads and no in-app purchases."
+      },
+      "category": "GAMES",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2e/e3/25/2ee325d7-8044-c1dc-c23a-d04066368591/AppIcon76x76@2x_U007eipad.png/512x512bb.webp",
+      "screenshots": {
+        "iphone": {
+          "fr": [
+            "https://is1-ssl.mzstatic.com/image/thumb/Yjr0rkEOlaFO6-uUT3MyCw/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/dzdX3ygm6GJ3IH_L-uIljA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/sh5AJUapQ37aSvld059Akg/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/xga-UaqcUwfwygF6iXogkQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/t0dnO8ALDn2S6AozjF6hGQ/1400x1400bb.webp"
+          ],
+          "en": [
+            "https://is1-ssl.mzstatic.com/image/thumb/5jlZ-MbgmIPm3zaFm1NE0w/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/zNr6VYZKDaTNkLIxAb9JEQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/kWNDc7t1F0rrpVT3wTPv1w/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/kudOqfuAmswQW6AGtqZpFg/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/lfO4h9JJJ_JPn_1Gx7YPpw/1400x1400bb.webp"
+          ]
+        },
+        "ipad": {
+          "fr": [
+            "https://is1-ssl.mzstatic.com/image/thumb/ZErVXrZucDQn9F4XeSXq6Q/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/m0ezd34WR0bFENESjw64tQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/mLjwVncB4JvgloFNA95_VA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/jzNfgHrAkYZEj41TTniS7w/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/itmrBaalmtT0-POFE0smXA/1400x1400bb.webp"
+          ],
+          "en": [
+            "https://is1-ssl.mzstatic.com/image/thumb/Zko62T3M2SqP-s2BxAvu4w/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/-i4GHhS-ZX7rJ8z0nJJqxw/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/OsBVbTnkNHE6H2CF_gjusw/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/9Vpm_4CG6w1s_X4FtcUcbg/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/8gzUATD4H_DcR3OirYsoLw/1400x1400bb.webp"
+          ]
+        }
+      }
+    },
+    {
+      "trackId": 6832665507,
+      "bundleId": "com.sharik.rabbitparty",
+      "status": "review",
+      "submittedAt": "2026-11-09T09:46:59-08:00",
+      "name": {
+        "fr": "Rabbit Party 100 Games Offline",
+        "en": "Rabbit Party 100 Games Offline"
+      },
+      "subtitle": {
+        "fr": "Mini-jeux de soirée entre amis",
+        "en": "Party games with cute bunnies"
+      },
+      "description": {
+        "fr": "Rabbit Party est une boîte de soirée de près de 100 mini-jeux avec des lapins en peluche. Joue partout : tout fonctionne hors ligne, contre des bots à la difficulté de ton choix.\n\nPRÈS DE 100 MINI-JEUX, TOUS LES GENRES\n• Courses et parcours d'obstacles, toboggans, toits et tyroliennes\n• Arènes de survie : météores, sumo, sol qui s'effondre, patate chaude\n• Défis en coop : porter le canapé, bâtir un lapin de neige, sauver le potager\n• Jeux d'arcade 2D : karts, tanks, snake, pong, bombes, plateformes\n• Tables de cartes et de dés, et un vrai jeu de plateau à propriétés\n• Des jeux qui font peur, pour les plus courageux\n\nJOUE COMME TU VEUX\n• Marathon : des mini-jeux tirés au sort, le meilleur total gagne\n• Partie libre : choisis un jeu dans la galerie, la carte, la difficulté des bots et le nombre de manches\n• En coop ou chacun pour soi, et des formats 2 contre 2\n\nENTRE AMIS\n• Jusqu'à 4 joueurs sur le même écran avec des manettes, écran partagé si besoin\n\nPENSÉ POUR LE TACTILE\nUn stick flottant et de gros boutons, et chaque jeu explique ses règles avant de commencer.\n\nSans pub, sans compte, sans internet.",
+        "en": "Rabbit Party is a party box of nearly 100 mini-games starring plush bunnies. Play it anywhere: everything works offline, against bots at the difficulty you choose.\n\nNEARLY 100 MINI-GAMES, EVERY KIND OF FUN\n• Races and obstacle courses, water slides, rooftops and ziplines\n• Survival arenas: meteors, sumo, crumbling floors, hot potato\n• Co-op challenges: carry the couch, build a snow bunny, save the garden\n• 2D arcade games: karts, tanks, snake, pong, bombs, platformers\n• Card and dice tables, and a full property-trading board game\n• Optional spooky games for the brave\n\nPLAY YOUR WAY\n• Marathon: a random string of mini-games, the best total wins\n• Free play: pick any game from the gallery, choose the map, the bot difficulty and the number of rounds\n• Co-op or every bunny for itself, and 2 vs 2 team formats\n\nWITH FRIENDS\n• Up to 4 players on one screen with game controllers, split screen when needed\n\nMADE FOR TOUCH\nA floating stick and big buttons, and every game explains its rules before it starts.\n\nNo ads, no account, no internet required."
+      },
+      "category": "GAMES",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/af/8e/a8/af8ea8ea-19e8-cf39-51e3-bd1248a2c84f/AppIcon-0-0-2x_U007epad-0-9-0-85-220.png/512x512bb.webp",
+      "screenshots": {
+        "iphone": {
+          "fr": [
+            "https://is1-ssl.mzstatic.com/image/thumb/0ujJCQX38iBoCth9UbPDIA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/OcBfw0lDEZgZ7X3NknwfFg/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/mJPolmnx_cFCZttLb0qCHg/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/aSAhOGx1YJYRr5EFvx54ug/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/hH1evjIo3rolIo_uBoP96A/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/C5J4tbEN1TRgZhevLOC7Vg/1400x1400bb.webp"
+          ],
+          "en": [
+            "https://is1-ssl.mzstatic.com/image/thumb/gJeEj3winEeZKWQnP68NHQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/-8kpPy1UbnBUKu9T-c9ltQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/vSlJxAGEyl1BLYVj5V_Avg/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/VEdwVEjhauWjZxtUPfkJ4w/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/3HRWuVAjX_lNhniNPc0xuA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/tBlt0s7wDfg7wkVxa4eXrQ/1400x1400bb.webp"
+          ]
+        },
+        "ipad": {
+          "fr": [
+            "https://is1-ssl.mzstatic.com/image/thumb/FzEL3e6FKy9jXDxhP29N0w/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/Rb07szngLU_4kwQrMHkYGA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/CEAABWHX6lyolAUGnJEwrQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/Xe9Td629xlNbcQ_Z-pWAAA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/vvjSjAAqirbKkvme3hwG_Q/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/I1MwEmEXYlP7OT_IDj2Btg/1400x1400bb.webp"
+          ],
+          "en": [
+            "https://is1-ssl.mzstatic.com/image/thumb/wlBPUVOY2yUgIHjo3t9dSQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/od-5nvbpQxtHQLQzdo5zmg/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/Z0cCneoa6OYe0poWvIeVrQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/6sKHW0m3pcD6-HQVZsEw2g/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/zfbQElCU3Mrv4hQhf1RRdQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/po5Hnr-C6EjRSJatSSIxkQ/1400x1400bb.webp"
+          ]
+        }
+      }
+    },
+    {
+      "trackId": 6831931944,
+      "bundleId": "com.sharik.tornado",
+      "status": "review",
+      "submittedAt": "2026-11-07T01:24:33-08:00",
+      "name": {
+        "fr": "Tornado Worlds",
+        "en": "Tornado Worlds"
+      },
+      "subtitle": {
+        "fr": "Grossis, améliore, 4 mondes",
+        "en": "Grow, upgrade, clear 4 worlds"
+      },
+      "description": {
+        "fr": "Tu es la tornade. Quatre mondes n'attendent que d'être avalés.\n\nGlisse le pouce et tourbillonne dans une campagne low poly éclatante. Tout ce qui est plus petit que toi décolle, monte en spirale le long de ton entonnoir et disparaît : poules, citrouilles et bottes de foin, puis vaches et ânes, puis voitures et tracteurs, puis maisons, granges et silos... jusqu'au moulin, au château d'eau et à l'église du village.\n\nChaque bouchée te fait grossir. Chaque taille te permet d'avaler plus gros.\n\nQUATRE MONDES, QUARANTE NIVEAUX\nCommence à la Campagne, puis gagne ton passage vers le Désert, la Banquise et le Volcan. Chaque monde compte dix niveaux, chacun plus grand et plus affamé que le précédent. Pour finir un niveau, avale tout : chaque rivale et chaque objet de la carte. Fais-toi avaler et tu recommences.\n\nAMÉLIORE TA TORNADE\nChaque niveau terminé rapporte des étoiles. Dépense-les dans les stats de ta tornade : des vents plus rapides, plus de force à chaque repas, un anneau de poussière plus large, un élan au départ de chaque niveau, et la force en duel : une chance d'avaler une tornade plus grosse que toi.\n\nMANGER OU ÊTRE MANGÉ\nDes tornades rivales écument la même carte. Quand deux tornades se rencontrent, la plus grosse avale la plus petite dans une spirale tourbillonnante. Chasse les petites, fuis les grosses, et grossis assez vite pour renverser la situation. Quand il ne reste plus rien à manger, le dernier duel décide du niveau.\n\nCHAQUE REPAS SE SENT\nLes granges s'arrachent, le toit en premier. Les bêtes paniquent et s'éparpillent. Les combos s'enchaînent, l'écran tremble et les confettis volent quand tu avales un gros morceau.\n\n- Se joue d'un seul pouce, parfait pour une petite partie\n- Quatre mondes et quarante niveaux, du plus facile au plus féroce\n- Cinq stats à améliorer\n- Cinq couleurs de tornade à débloquer\n- Un carnet de collection de tout ce que tu as avalé\n- Entièrement hors ligne : sans compte, sans pub",
+        "en": "You are the tornado. Four worlds are waiting to be swallowed.\n\nSlide your thumb and spin across a bright low-poly countryside. Everything smaller than you lifts off, spirals up your funnel and disappears: chickens, pumpkins and hay bales, then cows and donkeys, then cars and tractors, then houses, barns and silos... all the way up to the windmill, the water tower and the village church.\n\nEvery bite makes you bigger. Every size lets you swallow something bigger.\n\nFOUR WORLDS, FORTY LEVELS\nStart on the Farm, then earn your way to the Desert, the Ice Floe and the Volcano. Each world has ten levels, each one bigger and hungrier than the last. To clear a level, swallow everything: every rival and every last object on the map. Get swallowed and you try again.\n\nUPGRADE YOUR TORNADO\nEvery level you clear earns stars. Spend them on your tornado's stats: faster winds, more force from every meal, a wider dust ring, a head start on every level, and duel power: a chance to swallow a tornado bigger than you.\n\nEAT OR BE EATEN\nRival tornadoes roam the same map. When two tornadoes meet, the bigger one swallows the smaller one in a swirling spiral. Hunt the small ones, run from the big ones, and grow fast enough to turn the tables. When nothing is left to eat, the final duel decides the level.\n\nFEEL EVERY MEAL\nBarns rip apart, roof first. Animals panic and scatter. Combos chain, the screen shakes, and confetti flies when you land a huge meal.\n\n- One-thumb controls, made for quick sessions\n- Four worlds and forty levels, from easy to brutal\n- Five upgradable stats\n- Five tornado colors to unlock\n- A collection album of everything you have swallowed\n- Plays fully offline: no account, no ads"
+      },
+      "category": "GAMES",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/99/fb/46/99fb46c6-61ee-b995-a668-cb96396c0a04/AppIcon-0-0-2x_U007epad-0-9-0-85-220.png/512x512bb.webp",
+      "screenshots": {
+        "iphone": {
+          "fr": [
+            "https://is1-ssl.mzstatic.com/image/thumb/TlcpCM2R6FM-WJXp5RvbYw/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/QSmWcFKy7GBDvQIykMVXTA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/3IXy8yf8WM7V-npbV04v2w/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/R3FAHoDZhbe_87FfLgAXnQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/6Ws2dKQj_m1jEsgKFnkPnA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/Z5Ihs6yZjc7zBFhwc5CW-g/1400x1400bb.webp"
+          ],
+          "en": [
+            "https://is1-ssl.mzstatic.com/image/thumb/U1PwruK0PRozzVhSXDTGpw/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/HxnDtgDZdp4krecwvENgTQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/FPPSLW9FPgAs-Ir7R4rqRA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/67Bj7JCsDxoV_l_YpAe4lA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/6eGAOW5xRfUAC-CkPBuEpA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/KDNencCvHRX-ef-prHhiAg/1400x1400bb.webp"
+          ]
+        },
+        "ipad": {
+          "fr": [
+            "https://is1-ssl.mzstatic.com/image/thumb/iYrdbSk5I5PIhy-i_34Z8Q/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/wn_CP-KHPNZGBx9PAl5AUA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/XTW7cDisP1DXK56eMvj25Q/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/-elY7w2s0B3wIWqjQaf5tQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/cW7kN0RAXyS351UDo4Bxew/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/srJeSpB9H2NkBSmYGJmfVg/1400x1400bb.webp"
+          ],
+          "en": [
+            "https://is1-ssl.mzstatic.com/image/thumb/QdlQfwB7iNNPtjoXBTYXmQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/vtUlXWXfRVsZIRE0MGrDvg/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/Cq3-Xq2TVSucitZo7OeP4A/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/sq1yM6Sfxp-Tka_8nVj8fg/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/HXPQbBtwaVp9JBOfyHxDuw/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/3zaEjEFpY0fMtWTgDXTY7Q/1400x1400bb.webp"
+          ]
+        }
+      }
+    },
+    {
+      "trackId": 6822303078,
+      "bundleId": "com.sharik.lenasphone",
+      "status": "review",
+      "submittedAt": "2026-10-13T05:28:24-07:00",
+      "name": {
+        "fr": "Lena's Phone",
+        "en": "Lena's Phone"
+      },
+      "subtitle": {
+        "fr": "Son téléphone, ta seule piste",
+        "en": "Her phone is your only lead"
+      },
+      "description": {
+        "fr": "Hier soir, Lena est partie courir et n'est jamais rentrée. À l'aube, tu retrouves son téléphone sous un banc du parc. Et il se met à vibrer.\n\nTu es Alex, son copain. La police te dit d'attendre 48 heures. Tu n'attendras pas. Ce téléphone est ta seule piste, et quelqu'un sait déjà que tu l'as entre les mains.\n\nFOUILLE SA VIE\nPasse l'écran verrouillé, puis épluche tout ce qu'elle a laissé derrière elle : ses messages, ses photos, ses notes, ses mails, son agenda, ses plans et sa messagerie vocale. Chaque app cache un morceau de la vérité. Épingle tes découvertes sur le tableau de l'enquête et relie les indices.\n\nPARLE À SES AMIS\nMaya, Jess et Tom ont aussi peur que toi. Écris-leur avec tes propres mots : ils te répondent, chacun avec son caractère et ses souvenirs de Lena. Pose les bonnes questions, et ils te diront ce qu'elle ne t'a jamais dit.\n\nLeurs réponses viennent d'une IA qui tourne entièrement sur ton iPhone. Un téléchargement facultatif et unique (environ 0,9 Go, Wi-Fi conseillé) ; ensuite, tout fonctionne hors ligne et rien de ce que tu écris ne quitte ton téléphone. Sans elle, ses amis répondent quand même, simplement plus brièvement.\n\nIL JOUE CONTRE LA MONTRE\nUn numéro inconnu t'écrit. Il la retient, et il veut jouer. Il n'écrit qu'aux quarts d'heure, en temps réel, et t'envoie des énigmes avec un compte à rebours. Une mauvaise réponse, ou une seconde de trop, et c'est fini. Alors tu recommences.\n\nFerme l'app, l'histoire continue : ses messages t'arrivent en notifications, comme de vrais SMS.\n\nAU PROGRAMME\n• Un thriller complet raconté à travers un seul téléphone\n• Des énigmes construites sur de vrais indices : codes, coordonnées, photos, une voix au loin\n• Des questions chronométrées qui ne te laissent pas souffler\n• Des amis à qui parler vraiment, en privé, sur l'appareil\n• Bloqué ? Ses amis te mettent sur la voie, un indice à la fois\n• Entièrement jouable en français et en anglais\n\nSANS CONTREPARTIE\nGratuit. Sans publicité. Sans compte. Sans achat intégré. Sans pistage. Ta progression et tes conversations restent sur ton téléphone.\n\nAvertissement : cette histoire aborde l'enlèvement, le harcèlement et les menaces. Déconseillé aux moins de 16 ans.\n\nRetrouve-la avant qu'il ne soit trop tard.",
+        "en": "Lena went for a run last night and never came home. At dawn, you find her phone under a park bench. Then it buzzes.\n\nYou are Alex, her boyfriend. The police say to wait 48 hours. You won't. Her phone is the only lead you have, and someone else knows you've got it.\n\nUNLOCK HER LIFE\nGet past the lock screen, then dig through everything she left behind: her messages, photos, notes, mail, calendar, maps and voicemail. Every app hides a piece of the truth. Pin what you find to the case board and connect the dots.\n\nTALK TO HER FRIENDS\nMaya, Jess and Tom are as scared as you are. Write to them in your own words and they answer, each with their own personality and their own memories of Lena. Ask the right questions and they'll tell you things she never told you.\n\nTheir replies come from an AI that runs entirely on your iPhone. It's an optional one-time download (about 0.9 GB, Wi-Fi recommended); after that it works offline, and nothing you type ever leaves your phone. Skip it and her friends still answer, just more briefly.\n\nHE PLAYS BY THE CLOCK\nAn unknown number starts texting you. He has her, and he wants to play a game. He only writes on the quarter hour, in real time, and he sends riddles with a countdown. Answer wrong, or too late, and it's over. Then you try again.\n\nClose the app and the story keeps going: his messages reach you as notifications, like real texts.\n\nWHAT'S INSIDE\n• A complete thriller story told through one phone\n• Puzzles built from real clues: codes, coordinates, photos, a voice in the background\n• Timed riddles that keep you on edge\n• Friends you can actually talk to, privately, on device\n• Stuck? Her friends nudge you, one clue at a time\n• Fully playable in English and French\n\nNO STRINGS ATTACHED\nFree. No ads. No account. No in-app purchases. No tracking. Your progress and your conversations stay on your phone.\n\nContent warning: this story deals with kidnapping, stalking and threats. Recommended for players 16 and over.\n\nFind her before time runs out."
+      },
+      "category": "GAMES",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/40/f0/a7/40f0a731-dc6b-755d-8c9b-d99e0e9e523d/AppIcon60x60@2x.png/512x512bb.webp",
+      "screenshots": {
+        "iphone": {
+          "fr": [
+            "https://is1-ssl.mzstatic.com/image/thumb/2-NIhxAoNOUHQZW1hMDeDA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/Fi2BUacbhlcmqRnbPlCaUQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/b0SEf0-yMhstM0lvIbvHgg/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/z8iZUaRLkoBHZ0i8RMTKgw/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/Zm2VyaxiEF8nuAZiu53sDQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/DQUB4EfvuqIzf-7kAJtW4A/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/sUq42OXWkSTOLMTz6mQRVQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/w9K5c2UpX30UcNOstfOing/1400x1400bb.webp"
+          ],
+          "en": [
+            "https://is1-ssl.mzstatic.com/image/thumb/N2zUtMard3RkBgZPJthJww/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/9lRhe44njTs_qx-NcSBftQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/hfVC6eBk7HmljdDiPQ-m0A/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/040d128iLoxJLpTH5Af1tg/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/-kouISIu9egBQMyI0ddh2A/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/khbOfHdezx3EyZfVfDTJIA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/4u7pWGBeIzReRfVsIgtiIg/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/5ZbiChN4EYZrRopQex8ooQ/1400x1400bb.webp"
+          ]
+        }
+      }
+    },
+    {
+      "trackId": 6797798139,
+      "bundleId": "com.sharik.calculcard",
+      "status": "dev",
+      "submittedAt": "2026-08-04T02:15:09-07:00",
+      "name": {
+        "fr": "Empire : Poker de guerre",
+        "en": "Empire: War Poker"
+      },
+      "subtitle": {
+        "fr": "Ton armée réécrit l'Histoire",
+        "en": "Build an army. Rewrite history"
+      },
+      "description": {
+        "fr": "Ta main de poker est ton armée.\n\nChaque tour, tu tiens 8 cartes. Choisis-en 1 à 5 pour former une main de poker : c'est ton attaque. L'ennemi fait de même, en secret. Les deux mains se révèlent en même temps, et la plus forte frappe de toute sa force.\n\nUne paire, c'est ton infanterie. Une suite, une offensive coordonnée. Une quinte flush, un assaut légendaire.\n\nRECRUTE L'HISTOIRE\nAprès chaque victoire, choisis un renfort :\n• Commandants — Léonidas, César, Gengis Khan, Jeanne d'Arc, Napoléon…\n• Tactiques — Blitzkrieg, Embuscade, Fortification, Carte de campagne…\n• Artefacts — Couronne impériale, Aigle romain, Tambour de guerre…\n\nBâtis ton armée autour d'une main et regarde les chiffres exploser : Napoléon renforce tes suites, la Carte de campagne les rend plus faciles, le Blitzkrieg les double.\n\nSEPT ÉPOQUES, UNE SEULE VIE\nDe l'Antiquité aux guerres modernes, vingt et une batailles. La dernière de chaque époque, c'est son général, avec sa propre armée. Perds une seule bataille et la campagne est finie.\n\n• Les règles du poker que tu connais déjà — sans mise, sans jetons\n• Des cartes en pixel art, dans un style cartoon des années 30 hanté\n• Un adversaire qui ne triche jamais : il ne voit que ses cartes\n• Hors ligne, à une main, en portrait\n• 8 langues",
+        "en": "Your poker hand is your army.\n\nEvery turn you hold 8 cards. Pick 1 to 5 of them to form a poker hand: that is your attack. The enemy does the same, in secret. Both hands are revealed at once, and the stronger one strikes with all its power.\n\nA pair is your infantry. A straight, a coordinated offensive. A straight flush, a legendary assault.\n\nRECRUIT HISTORY\nAfter every victory, choose a reinforcement:\n• Commanders — Leonidas, Caesar, Genghis Khan, Joan of Arc, Napoleon…\n• Tactics — Blitzkrieg, Ambush, Fortification, Campaign Map…\n• Artifacts — Imperial Crown, Eagle of Rome, War Drum…\n\nBuild your army around one hand and watch the numbers explode: Napoleon makes your straights stronger, the Campaign Map makes them easier, Blitzkrieg doubles them.\n\nSEVEN ERAS, ONE LIFE\nFrom Antiquity to the modern wars, twenty-one battles. The last battle of every era is its general, with his own army. Lose a single battle and the campaign is over.\n\n• Poker rules you already know — no betting, no chips\n• Pixel-art cards with a dark, haunted 1930s cartoon style\n• An opponent that never cheats: it only sees its own cards\n• Plays offline, one-handed, in portrait\n• 8 languages"
+      },
+      "category": "GAMES",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/51/bc/a7/51bca78a-9f94-ec4e-2a29-f982afc49db0/AppIcon-0-0-2x_U007epad-0-9-0-85-220.png/512x512bb.webp",
+      "screenshots": {
+        "ipad": {
+          "fr": [
+            "https://is1-ssl.mzstatic.com/image/thumb/ypbd9LE1T0jUOWD3prVHTg/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/P6aE1ijjI1y1s_-8HxuJ0w/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/-QTxh-qa2RGBq2SN_T_l9w/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/fhF2hM2WK6VVecB1QlZvng/1400x1400bb.webp"
+          ],
+          "en": [
+            "https://is1-ssl.mzstatic.com/image/thumb/dlY__AxAdr8uG2JYnnzDsQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/R8j1K2AglmAuDxNPkb1baw/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/wqFB7B_w9pEKUiznKSzy8w/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/bEna5weR9UDp4m_I1i_SVg/1400x1400bb.webp"
+          ]
+        },
+        "iphone": {
+          "fr": [
+            "https://is1-ssl.mzstatic.com/image/thumb/33LOWbCZ9FPHm5g89KWdaQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/mjDnrvjImI7td8hMpVjb0g/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/K-TZP6Q_XJ_Z7a2VyydUOQ/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/YcH4XEUXB57uiY0imqsHmA/1400x1400bb.webp"
+          ],
+          "en": [
+            "https://is1-ssl.mzstatic.com/image/thumb/lkwWLC4uKjeIfX4TmL0d3w/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/qUKCWGNadAaFOtevtTheLw/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/sVeTTxGiBccaVtxUwo0oFA/1400x1400bb.webp",
+            "https://is1-ssl.mzstatic.com/image/thumb/FpTUpABSL86dRWGQaOWLfA/1400x1400bb.webp"
+          ]
+        }
+      }
+    }
+  ]
+}

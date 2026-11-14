@@ -15,6 +15,8 @@
     "cv:watch": "node scripts/generate-cv-pdfs.cjs --watch",
     "cv:variants": "node scripts/generate-cv-variants.cjs",
     "apps:sync": "node scripts/fetch-appstore-apps.cjs",
+    "apps:pending": "node scripts/fetch-asc-pending.cjs",
+    "shots:sync": "node scripts/sync-device-shots.cjs",
     "prebuild": "node scripts/fetch-appstore-apps.cjs || true"
   },
   "dependencies": {

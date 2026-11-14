@@ -62,46 +62,65 @@ Le CV existe en **4 endroits distincts** qui doivent toujours être identiques.
 - Le résumé ne doit pas contenir "reconversion volontaire" — utiliser "montée en compétences progressive"
 - Malgache est langue native au même titre que le français
 
-## Apps publiées sur l'App Store — liste DYNAMIQUE
+## Page `/portefolio` — liste d'apps DYNAMIQUE
 
-La page `/portefolio` ne contient plus de liste d'apps en dur. Elle lit le compte
-développeur Apple (`artistId 1816768480`) via l'API iTunes Lookup publique — aucune
-clé, aucune auth, CORS ouvert :
+Aucune liste d'apps en dur. Trois origines, fusionnées par `buildApps()` :
+
+| Origine | Source | Mise à jour |
+|---|---|---|
+| **En ligne** | API iTunes Lookup publique, `artistId 1816768480` (aucune clé, CORS ouvert) | toute seule, à chaud côté visiteur (cache 6 h) + `npm run apps:sync` pour le snapshot |
+| **En revue Apple / fiche prête** | App Store Connect → `src/data/ascPending.json` | `npm run apps:pending` (Mac, clé `.p8` de `~/.config/ios-testflight-cicd/`) |
+| **En développement** (pas de fiche) | `DEV_APPS` dans `appstoreApps.ts`, écrit à la main | à la main |
 
 ```
 https://itunes.apple.com/lookup?id=1816768480&entity=software&country=fr&limit=200
 ```
 
-**Publier une app sur l'App Store suffit : elle apparaît toute seule** (nom, icône,
-description, captures, note, catégorie, prix), et les métadonnées des apps existantes
-se mettent à jour d'elles-mêmes.
+**Publier une app suffit : elle apparaît toute seule**, et sort de la liste « en
+revue » d'elle-même (une entrée de `ascPending.json` dont le `trackId` arrive dans
+la réponse iTunes est masquée). Un refus Apple (`REJECTED`) s'affiche « en
+développement », jamais « refusé ».
 
 | Fichier | Rôle |
 |---|---|
-| `src/data/appstoreApps.ts` | Types, fetch live (cache localStorage 6 h), fallback snapshot, `CURATION`, `MANUAL_APPS` |
-| `src/data/appstoreSnapshot.json` | Snapshot embarqué au build — premier rendu instantané + secours si Apple ne répond pas (généré, ne pas éditer) |
+| `src/data/appstoreApps.ts` | Types, fetch live, `CURATION`, `DEV_APPS`, `MANUAL_APPS`, fusion des captures |
+| `src/data/appstoreSnapshot.json` | Snapshot iTunes embarqué au build (généré, ne pas éditer) |
+| `src/data/ascPending.json` | Apps en attente (généré, ne pas éditer) |
+| `src/data/deviceShots.json` + `public/shots/` | Captures de l'appareil 3D (générés, ne pas éditer) |
 | `src/hooks/useAppStoreApps.ts` | Hook consommé par `PortfolioPage` |
-| `scripts/fetch-appstore-apps.cjs` | `npm run apps:sync` (lancé aussi en `prebuild`) — régénère le snapshot |
-| `scripts/appstore-cron.sh` | Vérification périodique : re-sync, rebuild + déploiement **seulement si** la liste d'apps a changé |
+| `src/components/TabletViewer.tsx` | iPhone / iPad 3D : paysage automatique, défilement des captures |
+| `scripts/fetch-appstore-apps.cjs` | `npm run apps:sync` (lancé aussi en `prebuild`) |
+| `scripts/fetch-asc-pending.cjs` | `npm run apps:pending` |
+| `scripts/sync-device-shots.cjs` | `npm run shots:sync [id…]` |
+| `scripts/appstore-cron.sh` | VPS : re-sync, rebuild + déploiement **seulement si** la liste a changé |
 
-Trois couches, de la moins à la plus prioritaire : snapshot → fetch live → `CURATION`.
+### Captures de l'iPhone / iPad 3D — toujours des captures BRUTES
 
-- **`CURATION`** (clé = `trackId` App Store) : la copie éditoriale faite main
-  (sous-titre/description FR-EN, fonctionnalités, captures locales, stack, landing
-  page, ordre d'affichage). Chaque champ est facultatif et écrase Apple.
-- Une app **absente de `CURATION` s'affiche quand même** : sous-titre et
-  fonctionnalités sont déduits de la description App Store, captures et icône
-  viennent d'Apple. Ajouter une entrée `CURATION` ne sert qu'à soigner le rendu.
-- **`MANUAL_APPS`** : les apps hors de ce compte développeur (Guidor, publiée par
-  Skyconseil) — elles restent écrites en dur.
-- FR et EN viennent des storefronts `fr` et `us` : le nom, la description et le prix
-  sont donc déjà bilingues côté Apple.
+Les captures de l'App Store sont des visuels marketing (texte + téléphone
+incliné) : dans l'appareil 3D, cela donne un téléphone dans un téléphone, illisible.
+L'appareil 3D montre donc les captures **brutes** de chaque app, que
+`npm run shots:sync` va chercher dans le projet de l'app (table `APPS` du script :
+fastlane, shotsmith `raw/`, `Design/…`), convertit en WebP ≤ 1800 px et range dans
+`public/shots/<id>/`. La fiche détaillée (modale), elle, garde les visuels
+marketing de l'App Store, redemandés en haute résolution (`appleImage()` : le CDN
+d'Apple sert n'importe quelle taille, l'API ne renvoie qu'une vignette 320 px).
 
-Apps du compte au 15/08/2026 (générées, pour référence) : Meow-Tube, Islamic Daily
-Quote, easy-Gym / FitGame, online strategy dot war, Vocabulaire Anglais Widget,
-Strategic wars / Military Strategic War 2026, DuoBook / Addicted to Reading.
-Hors compte : Guidor (Skyconseil). LocalShort et meow-Toon restent dans
-`IN_PROGRESS_APPS` (pas sur l'App Store).
+- **Nouvelle app** : ajouter son `trackId` dans `CURATION` (avec un `id`), puis une
+  entrée du même `id` dans `APPS` de `sync-device-shots.cjs`, et lancer
+  `npm run shots:sync <id>`. Sans cela elle s'affiche quand même, avec ses captures
+  App Store sur l'iPhone 3D.
+- `rawStoreShots: true` dans `CURATION` : les captures de la fiche sont déjà
+  brutes (jeux Godot), elles complètent les locales (onglet iPad).
+- **Jeu sans fastlane** : poser des PNG dans `.shots-src/<id>/` (git-ignoré ;
+  `icon.png`, sous-dossier `ipad/`), puis `npm run shots:sync <id>`.
+- L'onglet iPad n'apparaît que si l'app a de vraies captures iPad.
+- `shots:sync` et `apps:pending` ne tournent que sur le Mac ; leurs sorties sont
+  versionnées, le build du VPS n'en a pas besoin.
+
+- **`CURATION`** (clé = `trackId`) : `id` stable + copie éditoriale facultative
+  (sous-titre/description FR-EN, fonctionnalités, stack, landing page, ordre).
+- **`MANUAL_APPS`** : apps d'un autre éditeur (Guidor, Skyconseil).
+- FR et EN viennent des storefronts `fr` et `us`.
 
 ⚠️ Le CV (les 4 fichiers synchronisés ci-dessus) garde sa liste d'apps écrite à la
 main — il n'est pas branché sur ce flux.

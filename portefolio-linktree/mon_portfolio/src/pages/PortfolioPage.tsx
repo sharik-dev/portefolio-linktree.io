@@ -6,16 +6,10 @@ import { useLang, t } from '../contexts/LangContext';
 import { useTheme } from '../contexts/ThemeContext';
 
 import { useAppStoreApps } from '../hooks/useAppStoreApps';
-import type { PortfolioApp } from '../data/appstoreApps';
+import type { PortfolioApp, DeviceKind } from '../data/appstoreApps';
 import hackathonPrize from '../assets/awards/hackathon-ia-for-impact.jpg';
 import occitanieTrainDesktop from '../assets/web-projects/occitanie-train-desktop.jpg';
 import occitanieTrainMobile from '../assets/web-projects/occitanie-train-mobile.jpg';
-
-/* ─── In-progress projects ───────────────────────────────────────── */
-const IN_PROGRESS_APPS = [
-  { id: 'localshort', name: 'LocalShort', subtitle: { fr: 'Lecteur de vidéos courtes en local', en: 'Offline short-form video player' }, tech: ['iOS', 'Swift', 'SwiftUI'], done: true },
-  { id: 'meowtoon', name: 'meow-Toon', subtitle: { fr: 'Dessin animé interactif', en: 'Interactive cartoon app' }, tech: ['iOS', 'Swift'], done: false },
-];
 
 /* ─── Web projects ──────────────────────────────────────────────── */
 const OCCITANIE_TRAIN_URL = 'https://ia-impact.51-91-125-99.sslip.io/';
@@ -62,7 +56,8 @@ const AWARDS = [
 const UI = {
   fr: {
     eyebrow: 'Mes réalisations', title: 'App Mobile',
-    subtitle: 'Applications iOS développées avec Swift, SwiftUI, MVVM et Mapbox',
+    subtitle: 'Apps iOS en Swift et SwiftUI, jeux mobiles sous Godot',
+    inReview: 'En attente de revue App Store', inDev: 'En développement', reviewBadge: 'En revue Apple', devBadge: 'En développement', pendingCount: 'en revue Apple', onStore: 'Sur l\u2019App Store',
     preview3d: 'Aperçu 3D', hint: '↔ Rotation automatique · Cliquez-glissez',
     details: 'Voir les détails', featured: 'À la une', allProjects: 'Tous les projets',
     getFeatured: 'À la une', getNew: 'Nouveau',
@@ -79,7 +74,8 @@ const UI = {
   },
   en: {
     eyebrow: 'My work', title: 'Mobile Apps',
-    subtitle: 'iOS apps built with Swift, SwiftUI, MVVM and Mapbox',
+    subtitle: 'iOS apps in Swift and SwiftUI, mobile games built with Godot',
+    inReview: 'Waiting for App Review', inDev: 'In development', reviewBadge: 'In App Review', devBadge: 'In development', pendingCount: 'in App Review', onStore: 'On the App Store',
     preview3d: '3D Preview', hint: '↔ Auto-rotate · Click & drag',
     details: 'See details', featured: 'Featured', allProjects: 'All projects',
     getFeatured: 'Featured', getNew: 'New',
@@ -97,7 +93,7 @@ const UI = {
 };
 
 /* ─── Sub-components ─────────────────────────────────────────────── */
-const Stars: React.FC<{ rating: number }> = ({ rating }) => (
+const Stars: React.FC<{ rating: number }> = ({ rating }) => rating <= 0 ? null : (
   <div className="flex items-center gap-0.5">
     {[...Array(5)].map((_, i) => (
       <svg key={i} width="10" height="10" viewBox="0 0 24 24"
@@ -129,18 +125,18 @@ const AppCard: React.FC<{ app: PortfolioApp; lang: 'fr' | 'en'; ui: typeof UI['f
 const AppModal: React.FC<{ app: PortfolioApp; lang: 'fr' | 'en'; ui: typeof UI['fr']; onClose: () => void }> = ({ app, lang, ui, onClose }) => {
   const navigate = useNavigate();
   const { theme } = useTheme();
-  const hasLanding = 'landingPage' in app && typeof (app as any).landingPage === 'string';
-  const hasExternal = 'externalLink' in app && typeof (app as any).externalLink === 'string';
-  const hasAppStore = 'appStoreLink' in app && typeof (app as any).appStoreLink === 'string';
+  const hasLanding = !!app.landingPage;
+  const hasExternal = !!app.externalLink;
+  const hasAppStore = !!app.appStoreLink;
 
   const actionBtn = hasLanding ? (
-    <button onClick={() => { onClose(); navigate((app as any).landingPage); }}
+    <button onClick={() => { onClose(); navigate(app.landingPage!); }}
       className="flex-shrink-0 bg-[#E5E5EA] dark:bg-[#3A3A3C] text-[#1D1D1F] dark:text-white text-[13px] font-semibold px-5 py-2 rounded-full hover:bg-[#D1D1D6] dark:hover:bg-[#48484A] active:scale-95 transition-all cursor-pointer flex items-center gap-1.5">
       {lang === 'fr' ? 'Visite' : 'Visit'}
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="9 18 15 12 9 6" /></svg>
     </button>
   ) : hasExternal ? (
-    <a href={(app as any).externalLink} target="_blank" rel="noopener noreferrer"
+    <a href={app.externalLink} target="_blank" rel="noopener noreferrer"
       className="flex-shrink-0 bg-[#E5E5EA] dark:bg-[#3A3A3C] text-[#1D1D1F] dark:text-white text-[13px] font-semibold px-5 py-2 rounded-full hover:bg-[#D1D1D6] dark:hover:bg-[#48484A] active:scale-95 transition-all flex items-center gap-1.5">
       {lang === 'fr' ? 'Voir' : 'Visit'}
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><polyline points="9 18 15 12 9 6" /></svg>
@@ -148,7 +144,7 @@ const AppModal: React.FC<{ app: PortfolioApp; lang: 'fr' | 'en'; ui: typeof UI['
   ) : null;
 
   const downloadBtn = hasAppStore ? (
-    <a href={(app as any).appStoreLink} target="_blank" rel="noopener noreferrer"
+    <a href={app.appStoreLink} target="_blank" rel="noopener noreferrer"
       className="flex-shrink-0 bg-[#0071E3] text-white text-[13px] font-bold px-5 py-2 rounded-full hover:bg-[#0077ED] active:scale-95 transition-all flex items-center gap-1.5">
       {lang === 'fr' ? 'Télécharger' : 'Download'}
       <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" /></svg>
@@ -158,7 +154,7 @@ const AppModal: React.FC<{ app: PortfolioApp; lang: 'fr' | 'en'; ui: typeof UI['
   const STATS = [
     {
       label: lang === 'fr' ? 'NOTES' : 'RATINGS',
-      value: app.rating.toFixed(1),
+      value: app.rating > 0 ? app.rating.toFixed(1) : '—',
       sub: <div className="flex justify-center gap-[2px] mt-0.5">
         {[...Array(5)].map((_, i) => (
           <svg key={i} width="9" height="9" viewBox="0 0 24 24" fill={i < Math.floor(app.rating) ? '#FF9F0A' : theme === 'dark' ? '#3A3A3C' : '#D1D1D6'}>
@@ -253,8 +249,8 @@ const AppModal: React.FC<{ app: PortfolioApp; lang: 'fr' | 'en'; ui: typeof UI['
             {lang === 'fr' ? 'Aperçu' : 'Preview'}
           </h3>
           <div className="flex gap-3 overflow-x-auto -mx-5 px-5 pb-3 scrollbar-hide">
-            {app.screenshots.map((s, i) => (
-              <img key={i} src={s} alt=""
+            {t(lang, app.screenshots.fr, app.screenshots.en).map((s, i) => (
+              <img key={i} src={s} alt="" loading="lazy"
                 className="h-[260px] md:h-[300px] rounded-2xl object-cover flex-shrink-0 border border-black/[0.06] dark:border-white/[0.06]" />
             ))}
           </div>
@@ -273,7 +269,7 @@ const AppModal: React.FC<{ app: PortfolioApp; lang: 'fr' | 'en'; ui: typeof UI['
           </div>
 
           {/* ── Description ── */}
-          <p className="text-[15px] text-[#3A3A3C] dark:text-[#E5E5EA] leading-[1.6] mb-5">
+          <p className="text-[15px] text-[#3A3A3C] dark:text-[#E5E5EA] leading-[1.6] mb-5 whitespace-pre-line">
             {t(lang, app.description.fr, app.description.en)}
           </p>
 
@@ -306,9 +302,18 @@ const PortfolioPage: React.FC = () => {
   const { apps: APPS, refreshing } = useAppStoreApps();
   const [selectedApp, setSelectedApp] = useState<PortfolioApp | null>(null);
   const [tabletIndex, setTabletIndex] = useState(0);
+  const [deviceKind, setDeviceKind] = useState<DeviceKind>('iphone');
 
+  const liveApps = APPS.filter(a => a.status === 'live');
+  const reviewApps = APPS.filter(a => a.status === 'review');
+  const devApps = APPS.filter(a => a.status === 'dev');
+
+  // Aperçu 3D : toutes les apps qui ont au moins une capture, en ligne ou non.
+  const SHOWCASE = APPS.filter(a => a.device.iphone || a.device.ipad);
   // La liste vient d'Apple : sa taille peut changer entre deux rendus.
-  const tabletApp = APPS[Math.min(tabletIndex, Math.max(APPS.length - 1, 0))];
+  const tabletApp = SHOWCASE[Math.min(tabletIndex, Math.max(SHOWCASE.length - 1, 0))];
+  const kind: DeviceKind = tabletApp?.device[deviceKind] ? deviceKind : tabletApp?.device.iphone ? 'iphone' : 'ipad';
+  const tabletShots = tabletApp?.device[kind] ? t(lang, tabletApp.device[kind]!.fr, tabletApp.device[kind]!.en) : [];
 
   // « À la une » : uniquement Guidor (projet pro), mis en avant seul.
   const featuredApps = APPS.filter(a => a.id === 'guidor');
@@ -323,7 +328,7 @@ const PortfolioPage: React.FC = () => {
         <p className="text-base text-[#6E6E73] dark:text-[#98989D] max-w-md mx-auto">{ui.subtitle}</p>
         <p className="text-[11px] text-[#86868B] dark:text-[#636366] mt-3 flex items-center justify-center gap-1.5">
           <span className={`w-1.5 h-1.5 rounded-full ${refreshing ? 'bg-[#FF9F0A] animate-pulse' : 'bg-[#34C759]'}`} />
-          {refreshing ? ui.syncing : `${ui.synced} · ${APPS.length} ${ui.appsCount}`}
+          {refreshing ? ui.syncing : `${ui.synced} · ${liveApps.length} ${ui.appsCount}${reviewApps.length ? ` · ${reviewApps.length} ${ui.pendingCount}` : ''}`}
         </p>
       </header>
 
@@ -337,14 +342,14 @@ const PortfolioPage: React.FC = () => {
             {/* Wrapper relatif : flèches centrées sur la hauteur du viewer uniquement */}
             <div className="relative">
               <button
-                onClick={() => setTabletIndex(i => (i - 1 + APPS.length) % APPS.length)}
+                onClick={() => setTabletIndex(i => (i - 1 + SHOWCASE.length) % SHOWCASE.length)}
                 className="absolute -left-3 sm:-left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-[#F5F5F7] dark:bg-[#2C2C2E] flex items-center justify-center text-[#1D1D1F] dark:text-white hover:bg-[#E8E8ED] dark:hover:bg-[#3A3A3C] transition-colors"
               >
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="15 18 9 12 15 6" /></svg>
               </button>
 
               <button
-                onClick={() => setTabletIndex(i => (i + 1) % APPS.length)}
+                onClick={() => setTabletIndex(i => (i + 1) % SHOWCASE.length)}
                 className="absolute -right-3 sm:-right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-[#F5F5F7] dark:bg-[#2C2C2E] flex items-center justify-center text-[#1D1D1F] dark:text-white hover:bg-[#E8E8ED] dark:hover:bg-[#3A3A3C] transition-colors"
               >
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="9 18 15 12 9 6" /></svg>
@@ -352,17 +357,25 @@ const PortfolioPage: React.FC = () => {
 
               {/* Viewer centré avec marges latérales pour laisser la place aux flèches */}
               <div className="mx-12 sm:mx-14 flex justify-center">
-                <div className="w-full max-w-[340px]">
-                  <TabletViewer
-                    screenshots={tabletApp.screenshots}
-                    landscape={tabletApp.landscape ?? false}
-                  />
-                </div>
+                <TabletViewer screenshots={tabletShots} device={kind} />
               </div>
             </div>
 
             {/* Infos app — hors du wrapper pour que top-1/2 des flèches reste sur le viewer */}
             <div className="text-center mt-3">
+              {tabletApp.device.iphone && tabletApp.device.ipad && (
+                <div className="inline-flex p-0.5 mb-3 rounded-full bg-[#F5F5F7] dark:bg-[#2C2C2E]">
+                  {(['iphone', 'ipad'] as const).map(d => (
+                    <button key={d} onClick={() => setDeviceKind(d)}
+                      className={`text-[12px] font-semibold px-4 py-1 rounded-full transition-colors ${kind === d ? 'bg-white dark:bg-[#48484A] text-[#1D1D1F] dark:text-white shadow-sm' : 'text-[#6E6E73] dark:text-[#98989D]'}`}>
+                      {d === 'iphone' ? 'iPhone' : 'iPad'}
+                    </button>
+                  ))}
+                </div>
+              )}
+              {tabletApp.status !== 'live' && (
+                <p className="mb-1"><span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-[#FF9F0A]/10 text-[#CC7A00]">{tabletApp.status === 'review' ? ui.reviewBadge : ui.devBadge}</span></p>
+              )}
               <h3 className="font-semibold text-[#1D1D1F] dark:text-white text-[15px]">{t(lang, tabletApp.name.fr, tabletApp.name.en)}</h3>
               <p className="text-[12px] text-[#6E6E73] dark:text-[#98989D]">{t(lang, tabletApp.subtitle.fr, tabletApp.subtitle.en)}</p>
               <p className="text-[10px] text-[#86868B] mt-1">{ui.hint}</p>
@@ -469,62 +482,35 @@ const PortfolioPage: React.FC = () => {
           </div>
         </section>
 
-        {/* All projects */}
-        <section>
-          <h2 className="text-2xl font-bold text-[#1D1D1F] dark:text-white tracking-tight mb-4">{ui.allProjects}</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {APPS.map(app => (
-              <motion.div key={app.id} whileHover={{ y: -4 }} whileTap={{ scale: 0.97 }}
-                onClick={() => setSelectedApp(app)}
-                className="bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl p-4 cursor-pointer shadow-sm hover:shadow-md transition-shadow">
-                <img src={app.icon} alt={t(lang, app.name.fr, app.name.en)} className="w-14 h-14 rounded-2xl object-cover shadow-sm mb-3" />
-                <h3 className="text-[13px] font-semibold text-[#1D1D1F] dark:text-white tracking-tight">{t(lang, app.name.fr, app.name.en)}</h3>
-                <p className="text-[11px] text-[#6E6E73] dark:text-[#98989D] mt-0.5 mb-2">{t(lang, app.subtitle.fr, app.subtitle.en)}</p>
-                <div className="flex flex-wrap gap-1 mb-2">
-                  {app.tech.slice(0, 2).map(t => (
-                    <span key={t} className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-[#0071E3]/[0.07] text-[#0071E3]">{t}</span>
-                  ))}
-                </div>
-                <Stars rating={app.rating} />
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
-        {/* In-progress projects */}
-        <section>
-          <h2 className="text-2xl font-bold text-[#1D1D1F] dark:text-white tracking-tight mb-4">{ui.inProgress}</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {IN_PROGRESS_APPS.map(app => (
-              <div key={app.id}
-                className={`bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl p-4 shadow-sm ${app.done ? '' : 'opacity-80'}`}>
-                <div className="w-14 h-14 rounded-2xl mb-3 bg-[#F2F2F7] dark:bg-[#2C2C2E] flex items-center justify-center">
-                  {app.done ? (
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#34C759" strokeWidth="1.8">
-                      <rect x="3" y="3" width="18" height="18" rx="4" /><path d="M8 12.5l2.5 2.5L16 9.5" />
-                    </svg>
-                  ) : (
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#86868B" strokeWidth="1.8">
-                      <rect x="3" y="3" width="18" height="18" rx="4" /><path d="M9 12h6M12 9v6" />
-                    </svg>
+        {([[ui.onStore, liveApps], [ui.inReview, reviewApps], [ui.inDev, devApps]] as const).map(([title, list]) => list.length > 0 && (
+          <section key={title}>
+            <h2 className="text-2xl font-bold text-[#1D1D1F] dark:text-white tracking-tight mb-4">{title}</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {list.map(app => (
+                <motion.div key={app.id} whileHover={{ y: -4 }} whileTap={{ scale: 0.97 }}
+                  onClick={() => setSelectedApp(app)}
+                  className="bg-white dark:bg-[#1C1C1E] border border-black/[0.10] dark:border-white/[0.06] rounded-2xl p-4 cursor-pointer shadow-sm hover:shadow-md transition-shadow">
+                  {app.icon
+                    ? <img src={app.icon} alt={t(lang, app.name.fr, app.name.en)} loading="lazy" className="w-14 h-14 rounded-2xl object-cover shadow-sm mb-3" />
+                    : <div className="w-14 h-14 rounded-2xl mb-3 bg-[#F2F2F7] dark:bg-[#2C2C2E]" />}
+                  {app.status !== 'live' && (
+                    <span className={`inline-block mb-1.5 text-[9px] font-semibold px-2 py-0.5 rounded-full ${app.status === 'review' ? 'bg-[#FF9F0A]/10 text-[#CC7A00]' : 'bg-[#0071E3]/10 text-[#0071E3]'}`}>
+                      {app.status === 'review' ? ui.reviewBadge : ui.devBadge}
+                    </span>
                   )}
-                </div>
-                <div className="mb-1.5">
-                  <span className={`text-[9px] font-semibold px-2 py-0.5 rounded-full ${app.done ? 'bg-[#34C759]/10 text-[#34C759]' : 'bg-[#0071E3]/10 text-[#0071E3]'}`}>
-                    {app.done ? ui.completed : ui.comingSoon}
-                  </span>
-                </div>
-                <h3 className="text-[13px] font-semibold text-[#1D1D1F] dark:text-white tracking-tight">{app.name}</h3>
-                <p className="text-[11px] text-[#6E6E73] dark:text-[#98989D] mt-0.5 mb-2">{t(lang, app.subtitle.fr, app.subtitle.en)}</p>
-                <div className="flex flex-wrap gap-1">
-                  {app.tech.slice(0, 2).map(tech => (
-                    <span key={tech} className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-[#0071E3]/[0.07] text-[#0071E3]">{tech}</span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
+                  <h3 className="text-[13px] font-semibold text-[#1D1D1F] dark:text-white tracking-tight">{t(lang, app.name.fr, app.name.en)}</h3>
+                  <p className="text-[11px] text-[#6E6E73] dark:text-[#98989D] mt-0.5 mb-2">{t(lang, app.subtitle.fr, app.subtitle.en)}</p>
+                  <div className="flex flex-wrap gap-1 mb-2">
+                    {app.tech.slice(0, 2).map(tech => (
+                      <span key={tech} className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-[#0071E3]/[0.07] text-[#0071E3]">{tech}</span>
+                    ))}
+                  </div>
+                  <Stars rating={app.rating} />
+                </motion.div>
+              ))}
+            </div>
+          </section>
+        ))}
       </div>
 
       <AnimatePresence>

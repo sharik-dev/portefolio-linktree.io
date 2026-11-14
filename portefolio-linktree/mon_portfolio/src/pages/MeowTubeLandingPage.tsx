@@ -9,6 +9,7 @@ import appSecond from '../assets/meowTube/AppSecondPage.png';
 import redCat from '../assets/meowTube/Red Cat Illustration.png';
 import redDecoration from '../assets/meowTube/redCatDecoration.png';
 import TabletViewer from '../components/TabletViewer';
+import { deviceShotsFor } from '../data/appstoreApps';
 
 /* ─── Contact form ────────────────────────────────────────────── */
 const CONTACT_EMAIL = 'sharikmohamed8@gmail.com';
@@ -396,7 +397,7 @@ const MeowTubeLandingPage: React.FC = () => {
           viewport={{ once: true }} transition={{ duration: 0.6 }}
           className="max-w-[280px] mx-auto"
         >
-          <TabletViewer screenshots={[appHome, appSecond]} />
+          <TabletViewer screenshots={deviceShotsFor('meowtube', lang).length ? deviceShotsFor('meowtube', lang) : [appHome, appSecond]} />
         </motion.div>
       </section>
 

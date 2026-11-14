@@ -1,15 +1,48 @@
 {
   "artistId": "1816768480",
-  "generatedAt": "2026-08-20T08:48:12.087Z",
+  "generatedAt": "2026-11-14T14:31:43.662Z",
   "storefronts": {
     "fr": [
       {
-        "trackId": 6760180650,
-        "trackName": "Meow-Tube:No ad & Music Player",
+        "trackId": 6798837070,
+        "trackName": "Salat : apprendre à prier",
         "artistId": 1816768480,
         "artistName": "Abubucker Siddeek Mohamed Sharik",
         "sellerName": "Abubucker Siddeek Mohamed Sharik",
-        "description": "This app allows users to watch multimedia content while tracking their screen time to help them stay focused and productive. It reduces distractions and lets users save videos to their favorites so they can watch them later. Users can also listen to videos in the background.",
+        "description": "Apprenez ce qu'on dit dans chaque position de la prière, une étape à la fois.\nL'arabe, la prononciation écrite en français et le sens, côte à côte sur chaque ligne.\nSans compte, sans réseau : juste vous et les paroles de la salat.\n\nLes gestes, vous les connaissez. Debout, incliné, le front au sol, assis. Ce que vous ne savez pas, c'est quoi dire une fois que vous y êtes, et personne ne l'enseigne assez lentement pour qu'on l'apprenne vraiment.\n\nQUATORZE ÉTAPES, DANS L'ORDRE\n\nChaque position de la prière, du takbir d'ouverture au salam final, dans l'ordre où on les accomplit. Touchez-en une et vous obtenez quatre choses, jamais mélangées : ce que fait le corps, le texte arabe, la prononciation écrite dans votre langue, et le sens réel.\n\nLIGNE À LIGNE\n\nLes longs passages, comme la Fatiha et le Tashahhud, sont découpés ligne à ligne : l'arabe, la prononciation et la traduction sont côte à côte sur chaque ligne. C'est cet alignement, la leçon. Vous apprenez quels mots vous prononcez, pas seulement leur sonorité.\n\nL'ENTENDRE, PUIS S'ENTENDRE\n\nPour la Fatiha et la sourate courte, appuyez sur lecture et écoutez Mahmoud Khalil Al-Husary ou Mishary Rashid Alafasy réciter le verset. L'enregistrement d'enseignement d'Al-Husary est lent et détaché, fait pour être répété après.\n\nPuis enregistrez-vous. Les deux tracés sont dessinés sur la même forme d'onde : vous voyez où vous avez accéléré et où vous vous êtes arrêté trop tôt. L'enregistrement reste sur votre iPhone et n'est envoyé nulle part.\n\nÉCRIT POUR VOTRE LANGUE\n\nLa prononciation n'est pas translittérée une fois puis recopiée. Un francophone ne lit pas « Subhaana » comme un anglophone : chaque langue a donc sa propre graphie, écrite pour la façon dont on lit à voix haute dans cette langue. Quatorze langues : français, anglais, arabe, indonésien, malais, ourdou, bengali, turc, russe, espagnol, portugais, allemand, italien et néerlandais.\n\nUN WIDGET QUI CONTINUE D'ENSEIGNER\n\nAjoutez le widget à l'écran d'accueil : les positions défilent toutes seules, avec ce qui se dit à chacune. Vous ne révisez pas, vous le voyez, plusieurs fois par jour, jusqu'à ce que ça reste.\n\nPRIVÉE ET HORS LIGNE\n\nPas de compte. Pas de connexion. Aucun réseau : l'app ne fait aucune requête, elle fonctionne donc en avion, en sous-sol, n'importe où. Rien n'est collecté, parce qu'il n'y a nulle part où le collecter.\n\nSUR LE CONTENU\n\nLa prière décrite ici est le tronc commun des quatre écoles sunnites. Là où elles divergent (la formulation du Tashahhud, la position des mains, le Qunut), l'app vous dit qu'elles divergent, dans une note sur l'étape concernée, au lieu d'en choisir une en silence.\n\nC'est une aide à la mémorisation. Elle ne remplace pas un professeur, et ne prétend pas le faire.",
+        "primaryGenreName": "Education",
+        "genres": [
+          "Éducation",
+          "Références"
+        ],
+        "price": 0,
+        "formattedPrice": "Gratuit",
+        "currency": "EUR",
+        "averageUserRating": 5,
+        "userRatingCount": 2,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/85/59/3a/85593ae9-1479-e46a-a5c6-b741a18332e3/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/85/59/3a/85593ae9-1479-e46a-a5c6-b741a18332e3/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7f/19/35/7f193525-3758-d136-8f9b-3fd7a2ef4e7b/1_showcase.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/76/e3/c9/76e3c960-a77d-7095-be7c-0745044ff0ec/2_showcase.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a9/f1/fc/a9f1fce5-0f1e-b115-cc53-3e59365388ab/3_showcase.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c1/14/a1/c114a1fb-218d-6245-9599-6b04ba8bd909/4_showcase.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/05/cd/ae/05cdae9f-0d7c-2e35-83ee-a815c6c5ef31/5_showcase.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [],
+        "version": "1.3",
+        "releaseDate": "2026-08-22T07:00:00Z",
+        "currentVersionReleaseDate": "2026-11-06T20:57:45Z",
+        "trackViewUrl": "https://apps.apple.com/fr/app/salat-apprendre-%C3%A0-prier/id6798837070?uo=4",
+        "minimumOsVersion": "17.0"
+      },
+      {
+        "trackId": 6760180650,
+        "trackName": "MeowTube : Bloqueur de Shorts",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Les vidéos courtes sont conçues pour vous faire scroller. Une vidéo en appelle vingt, et vingt minutes deviennent une heure.\n\nMeowTube est un navigateur pour les sites de vidéo, de musique et les réseaux sociaux qui retire les fils sans fin. Vous continuez à regarder, écouter et garder le contact : vous arrêtez juste de scroller.\n\nLES SHORTS, BLOQUÉS\nLes Shorts sont bloqués avant d'arriver à l'écran : leurs vignettes disparaissent de l'accueil et des résultats de recherche, l'onglet Shorts n'est plus là, et un lien vers un Short vous ramène à l'accueil au lieu de vous lancer dans le défilement sans fin. Les vidéos courtes sont aussi bloquées sur les réseaux sociaux.\n\nCE QUI DISPARAÎT\n• Les Shorts et les fils de vidéos courtes\n• Les vidéos suggérées et l'enchaînement automatique\n• Les miniatures qui vous happent : floutez-les, ou passez en noir et blanc\n\nCE QUE VOUS GARDEZ\n• Les vidéos et la musique que vous êtes venu chercher\n• Vos abonnements, playlists et messages\n• L'écoute en arrière-plan, écran verrouillé\n• L'image dans l'image pendant que vous utilisez d'autres apps\n• Votre Librairie : vidéos et morceaux en favoris, rangés en dossiers, reprise là où vous vous êtes arrêté\n\nREPRENEZ VOTRE TEMPS\n• Une limite quotidienne avec une jauge en direct\n• Un verrou quand la limite est atteinte\n• Des statistiques d'usage pour chaque site, jour par jour\n\nMÉRITEZ LA VIDÉO SUIVANTE\nVous voulez quand même des vidéos courtes sur un réseau social ? Activez les défis. Le chat de MeowTube compte chaque vidéo regardée dans la journée, et toutes les trois vidéos il vous lance un petit défi avant la suivante :\n• Des pompes, comptées par la caméra avant\n• Relier des points, calcul mental, énigmes logiques ou une ligne de code\n• Facile, moyen ou difficile : à vous de choisir\n\nCOMMENT ÇA MARCHE\nMeowTube est un navigateur : vous choisissez les sites à afficher sur votre accueil, et chaque site s'ouvre à son adresse officielle. MeowTube masque les fils de vidéos courtes et les suggestions dans la page, pour que vous utilisiez chaque site avec intention, pas en pilote automatique.\n\nGRATUIT, TOUT COMPRIS\n• Les sites de vidéos sans Shorts, et les vidéos courtes bloquées sur les réseaux sociaux\n• Librairie, écoute en arrière-plan et image dans l'image\n• Limite quotidienne avec verrou strict, et statistiques d'usage complètes\n• Un second compte sur un même site\n• Une pub de temps en temps, jamais pendant une vidéo\n\nMEOWTUBE PRO\n• Zéro pub\n• Fait vivre MeowTube : maintenance et mises à jour\n\nDisponible en anglais, français, espagnol, arabe et hindi.\n\nABONNEMENT\nMeowTube Pro est un abonnement à renouvellement automatique : 4,99 € par mois ou 29,99 € par an (l'annuel commence par 3 jours d'essai gratuit). Les prix peuvent varier selon le pays et sont affichés dans votre devise avant l'achat.\n• Le paiement est débité sur votre compte Apple ID à la confirmation de l'achat, ou à la fin de l'essai gratuit.\n• L'abonnement se renouvelle automatiquement sauf s'il est annulé au moins 24 heures avant la fin de la période en cours. Le renouvellement est débité dans les 24 heures précédant la fin de la période en cours.\n• Vous pouvez gérer et annuler votre abonnement dans les réglages de votre compte Apple ID après l'achat.\n• Toute période d'essai gratuit non utilisée est perdue lors de la souscription d'un abonnement.\n\nConditions d'utilisation : https://www.apple.com/legal/internet-services/itunes/dev/stdeula/\nPolitique de confidentialité : https://sharik.fr/meowtube/privacy/",
         "primaryGenreName": "Entertainment",
         "genres": [
           "Divertissement"
@@ -17,24 +50,68 @@
         "price": 0,
         "formattedPrice": "Gratuit",
         "currency": "EUR",
-        "averageUserRating": 4.59999,
-        "userRatingCount": 5,
-        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6a/48/3e/6a483edf-df5e-86cc-546c-40963b24bbf1/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
-        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6a/48/3e/6a483edf-df5e-86cc-546c-40963b24bbf1/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+        "averageUserRating": 4.71429,
+        "userRatingCount": 7,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2d/d6/73/2dd67314-7ad4-048d-9015-4ef977daad5e/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2d/d6/73/2dd67314-7ad4-048d-9015-4ef977daad5e/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
         "screenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c6/e0/72/c6e072d7-5c1c-8397-00c8-99ced5bbf558/01-slide1-1284x2778.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/aa/1a/53/aa1a5324-7922-8347-2b89-4f8459832b99/02-slide2-1284x2778.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/43/83/d9/4383d9c0-5719-c694-8372-785a6f889c63/03-slide3-1284x2778.png/320x480bb.jpg"
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/3e/6a/30/3e6a30e0-5c3a-af8b-56e7-f52b44dc9a15/01_01-hero.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/3f/e1/95/3fe195a0-a919-3c66-9778-b363ad4d5e90/02_02-library.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/3a/d3/f8/3ad3f85e-3b6a-6480-1ccd-c42fc321358b/03_03-lock.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b6/18/b2/b618b2b8-af0d-42b4-7274-ff2e61c805a1/04_04-music.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b4/1c/18/b41c18b2-3b10-859b-2560-602d99780d4e/05_05-pip.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ce/bc/29/cebc299d-06e6-d169-2514-cbaa2f5af4b1/06_06-noshorts.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/1e/26/e1/1e26e19f-76a3-b5d9-49bc-23dec437121e/07_07-browse.png/320x480bb.jpg"
         ],
         "ipadScreenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/be/93/96/be939670-c6a1-c992-6a6f-4ddd451f7ce3/iPad_Air_M3_Screenshot_Mar_6.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/34/26/31/34263185-801f-ac73-c35d-57e6464a82ee/iPad_Air_M3_Screenshot_Mar_6__U00281_U0029.png/360x480bb.jpg"
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/52/56/06/525606ac-7590-854b-e563-7f81417d000e/iPad_Air_M3_Screenshot_Mar_6.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8c/9e/ef/8c9eef80-e12a-5bc0-a444-bda29a5c149f/iPad_Air_M3_Screenshot_Mar_6__U00281_U0029.png/360x480bb.jpg"
         ],
-        "version": "2.1",
+        "version": "2.7.2",
         "releaseDate": "2026-03-18T07:00:00Z",
-        "currentVersionReleaseDate": "2026-05-29T18:50:14Z",
-        "trackViewUrl": "https://apps.apple.com/fr/app/meow-tube-no-ad-music-player/id6760180650?uo=4",
+        "currentVersionReleaseDate": "2026-11-05T06:27:13Z",
+        "trackViewUrl": "https://apps.apple.com/fr/app/meowtube-bloqueur-de-shorts/id6760180650?uo=4",
         "minimumOsVersion": "17.0"
+      },
+      {
+        "trackId": 6801350476,
+        "trackName": "Military Army Runner 2026",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Faites d'une poignée de soldats une armée de chars, de bazookas et d'hélicoptères.\nMitraillez chaque porte, choisissez les bonnes caisses d'armes et tenez tête à des hordes sans fin.\nUn seul pouce, une seule question à chaque seconde : où envoyer vos balles ?\n\nCOMMENT ÇA SE JOUE\nVotre foule avance seule ; le pouce ne fait que la déplacer en travers. Portes, caisses d'armes et hordes se disputent le même feu, et votre effectif est votre barre de vie.\n\nLES PORTES SONT DES CHANTIERS, PAS DES PIÈGES\nUne porte arrive à zéro, ou en négatif. Mitraillez-la et elle monte : +1, +2, +3. La foule ne tire que droit devant : pour nourrir une porte, il faut se placer en face. Une porte rouge ne s'évite pas, elle se construit.\n\nCHAQUE PORTE DONNE UNE TROUPE\nFusilier, bazooka, éclaireur, char, hélicoptère, bombardier. Une carte flotte au-dessus de chaque porte avec le vrai modèle 3D de la troupe offerte, parce que +2 chars ne se comparent pas à +3 fusiliers.\n\nLES ARMES SE CUMULENT\nLes armes sont enfermées dans des piles de pneus, le prix écrit dessus. Chaque caisse ajoute son arme à votre arsenal, et jusqu'à quatre armes tirent en même temps. Une arme que vous portez déjà monte d'un niveau. Les caisses tombent à deux, dans des voies différentes : il faut toujours choisir laquelle aller chercher.\n\nTREIZE ARMES QUI NE SONT PAS D'ACCORD\nFusil, mitraillette, canon rail, lames de tronçonneuse qui ricochent, et de rares armes légendaires. Le bazooka et le mortier emportent tout ce que couvre leur zone d'explosion, les dégâts faiblissant vers le bord. Le rayon est à l'autre extrême : trois bouches, la cadence la plus rapide du jeu, des dégâts minuscules par trait, et huit corps traversés d'une seule ligne. La pire arme contre une porte isolée, la meilleure contre une colonne. Une arme lourde change aussi le soldat qui la porte.\n\nCOFFRES AU TRÉSOR ET 16 AMÉLIORATIONS\nTraversez un coffre et le jeu se met en pause : une roulette tourne et vous propose trois améliorations, vous en choisissez une. Un éclair qui saute d'un ennemi à l'autre, un gel qui les ralentit, un feu qui les consume, des ricochets, des tirs perçants, des grenades, des météores, des scies qui tournent autour de votre armée, et bien plus. Elles se cumulent, et vos balles changent de couleur et de taille à mesure que vous les ramassez.\n\nLES HORDES RIPOSTENT\nLes vagues foncent sur vous sans fin. Un ennemi au contact emporte un coureur avec lui : toujours un pour un. Et elles tirent, dans une fenêtre étroite juste devant votre foule.\n\nNIVEAU APRÈS NIVEAU\nChaque niveau est une ligne d'arrivée plus loin sur le pont, gardée par un boss, dans un nouveau décor : la mer, un col enneigé, le désert, une ville néon. Le niveau 1 est un échauffement ; au niveau 10, il vous faut chaque porte, chaque caisse et chaque balle. Franchissez-la, et la ligne suivante vous attend un peu plus loin.\n\nAUCUNE PARTIE NE SE RESSEMBLE\nLa piste est tracée à neuf à chaque partie : rien à apprendre par cœur. Lisez le pont, choisissez vos cibles, et voyez jusqu'où va votre armée.",
+        "primaryGenreName": "Games",
+        "genres": [
+          "Jeux",
+          "Parties rapides",
+          "Action"
+        ],
+        "price": 0,
+        "formattedPrice": "Gratuit",
+        "currency": "EUR",
+        "averageUserRating": 5,
+        "userRatingCount": 2,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/cb/0a/fd/cb0afd4e-7289-cb7e-f000-d57fb4aec491/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/cb/0a/fd/cb0afd4e-7289-cb7e-f000-d57fb4aec491/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/66/0e/b0/660eb06b-e04a-0fdc-ca83-16b456baed31/1_gates.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f9/fa/a5/f9faa5b6-9c87-851d-045a-09715fab8d67/2_bazooka.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/db/53/04/db53042e-bee0-ad2f-c8ad-16b2cbcd53a8/3_laser.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/23/71/5e/23715ef5-23c2-0875-26e7-adc2a846b50d/4_crowd.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/bb/2a/f9/bb2af961-90fa-0e48-b57a-17d616f84e03/5_title.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/6a/49/e4/6a49e43e-6505-feb0-d84a-08450a5e44b0/1_gates_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ba/e9/36/bae9368f-42c7-436b-4f0e-f4b43b836e4b/2_bazooka_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9e/95/77/9e9577d9-e888-2f29-28a1-859d0de7e7d0/3_laser_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/62/95/06/629506ee-16e9-811d-a1f9-da8c8dbc8e59/4_crowd_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b6/77/de/b677ded6-fe69-78b1-7154-31ae3d9ee575/5_title_ipad.png/360x480bb.jpg"
+        ],
+        "version": "1.7",
+        "releaseDate": "2026-08-18T07:00:00Z",
+        "currentVersionReleaseDate": "2026-11-13T22:38:02Z",
+        "trackViewUrl": "https://apps.apple.com/fr/app/military-army-runner-2026/id6801350476?uo=4",
+        "minimumOsVersion": "15.0"
       },
       {
         "trackId": 6781363751,
@@ -42,7 +119,7 @@
         "artistId": 1816768480,
         "artistName": "Abubucker Siddeek Mohamed Sharik",
         "sellerName": "Abubucker Siddeek Mohamed Sharik",
-        "description": "Vocabulaire Anglais t'aide à enrichir ton anglais sans effort, un mot à la fois — directement depuis ton écran d'accueil et ton écran verrouillé.\n\nLe cœur de l'app, ce sont ses widgets élégants : un nouveau mot anglais et sa traduction française apparaissent chaque heure, adaptés à ton niveau, du débutant (A1) à l'avancé (B2).\n\nCE QUE TU PEUX FAIRE\n• Widgets écran d'accueil ET écran verrouillé\n• Un mot qui change toutes les heures\n• Quatre niveaux : A1, A2, B1, B2\n• Glisse pour découvrir d'autres mots du jour\n• Marque les mots comme « appris » et suis ta progression\n• Rappel quotidien optionnel\n• Design soigné, ambiance carnet de cours\n\nSIMPLE ET RESPECTUEUX\n• 100 % hors ligne\n• Aucun compte requis\n• Aucune publicité, aucun pistage\n\nInstalle le widget, et apprends l'anglais sans même ouvrir l'app.",
+        "description": "Apprends l'anglais sans même ouvrir l'app : un nouveau mot et sa traduction française s'affichent chaque heure sur ton écran.\nDu débutant (A1) à l'avancé (B2), enrichis ton vocabulaire à ton rythme, un mot à la fois.\nSans compte, sans publicité, 100 % hors ligne.\n\nDES WIDGETS PARTOUT\nPlace le widget sur ton écran d'accueil ou ton écran verrouillé. À chaque coup d'œil sur ton iPhone, tu révises un mot anglais sans y penser.\n\nUN MOT QUI CHANGE TOUTES LES HEURES\nLe widget se met à jour chaque heure. Glisse pour découvrir d'autres mots du jour quand tu as envie d'en apprendre plus.\n\nADAPTÉ À TON NIVEAU\nChoisis parmi quatre niveaux : A1, A2, B1 et B2. Les mots proposés correspondent à ce que tu sais déjà et à ce que tu dois apprendre ensuite.\n\nSUIS TA PROGRESSION\nMarque les mots comme « appris » et vois ton vocabulaire grandir. Un rappel quotidien optionnel t'aide à garder le rythme.\n\nUN DESIGN SOIGNÉ\nUne ambiance carnet de cours, élégante et reposante, pensée pour s'intégrer joliment à ton écran.\n\nSIMPLE ET RESPECTUEUX\n• 100 % hors ligne\n• Aucun compte requis\n• Aucune publicité, aucun pistage\n\nInstalle le widget, et apprends l'anglais un mot à la fois.",
         "primaryGenreName": "Education",
         "genres": [
           "Éducation",
@@ -53,42 +130,40 @@
         "currency": "EUR",
         "averageUserRating": 4.5,
         "userRatingCount": 2,
-        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/58/5a/b0/585ab0db-ffc2-4ac5-5ee0-d2281c52e42a/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
-        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/58/5a/b0/585ab0db-ffc2-4ac5-5ee0-d2281c52e42a/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/dd/fe/40/ddfe404d-4dc9-4771-6873-257539611e09/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/dd/fe/40/ddfe404d-4dc9-4771-6873-257539611e09/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
         "screenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e3/3b/47/e33b47ea-94e1-6913-a39f-a7e49594c4d4/iphone_1.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/50/58/bf/5058bfc1-3c3a-8390-7f7a-6a66b551c6b9/iphone_2.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/79/82/bd/7982bde6-b98d-a6f1-e42d-d258777e1809/iphone_3.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/80/e9/18/80e918d2-921b-1354-4971-8fc946807dcd/iphone_4.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/16/c0/ef/16c0ef71-aa36-04b0-df2b-71a9bcdd20a5/iphone_5.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/1f/bb/b9/1fbbb972-5f41-892d-6caf-edee9757a8b1/iphone_6.png/320x480bb.jpg"
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9d/d6/80/9dd68097-3c0a-497c-050d-377cb70724c6/iphone3d_1.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ab/cc/32/abcc326f-62f3-2f8f-eb44-a83600467620/iphone3d_2.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/26/44/66/26446617-9bd0-06e9-5c6b-867a894652d0/iphone3d_3.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/38/10/a6/3810a66c-fbab-1306-9617-8cd18aadd12b/iphone3d_4.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9e/54/5a/9e545afe-20a4-6730-18ed-f5e93656496e/iphone3d_5.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/aa/50/61/aa5061f6-3f73-37f2-4588-7d81dc7841c3/iphone3d_6.png/320x480bb.jpg"
         ],
         "ipadScreenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/bf/85/ee/bf85ee40-910c-c2ee-9040-ae68b1c87a66/ipad_1.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f3/46/25/f34625dd-66bb-bffc-7a76-57b7eed280b4/ipad_2.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e8/71/6b/e8716b64-519d-ea4e-d4b6-f8c61f008a04/ipad_3.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f1/c7/4a/f1c74a64-3e61-3fc1-7595-6dace2edc027/ipad_4.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a5/fa/1d/a5fa1de2-071a-1355-d8c5-d49a5d73b2a6/ipad_5.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b5/d5/ff/b5d5ffac-49f8-32c5-1141-a20c0bd41706/ipad_6.png/360x480bb.jpg"
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a1/74/e1/a174e16d-2d42-4431-cf22-7ffa327f9f24/ipad_1.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/61/d5/0c/61d50c6d-e658-b4e0-06de-2da369c0b730/ipad_2.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/af/6e/08/af6e08c8-5ea8-fc07-cafc-39c6fc340505/ipad_3.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/de/72/29/de7229f1-b514-e2d5-64d5-e0f0322b4c53/ipad_4.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/85/0e/39/850e39b0-a25e-35de-360c-847cd8b057cb/ipad_5.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/1e/ca/a7/1ecaa724-8037-0b70-c99a-583714f88749/ipad_6.png/360x480bb.jpg"
         ],
-        "version": "1.1",
+        "version": "2.2",
         "releaseDate": "2026-06-19T07:00:00Z",
-        "currentVersionReleaseDate": "2026-06-25T21:59:32Z",
+        "currentVersionReleaseDate": "2026-11-12T08:08:36Z",
         "trackViewUrl": "https://apps.apple.com/fr/app/vocabulaire-anglais-widget/id6781363751?uo=4",
         "minimumOsVersion": "16.0"
       },
       {
-        "trackId": 6786755599,
-        "trackName": "Strategic wars",
+        "trackId": 6794597550,
+        "trackName": "TerraFocus: Minuteur Pomodoro",
         "artistId": 1816768480,
         "artistName": "Abubucker Siddeek Mohamed Sharik",
         "sellerName": "Abubucker Siddeek Mohamed Sharik",
-        "description": "Strategic Wars est un jeu de tactique tour par tour dans l'esprit des classiques : capturez villes et usines, produisez des unités grâce aux fonds qu'elles génèrent, et déjouez votre adversaire sur un champ de bataille en 3D.\n\nFONCTIONNALITÉS\n- Environ 20 types d'unités (infanterie, chars, hélicoptères, navires, bombardiers), chacune avec sa portée, son arme et ses contres\n- 7 terrains (herbe, routes, eau, ponts, villes, forêts, montagnes) qui modifient défense et déplacement\n- Capturez Villes, Usines, Aéroports et Ports pour financer votre armée\n- Campagne complète avec missions scénarisées et un nombre croissant de cartes\n- Duel local 1 contre 1 en passe-et-joue, ou affrontez une IA tactique\n- Multijoueur en ligne via Game Center — défiez vos amis directement\n- Mode classé en ligne avec un vrai classement ELO et un leaderboard sur serveur dédié, impossible à tricher\n- Parties personnalisées en ligne — choisissez votre carte, jouez en public ou invitez des amis avec un code de salon\n\nSans pay-to-win, sans publicité pour interrompre vos batailles. Juste de la stratégie tour par tour pure.",
-        "primaryGenreName": "Games",
+        "description": "Ici, la seule chose qui pousse, c'est votre concentration.\n\nTerraFocus est un minuteur de concentration posé sur un îlot en train de mourir. Vous lancez une session, vous posez le téléphone, vous faites votre vrai travail. Quand le minuteur arrive au bout, vous gagnez de la biomasse — et la biomasse est la seule façon d'acheter les engins qui ramènent cet endroit à la vie.\n\nTERRAFORMER, DANS L'ORDRE\nRien ne se peint en vert à la main. Vous installez une infrastructure, et le terrain réagit :\n• Les éoliennes, les panneaux solaires et les barrages produisent le courant, les poteaux le portent\n• Les dépollueurs rendent la friche polluée en terre\n• Les trancheuses et les excavatrices creusent les canaux, le puits les remplit\n• Les irrigateurs font de la terre une prairie, et l'eau en fait un marais\n• Les ruches font fleurir, le brûlis et l'arboretum font naître une forêt\n\nQuand l'île vit, vous démontez chaque engin pour la rendre à la nature — puis vous partez pour la suivante.\n\nUN MONDE QUI CONTINUE DE VIVRE\nLe jour laisse place à la nuit tout seul. Les lampadaires s'allument, les LED des machines luisent, les papillons de nuit tournent autour de la lumière. Les arbres poussent, vieillissent, s'inclinent, et une autre espèce prend leur place. Les écureuils s'installent dans les bois le jour ; les grenouilles arrivent au bord de l'eau la nuit. Rien de tout ça ne compte de points. C'est juste à quoi ressemble un endroit qui va mieux.\n\nDES ÎLES DESSINÉES À LA MAIN, DE VRAIES ÉNIGMES\nSix petites îles d'entraînement présentent les engins deux par deux. Ensuite, chaque île est une énigme dessinée à la main, avec un budget serré : où est le seul rocher, dans quel sens tourner l'irrigateur en L, quelle prairie brûler ? Moins vous dépensez, plus vous gagnez d'étoiles.\n\nVINGT ENGINS, UNE CHAÎNE\nChacun a un rôle et une forme, et l'ordre compte : pas d'eau sans courant, pas de forêt sans cendre. Trouver l'enchaînement, c'est le jeu.\n\nCONSTRUIT HONNÊTEMENT\n• Le minuteur mesure du temps réel — il continue quand le téléphone est dans la poche, et se conclut tout seul\n• Aucune publicité\n• Aucune série à tenir, donc rien qui vous punisse d'une mauvaise semaine\n• Fonctionne entièrement hors ligne — aucun compte, aucune connexion, rien ne quitte votre appareil\n\nChoisissez 5, 15, 25, 45 ou 60 minutes. Toutes les durées rapportent au même taux : vous choisissez votre rythme, pas votre exploit.\n\nLa terraformation rencontre le travail en profondeur. Faites la session, gardez l'île.",
+        "primaryGenreName": "Productivity",
         "genres": [
-          "Jeux",
-          "Stratégie",
-          "Action",
+          "Productivité",
           "Éducation"
         ],
         "price": 0,
@@ -96,102 +171,147 @@
         "currency": "EUR",
         "averageUserRating": 0,
         "userRatingCount": 0,
-        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/87/02/e4/8702e4b2-af9e-0bb6-bfff-77a319dcf6e8/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
-        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/87/02/e4/8702e4b2-af9e-0bb6-bfff-77a319dcf6e8/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/23/40/4d/23404dd3-4edb-73ae-bee6-fa7e90f85baf/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/23/40/4d/23404dd3-4edb-73ae-bee6-fa7e90f85baf/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/100x100bb.jpg",
         "screenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/41/a7/55/41a7557d-6e25-7cb8-d9be-9a0f104e2d87/iphone_01_01_missile.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/65/c3/72/65c372f3-8100-19ce-a64f-e1593913abf2/iphone_02_02_airstrike.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/50/55/8e/50558e0d-bbaf-c238-63f4-8716dc49c89f/iphone_03_03_naval.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/f1/63/47/f163476d-b585-b2eb-593d-55ee0f6086d0/iphone_04_04_frontline.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/14/e4/56/14e4566f-e7b0-0e85-972a-24c4d4bbbbbf/iphone_05_05_warmap.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2a/dc/d2/2adcd296-f3a1-6610-8f9f-47f916fa25fc/iphone_06_06_menu.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/6a/2e/19/6a2e19c4-2df8-017f-23e8-e2d22f936b0a/iphone_07_07_units.png/320x480bb.jpg"
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/2f/42/d2/2f42d279-f67c-8891-3494-e7c66da9d378/01-focus-1290x2796.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/81/76/1c/81761c59-eca3-b731-2d92-eb7197cac242/02-task-1290x2796.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/01/e5/62/01e562d2-0fa6-1614-7737-aa3f1c790f58/03-rhythm-1290x2796.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/19/e9/ad/19e9ada8-4643-ca4f-4cb3-9212ea3708c0/04-reward-1290x2796.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c9/d6/9f/c9d69f7f-cf17-6078-f688-76b4bd8d3253/05-build-1290x2796.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/37/7f/c5/377fc54e-145f-f02a-3532-9644e15f6005/06-life-1290x2796.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/44/b4/39/44b43904-a148-0a99-8730-cff7e5850585/07-honest-1290x2796.png/320x480bb.jpg"
         ],
         "ipadScreenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/d5/b0/2e/d5b02e06-9653-cb56-651e-940a09ec1ba0/ipad_01_01_missile.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f8/54/51/f854515c-4b29-7cc9-6e48-ba9f8c68b1d7/ipad_02_02_airstrike.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/30/e4/bc/30e4bc12-ee58-a4e2-35ee-c35682cd2915/ipad_03_03_naval.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/1a/78/14/1a7814dc-10c5-9a79-fde1-2cc4b782fbc8/ipad_04_04_frontline.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c0/dd/be/c0ddbecb-84db-6cca-b8e3-7851fe74f046/ipad_05_05_warmap.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/df/1f/cc/df1fcca0-613b-0f47-f801-275e1d3bbf0a/ipad_06_06_menu.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2b/ee/a9/2beea984-f8b7-c604-8179-eaef655eaa40/ipad_07_07_units.png/360x480bb.jpg"
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ae/8b/63/ae8b6377-660c-6abf-cb74-c0f768f24fef/01-focus-2064x2752.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9e/6c/90/9e6c9025-29ec-5330-d729-00adf2be9ae7/02-task-2064x2752.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/d1/e1/f6/d1e1f691-389c-6021-872e-a3f8331c1fa1/03-rhythm-2064x2752.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a2/98/8d/a2988d88-7c35-9707-8eba-d448a476b538/04-reward-2064x2752.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/df/05/c8/df05c85b-8f76-3b64-96b3-7d312f69ffea/05-build-2064x2752.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/44/c2/98/44c2985f-bc71-090a-b343-8bc551250e3c/06-life-2064x2752.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b9/7f/eb/b97feb73-09aa-2ad1-5253-035a79cdae7c/07-honest-2064x2752.png/360x480bb.jpg"
         ],
-        "version": "1.1",
-        "releaseDate": "2026-07-16T07:00:00Z",
-        "currentVersionReleaseDate": "2026-07-27T14:12:22Z",
-        "trackViewUrl": "https://apps.apple.com/fr/app/strategic-wars/id6786755599?uo=4",
-        "minimumOsVersion": "13.0"
+        "version": "1.2.1",
+        "releaseDate": "2026-08-26T07:00:00Z",
+        "currentVersionReleaseDate": "2026-10-08T23:54:04Z",
+        "trackViewUrl": "https://apps.apple.com/fr/app/terrafocus-minuteur-pomodoro/id6794597550?uo=4",
+        "minimumOsVersion": "15.0"
       },
       {
-        "trackId": 6761538853,
-        "trackName": "easy-Gym",
+        "trackId": 6824072258,
+        "trackName": "Wordiko : Apprendre l'anglais",
         "artistId": 1816768480,
         "artistName": "Abubucker Siddeek Mohamed Sharik",
         "sellerName": "Abubucker Siddeek Mohamed Sharik",
-        "description": "Restez en forme sans quitter votre domicile ! Notre application propose une variété d’exercices adaptés à tous les niveaux. Aucun équipement n’est nécessaire — seulement votre motivation. Suivez vos progrès, profitez de routines faciles à comprendre et améliorez votre force, votre souplesse et votre endurance. Parfait pour les emplois du temps chargés et les entraînements à la maison. Soyez en forme à tout moment, où que vous soyez !",
-        "primaryGenreName": "Lifestyle",
+        "description": "Apprenez l'anglais en jouant. Wordiko transforme le vocabulaire et l'orthographe en jeux de mots rapides et addictifs — pas de cours, pas de listes à réciter.\n\n16 JEUX\n• Word Rush — une suite de mini-défis de 5 secondes (attrape, vrai/faux, démêle, l'intrus) qui accélère sans cesse\n• Petit bac contre l'IA — une lettre, six catégories, battez l'IA avant la fin du chrono\n• Ghost — une lettre chacun, ne soyez pas celui qui termine un mot\n• Word Connect — glissez sur les lettres pour trouver tous les mots cachés\n• Word Ninja — tranchez les mots de la catégorie, épargnez les intrus\n• Le Pendu — devinez le mot anglais, lettre par lettre\n• Cinq Lettres — le mot du jour en 5 lettres, en 6 essais\n• Paires — associez chaque mot anglais à sa traduction\n• Pluie de lettres — des lettres tombent, alignez-les en mots pour les effacer\n• Nom de code — un indice, plusieurs mots : faites équipe avec l'IA et évitez la bombe\n• Word Chain — chaque mot commence par la dernière lettre du précédent, contre l'IA\n• Bombe à mots — tapez un mot qui contient les lettres avant que la bombe explose\n• La Ruche — sept lettres, une au centre : combien de mots trouverez-vous ?\n• Mot interdit — faites deviner le mot à l'IA sans utiliser les mots interdits\n• Choc des couleurs — ROUGE écrit en bleu : touchez l'encre ou le mot, votre cerveau va vous mentir\n• Touches chantantes — touchez les tuiles noires, chacune chante le mot suivant d'une chanson anglaise célèbre\n\nPENSÉ POUR LES FRANCOPHONES\n• Astuces en français et traduction de chaque mot une fois trouvé\n• Chaque erreur rejoint une liste « à revoir »\n• XP, série de jours et records pour revenir chaque jour\n• Mode Zen sans chrono\n\n100 % HORS LIGNE\nTout tourne sur votre iPhone, y compris l'IA arbitre. Pas de compte, pas de pub, aucune donnée collectée.",
+        "primaryGenreName": "Education",
         "genres": [
-          "Style de vie"
+          "Éducation",
+          "Jeux",
+          "Mots"
         ],
         "price": 0,
         "formattedPrice": "Gratuit",
         "currency": "EUR",
         "averageUserRating": 0,
         "userRatingCount": 0,
-        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fa/6a/24/fa6a2432-8dc8-95d4-28fd-f6b3f15e3051/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
-        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fa/6a/24/fa6a2432-8dc8-95d4-28fd-f6b3f15e3051/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/21/3e/cf/213ecfb5-5f52-5a02-3fe3-4fa61cd798ba/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/21/3e/cf/213ecfb5-5f52-5a02-3fe3-4fa61cd798ba/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/100x100bb.jpg",
         "screenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/35/39/ed/3539ed5c-aef8-8955-d069-2600bba7a586/01_home_promax.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/81/ba/59/81ba59ff-7eab-cc7e-b545-4e435d034438/02_quete_promax.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/94/f5/60/94f560a9-69f4-0b80-aadd-5d69463b25b6/03_seance_promax.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/4d/10/25/4d102553-3c8e-6b4c-1d6b-30009afc7fee/04_profil_promax.png/320x480bb.jpg"
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/31/e7/58/31e758a8-6fba-e539-1136-1cd38b665a6c/01_1_spy_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/eb/14/58/eb145826-2d86-fce5-6970-0488736d4a2e/02_2_piano_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/25/03/26/25032658-8420-acea-7ac1-21547ed67281/03_3_bee_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/58/d4/2e/58d42e32-08e4-5bf3-42ae-c8f445765a99/04_4_connect_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/d8/e1/ca/d8e1ca58-b7ab-68f9-bc71-b0d55720abf1/05_5_bomb_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/08/5c/d9/085cd960-4d0e-94be-7191-58122020d012/06_6_stroop_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/d8/c0/01/d8c0014e-5a7b-8b97-8758-48908c42bd7b/07_7_bac_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2e/d7/08/2ed70889-bf44-d102-fd41-dc5c097f0462/08_8_taboo_iphone69.png/320x480bb.jpg"
         ],
-        "ipadScreenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8c/30/38/8c303887-8582-7727-7fcb-a9a4906c07ed/01_home_ipad13.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/75/23/9d/75239db4-481c-7d15-b464-54369e37a88a/02_quete_ipad13.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a6/dc/6c/a6dc6c74-a724-3f2c-d0d0-cecb1d207af2/03_seance_ipad13.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/73/02/6c/73026ca2-80be-ab19-08f6-85c9019b8e7d/04_profil_ipad13.png/360x480bb.jpg"
-        ],
-        "version": "2",
-        "releaseDate": "2026-04-03T07:00:00Z",
-        "currentVersionReleaseDate": "2026-08-05T15:36:45Z",
-        "trackViewUrl": "https://apps.apple.com/fr/app/easy-gym/id6761538853?uo=4",
-        "minimumOsVersion": "26.2"
+        "ipadScreenshotUrls": [],
+        "version": "1.0.1",
+        "releaseDate": "2026-10-20T07:00:00Z",
+        "currentVersionReleaseDate": "2026-11-11T22:03:06Z",
+        "trackViewUrl": "https://apps.apple.com/fr/app/wordiko-apprendre-langlais/id6824072258?uo=4",
+        "minimumOsVersion": "26.0"
       },
       {
-        "trackId": 6761615625,
-        "trackName": "online strategy dot war",
+        "trackId": 6819831893,
+        "trackName": "Salsa Steps: Rhythm & Wiki",
         "artistId": 1816768480,
         "artistName": "Abubucker Siddeek Mohamed Sharik",
         "sellerName": "Abubucker Siddeek Mohamed Sharik",
-        "description": "Découvrez un jeu de points traditionnel malgache qui allie simplicité et profondeur stratégique. Placez vos points, créez des connexions intelligentes et anticipez les mouvements de votre adversaire pour prendre l’avantage.\n\nConçu pour les débutants comme pour les joueurs expérimentés, le jeu propose des contrôles intuitifs, une expérience fluide et une interface épurée pour rester concentré sur l’essentiel. Que vous cherchiez une partie rapide ou un défi stratégique plus long, ce jeu vous offre une expérience captivante inspirée de la culture malgache.\n\nJouez, réfléchissez et maîtrisez l’art de la connexion.",
-        "primaryGenreName": "Games",
+        "description": "Apprends la salsa, un temps à la fois.\n\nSalsa Steps a deux parties : un jeu de rythme qui apprend le tempo à tes pieds, et un wiki salsa de poche où chaque pas est tracé au sol.\n\nRYTHME\n• Touche GAUCHE et DROITE pile sur le temps, sur des grooves salsa originaux\n• Des pas sur 1-2-3, pause sur 4, des pas sur 5-6-7, pause sur 8 — le vrai compte de la salsa\n• Cinq niveaux, du pas de base lent à la salsa rapide avec taps\n• Jugement Parfait / Bien / Raté, combos et un rang pour chaque niveau\n\nWIKI SALSA\n• Neuf figures : pas de base, pas de côté, guapea cubaine, pas de base avec taps, pas cumbia, Suzie Q, tour à droite de la cavalière, cross body lead et pas de base On2 New York\n• Des empreintes animées vues du dessus : chaque pied bouge sur son temps, avec trajets, tours et pivots\n• Vue cavalier et vue cavalière — les pas de la cavalière ne sont pas un simple miroir\n• Lance n'importe quelle figure en musique, lente, normale ou rapide, ou touche un temps pour le figer\n• Détail temps par temps, astuces et erreurs fréquentes pour chaque figure\n• Articles : rythme et clave, trouver le 1, les styles (LA, New York, cubaine, colombienne), petite histoire, posture et cadre, guider et suivre, morceaux pour s'entraîner, glossaire et routine de 15 minutes à la maison\n• Des liens vidéo pour aller plus loin\n\nSans compte, sans pub, sans pistage. Fonctionne hors ligne. Disponible en français et en anglais.",
+        "primaryGenreName": "Education",
         "genres": [
-          "Jeux"
+          "Éducation",
+          "Musique"
         ],
         "price": 0,
         "formattedPrice": "Gratuit",
         "currency": "EUR",
-        "averageUserRating": 5,
-        "userRatingCount": 1,
-        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9d/a4/ed/9da4ed80-e54a-0e39-e3a7-263a19550603/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
-        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9d/a4/ed/9da4ed80-e54a-0e39-e3a7-263a19550603/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+        "averageUserRating": 0,
+        "userRatingCount": 0,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/24/88/9b/24889bad-eb2e-f2f8-068a-03cf78c96bf8/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/24/88/9b/24889bad-eb2e-f2f8-068a-03cf78c96bf8/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg",
         "screenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9b/52/d9/9b52d912-a529-7d3a-5ff7-b9d24cb19c2a/01-hero-1242x2688.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/5a/2f/26/5a2f2644-685c-b4e1-f839-2cbd79aeb9c3/02-modes-1242x2688.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2c/8e/22/2c8e222c-97f2-e666-f0d9-aa75b3a57ac8/03-gameplay-1242x2688.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ea/9d/66/ea9d665e-f969-62b6-817d-1a27821bfabd/04-competition-1242x2688.png/320x480bb.jpg"
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b7/e8/f0/b7e8f062-d81d-19b4-b9c3-68a9cc4f0456/01_wiki-steps_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/6e/19/2f/6e192f21-428b-0c4c-fe49-36384199826d/02_rhythm_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/43/8f/d3/438fd300-f501-f37f-8cfa-74d04db7a6e8/03_turn_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/79/fc/ff/79fcffa7-6ad1-19d2-c1f6-8817a3344f4f/04_wiki_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/0a/06/c6/0a06c6ab-79e5-e6e8-b688-95f4a692f650/05_clave_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/df/8d/d2/df8dd29d-7226-26d9-4ac9-0af4c9c256c2/06_home_iphone69.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [],
+        "version": "1.1",
+        "releaseDate": "2026-10-07T07:00:00Z",
+        "currentVersionReleaseDate": "2026-11-13T22:38:23Z",
+        "trackViewUrl": "https://apps.apple.com/fr/app/salsa-steps-rhythm-wiki/id6819831893?uo=4",
+        "minimumOsVersion": "17.0"
+      },
+      {
+        "trackId": 6796000489,
+        "trackName": "Magic Tower Draw",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Deux châteaux qui marchent se font face. À chaque tour, tu lances un sort à la main : tu le DESSINES, le jeu lit ton tracé et t'annonce à quel point il l'a reconnu - et ce pourcentage devient la puissance du tir. Ensuite tu tires ton mage en arrière comme un élastique, tu vises, tu lâches.\n\nUn glyphe propre frappe fort. Un gribouillis part quand même, mais il égratigne à peine. Toute la compétence du jeu est là : ta main est l'arme.\n\nDESSINER SA MAGIE\n- 11 sorts tracés à la main, de la simple frappe à trois glyphes combinés\n- Ton tracé est noté de 0 à 100 % - la puissance suit\n- Un grimoire qui montre chaque forme apprise\n\nTIRER À L'ÉLASTIQUE\n- Le mage EST le lance-pierre : on tire en arrière, on vise l'arc, on lâche\n- Les sorts percent les murs, éclaboussent les pièces voisines, gèlent une pièce un tour, soignent ou enveloppent ton château d'un bouclier\n- Une pièce à 0 PV s'effondre - et tout ce qui est empilé dessus tombe avec elle\n\nUNE AVENTURE, UNE LEÇON À LA FOIS\n- 30 niveaux sur une carte dessinée à la main, chacun apprend un nouveau sort ou une nouvelle règle\n- Un premier duel guidé : une main fantôme montre comment dessiner, sceller et tirer\n- Ton château marche sur huit pattes : avance ou recule, d'une distance par tour\n- Quatre éléments en cycle - l'eau bat le feu, qui bat l'air, qui bat la terre. Lis les murs d'en face, puis dessine ce qui les mord\n- Plus loin, tu bâtis ton propre château avant le duel, pièce par pièce, et tu déplaces tes mages quand leur pièce va céder\n- Trois sceaux par niveau : gagner, gagner vite, et finir le cœur intact\n\nCINQ MONDES\nLe crépuscule, le plein jour, la haute montagne, la plage au couchant et le large - où les pattes du château marchent dans l'eau.\n\nSans pub. Sans achat intégré. Sans compte. Jouable hors ligne. Français et anglais, détectés automatiquement.",
+        "primaryGenreName": "Games",
+        "genres": [
+          "Jeux",
+          "Divertissement",
+          "Stratégie",
+          "Casse-tête"
+        ],
+        "price": 0,
+        "formattedPrice": "Gratuit",
+        "currency": "EUR",
+        "averageUserRating": 0,
+        "userRatingCount": 0,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/79/cc/cb/79cccb5d-5a34-8763-dc34-b9e1baa0c2ef/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/79/cc/cb/79cccb5d-5a34-8763-dc34-b9e1baa0c2ef/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/25/18/c4/2518c480-65b3-f58b-d8d1-622b64312bc0/iphone_01_title.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/70/42/60/70426056-f51f-b7e7-ec08-cf919f35e967/iphone_02_draw_guide.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/f1/52/aa/f152aac5-5256-8ec3-54d0-8490fe580052/iphone_03_spell_charged.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/84/c7/01/84c701fd-16e7-aa08-26ed-9f0b6b2b3cda/iphone_04_slingshot.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/63/6d/dd/636dddc1-9f49-760c-6eff-18948551e535/iphone_05_duel.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/65/5e/c7/655ec79b-32b8-55f0-cb58-3cd3a314dcd3/iphone_06_campaign.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/57/3b/3b/573b3b8f-27c8-70a5-a6dd-612c6cae8fbc/iphone_07_grimoire.png/320x480bb.jpg"
         ],
         "ipadScreenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/c2/eb/db/c2ebdb80-6a19-e649-e345-423d4cb61069/Simulator_Screenshot_-_iPad__U0028A16_U0029_-_2026-04-03_at_14.39.16_2064x2752.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/08/3b/1d/083b1d2c-f8ce-c0eb-3e50-da550d20aa90/Simulator_Screenshot_-_iPad__U0028A16_U0029_-_2026-04-03_at_14.39.03_2064x2752.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9d/ae/a0/9daea0d3-07dc-3b29-fb95-5851d7046d89/Simulator_Screenshot_-_iPad__U0028A16_U0029_-_2026-04-03_at_14.39.01_2064x2752.png/360x480bb.jpg"
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/c0/c0/10/c0c010ba-6f60-eca5-1204-2f1a6033f1cb/ipad_01_title.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/53/c6/d8/53c6d8c3-90a7-0aaa-2c4d-1e9b065a348f/ipad_02_draw_guide.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/23/c2/1d/23c21db3-067f-c2b5-97c5-115ca188e808/ipad_03_spell_charged.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/68/d4/57/68d4571b-4919-053a-531c-00f1de8253be/ipad_04_slingshot.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/63/0e/9e/630e9e0c-c244-162e-07bf-534c042a422c/ipad_05_duel.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c6/11/29/c61129eb-3493-1d1f-d7b4-c4adb736f771/ipad_06_campaign.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/1a/af/06/1aaf06be-25f7-6a3d-7a5c-22cbe6e0e280/ipad_07_grimoire.png/360x480bb.jpg"
         ],
-        "version": "1.1",
-        "releaseDate": "2026-04-03T07:00:00Z",
-        "currentVersionReleaseDate": "2026-06-27T12:06:41Z",
-        "trackViewUrl": "https://apps.apple.com/fr/app/online-strategy-dot-war/id6761615625?uo=4",
-        "minimumOsVersion": "26.2"
+        "version": "1.0",
+        "releaseDate": "2026-10-30T07:00:00Z",
+        "currentVersionReleaseDate": "2026-10-30T09:23:29Z",
+        "trackViewUrl": "https://apps.apple.com/fr/app/magic-tower-draw/id6796000489?uo=4",
+        "minimumOsVersion": "15.0"
       },
       {
         "trackId": 6760481474,
@@ -228,6 +348,162 @@
         "currentVersionReleaseDate": "2026-06-25T23:14:16Z",
         "trackViewUrl": "https://apps.apple.com/fr/app/islamic-daily-quote/id6760481474?uo=4",
         "minimumOsVersion": "26.1"
+      },
+      {
+        "trackId": 6798384489,
+        "trackName": "Clutch Lab: Esports Trainer",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Clutch Lab entraîne les gestes des jeux compétitifs, un par un, en retirant tout le reste.\n\nDans une vraie partie, on a quelques occasions par heure de travailler une esquive, un smite ou un tir de réaction — et on ne sait jamais lequel on a raté. Ici, on les enchaîne, avec un objectif clair et un score qui dit si l'on progresse.\n\nMOBA\nLes sorts arrivent de tous les côtés, chacun annoncé par sa marque au sol qui se remplit. Une lance étroite et rapide, une sphère large et lente, une boule de feu à longue incantation, un orbe qui revient, une chaîne de frappes en file : chaque silhouette dit comment l'esquiver. Tenez le plus longtemps possible, ou jouez les exercices — skillshots, zones, lecture d'incantation, réflexes — en dix niveaux chacun. Puis les 1v1 : un duel dans un enclos où l'adversaire esquive et riposte, un duel au grappin au-dessus du vide, et un exercice de smite où il faut prendre le dernier coup sur le monstre avant le jungler adverse.\n\nBRAWLER\nLe rythme d'un jeu de tir en arène 3v3 : rafales, éventails, tirs lobés, tirs de précision, avec moins de temps pour lire. Les exercices de fusil à pompe et de tireur d'élite travaillent les munitions, le tir automatique et le super.\n\nFPS\nUn entraîneur de visée au pouce : grille, flick, suivi et cibles réflexes. Puis les exercices de lecture : tenez un angle et tirez dès qu'une tête sort — pas avant, et jamais sur un allié. Six types d'armes, une place de désert pour s'entraîner.\n\nTACTIQUE\nUn exercice de cartes en temps réel, en portrait : envoyez le bon sort sur la bonne troupe, visez là où elles seront, posez votre défense entre les deux voies avant que le chargeur ne passe le pont.\n\nFAIT POUR S'ENTRAÎNER\n• Chaque exercice a dix niveaux et trois étoiles\n• Des modes de survie avec un record chacun\n• Plusieurs cartes par genre, choisies avant chaque partie\n• Joystick flottant ou verrouillé, cinq crans de sensibilité\n• Sans compte, sans publicité, entièrement hors ligne\n\nVotre temps, vos étoiles, votre temps de réaction : le score est toujours quelque chose que vous avez fait.",
+        "primaryGenreName": "Games",
+        "genres": [
+          "Jeux",
+          "Parties rapides",
+          "Action"
+        ],
+        "price": 0,
+        "formattedPrice": "Gratuit",
+        "currency": "EUR",
+        "averageUserRating": 5,
+        "userRatingCount": 1,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f0/8b/93/f08b9374-3c6f-d9b2-8bbb-b16bd3d9714e/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f0/8b/93/f08b9374-3c6f-d9b2-8bbb-b16bd3d9714e/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4d/6c/18/4d6c1868-afed-c834-a58c-70fc10bad491/1_hub.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/95/94/e6/9594e6ae-3085-b778-4687-a576ed74aa6b/2_dodge.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ee/63/44/ee6344c4-32f3-2792-5c0d-29c01819362a/3_fps.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/76/d8/23/76d82377-7ab9-5d7d-1256-5de00c5df0d1/4_smite.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ce/3d/92/ce3d928c-89b3-ce46-c11e-ebe84ff3a14d/5_modes.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/60/af/0f/60af0fb5-e70a-146b-87b0-9c0778319051/1_hub_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/23/d0/78/23d078f5-939b-4420-6c75-9a42b02516ae/2_dodge_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/bf/dd/43/bfdd43a7-154c-ef9c-a896-1033db0defa7/3_fps_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/42/4d/2c/424d2c6d-e90b-a09c-3546-650994234e99/4_smite_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/07/61/c0/0761c050-5371-a36b-74ef-479aee2a9923/5_modes_ipad.png/360x480bb.jpg"
+        ],
+        "version": "2.0",
+        "releaseDate": "2026-09-15T07:00:00Z",
+        "currentVersionReleaseDate": "2026-10-13T10:17:53Z",
+        "trackViewUrl": "https://apps.apple.com/fr/app/clutch-lab-esports-trainer/id6798384489?uo=4",
+        "minimumOsVersion": "15.0"
+      },
+      {
+        "trackId": 6786755599,
+        "trackName": "Strategic wars",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Strategic Wars est un jeu de tactique tour par tour dans l'esprit des classiques : capturez villes et usines, produisez des unités grâce aux fonds qu'elles génèrent, et déjouez votre adversaire sur un champ de bataille en 3D.\n\nFONCTIONNALITÉS\n- Conquête mondiale : jusqu'à quatre armées se disputent la vraie carte du monde — tenez les capitales, marquez pays et continents, éliminez les QG rivaux\n- Conflits : incarnez un pays dans quatre crises fictives sur une géographie réelle\n- Commandants : chacun plie les règles grâce à un talent unique\n- Environ 20 types d'unités (infanterie, chars, hélicoptères, navires, bombardiers), chacune avec sa portée, son arme et ses contres\n- 7 terrains (herbe, routes, eau, ponts, villes, forêts, montagnes) qui modifient défense et déplacement\n- Capturez Villes, Usines, Aéroports et Ports pour financer votre armée\n- Campagne complète avec missions scénarisées et un nombre croissant de cartes\n- Éditeur de cartes intégré\n- Duel local 1 contre 1 en passe-et-joue, ou affrontez une IA tactique\n- Multijoueur en ligne via Game Center — défiez vos amis directement\n- Parties personnalisées en ligne — choisissez votre carte, jouez en public ou invitez des amis avec un code de salon\n\nSans pay-to-win, sans publicité pour interrompre vos batailles. Juste de la stratégie tour par tour pure.",
+        "primaryGenreName": "Games",
+        "genres": [
+          "Jeux",
+          "Stratégie",
+          "Action",
+          "Éducation"
+        ],
+        "price": 0,
+        "formattedPrice": "Gratuit",
+        "currency": "EUR",
+        "averageUserRating": 0,
+        "userRatingCount": 0,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/96/a6/97/96a69782-7f57-a1e9-b196-db5f8f1d94c9/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/96/a6/97/96a69782-7f57-a1e9-b196-db5f8f1d94c9/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a2/4c/52/a24c523e-7e18-b0e0-59f1-2aa52e604c4c/01_home_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7b/9a/04/7b9a04be-6255-9ad5-5ab0-9651ae65c995/02_world_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/bc/59/89/bc59899e-faa3-4a8a-5fa0-aad762c130f7/03_battle_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/eb/75/ed/eb75ed07-3610-5d53-e54e-4f9c99abca5c/04_modes_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/86/89/25/868925b8-a20d-e1b5-b128-df7962ceab9d/05_conflicts_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f1/55/b1/f155b168-efc2-e42c-c8f5-542d361a33ba/06_units_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/08/8e/dc/088edcdb-b46d-d895-49f8-bda9d1e2fe6c/07_commanders_iphone69.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/db/de/ee/dbdeee61-666b-c730-e870-58db652ae52f/01_home_ipad13.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/73/e1/06/73e106f1-74f6-b2e9-0ea7-b4eba2312746/02_world_ipad13.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/31/00/7e/31007ebf-6d49-058c-49db-6ca026ea48c3/03_battle_ipad13.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/6b/48/e0/6b48e0c6-ead3-31e0-d8db-0484ad48424e/04_modes_ipad13.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/3d/21/7f/3d217f9d-2035-b289-e588-8edc596fd744/05_conflicts_ipad13.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/90/33/7a/90337a5d-b2b4-86e3-6aad-b3f0ae6c0ceb/06_units_ipad13.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/40/12/d4/4012d4de-2d9c-f3a5-8aae-9d7205e4fe84/07_commanders_ipad13.png/360x480bb.jpg"
+        ],
+        "version": "1.2",
+        "releaseDate": "2026-07-16T07:00:00Z",
+        "currentVersionReleaseDate": "2026-10-16T16:55:06Z",
+        "trackViewUrl": "https://apps.apple.com/fr/app/strategic-wars/id6786755599?uo=4",
+        "minimumOsVersion": "15.0"
+      },
+      {
+        "trackId": 6761615625,
+        "trackName": "online strategy dot war",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Découvrez un jeu de points traditionnel malgache qui allie simplicité et profondeur stratégique. Placez vos points, créez des connexions intelligentes et anticipez les mouvements de votre adversaire pour prendre l’avantage.\n\nConçu pour les débutants comme pour les joueurs expérimentés, le jeu propose des contrôles intuitifs, une expérience fluide et une interface épurée pour rester concentré sur l’essentiel. Que vous cherchiez une partie rapide ou un défi stratégique plus long, ce jeu vous offre une expérience captivante inspirée de la culture malgache.\n\nJouez, réfléchissez et maîtrisez l’art de la connexion.",
+        "primaryGenreName": "Games",
+        "genres": [
+          "Jeux"
+        ],
+        "price": 0,
+        "formattedPrice": "Gratuit",
+        "currency": "EUR",
+        "averageUserRating": 5,
+        "userRatingCount": 1,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/10/ff/25/10ff25de-a0f4-95b5-c75b-8ca36771542f/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/10/ff/25/10ff25de-a0f4-95b5-c75b-8ca36771542f/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9b/52/d9/9b52d912-a529-7d3a-5ff7-b9d24cb19c2a/01-hero-1242x2688.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/5a/2f/26/5a2f2644-685c-b4e1-f839-2cbd79aeb9c3/02-modes-1242x2688.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2c/8e/22/2c8e222c-97f2-e666-f0d9-aa75b3a57ac8/03-gameplay-1242x2688.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ea/9d/66/ea9d665e-f969-62b6-817d-1a27821bfabd/04-competition-1242x2688.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/c2/eb/db/c2ebdb80-6a19-e649-e345-423d4cb61069/Simulator_Screenshot_-_iPad__U0028A16_U0029_-_2026-04-03_at_14.39.16_2064x2752.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/08/3b/1d/083b1d2c-f8ce-c0eb-3e50-da550d20aa90/Simulator_Screenshot_-_iPad__U0028A16_U0029_-_2026-04-03_at_14.39.03_2064x2752.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9d/ae/a0/9daea0d3-07dc-3b29-fb95-5851d7046d89/Simulator_Screenshot_-_iPad__U0028A16_U0029_-_2026-04-03_at_14.39.01_2064x2752.png/360x480bb.jpg"
+        ],
+        "version": "1.2",
+        "releaseDate": "2026-04-03T07:00:00Z",
+        "currentVersionReleaseDate": "2026-11-12T07:28:29Z",
+        "trackViewUrl": "https://apps.apple.com/fr/app/online-strategy-dot-war/id6761615625?uo=4",
+        "minimumOsVersion": "26.2"
+      },
+      {
+        "trackId": 6761538853,
+        "trackName": "easy-Gym",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Restez en forme sans quitter votre domicile ! Notre application propose une variété d’exercices adaptés à tous les niveaux. Aucun équipement n’est nécessaire — seulement votre motivation. Suivez vos progrès, profitez de routines faciles à comprendre et améliorez votre force, votre souplesse et votre endurance. Parfait pour les emplois du temps chargés et les entraînements à la maison. Soyez en forme à tout moment, où que vous soyez !",
+        "primaryGenreName": "Lifestyle",
+        "genres": [
+          "Style de vie"
+        ],
+        "price": 0,
+        "formattedPrice": "Gratuit",
+        "currency": "EUR",
+        "averageUserRating": 0,
+        "userRatingCount": 0,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fa/6a/24/fa6a2432-8dc8-95d4-28fd-f6b3f15e3051/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/fa/6a/24/fa6a2432-8dc8-95d4-28fd-f6b3f15e3051/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/35/39/ed/3539ed5c-aef8-8955-d069-2600bba7a586/01_home_promax.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/81/ba/59/81ba59ff-7eab-cc7e-b545-4e435d034438/02_quete_promax.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/94/f5/60/94f560a9-69f4-0b80-aadd-5d69463b25b6/03_seance_promax.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/4d/10/25/4d102553-3c8e-6b4c-1d6b-30009afc7fee/04_profil_promax.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8c/30/38/8c303887-8582-7727-7fcb-a9a4906c07ed/01_home_ipad13.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/75/23/9d/75239db4-481c-7d15-b464-54369e37a88a/02_quete_ipad13.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a6/dc/6c/a6dc6c74-a724-3f2c-d0d0-cecb1d207af2/03_seance_ipad13.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/73/02/6c/73026ca2-80be-ab19-08f6-85c9019b8e7d/04_profil_ipad13.png/360x480bb.jpg"
+        ],
+        "version": "2",
+        "releaseDate": "2026-04-03T07:00:00Z",
+        "currentVersionReleaseDate": "2026-08-05T15:36:45Z",
+        "trackViewUrl": "https://apps.apple.com/fr/app/easy-gym/id6761538853?uo=4",
+        "minimumOsVersion": "26.2"
       },
       {
         "trackId": 6791636773,
@@ -271,56 +547,16 @@
         "currentVersionReleaseDate": "2026-07-20T11:25:02Z",
         "trackViewUrl": "https://apps.apple.com/fr/app/duobook-read-every-day/id6791636773?uo=4",
         "minimumOsVersion": "18.5"
-      },
-      {
-        "trackId": 6801350476,
-        "trackName": "Last Soldier: Crowd Runner",
-        "artistId": 1816768480,
-        "artistName": "Abubucker Siddeek Mohamed Sharik",
-        "sellerName": "Abubucker Siddeek Mohamed Sharik",
-        "description": "Rien, sur ce pont, ne vaut quoi que ce soit tant qu'on ne lui a pas tiré dessus.\n\nVotre foule avance seule, à vitesse constante, sans fin. Le pouce ne fait que la déplacer en travers. Et tout le jeu tient dans une seule question, posée en continu : où j'envoie mes balles ?\n\nLES PORTES NE SONT PAS DES PIÈGES, CE SONT DES CHANTIERS\nUne porte arrive à zéro, ou en négatif. On la mitraille et elle monte d'un cran : +1, +2, +3. La foule tire droit devant elle : la seule façon d'en nourrir une est de se mettre en face. Une porte rouge n'est donc pas quelque chose à éviter. C'est un chantier, et c'est la seule chose que ce jeu ait à vous apprendre.\n\nChaque porte donne aussi une troupe : fusilier, bazooka, éclaireur, char, hélicoptère, bombardier. Elle l'annonce par une carte qui flotte au-dessus du portique, portant le vrai modèle, figé de trois quarts. Parce que +2 de chars ne se compare pas à +3 de fusiliers, et qu'une rangée de portes ne doit pas être une addition.\n\nLES CAISSES ARRIVENT PAR DEUX, DONC IL FAUT RENONCER\nLes armes sont enfermées dans des piles de pneus, le prix écrit dessus. Ramasser deux fois la même arme la fait monter d'un niveau. En ramasser une autre remet le compteur à un.\nElles tombent à deux, dans deux voies différentes. La foule ne tire que sur trois mètres de front, et deux voies voisines en font davantage. On en prend donc une et on perd l'autre, à chaque fois. C'est la seule décision à long terme du jeu, et elle tire contre la curiosité.\n\nSEPT ARMES QUI NE SONT PAS D'ACCORD ENTRE ELLES\nLe bazooka et le mortier portent une ogive qui emporte tout ce que le disque couvre, le dégât décroissant vers le bord. Le rayon est l'autre bout du même axe : trois bouches, la cadence la plus rapide du jeu, un dégât ridicule par trait, et huit corps enfilés d'une seule ligne. La pire arme du catalogue sur une porte isolée. La meilleure sur une colonne.\nUne arme lourde change aussi le corps qui la porte. Des roquettes qui sortent d'un fusil d'assaut étaient la dernière chose de la piste qui ne se lisait pas.\n\nLES HORDES RIPOSTENT\nLes vagues arrivent sans fin et foncent droit sur vous. Un ennemi au contact emporte un coureur et meurt avec lui : l'échange est toujours de un pour un, parce que l'effectif EST la barre de vie. Et elles tirent, dans une fenêtre étroite devant la foule.\n\nPortes, caisses et hordes se disputent le même feu, et ce feu est fini. Toute la tension vient de cette concurrence. Elle ne demande ni boss, ni niveaux, ni ligne d'arrivée.\n\nAUCUNE PARTIE NE RESSEMBLE À LA PRÉCÉDENTE\nLa piste est tirée au sort à chaque partie : rien à apprendre par cœur. Quand l'effectif tombe à zéro, c'est fini, et le score est la seule note. Le meilleur score et la plus longue marche sont conservés.\n\nPortrait, un pouce, sans compte. Sept langues.",
-        "primaryGenreName": "Games",
-        "genres": [
-          "Jeux",
-          "Parties rapides",
-          "Action"
-        ],
-        "price": 0,
-        "formattedPrice": "Gratuit",
-        "currency": "EUR",
-        "averageUserRating": 5,
-        "userRatingCount": 1,
-        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e3/70/34/e370344d-709b-6117-1fb8-7f7614811e73/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
-        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e3/70/34/e370344d-709b-6117-1fb8-7f7614811e73/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
-        "screenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/50/80/11/508011a8-3d97-ff9e-017d-7dbb120eb4e9/1_gates.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a8/5f/0d/a85f0db3-6a88-afb0-2694-31a26f134cf7/2_bazooka.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b9/ff/d5/b9ffd585-6980-a2a9-771c-066a8f7ebecc/3_laser.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ee/c1/1e/eec11e09-a622-7705-a0d6-775e0b72374d/4_crowd.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/e1/53/04/e15304af-03b8-4fc6-1e6a-c75013f8388b/5_title.png/320x480bb.jpg"
-        ],
-        "ipadScreenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/02/23/bd/0223bdda-841c-9615-f87e-08ff53c02e72/1_gates_ipad.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4c/7e/7b/4c7e7bc1-3495-85ed-2463-abce9e82b244/2_bazooka_ipad.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a0/99/2d/a0992dc0-8e85-4501-3921-939f3ea30d2b/3_laser_ipad.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a2/09/97/a20997a5-0671-08dd-04ad-046ad47e3957/4_crowd_ipad.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/0e/a2/a6/0ea2a649-2e57-7b47-ac72-fbf16e9ae16b/5_title_ipad.png/360x480bb.jpg"
-        ],
-        "version": "1.0",
-        "releaseDate": "2026-08-18T07:00:00Z",
-        "currentVersionReleaseDate": "2026-08-18T15:02:06Z",
-        "trackViewUrl": "https://apps.apple.com/fr/app/last-soldier-crowd-runner/id6801350476?uo=4",
-        "minimumOsVersion": "15.0"
       }
     ],
     "us": [
       {
         "trackId": 6760180650,
-        "trackName": "Meow-Tube:No ad & Music Player",
+        "trackName": "MeowTube: Shorts Blocker",
         "artistId": 1816768480,
         "artistName": "Abubucker Siddeek Mohamed Sharik",
         "sellerName": "Abubucker Siddeek Mohamed Sharik",
-        "description": "This app allows users to watch multimedia content while tracking their screen time to help them stay focused and productive. It reduces distractions and lets users save videos to their favorites so they can watch them later. Users can also listen to videos in the background.",
+        "description": "Short videos are designed to keep you scrolling. One clip becomes twenty, and twenty minutes become an hour.\n\nMeowTube is a web browser for video, music and social websites that removes the endless feeds. You still watch, listen and keep in touch: you just stop doomscrolling.\n\nSHORTS, BLOCKED\nShorts are blocked before they reach your screen: Shorts cards disappear from the home page and search results, the Shorts tab is gone, and a Shorts link takes you back home instead of into the endless swipe feed. Short videos are blocked on social networks too.\n\nWHAT GETS REMOVED\n• Shorts and short-video feeds\n• Suggested videos and autoplay rabbit holes\n• Thumbnails that pull you in: blur them, or switch to black and white\n\nWHAT YOU KEEP\n• The videos and music you actually searched for\n• Your subscriptions, playlists and messages\n• Background listening with the screen locked\n• Picture-in-picture while you use other apps\n• Your Library: bookmark videos and songs, organize them in folders, pick up where you left off\n\nTAKE BACK YOUR TIME\n• A daily time limit with a live gauge\n• A lock when the limit is reached\n• Usage stats for every site, day by day\n\nEARN YOUR NEXT VIDEO\nWant short videos on a social network anyway? Turn on challenges. The MeowTube cat counts every video you watch today, and every three videos it asks for a quick challenge before the next one:\n• Push-ups, counted by the front camera\n• Connect the dots, quick maths, logic puzzles or a line of code\n• Easy, medium or hard: you choose\n\nHOW IT WORKS\nMeowTube is a browser: you choose the websites you want on your home screen, and every site opens at its official address. MeowTube hides short-video feeds and suggestions inside the page, so you can use each site with intention instead of on autopilot.\n\nFREE, EVERYTHING INCLUDED\n• Video websites without Shorts, and short videos blocked on social networks\n• Library, background listening and picture-in-picture\n• Daily time limit with a strict lock, and full usage stats\n• A second account on the same site\n• An ad now and then, never during a video\n\nMEOWTUBE PRO\n• Zero ads\n• Keeps MeowTube maintained and updated\n\nAvailable in English, French, Spanish, Arabic and Hindi.\n\nSUBSCRIPTION\nMeowTube Pro is an auto-renewable subscription: 4.99 € per month or 29.99 € per year (the yearly plan starts with a 3-day free trial). Prices may vary by country and are shown in your local currency before purchase.\n• Payment is charged to your Apple ID account at confirmation of purchase, or at the end of the free trial.\n• The subscription renews automatically unless it is cancelled at least 24 hours before the end of the current period. Your account is charged for renewal within 24 hours before the end of the current period.\n• You can manage and cancel your subscription in your Apple ID account settings after purchase.\n• Any unused portion of a free trial is forfeited when you purchase a subscription.\n\nTerms of Use: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/\nPrivacy Policy: https://sharik.fr/meowtube/privacy/",
         "primaryGenreName": "Entertainment",
         "genres": [
           "Entertainment"
@@ -328,24 +564,138 @@
         "price": 0,
         "formattedPrice": "Free",
         "currency": "USD",
-        "averageUserRating": 0,
-        "userRatingCount": 0,
-        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6a/48/3e/6a483edf-df5e-86cc-546c-40963b24bbf1/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
-        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/6a/48/3e/6a483edf-df5e-86cc-546c-40963b24bbf1/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+        "averageUserRating": 5,
+        "userRatingCount": 1,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2d/d6/73/2dd67314-7ad4-048d-9015-4ef977daad5e/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/2d/d6/73/2dd67314-7ad4-048d-9015-4ef977daad5e/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
         "screenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c6/e0/72/c6e072d7-5c1c-8397-00c8-99ced5bbf558/01-slide1-1284x2778.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/aa/1a/53/aa1a5324-7922-8347-2b89-4f8459832b99/02-slide2-1284x2778.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/43/83/d9/4383d9c0-5719-c694-8372-785a6f889c63/03-slide3-1284x2778.png/320x480bb.jpg"
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/46/85/10/4685103d-5f78-754b-ab8a-7de1bacb8493/01_01-hero.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/34/e4/88/34e48839-bfb7-ccc9-13cf-29f6c3c1b09b/02_02-library.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9c/ab/a4/9caba4f2-0d07-3771-ec2b-787611347b00/03_03-lock.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/85/ed/1c/85ed1cd2-a244-861c-577f-1cc0927e906a/04_04-music.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/76/07/9d/76079d03-4ee1-fa68-b0fe-9057cf4b09f9/05_05-pip.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/57/30/f9/5730f9b0-a20c-03b2-7845-c6dc13816663/06_06-noshorts.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/3a/e8/90/3ae89095-5ed5-67b1-0def-bd76b1b2515c/07_07-browse.png/320x480bb.jpg"
         ],
         "ipadScreenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/be/93/96/be939670-c6a1-c992-6a6f-4ddd451f7ce3/iPad_Air_M3_Screenshot_Mar_6.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/34/26/31/34263185-801f-ac73-c35d-57e6464a82ee/iPad_Air_M3_Screenshot_Mar_6__U00281_U0029.png/360x480bb.jpg"
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/52/56/06/525606ac-7590-854b-e563-7f81417d000e/iPad_Air_M3_Screenshot_Mar_6.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8c/9e/ef/8c9eef80-e12a-5bc0-a444-bda29a5c149f/iPad_Air_M3_Screenshot_Mar_6__U00281_U0029.png/360x480bb.jpg"
         ],
-        "version": "2.1",
+        "version": "2.7.2",
         "releaseDate": "2026-03-18T07:00:00Z",
-        "currentVersionReleaseDate": "2026-05-29T18:50:14Z",
-        "trackViewUrl": "https://apps.apple.com/us/app/meow-tube-no-ad-music-player/id6760180650?uo=4",
+        "currentVersionReleaseDate": "2026-11-05T06:27:13Z",
+        "trackViewUrl": "https://apps.apple.com/us/app/meowtube-shorts-blocker/id6760180650?uo=4",
         "minimumOsVersion": "17.0"
+      },
+      {
+        "trackId": 6798837070,
+        "trackName": "Salat: Learn How to Pray",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Learn exactly what to say in every position of the prayer, one step at a time.\nThe Arabic, how to pronounce it in your own language, and what it means, side by side.\nNo account, no network: just you and the words of the salah.\n\nYou know the movements. Standing, bowing, forehead to the ground, sitting. What you do not know is what to say while you are down there, and nobody teaches it slowly enough to actually learn.\n\nFOURTEEN STEPS, IN ORDER\n\nEvery position of the prayer, from the opening takbir to the final salam, in the order you perform them. Tap one and you get four things, never mixed together: what your body does, the Arabic text, how to pronounce it written in your own language, and what it actually means.\n\nLINE BY LINE\n\nLong passages such as Al-Fatiha and the Tashahhud are broken line by line, with the Arabic, the pronunciation and the meaning side by side on each line. That alignment is the whole lesson. You learn which words you are saying, not just the sound of them.\n\nHEAR IT, THEN HEAR YOURSELF\n\nFor Al-Fatiha and the short surah, tap play and hear Mahmoud Khalil Al-Husary or Mishary Rashid Alafasy recite the line. Al-Husary's teaching recording is slow and detached, made to be repeated after.\n\nThen record yourself. Both traces are drawn on the same waveform, so you can see where you rushed and where you stopped short. The recording stays on your iPhone and is never sent anywhere.\n\nWRITTEN FOR YOUR LANGUAGE\n\nThe pronunciation is not transliterated once and reused. A French reader does not read \"Subhaana\" the way an English reader does, so each language gets its own spelling, written for the way that language is read aloud. Fourteen languages: English, French, Arabic, Indonesian, Malay, Urdu, Bengali, Turkish, Russian, Spanish, Portuguese, German, Italian and Dutch.\n\nA WIDGET THAT KEEPS TEACHING\n\nAdd the widget to your Home Screen and the positions cycle on their own, with what is said at each one. You are not studying. You are just seeing it, several times a day, until it sticks.\n\nPRIVATE AND OFFLINE\n\nNo account. No sign-in. No network: the app makes no request of any kind, so it works on a plane, in a basement, anywhere. Nothing is collected, because there is nowhere to collect it to.\n\nON THE CONTENT\n\nThe prayer described here is the ground shared by the four Sunni schools of law. Where they differ (the wording of the Tashahhud, where the hands rest, the Qunut), the app tells you they differ, in a note on that step, instead of quietly picking one.\n\nIt is a memorisation aid. It does not replace a teacher, and it does not claim to.",
+        "primaryGenreName": "Education",
+        "genres": [
+          "Education",
+          "Reference"
+        ],
+        "price": 0,
+        "formattedPrice": "Free",
+        "currency": "USD",
+        "averageUserRating": 0,
+        "userRatingCount": 0,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/85/59/3a/85593ae9-1479-e46a-a5c6-b741a18332e3/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/85/59/3a/85593ae9-1479-e46a-a5c6-b741a18332e3/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/44/1e/be/441ebea7-44f5-4aa5-3bdb-c94405259cd6/1_showcase.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a6/91/23/a69123e9-43d5-c9d3-cc96-3d10581adad9/2_showcase.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ed/97/e9/ed97e915-60d9-fdef-86b8-67119d9791c6/3_showcase.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b9/ef/eb/b9efeb51-59a8-cfbf-2594-36760e89a1e8/4_showcase.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/03/92/27/03922702-3a1b-6f3d-9577-ced2f6a33e1f/5_showcase.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [],
+        "version": "1.3",
+        "releaseDate": "2026-08-22T07:00:00Z",
+        "currentVersionReleaseDate": "2026-11-06T20:57:45Z",
+        "trackViewUrl": "https://apps.apple.com/us/app/salat-learn-how-to-pray/id6798837070?uo=4",
+        "minimumOsVersion": "17.0"
+      },
+      {
+        "trackId": 6801350476,
+        "trackName": "Military Army Runner 2026",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Turn a handful of soldiers into an army of tanks, bazookas and helicopters.\nShoot every gate in your path, grab the right weapon crates and hold back endless hordes.\nOne thumb, one question every second: where do you send your fire?\n\nHOW IT PLAYS\nYour crowd runs forward on its own; your thumb only moves it sideways. Gates, weapon crates and hordes all compete for the same bullets, and your headcount is your health bar.\n\nGATES ARE WORK, NOT TRAPS\nA gate arrives at zero or below. Shoot it and it climbs: +1, +2, +3. Your crowd only fires straight ahead, so to feed a gate you have to stand in front of it. A red gate is not something to dodge. It is a building site.\n\nEVERY GATE HANDS YOU A TROOP\nRifleman, bazooka, scout, tank, helicopter, bomber. A card above each gate shows the real 3D model of the troop it gives, because +2 tanks and +3 riflemen don't compare by arithmetic.\n\nWEAPONS STACK UP\nWeapons are locked in stacks of tyres with their price written on them. Every crate adds its weapon to your arsenal, and up to four weapons fire at once. Take one you already carry and it levels up. Crates land two at a time in different lanes, so you still have to choose which one to chase.\n\nTHIRTEEN WEAPONS THAT DISAGREE\nRifle, machine gun, railgun, chainsaw blades that ricochet, and rare legendary weapons. The bazooka and the mortar hit everything under their blast disc, with damage falling off toward the edge. The laser sits at the far end: three barrels, the fastest fire rate in the game, tiny damage per shot, and eight bodies threaded on a single line. Worst against one gate, best against a column. Heavy weapons also change the soldier carrying them.\n\nTREASURE CHESTS AND 16 UPGRADES\nRun through a chest and the game pauses: a roulette spins and offers three upgrades, and you pick one. Lightning that arcs between enemies, frost that slows them, fire that burns, ricochets, piercing shots, grenades, meteors, saw blades orbiting your army and more. They stack, and your bullets change color and size as you collect them.\n\nTHE HORDES SHOOT BACK\nWaves run straight at you without end. An enemy who reaches your crowd takes one runner down with it: always one for one. And they fire back, into a narrow window right in front of you.\n\nLEVEL AFTER LEVEL\nEach level is a finish line further down the bridge, guarded by a boss, across a new landscape: sea, snowy pass, desert, neon city. Level 1 is a warm-up; by level 10 you need every gate, every crate and every bullet. Clear it and the next line waits a little further out.\n\nNO TWO RUNS ARE THE SAME\nThe track is drawn fresh every game, so there is nothing to learn by heart. Read the bridge, pick your targets, and see how far your army gets.",
+        "primaryGenreName": "Games",
+        "genres": [
+          "Games",
+          "Casual",
+          "Action"
+        ],
+        "price": 0,
+        "formattedPrice": "Free",
+        "currency": "USD",
+        "averageUserRating": 0,
+        "userRatingCount": 0,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/cb/0a/fd/cb0afd4e-7289-cb7e-f000-d57fb4aec491/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/cb/0a/fd/cb0afd4e-7289-cb7e-f000-d57fb4aec491/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8c/30/2d/8c302df8-f6d3-e294-69c1-72f3e9baa938/1_gates.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a7/66/2d/a7662d43-be3a-5c37-a19f-59dec57ffebb/2_bazooka.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/f8/e2/4b/f8e24b3c-ef80-bcc0-d5f2-6e8ec2b723b1/3_laser.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/6a/2a/b1/6a2ab1fd-def8-2ef7-b78a-302cc43d275c/4_crowd.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/90/1c/a7/901ca7fa-35bc-5271-0997-68f08812d22c/5_title.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/5b/6a/8e/5b6a8ed2-ce0a-637f-3c88-ac924c6187e8/1_gates_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/18/f4/da/18f4da86-2942-efd4-c7af-4dfc01d51cc3/2_bazooka_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ce/0d/75/ce0d7589-817e-6638-4e98-f603ceed04c6/3_laser_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/03/6c/75/036c7580-2740-66a6-9ffd-beee8259bab5/4_crowd_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/17/bc/ff/17bcff8b-1cd4-7911-5bfd-0fa48aa2445c/5_title_ipad.png/360x480bb.jpg"
+        ],
+        "version": "1.7",
+        "releaseDate": "2026-08-18T07:00:00Z",
+        "currentVersionReleaseDate": "2026-11-13T22:38:02Z",
+        "trackViewUrl": "https://apps.apple.com/us/app/military-army-runner-2026/id6801350476?uo=4",
+        "minimumOsVersion": "15.0"
+      },
+      {
+        "trackId": 6824072258,
+        "trackName": "Wordiko: Learn English Games",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Learn English by playing. Wordiko turns vocabulary and spelling into fast, addictive word games — no lessons, no boring lists.\n\n16 GAMES\n• Word Rush — a chain of 5-second micro-challenges (catch, true/false, unscramble, odd one out) that keeps speeding up\n• Categories vs AI — one letter, six categories, beat the AI before the clock runs out\n• Ghost — add a letter each turn, don't be the one who finishes a word\n• Word Connect — swipe across the letters to find every hidden word\n• Word Ninja — slice the words that fit the category, spare the intruders\n• Hangman — guess the English word, letter by letter\n• Five Letters — the daily 5-letter word, in 6 tries\n• Memory Pairs — match each English word with its translation\n• Letter Drop — falling letters, line them up into words to clear them\n• Code Words — one clue, several words: team up with the AI and avoid the bomb\n• Word Chain — each word starts with the last letter of the previous one, against the AI\n• Word Bomb — type a word containing the letters before the bomb goes off\n• Word Hive — seven letters, one in the middle: how many words can you make?\n• Don't Say It — make the AI guess the word without the forbidden words\n• Color Clash — RED written in blue: tap the ink or the word, your brain will lie to you\n• Song Tiles — tap the black tiles, each one sings the next word of a famous English song\n\nMADE FOR LEARNERS\n• Translations in your native language (18 languages), shown only once you've found the word\n• Every mistake goes into a \"to review\" list\n• XP, daily streak and records to keep you coming back\n• Zen mode without a timer\n\n100% OFFLINE\nEverything runs on your iPhone, including the AI judge. No account, no ads, no data collected.",
+        "primaryGenreName": "Education",
+        "genres": [
+          "Education",
+          "Games",
+          "Word"
+        ],
+        "price": 0,
+        "formattedPrice": "Free",
+        "currency": "USD",
+        "averageUserRating": 0,
+        "userRatingCount": 0,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/21/3e/cf/213ecfb5-5f52-5a02-3fe3-4fa61cd798ba/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/21/3e/cf/213ecfb5-5f52-5a02-3fe3-4fa61cd798ba/AppIcon-0-0-1x_U007ephone-0-1-0-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/49/9e/9b/499e9be8-772c-879d-efb5-62b94da4c468/01_1_spy_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9c/2f/e1/9c2fe1ea-41d3-8800-b9b0-54446fcdd6ac/02_2_piano_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/1a/fc/9d/1afc9d2e-6891-e4ec-6f4f-be801d3d38d3/03_3_bee_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/14/4a/55/144a5531-051e-6394-af95-325349e0ae82/04_4_connect_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f8/4b/8b/f84b8b4a-a44e-078d-a283-d89064493383/05_5_bomb_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/95/c5/e6/95c5e658-46ea-5c3e-526c-d0dace3dd6f0/06_6_stroop_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/e7/0d/3d/e70d3dfa-0ca1-a375-70f0-61c252bd2a51/07_7_bac_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b3/cd/bc/b3cdbcdb-fff4-3a17-d393-9822b1b15b9d/08_8_taboo_iphone69.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [],
+        "version": "1.0.1",
+        "releaseDate": "2026-10-20T07:00:00Z",
+        "currentVersionReleaseDate": "2026-11-11T22:03:06Z",
+        "trackViewUrl": "https://apps.apple.com/us/app/wordiko-learn-english-games/id6824072258?uo=4",
+        "minimumOsVersion": "26.0"
       },
       {
         "trackId": 6786755599,
@@ -353,7 +703,7 @@
         "artistId": 1816768480,
         "artistName": "Abubucker Siddeek Mohamed Sharik",
         "sellerName": "Abubucker Siddeek Mohamed Sharik",
-        "description": "Strategic Wars is a turn-based tactics game in the spirit of the classics: capture cities and factories, produce units with the funds they generate, and out-maneuver your opponent on a 3D battlefield.\n\nFEATURES\n- ~20 unit types across infantry, tanks, helicopters, ships and bombers, each with its own range, weapon and counters\n- 7 terrain types (grass, roads, water, bridges, cities, forests, mountains) that change defense and movement\n- Capture Cities, Factories, Airports and Ports to fund your army\n- Full campaign with story missions and a growing roster of maps\n- Local 1v1 pass-and-play, or battle a tactical AI\n- Online multiplayer via Game Center — challenge friends directly\n- Ranked online mode with a real ELO rating and leaderboard on a dedicated server, so nobody can cheat their rank\n- Custom online matches — pick your map, play public or invite friends with a room code\n\nNo pay-to-win, no ads interrupting your battles. Just pure turn-based strategy.",
+        "description": "Strategic Wars is a turn-based tactics game in the spirit of the classics: capture cities and factories, produce units with the funds they generate, and out-maneuver your opponent on a 3D battlefield.\n\nFEATURES\n- World Conquest: up to four armies fight over the real world map — hold capitals, score countries and continents, eliminate rival HQs\n- Conflicts: pick a nation in four fictional crises set on real geography\n- Commanders: each one bends the rules with a unique skill\n- ~20 unit types across infantry, tanks, helicopters, ships and bombers, each with its own range, weapon and counters\n- 7 terrain types (grass, roads, water, bridges, cities, forests, mountains) that change defense and movement\n- Capture Cities, Factories, Airports and Ports to fund your army\n- Full campaign with story missions and a growing roster of maps\n- Built-in map editor\n- Local 1v1 pass-and-play, or battle a tactical AI\n- Online multiplayer via Game Center — challenge friends directly\n- Custom online matches — pick your map, play public or invite friends with a room code\n\nNo pay-to-win, no ads interrupting your battles. Just pure turn-based strategy.",
         "primaryGenreName": "Games",
         "genres": [
           "Games",
@@ -366,68 +716,65 @@
         "currency": "USD",
         "averageUserRating": 0,
         "userRatingCount": 0,
-        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/87/02/e4/8702e4b2-af9e-0bb6-bfff-77a319dcf6e8/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
-        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/87/02/e4/8702e4b2-af9e-0bb6-bfff-77a319dcf6e8/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/96/a6/97/96a69782-7f57-a1e9-b196-db5f8f1d94c9/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/96/a6/97/96a69782-7f57-a1e9-b196-db5f8f1d94c9/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/100x100bb.jpg",
         "screenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/73/5d/59/735d5922-bef1-1fd2-4047-c3dded0bd5dd/iphone_01_01_missile.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2a/37/a4/2a37a4df-0615-2c47-f769-fa20a233bb59/iphone_02_02_airstrike.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/34/f8/53/34f85370-075d-11c2-5757-ecca4c7f2498/iphone_03_03_naval.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/d1/9d/ce/d19dcef8-34a0-8124-c544-7e2ee714ab02/iphone_04_04_frontline.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/94/91/a7/9491a773-3210-db25-12b5-a0cac033aff0/iphone_05_05_warmap.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2c/36/51/2c365133-4993-b451-e825-e0164657d9b5/iphone_06_06_menu.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a9/c7/37/a9c737b3-4f47-3b40-1dee-827a31ef77e9/iphone_07_07_units.png/320x480bb.jpg"
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/38/d6/58/38d658d2-f2cc-7a51-0e0c-805b9554432e/01_home_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/05/a9/f9/05a9f95c-bb5f-6764-8649-a70c37d10eb1/02_world_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/57/ba/fa/57bafa89-3245-3f54-0c46-dd1fcbf18ea5/03_battle_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/21/da/bd/21dabd22-5c44-3795-5bbc-614aeea54821/04_modes_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ff/55/a1/ff55a1fc-1dc0-63a1-7140-82db56339fc2/05_conflicts_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/d3/d1/09/d3d1091f-d480-5b7a-46d8-bc5754494ece/06_units_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/22/12/b1/2212b144-7b8b-1a94-2c8d-77cef67ead92/07_commanders_iphone69.png/320x480bb.jpg"
         ],
         "ipadScreenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/65/f7/3c/65f73cbd-524b-e0f7-ed48-44a9b344d956/ipad_01_01_missile.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/09/0b/2d/090b2d23-1c02-41ea-c960-4635ece2b1b3/ipad_02_02_airstrike.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/5a/22/07/5a2207cb-cd0d-5850-d3cf-80cea41ae081/ipad_03_03_naval.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4b/5a/ee/4b5aeef4-3ca1-d10f-17c8-c565f52d17e6/ipad_04_04_frontline.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b4/35/8b/b4358be4-ab3d-46ed-bcee-d10c6b1f7ebd/ipad_05_05_warmap.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7a/f2/7e/7af27eb8-84ee-910f-d325-45992b896e2e/ipad_06_06_menu.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/2c/44/1d/2c441db2-e28e-3239-1c80-0096327a37bb/ipad_07_07_units.png/360x480bb.jpg"
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/85/82/84/8582847b-029e-4f29-831f-3015cb542d75/01_home_ipad13.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9d/ae/95/9dae95e8-2d71-9286-dce7-f4f9df3e8bf2/02_world_ipad13.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/35/b5/89/35b589b8-e2a8-c4a5-e54f-fa73d5e74dee/03_battle_ipad13.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/68/5a/19/685a1997-fc3f-a955-3cef-b621bdf53b00/04_modes_ipad13.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/08/36/68/08366890-6b86-e6fe-3e91-26eff6e22c04/05_conflicts_ipad13.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/44/21/f1/4421f183-ed40-5e4a-1250-3436b49f6014/06_units_ipad13.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/db/91/ab/db91ab88-fbaf-0e7d-73cc-379a51c03f7f/07_commanders_ipad13.png/360x480bb.jpg"
         ],
-        "version": "1.1",
+        "version": "1.2",
         "releaseDate": "2026-07-16T07:00:00Z",
-        "currentVersionReleaseDate": "2026-07-27T14:12:22Z",
+        "currentVersionReleaseDate": "2026-10-16T16:55:06Z",
         "trackViewUrl": "https://apps.apple.com/us/app/military-strategic-war-2026/id6786755599?uo=4",
-        "minimumOsVersion": "13.0"
+        "minimumOsVersion": "15.0"
       },
       {
-        "trackId": 6791636773,
-        "trackName": "Addicted to Reading: Gamified",
+        "trackId": 6819831893,
+        "trackName": "Salsa Steps: Rhythm & Wiki",
         "artistId": 1816768480,
         "artistName": "Abubucker Siddeek Mohamed Sharik",
         "sellerName": "Abubucker Siddeek Mohamed Sharik",
-        "description": "DuoBook turns your PDF library into a daily reading habit. Import any PDF you own, set a simple daily page goal, and let DuoBook keep you accountable — Duolingo-style — with a win streak that grows every day you hit your target.\n\nNo account, no sign-up, no ads. Your books and your progress never leave your device.\n\nHOW IT WORKS\n\nDrop in your own PDFs — novels, textbooks, reports, whatever you're working through. DuoBook copies each file locally, generates a cover, and adds it to your shelf. Open a book, read at your own pace in a clean full-page PDF viewer, and DuoBook quietly tracks the pages you've read today.\n\nSet your daily objective (10 pages a day by default, fully adjustable) and watch a progress ring fill up as you read. Hit your goal and a pixel-art campfire lights up to celebrate — miss a day and your streak resets, just like the habit apps you already know.\n\nSTAY MOTIVATED\n\n- Daily win streak with a best-streak record, so you always know your all-time high\n- A dedicated Statistics screen: an activity calendar for the last 5 weeks and a bar chart of your last 7 days, so you can see your habit take shape\n- A home screen widget (via WidgetKit) that shows your current streak and how many pages are left today — no need to open the app to stay on track\n- A profile screen with your own avatar, name, and bio\n\nBUILT YOUR WAY\n\n- Import unlimited PDFs from anywhere on your device\n- Automatic page-by-page progress tracking as you read — pick up exactly where you left off\n- Light and dark mode, switchable anytime\n- A distinctive retro \"green terminal\" look: neon green on black, a pixel font, hand-picked pixel-art icons, and an animated dot-matrix navigation bar — DuoBook feels like nothing else on the App Store\n\nPRIVACY FIRST\n\nDuoBook doesn't ask for an account and doesn't show ads. Your PDFs, your reading stats, and your streak are stored entirely on your device (and synced to your widget through Apple's own App Group storage). Nothing is uploaded, nothing is tracked.\n\nWhether you're chipping away at a textbook, working through a backlog of novels, or just trying to read more consistently, DuoBook gives you the small daily nudge — and the streak to prove it — to actually finish what you start.\n\nDownload DuoBook and start your streak today.",
-        "primaryGenreName": "Book",
+        "description": "Learn salsa one count at a time.\n\nSalsa Steps has two parts: a rhythm game that teaches your feet the beat, and a pocket salsa wiki where every step is traced on the floor.\n\nRHYTHM\n• Tap LEFT and RIGHT exactly on the beat, over original salsa grooves\n• Steps on 1-2-3, pause on 4, steps on 5-6-7, pause on 8 — the real salsa count\n• Five levels, from a slow basic step to fast salsa with taps\n• Perfect / Good / Miss judgment, combos and a rank for every level\n\nSALSA WIKI\n• Nine figures: basic step, side basic, Cuban guapea, basic with taps, cumbia step, Suzie Q, the follower's right turn, the cross body lead and the New York On2 basic\n• Animated footprints seen from above: watch each foot move on its count, with trails, turns and pivots\n• Leader and follower views — the follower's steps are not just a mirror\n• Play any figure on music, slow, normal or fast, or tap a count to freeze it\n• Count-by-count breakdown, tips and common mistakes for every figure\n• Articles: rhythm and clave, finding the 1, the styles (LA, New York, Cuban, Colombian), a short history, posture and frame, leading and following, songs to practise on, a glossary and a 15-minute home routine\n• Video links to go further\n\nNo account, no ads, no tracking. Works offline. Available in English and French.",
+        "primaryGenreName": "Education",
         "genres": [
-          "Books",
-          "Productivity"
+          "Education",
+          "Music"
         ],
         "price": 0,
         "formattedPrice": "Free",
         "currency": "USD",
         "averageUserRating": 0,
         "userRatingCount": 0,
-        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/66/d1/8a/66d18aa2-6c6f-888d-1c10-f6aef3ac04f7/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
-        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/66/d1/8a/66d18aa2-6c6f-888d-1c10-f6aef3ac04f7/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/24/88/9b/24889bad-eb2e-f2f8-068a-03cf78c96bf8/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/24/88/9b/24889bad-eb2e-f2f8-068a-03cf78c96bf8/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/100x100bb.jpg",
         "screenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d9/c3/46/d9c34665-0c83-e4a7-87a3-1be6c8548aa8/iphone_01_Home.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/96/a5/ab/96a5ab9e-1eec-014d-c806-d156ab3fb1ea/iphone_02_Reader.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/0c/98/97/0c989796-43fd-6c34-0f28-6ff76d466a50/iphone_03_Statistics.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/0b/0f/f0/0b0ff0a5-f130-2944-52fa-7ffa93fca048/iphone_04_Profile.png/320x480bb.jpg"
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/60/af/63/60af6319-aace-dbd4-7e0b-053f304b8b79/01_wiki-steps_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/61/64/e8/6164e813-0bdd-d4a3-6b12-3cc9ab5a3d29/02_rhythm_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/fc/78/64/fc7864bc-5f44-7ea8-36b7-8b24ef86698c/03_turn_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/9c/f9/bd/9cf9bdb7-9b7f-62b7-d20c-bf40325d67ca/04_wiki_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d7/eb/ec/d7ebec40-cb56-3f5f-f468-aab8c9f4ae6d/05_clave_iphone69.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/75/42/9d/75429d7a-c1d8-9a8d-55fb-cc0e13da7b41/06_home_iphone69.png/320x480bb.jpg"
         ],
-        "ipadScreenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/54/7d/88/547d88ac-f87a-5ddc-2137-2ac86ec89b37/ipad_01_Home.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/af/68/20/af682052-9f2f-6223-5f54-77511894a9b6/ipad_02_Reader.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/10/01/68/10016897-ab7f-0875-4e26-9f712498d324/ipad_03_Statistics.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/8f/8c/9a/8f8c9aa5-2bbb-56cb-25a8-525f80979579/ipad_04_Profile.png/360x480bb.jpg"
-        ],
-        "version": "1.0",
-        "releaseDate": "2026-07-20T07:00:00Z",
-        "currentVersionReleaseDate": "2026-07-20T11:25:02Z",
-        "trackViewUrl": "https://apps.apple.com/us/app/addicted-to-reading-gamified/id6791636773?uo=4",
-        "minimumOsVersion": "18.5"
+        "ipadScreenshotUrls": [],
+        "version": "1.1",
+        "releaseDate": "2026-10-07T07:00:00Z",
+        "currentVersionReleaseDate": "2026-11-13T22:38:23Z",
+        "trackViewUrl": "https://apps.apple.com/us/app/salsa-steps-rhythm-wiki/id6819831893?uo=4",
+        "minimumOsVersion": "17.0"
       },
       {
         "trackId": 6760481474,
@@ -481,8 +828,8 @@
         "currency": "USD",
         "averageUserRating": 0,
         "userRatingCount": 0,
-        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9d/a4/ed/9da4ed80-e54a-0e39-e3a7-263a19550603/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
-        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/9d/a4/ed/9da4ed80-e54a-0e39-e3a7-263a19550603/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/10/ff/25/10ff25de-a0f4-95b5-c75b-8ca36771542f/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/10/ff/25/10ff25de-a0f4-95b5-c75b-8ca36771542f/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
         "screenshotUrls": [
           "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9b/52/d9/9b52d912-a529-7d3a-5ff7-b9d24cb19c2a/01-hero-1242x2688.png/320x480bb.jpg",
           "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/5a/2f/26/5a2f2644-685c-b4e1-f839-2cbd79aeb9c3/02-modes-1242x2688.png/320x480bb.jpg",
@@ -494,11 +841,96 @@
           "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/08/3b/1d/083b1d2c-f8ce-c0eb-3e50-da550d20aa90/Simulator_Screenshot_-_iPad__U0028A16_U0029_-_2026-04-03_at_14.39.03_2064x2752.png/360x480bb.jpg",
           "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/9d/ae/a0/9daea0d3-07dc-3b29-fb95-5851d7046d89/Simulator_Screenshot_-_iPad__U0028A16_U0029_-_2026-04-03_at_14.39.01_2064x2752.png/360x480bb.jpg"
         ],
-        "version": "1.1",
+        "version": "1.2",
         "releaseDate": "2026-04-03T07:00:00Z",
-        "currentVersionReleaseDate": "2026-06-27T12:06:41Z",
+        "currentVersionReleaseDate": "2026-11-12T07:28:29Z",
         "trackViewUrl": "https://apps.apple.com/us/app/online-strategy-dot-war/id6761615625?uo=4",
         "minimumOsVersion": "26.2"
+      },
+      {
+        "trackId": 6798384489,
+        "trackName": "Clutch Lab: Esports Trainer",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Clutch Lab trains the mechanics of competitive games, one at a time, with everything else taken away.\n\nIn a real match you get a few chances an hour to practise a dodge, a smite or a reaction shot — and you never know which one you missed. Here you get them back to back, with a clear goal and a score that tells you whether you improved.\n\nMOBA\nSpells come from every side, each announced by its mark on the ground filling up. A narrow fast spear, a wide slow sphere, a fireball with a long cast, an orb that comes back, a chain of strikes in a row: every silhouette says how to dodge it. Survive as long as you can, or play the drills — skillshots, zones, cast reading, reflexes — in ten levels each. Then take on the 1v1s: a duel in a tiny pit where your rival dodges and fires back, a hook duel across a chasm, and a smite drill where you must take the last hit on the monster before an enemy jungler does.\n\nBRAWLER\nThe rhythm of a 3v3 arena shooter: bursts, spreads, lobbed shots, snipes, all with less time to read. Shotgun and sniper drills train ammo, auto-aim and your super.\n\nFPS\nAn aim trainer for the thumb: gridshot, flick, tracking and reflex targets. Then the reading drills: hold an angle and shoot the instant a head peeks out — not before, and never at an ally. Six weapon types, a desert compound to train in.\n\nTACTICS\nA real-time card drill played in portrait: send the right spell at the right troop, aim where they will be, place your defence between two lanes before the charger crosses the bridge.\n\nBUILT FOR TRAINING\n• Every drill has ten levels and three stars\n• Survival modes with a personal record each\n• Several maps per genre, picked before every match\n• Floating or locked joystick, five sensitivity steps\n• No account, no ads, fully offline\n\nYour time, your stars, your reaction time: the score is always something you did.",
+        "primaryGenreName": "Games",
+        "genres": [
+          "Games",
+          "Casual",
+          "Action"
+        ],
+        "price": 0,
+        "formattedPrice": "Free",
+        "currency": "USD",
+        "averageUserRating": 0,
+        "userRatingCount": 0,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f0/8b/93/f08b9374-3c6f-d9b2-8bbb-b16bd3d9714e/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/f0/8b/93/f08b9374-3c6f-d9b2-8bbb-b16bd3d9714e/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/30/ac/84/30ac8455-91de-2450-3e13-69181045ee8b/1_hub.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/82/f7/d6/82f7d6a1-7807-2ba0-c6e4-d5bdea4c8ab5/2_dodge.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d3/95/3c/d3953c5c-03c4-03f3-fb61-20b1c5d41321/3_fps.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/e0/aa/90/e0aa90e3-3ee6-1b3f-3810-979fb6f70d8a/4_smite.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e7/7e/17/e77e17de-6aff-4618-9f51-4e0dbe301484/5_modes.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b4/15/43/b4154349-aaf9-a5dd-a735-3a09be8c9e89/1_hub_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/6a/60/12/6a601221-3973-a283-7150-eeede4ced579/2_dodge_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/4e/c4/91/4ec4916b-c2ee-74a0-4af6-58a2b9279b04/3_fps_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a8/72/27/a87227a9-eea3-006a-9072-80ab69ea5520/4_smite_ipad.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8b/5c/aa/8b5caa07-31a8-8b88-dbf2-e984073d830e/5_modes_ipad.png/360x480bb.jpg"
+        ],
+        "version": "2.0",
+        "releaseDate": "2026-09-15T07:00:00Z",
+        "currentVersionReleaseDate": "2026-10-13T10:17:53Z",
+        "trackViewUrl": "https://apps.apple.com/us/app/clutch-lab-esports-trainer/id6798384489?uo=4",
+        "minimumOsVersion": "15.0"
+      },
+      {
+        "trackId": 6796000489,
+        "trackName": "Magic Tower Draw",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Two walking castles face each other. Every turn you cast by hand: you DRAW the spell, the game reads your line and tells you how well it recognised it - and that percentage becomes the power of the shot. Then you pull your mage back like a slingshot, aim, and let go.\n\nA clean glyph hits hard. A scribble still casts, but it barely scratches. That is the whole skill of the game: your hand is the weapon.\n\nDRAW YOUR MAGIC\n- 11 hand-drawn spells, from a simple strike to three combo glyphs\n- Your line is scored from 0 to 100% - and power scales with it\n- A grimoire that shows every shape you have learnt\n\nSHOOT LIKE A SLINGSHOT\n- The mage IS the slingshot: pull back, aim the arc, release\n- Spells pierce walls, splash onto neighbouring rooms, freeze a room for a turn, heal, or wrap your castle in a shield\n- A room at 0 HP collapses - and everything stacked on top falls with it\n\nAN ADVENTURE, ONE LESSON AT A TIME\n- 30 levels on a hand-drawn map, each one teaching one new spell or rule\n- A guided first duel: a ghost hand shows you how to draw, seal and fire\n- Your castle walks on eight legs: step closer or back away, a set distance per turn\n- Four elements in a cycle - water beats fire beats air beats earth. Read the enemy walls, then draw the spell that bites them\n- Later levels let you build your own castle before the duel, room by room, and move your mages when their room is about to fall\n- Three seals per level: win, win fast, and finish with your heart intact\n\nFIVE WORLDS\nDusk, daylight, high peaks, a sunset coast and the open sea - where your castle's legs walk right through the water.\n\nNo ads. No in-app purchases. No account. Plays offline. English and French, detected automatically.",
+        "primaryGenreName": "Games",
+        "genres": [
+          "Games",
+          "Entertainment",
+          "Strategy",
+          "Puzzle"
+        ],
+        "price": 0,
+        "formattedPrice": "Free",
+        "currency": "USD",
+        "averageUserRating": 0,
+        "userRatingCount": 0,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/79/cc/cb/79cccb5d-5a34-8763-dc34-b9e1baa0c2ef/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/79/cc/cb/79cccb5d-5a34-8763-dc34-b9e1baa0c2ef/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/42/3b/b7/423bb709-366d-e3b2-5e7f-8635d0623140/iphone_01_title.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/2d/f5/52/2df55248-5d90-f4cc-208a-6cd7444ef86d/iphone_02_draw_guide.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ca/0e/75/ca0e75f8-5807-2c8c-dc37-b08bdc4d0f4f/iphone_03_spell_charged.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/51/d8/37/51d8372c-3959-27dd-bbab-fd230de327bb/iphone_04_slingshot.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4b/d7/af/4bd7aff6-4fec-e440-7b6c-f8de6da612c6/iphone_05_duel.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/5e/df/42/5edf4292-1148-ab96-ed57-2a2d78cc7977/iphone_06_campaign.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/18/32/62/18326202-3cca-d332-fe56-2b6577161e2e/iphone_07_grimoire.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/46/01/fc/4601fcca-0452-c722-8b7d-d026ede76478/ipad_01_title.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/c6/bc/e8/c6bce852-0b79-896f-6588-bb1ee5344353/ipad_02_draw_guide.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/79/ca/4f/79ca4fa8-23a2-a1a7-ab88-76ffb671b68f/ipad_03_spell_charged.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/36/8f/a7/368fa782-8695-7a3b-ef71-932fc467c696/ipad_04_slingshot.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7b/69/53/7b695352-e778-4485-070b-4fc6af344ce8/ipad_05_duel.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8d/6e/45/8d6e45e1-10ea-57f9-1c23-df476506f58d/ipad_06_campaign.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/80/2a/7f/802a7f63-ce0a-a052-7578-945062405639/ipad_07_grimoire.png/360x480bb.jpg"
+        ],
+        "version": "1.0",
+        "releaseDate": "2026-10-30T07:00:00Z",
+        "currentVersionReleaseDate": "2026-10-30T09:23:29Z",
+        "trackViewUrl": "https://apps.apple.com/us/app/magic-tower-draw/id6796000489?uo=4",
+        "minimumOsVersion": "15.0"
       },
       {
         "trackId": 6761538853,
@@ -537,12 +969,49 @@
         "minimumOsVersion": "26.2"
       },
       {
-        "trackId": 6781363751,
-        "trackName": "Vocabulaire Anglais Widget",
+        "trackId": 6791636773,
+        "trackName": "Addicted to Reading: Gamified",
         "artistId": 1816768480,
         "artistName": "Abubucker Siddeek Mohamed Sharik",
         "sellerName": "Abubucker Siddeek Mohamed Sharik",
-        "description": "Vocabulaire Anglais t'aide à enrichir ton anglais sans effort, un mot à la fois — directement depuis ton écran d'accueil et ton écran verrouillé.\n\nLe cœur de l'app, ce sont ses widgets élégants : un nouveau mot anglais et sa traduction française apparaissent chaque heure, adaptés à ton niveau, du débutant (A1) à l'avancé (B2).\n\nCE QUE TU PEUX FAIRE\n• Widgets écran d'accueil ET écran verrouillé\n• Un mot qui change toutes les heures\n• Quatre niveaux : A1, A2, B1, B2\n• Glisse pour découvrir d'autres mots du jour\n• Marque les mots comme « appris » et suis ta progression\n• Rappel quotidien optionnel\n• Design soigné, ambiance carnet de cours\n\nSIMPLE ET RESPECTUEUX\n• 100 % hors ligne\n• Aucun compte requis\n• Aucune publicité, aucun pistage\n\nInstalle le widget, et apprends l'anglais sans même ouvrir l'app.",
+        "description": "DuoBook turns your PDF library into a daily reading habit. Import any PDF you own, set a simple daily page goal, and let DuoBook keep you accountable — Duolingo-style — with a win streak that grows every day you hit your target.\n\nNo account, no sign-up, no ads. Your books and your progress never leave your device.\n\nHOW IT WORKS\n\nDrop in your own PDFs — novels, textbooks, reports, whatever you're working through. DuoBook copies each file locally, generates a cover, and adds it to your shelf. Open a book, read at your own pace in a clean full-page PDF viewer, and DuoBook quietly tracks the pages you've read today.\n\nSet your daily objective (10 pages a day by default, fully adjustable) and watch a progress ring fill up as you read. Hit your goal and a pixel-art campfire lights up to celebrate — miss a day and your streak resets, just like the habit apps you already know.\n\nSTAY MOTIVATED\n\n- Daily win streak with a best-streak record, so you always know your all-time high\n- A dedicated Statistics screen: an activity calendar for the last 5 weeks and a bar chart of your last 7 days, so you can see your habit take shape\n- A home screen widget (via WidgetKit) that shows your current streak and how many pages are left today — no need to open the app to stay on track\n- A profile screen with your own avatar, name, and bio\n\nBUILT YOUR WAY\n\n- Import unlimited PDFs from anywhere on your device\n- Automatic page-by-page progress tracking as you read — pick up exactly where you left off\n- Light and dark mode, switchable anytime\n- A distinctive retro \"green terminal\" look: neon green on black, a pixel font, hand-picked pixel-art icons, and an animated dot-matrix navigation bar — DuoBook feels like nothing else on the App Store\n\nPRIVACY FIRST\n\nDuoBook doesn't ask for an account and doesn't show ads. Your PDFs, your reading stats, and your streak are stored entirely on your device (and synced to your widget through Apple's own App Group storage). Nothing is uploaded, nothing is tracked.\n\nWhether you're chipping away at a textbook, working through a backlog of novels, or just trying to read more consistently, DuoBook gives you the small daily nudge — and the streak to prove it — to actually finish what you start.\n\nDownload DuoBook and start your streak today.",
+        "primaryGenreName": "Book",
+        "genres": [
+          "Books",
+          "Productivity"
+        ],
+        "price": 0,
+        "formattedPrice": "Free",
+        "currency": "USD",
+        "averageUserRating": 5,
+        "userRatingCount": 1,
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/66/d1/8a/66d18aa2-6c6f-888d-1c10-f6aef3ac04f7/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/66/d1/8a/66d18aa2-6c6f-888d-1c10-f6aef3ac04f7/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/100x100bb.jpg",
+        "screenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d9/c3/46/d9c34665-0c83-e4a7-87a3-1be6c8548aa8/iphone_01_Home.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/96/a5/ab/96a5ab9e-1eec-014d-c806-d156ab3fb1ea/iphone_02_Reader.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/0c/98/97/0c989796-43fd-6c34-0f28-6ff76d466a50/iphone_03_Statistics.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/0b/0f/f0/0b0ff0a5-f130-2944-52fa-7ffa93fca048/iphone_04_Profile.png/320x480bb.jpg"
+        ],
+        "ipadScreenshotUrls": [
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/54/7d/88/547d88ac-f87a-5ddc-2137-2ac86ec89b37/ipad_01_Home.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/af/68/20/af682052-9f2f-6223-5f54-77511894a9b6/ipad_02_Reader.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/10/01/68/10016897-ab7f-0875-4e26-9f712498d324/ipad_03_Statistics.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/8f/8c/9a/8f8c9aa5-2bbb-56cb-25a8-525f80979579/ipad_04_Profile.png/360x480bb.jpg"
+        ],
+        "version": "1.0",
+        "releaseDate": "2026-07-20T07:00:00Z",
+        "currentVersionReleaseDate": "2026-07-20T11:25:02Z",
+        "trackViewUrl": "https://apps.apple.com/us/app/addicted-to-reading-gamified/id6791636773?uo=4",
+        "minimumOsVersion": "18.5"
+      },
+      {
+        "trackId": 6781363751,
+        "trackName": "Vocabulaire: English Words",
+        "artistId": 1816768480,
+        "artistName": "Abubucker Siddeek Mohamed Sharik",
+        "sellerName": "Abubucker Siddeek Mohamed Sharik",
+        "description": "Build your English vocabulary without even opening the app: a new English word and its French translation appear on your screen every hour.\nFrom beginner (A1) to upper-intermediate (B2), grow your vocabulary at your own pace, one word at a time.\nNo account, no ads, 100% offline.\n\nWIDGETS EVERYWHERE\nAdd the widget to your Home Screen or Lock Screen. Every time you glance at your iPhone, you review an English word effortlessly.\n\nA NEW WORD EVERY HOUR\nThe widget refreshes every hour. Swipe to discover more words of the day whenever you want to learn more.\n\nMATCHED TO YOUR LEVEL\nPick one of four levels: A1, A2, B1 or B2. Words are chosen to fit what you already know and what comes next.\n\nTRACK YOUR PROGRESS\nMark words as \"learned\" and watch your vocabulary grow. An optional daily reminder helps you keep the habit.\n\nTHOUGHTFUL DESIGN\nA clean notebook-style look, elegant and calm, made to fit beautifully on your screen.\n\nSIMPLE AND RESPECTFUL\n• 100% offline\n• No account required\n• No ads, no tracking\n\nAdd the widget and learn English one word at a time.",
         "primaryGenreName": "Education",
         "genres": [
           "Education",
@@ -553,68 +1022,71 @@
         "currency": "USD",
         "averageUserRating": 0,
         "userRatingCount": 0,
-        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/58/5a/b0/585ab0db-ffc2-4ac5-5ee0-d2281c52e42a/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
-        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/58/5a/b0/585ab0db-ffc2-4ac5-5ee0-d2281c52e42a/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/dd/fe/40/ddfe404d-4dc9-4771-6873-257539611e09/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/dd/fe/40/ddfe404d-4dc9-4771-6873-257539611e09/AppIcon-0-0-1x_U007epad-0-1-85-220.png/100x100bb.jpg",
         "screenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e3/3b/47/e33b47ea-94e1-6913-a39f-a7e49594c4d4/iphone_1.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/50/58/bf/5058bfc1-3c3a-8390-7f7a-6a66b551c6b9/iphone_2.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/79/82/bd/7982bde6-b98d-a6f1-e42d-d258777e1809/iphone_3.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/80/e9/18/80e918d2-921b-1354-4971-8fc946807dcd/iphone_4.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/16/c0/ef/16c0ef71-aa36-04b0-df2b-71a9bcdd20a5/iphone_5.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/1f/bb/b9/1fbbb972-5f41-892d-6caf-edee9757a8b1/iphone_6.png/320x480bb.jpg"
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/67/c1/50/67c150a2-83f9-6dee-1601-5c92edd2b225/iphone3d_1.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/cf/44/e6/cf44e604-53d9-931a-c387-d317ef4c68c7/iphone3d_2.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/01/0e/2d/010e2d62-b5e3-3d91-285e-eaf0ee5a4eaa/iphone3d_3.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/86/fe/a8/86fea8a3-0b1b-a63d-8c5d-4752123a5a0c/iphone3d_4.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7f/8b/ea/7f8beae2-463d-d3e6-2d06-206272c145ac/iphone3d_5.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/c6/36/4f/c6364fec-a1c3-c726-da80-48706f614800/iphone3d_6.png/320x480bb.jpg"
         ],
         "ipadScreenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/bf/85/ee/bf85ee40-910c-c2ee-9040-ae68b1c87a66/ipad_1.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f3/46/25/f34625dd-66bb-bffc-7a76-57b7eed280b4/ipad_2.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e8/71/6b/e8716b64-519d-ea4e-d4b6-f8c61f008a04/ipad_3.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f1/c7/4a/f1c74a64-3e61-3fc1-7595-6dace2edc027/ipad_4.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/a5/fa/1d/a5fa1de2-071a-1355-d8c5-d49a5d73b2a6/ipad_5.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b5/d5/ff/b5d5ffac-49f8-32c5-1141-a20c0bd41706/ipad_6.png/360x480bb.jpg"
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7e/07/c2/7e07c2db-73d8-ad89-8c13-a2790431c736/ipad_1.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/47/ce/9e/47ce9e00-683f-5d4d-8a6a-2a7efb0170f8/ipad_2.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a4/5a/66/a45a6624-e6b3-b0a3-679b-706e5b111128/ipad_3.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/4c/a0/77/4ca07764-7e00-8199-7475-2496dd4a72ce/ipad_4.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/49/89/49/4989491f-4874-eb55-1952-2708f84c5db2/ipad_5.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/c4/a9/c5/c4a9c5d9-5f55-bf3e-f0d3-e7d17a0ad3dd/ipad_6.png/360x480bb.jpg"
         ],
-        "version": "1.1",
+        "version": "2.2",
         "releaseDate": "2026-06-19T07:00:00Z",
-        "currentVersionReleaseDate": "2026-06-25T21:59:32Z",
-        "trackViewUrl": "https://apps.apple.com/us/app/vocabulaire-anglais-widget/id6781363751?uo=4",
+        "currentVersionReleaseDate": "2026-11-12T08:08:36Z",
+        "trackViewUrl": "https://apps.apple.com/us/app/vocabulaire-english-words/id6781363751?uo=4",
         "minimumOsVersion": "16.0"
       },
       {
-        "trackId": 6801350476,
-        "trackName": "Last Soldier: Crowd Runner",
+        "trackId": 6794597550,
+        "trackName": "TerraFocus: Focus Timer",
         "artistId": 1816768480,
         "artistName": "Abubucker Siddeek Mohamed Sharik",
         "sellerName": "Abubucker Siddeek Mohamed Sharik",
-        "description": "Nothing on this bridge is worth anything until you have shot at it.\n\nYour crowd runs forward on its own, at a constant speed, forever. Your thumb only moves it sideways. And the whole game is one question, asked without pause: where do I send my fire?\n\nGATES ARE NOT TRAPS, THEY ARE WORK\nA gate arrives at zero, or below it. Shoot it and it climbs: +1, +2, +3. Your crowd only fires straight ahead, so the only way to feed a gate is to stand in front of it. A red gate is not something to dodge. It is a building site, and it is the only thing this game has to teach you.\n\nEvery gate also hands you a troop: rifleman, bazooka, scout, tank, helicopter, bomber. It announces which one on a card floating above the frame, carrying the real model, turned three-quarters. Because +2 tanks does not compare to +3 riflemen by arithmetic, and a row of gates should not be a sum.\n\nCRATES COME IN PAIRS, SO YOU HAVE TO GIVE ONE UP\nWeapons are locked in stacks of tyres with the price written on them. Take the same weapon twice and it levels up. Take a different one and the counter drops back to one.\nThey land two at a time, in two different lanes. Your crowd only fires across three metres of front, and two neighbouring lanes are wider than that. So you take one and you lose the other, every time. That is the only long-term decision in the game, and it pulls against your curiosity.\n\nSEVEN WEAPONS THAT DISAGREE WITH EACH OTHER\nThe bazooka and the mortar carry a blast that takes everything the disc covers, damage falling off toward the edge. The laser is the far end of the same axis: three barrels, the fastest rate of fire in the game, a ridiculous damage per shot, and eight bodies threaded on a single line. The worst weapon in the catalogue against one gate. The best one against a column.\nA heavy weapon also changes the body carrying it. Rockets coming out of an assault rifle was the last thing on this bridge that did not read.\n\nTHE HORDES SHOOT BACK\nWaves arrive without end and run straight at you. An enemy who reaches you takes one runner with him and dies: the trade is always one for one, because your headcount IS your health bar. And they fire back, into a narrow window right in front of your crowd.\n\nGates, crates and hordes all compete for the same fire, and your fire is finite. The tension comes from that competition alone. It needs no boss, no levels and no finish line.\n\nNO TWO RUNS ARE THE SAME\nThe track is drawn fresh every game, so there is nothing to learn by heart. When your headcount hits zero, that is the end, and your score is the only mark. Your best run and your longest march are both kept.\n\nPortrait, one thumb, no account. Seven languages.",
-        "primaryGenreName": "Games",
+        "description": "Your focus is the only thing that grows here.\n\nTerraFocus wraps a focus timer around a small, dying island. Start a session, put the phone down, and do your actual work. When the timer runs out you earn biomass — and biomass is the only way to buy the machines that bring this place back to life.\n\nTERRAFORM, STEP BY STEP\nNothing is painted green by hand. You build infrastructure, and the land reacts:\n• Wind turbines, solar panels and dams lay down power, pylons carry it\n• Toxin scrubbers turn polluted wasteland back into soil\n• Trenchers and excavators dig the canals, a water pump fills them\n• Irrigators turn soil into grassland, and water makes wetland\n• Beehives bring flowers, a controlled burn and an arboretum grow a forest\n\nWhen the island is alive, you take every machine down and give it back to nature — then sail to the next one.\n\nA WORLD THAT KEEPS LIVING\nDay turns to night on its own. Street lamps switch on, machine LEDs glow, moths gather around the light. Trees grow, age, lean over and are replaced by other species. Squirrels move into the woods by day; frogs appear at the water's edge by night. None of it is a score. It is simply what a healed place looks like.\n\nHAND-MADE ISLANDS, REAL PUZZLES\nSix small training islands introduce the machines two by two. Then every island is a hand-drawn puzzle with a tight budget: where does the only rock sit, which way should the L-shaped irrigator face, which meadow do you burn? The fewer leaves you spend, the more stars you earn.\n\nTWENTY MACHINES, ONE CHAIN\nEach machine has a job and a shape, and the order matters: no water without power, no forest without ash. Working out the sequence is the game.\n\nBUILT TO BE HONEST\n• The timer measures real time — it keeps running while your phone is in your pocket, and finishes on its own\n• No ads\n• No streak to punish you for a bad week\n• Plays fully offline — no account, no sign-in, no data leaves your device\n\nPick 5, 15, 25, 45 or 60 minutes. Every duration pays the same rate, so you choose your rhythm — not your exploit.\n\nTerraforming meets deep work. Do the session, keep the island.",
+        "primaryGenreName": "Productivity",
         "genres": [
-          "Games",
-          "Casual",
-          "Action"
+          "Productivity",
+          "Education"
         ],
         "price": 0,
         "formattedPrice": "Free",
         "currency": "USD",
         "averageUserRating": 0,
         "userRatingCount": 0,
-        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e3/70/34/e370344d-709b-6117-1fb8-7f7614811e73/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
-        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/e3/70/34/e370344d-709b-6117-1fb8-7f7614811e73/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/100x100bb.jpg",
+        "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/23/40/4d/23404dd3-4edb-73ae-bee6-fa7e90f85baf/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/512x512bb.jpg",
+        "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/23/40/4d/23404dd3-4edb-73ae-bee6-fa7e90f85baf/AppIcon-0-0-1x_U007epad-0-11-0-85-220.png/100x100bb.jpg",
         "screenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/8c/30/2d/8c302df8-f6d3-e294-69c1-72f3e9baa938/1_gates.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a7/66/2d/a7662d43-be3a-5c37-a19f-59dec57ffebb/2_bazooka.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/f8/e2/4b/f8e24b3c-ef80-bcc0-d5f2-6e8ec2b723b1/3_laser.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/6a/2a/b1/6a2ab1fd-def8-2ef7-b78a-302cc43d275c/4_crowd.png/320x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/90/1c/a7/901ca7fa-35bc-5271-0997-68f08812d22c/5_title.png/320x480bb.jpg"
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/24/83/8f/24838fe4-7f92-aff5-5e9e-f089fdf4dd25/01-focus-1290x2796.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7a/9c/e0/7a9ce046-1fde-ae75-e376-4ee213057976/02-task-1290x2796.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/19/cf/d9/19cfd9bf-425d-e7b2-0207-6b37edcac1fd/03-rhythm-1290x2796.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/3d/0f/93/3d0f93b7-280b-01b4-3065-6fac60640fd0/04-reward-1290x2796.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/d0/47/36/d04736b9-3dc7-2779-bf1d-331c086ab36c/05-build-1290x2796.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/16/86/9e/16869e7a-26aa-3b47-a61f-9ae38ab4fa19/06-life-1290x2796.png/320x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/34/af/5d/34af5d72-7b56-9999-80df-e787d80473b4/07-honest-1290x2796.png/320x480bb.jpg"
         ],
         "ipadScreenshotUrls": [
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/5b/6a/8e/5b6a8ed2-ce0a-637f-3c88-ac924c6187e8/1_gates_ipad.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/18/f4/da/18f4da86-2942-efd4-c7af-4dfc01d51cc3/2_bazooka_ipad.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/ce/0d/75/ce0d7589-817e-6638-4e98-f603ceed04c6/3_laser_ipad.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/03/6c/75/036c7580-2740-66a6-9ffd-beee8259bab5/4_crowd_ipad.png/360x480bb.jpg",
-          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/17/bc/ff/17bcff8b-1cd4-7911-5bfd-0fa48aa2445c/5_title_ipad.png/360x480bb.jpg"
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/06/0a/34/060a34bd-9ce2-f11f-cfd4-feb469249211/01-focus-2064x2752.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/f8/eb/cc/f8ebcc67-a153-065d-98b5-f01ba47fa2a8/02-task-2064x2752.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2f/85/5d/2f855d00-5ce3-9319-ce15-2117b016d0ed/03-rhythm-2064x2752.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/aa/f8/ae/aaf8ae8a-9f6b-b3be-658f-235b9af25cd9/04-reward-2064x2752.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/c8/53/f6/c853f650-db4d-f817-c6fb-4b423104d79b/05-build-2064x2752.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/0d/d0/94/0dd09477-2b14-c1e9-1111-0f7d0756cb64/06-life-2064x2752.png/360x480bb.jpg",
+          "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7e/b1/6f/7eb16f5f-7469-4773-b593-bc6d6667dd6b/07-honest-2064x2752.png/360x480bb.jpg"
         ],
-        "version": "1.0",
-        "releaseDate": "2026-08-18T07:00:00Z",
-        "currentVersionReleaseDate": "2026-08-18T15:02:06Z",
-        "trackViewUrl": "https://apps.apple.com/us/app/last-soldier-crowd-runner/id6801350476?uo=4",
+        "version": "1.2.1",
+        "releaseDate": "2026-08-26T07:00:00Z",
+        "currentVersionReleaseDate": "2026-10-08T23:54:04Z",
+        "trackViewUrl": "https://apps.apple.com/us/app/terrafocus-focus-timer/id6794597550?uo=4",
         "minimumOsVersion": "15.0"
       }
     ]

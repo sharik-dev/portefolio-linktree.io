@@ -5,10 +5,10 @@ import { useLang } from '../contexts/LangContext';
 
 import appLogo from '../assets/islamic daily quote/logo.png';
 import firstImage from '../assets/islamic daily quote/firstImage.png';
-import appImage from '../assets/islamic daily quote/image.png';
 import secondImage from '../assets/islamic daily quote/second image.png';
 import thirdImage from '../assets/islamic daily quote/thirst image.png';
 import TabletViewer from '../components/TabletViewer';
+import { deviceShotsFor } from '../data/appstoreApps';
 
 /* ─── Contact form ────────────────────────────────────────────── */
 const CONTACT_EMAIL = 'VOTRE_EMAIL@exemple.com'; // TODO: remplace par ton adresse
@@ -523,7 +523,7 @@ const IslamicDailyQuoteLandingPage: React.FC = () => {
           viewport={{ once: true }} transition={{ duration: 0.6 }}
           className="max-w-[280px] mx-auto"
         >
-          <TabletViewer screenshots={[firstImage, appImage, secondImage, thirdImage]} />
+          <TabletViewer screenshots={deviceShotsFor('islamic-daily-quote', lang).length ? deviceShotsFor('islamic-daily-quote', lang) : [firstImage, secondImage, thirdImage]} />
         </motion.div>
       </section>
 

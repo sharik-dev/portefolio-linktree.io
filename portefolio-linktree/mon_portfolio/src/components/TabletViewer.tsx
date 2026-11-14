@@ -205,7 +205,15 @@ interface RotState {
   dragging: boolean;
   isIdle: boolean;
   targetY: number; targetX: number;
+  /** Instant (horloge three) où l'appareil est revenu au repos ; -1 = à poser à la prochaine image. */
+  idleSince: number;
 }
+
+// Au repos, l'appareil reste immobile face au visiteur ; toutes les
+// GLANCE_EVERY secondes, il jette un regard à gauche, puis à droite, et revient.
+const GLANCE_EVERY = 8;
+const GLANCE_DUR = 2.4;
+const GLANCE_AMP = 0.42;
 
 // ── Apple logo ─────────────────────────────────────────────────────────────
 const APPLE_SVG_PATH =
@@ -233,12 +241,10 @@ function makeLogoTex(color: string): THREE.CanvasTexture {
 }
 
 // ── 3D Device model ────────────────────────────────────────────────────────
-function DeviceModel({ src, device, landscape, swing, rotState, onOrientation }: {
+function DeviceModel({ src, device, landscape, rotState, onOrientation }: {
   src: string | undefined;
   device: DeviceKind;
   landscape: boolean;
-  /** Demi-amplitude du balancement au repos, en radians. */
-  swing: number;
   rotState: React.MutableRefObject<RotState>;
   onOrientation: (landscape: boolean) => void;
 }) {
@@ -282,21 +288,23 @@ function DeviceModel({ src, device, landscape, swing, rotState, onOrientation }:
   const screenH = landscape ? SW : SH;
   const screenR = Math.max(0.02, s.radius - s.bezel);
 
-  useFrame(() => {
+  useFrame(({ clock }) => {
     if (!groupRef.current) return;
     const r = rotState.current;
+    const now = clock.getElapsedTime();
     if (!r.dragging) {
       const rawDy = r.targetY - r.y;
       const dyAngle = ((rawDy % (2 * Math.PI)) + 3 * Math.PI) % (2 * Math.PI) - Math.PI;
 
       if (r.isIdle) {
-        // Balancement lent gauche-droite autour de la pose de repos.
-        r.y += r.vy;
-        const relY = ((r.y - r.targetY) % (2 * Math.PI) + 3 * Math.PI) % (2 * Math.PI) - Math.PI;
-        if (Math.abs(relY) > swing) r.vy += -Math.sign(relY) * 0.0012;
-        else r.vy = r.vy * 0.997 + 0.003 * 0.003;
-        r.vx *= 0.93;
-        r.x = Math.max(-0.43, Math.min(0.43, r.x + r.vx));
+        if (r.idleSince < 0) r.idleSince = now;
+        const phase = (now - r.idleSince) % GLANCE_EVERY;
+        const start = GLANCE_EVERY - GLANCE_DUR;
+        // Gauche puis droite, départ et arrivée en douceur (dérivée nulle aux deux bouts).
+        const p = phase < start ? 0 : (phase - start) / GLANCE_DUR;
+        r.y = r.targetY - GLANCE_AMP * Math.sin(2 * Math.PI * p) * Math.sin(Math.PI * p);
+        r.x = r.targetX;
+        r.vy = 0; r.vx = 0;
       } else {
         // Retour élastique vers la pose de repos après un glisser.
         const dxAngle = r.targetX - r.x;
@@ -304,9 +312,9 @@ function DeviceModel({ src, device, landscape, swing, rotState, onOrientation }:
         r.vx = r.vx * 0.90 + dxAngle * 0.028;
         r.y += r.vy;
         r.x = Math.max(-0.43, Math.min(0.43, r.x + r.vx));
-        if (Math.abs(dyAngle) < 0.12 && Math.abs(r.vy) < 0.008) {
+        if (Math.abs(dyAngle) < 0.01 && Math.abs(r.vy) < 0.002 && Math.abs(dxAngle) < 0.01) {
           r.isIdle = true;
-          r.vy = 0.003;
+          r.idleSince = -1;
         }
       }
     }
@@ -488,17 +496,16 @@ export default function TabletViewer({ screenshots, device, landscape: legacyTab
     return () => obs.disconnect();
   }, []);
 
-  // Pose de repos peu inclinée : la capture doit rester lisible pendant le balancement.
-  const restY = landscape ? -0.16 : kind === 'ipad' ? -0.20 : 0.22;
-  const restX = landscape ? -0.06 : -0.10;
-  const swing = landscape ? 0.26 : 0.34;
+  // Pose de repos : bien droit, face au visiteur.
+  const restY = 0;
+  const restX = 0;
 
   const rotState = useRef<RotState>({
-    y: restY, x: restX, vy: 0.003, vx: 0, dragging: false, isIdle: true, targetY: restY, targetX: restX,
+    y: restY, x: restX, vy: 0, vx: 0, dragging: false, isIdle: true, targetY: restY, targetX: restX, idleSince: -1,
   });
 
   useEffect(() => {
-    rotState.current = { y: restY, x: restX, vy: 0.003, vx: 0, dragging: false, isIdle: true, targetY: restY, targetX: restX };
+    rotState.current = { y: restY, x: restX, vy: 0, vx: 0, dragging: false, isIdle: true, targetY: restY, targetX: restX, idleSince: -1 };
   }, [shots, kind, restY, restX]);
 
   const lastPtr = useRef({ x: 0, y: 0 });
@@ -572,7 +579,6 @@ export default function TabletViewer({ screenshots, device, landscape: legacyTab
                 src={current?.src}
                 device={kind}
                 landscape={landscape}
-                swing={swing}
                 rotState={rotState}
                 onOrientation={setLandscape}
               />

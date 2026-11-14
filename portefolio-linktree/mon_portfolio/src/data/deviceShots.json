@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T14:30:01.367Z",
+  "generatedAt": "2026-11-14T15:22:30.033Z",
   "apps": {
     "archer-io": {
       "icon": "shots/archer-io/icon.webp",
@@ -600,39 +600,6 @@
         ]
       }
     },
-    "localshort": {
-      "iphone": {
-        "en": [
-          {
-            "src": "shots/localshort/iphone-en-1.webp",
-            "w": 828,
-            "h": 1800
-          },
-          {
-            "src": "shots/localshort/iphone-en-2.webp",
-            "w": 828,
-            "h": 1800
-          }
-        ]
-      }
-    },
-    "meowtoon": {
-      "icon": "shots/meowtoon/icon.webp",
-      "iphone": {
-        "en": [
-          {
-            "src": "shots/meowtoon/iphone-en-1.webp",
-            "w": 828,
-            "h": 1800
-          },
-          {
-            "src": "shots/meowtoon/iphone-en-2.webp",
-            "w": 828,
-            "h": 1800
-          }
-        ]
-      }
-    },
     "meowtube": {
       "iphone": {
         "en": [
@@ -727,81 +694,6 @@
         ]
       }
     },
-    "recall": {
-      "icon": "shots/recall/icon.webp",
-      "iphone": {
-        "en": [
-          {
-            "src": "shots/recall/iphone-en-1.webp",
-            "w": 828,
-            "h": 1800
-          },
-          {
-            "src": "shots/recall/iphone-en-2.webp",
-            "w": 828,
-            "h": 1800
-          },
-          {
-            "src": "shots/recall/iphone-en-3.webp",
-            "w": 828,
-            "h": 1800
-          },
-          {
-            "src": "shots/recall/iphone-en-4.webp",
-            "w": 828,
-            "h": 1800
-          }
-        ],
-        "fr": [
-          {
-            "src": "shots/recall/iphone-fr-1.webp",
-            "w": 828,
-            "h": 1800
-          },
-          {
-            "src": "shots/recall/iphone-fr-2.webp",
-            "w": 828,
-            "h": 1800
-          },
-          {
-            "src": "shots/recall/iphone-fr-3.webp",
-            "w": 828,
-            "h": 1800
-          },
-          {
-            "src": "shots/recall/iphone-fr-4.webp",
-            "w": 828,
-            "h": 1800
-          }
-        ]
-      },
-      "ipad": {
-        "en": [
-          {
-            "src": "shots/recall/ipad-en-1.webp",
-            "w": 1350,
-            "h": 1800
-          },
-          {
-            "src": "shots/recall/ipad-en-2.webp",
-            "w": 1350,
-            "h": 1800
-          }
-        ],
-        "fr": [
-          {
-            "src": "shots/recall/ipad-fr-1.webp",
-            "w": 1350,
-            "h": 1800
-          },
-          {
-            "src": "shots/recall/ipad-fr-2.webp",
-            "w": 1350,
-            "h": 1800
-          }
-        ]
-      }
-    },
     "salat": {
       "iphone": {
         "en": [
@@ -819,11 +711,6 @@
             "src": "shots/salat/iphone-en-3.webp",
             "w": 828,
             "h": 1800
-          },
-          {
-            "src": "shots/salat/iphone-en-4.webp",
-            "w": 828,
-            "h": 1800
           }
         ],
         "fr": [
@@ -839,11 +726,6 @@
           },
           {
             "src": "shots/salat/iphone-fr-3.webp",
-            "w": 828,
-            "h": 1800
-          },
-          {
-            "src": "shots/salat/iphone-fr-4.webp",
             "w": 828,
             "h": 1800
           }
@@ -918,33 +800,6 @@
           },
           {
             "src": "shots/strategic-wars/iphone-en-4.webp",
-            "w": 1800,
-            "h": 1013
-          }
-        ]
-      }
-    },
-    "terra-beasts": {
-      "icon": "shots/terra-beasts/icon.webp",
-      "iphone": {
-        "en": [
-          {
-            "src": "shots/terra-beasts/iphone-en-1.webp",
-            "w": 1800,
-            "h": 1013
-          },
-          {
-            "src": "shots/terra-beasts/iphone-en-2.webp",
-            "w": 1800,
-            "h": 1013
-          },
-          {
-            "src": "shots/terra-beasts/iphone-en-3.webp",
-            "w": 1800,
-            "h": 1013
-          },
-          {
-            "src": "shots/terra-beasts/iphone-en-4.webp",
             "w": 1800,
             "h": 1013
           }
@@ -1114,33 +969,6 @@
           {
             "src": "shots/vocabulary/ipad-fr-3.webp",
             "w": 1350,
-            "h": 1800
-          }
-        ]
-      }
-    },
-    "void-eater": {
-      "icon": "shots/void-eater/icon.webp",
-      "iphone": {
-        "en": [
-          {
-            "src": "shots/void-eater/iphone-en-1.webp",
-            "w": 1013,
-            "h": 1800
-          },
-          {
-            "src": "shots/void-eater/iphone-en-2.webp",
-            "w": 1013,
-            "h": 1800
-          },
-          {
-            "src": "shots/void-eater/iphone-en-3.webp",
-            "w": 1013,
-            "h": 1800
-          },
-          {
-            "src": "shots/void-eater/iphone-en-4.webp",
-            "w": 1013,
             "h": 1800
           }
         ]

@@ -467,7 +467,7 @@ export default function TabletViewer({ screenshots, device, landscape: legacyTab
     if (!autoPlay || paused || shots.length < 2) return;
     const id = window.setInterval(() => setIndex(i => (i + 1) % shots.length), AUTOPLAY_MS);
     return () => window.clearInterval(id);
-  }, [autoPlay, paused, shots]);
+  }, [autoPlay, paused, shots, index]);
 
   // Précharge la capture suivante pour que le fondu parte sans attente.
   const current = shots[Math.min(index, Math.max(shots.length - 1, 0))];
@@ -504,7 +504,9 @@ export default function TabletViewer({ screenshots, device, landscape: legacyTab
   const lastPtr = useRef({ x: 0, y: 0 });
 
   const onDown = useCallback((e: React.PointerEvent) => {
-    e.preventDefault();
+    // Souris : pas de sélection de texte. Doigt : surtout pas de preventDefault,
+    // le navigateur doit pouvoir lancer le défilement vertical (touch-action: pan-y).
+    if (e.pointerType === 'mouse') e.preventDefault();
     rotState.current.dragging = true;
     rotState.current.isIdle = false;
     lastPtr.current = { x: e.clientX, y: e.clientY };
@@ -514,7 +516,6 @@ export default function TabletViewer({ screenshots, device, landscape: legacyTab
 
   const onMove = useCallback((e: React.PointerEvent) => {
     if (!rotState.current.dragging) return;
-    e.preventDefault();
     const dx = e.clientX - lastPtr.current.x;
     const dy = e.clientY - lastPtr.current.y;
     rotState.current.y += dx * 0.014;
@@ -533,12 +534,14 @@ export default function TabletViewer({ screenshots, device, landscape: legacyTab
   const modelW = landscape ? s.H : s.W;
   const modelH = landscape ? s.W : s.H;
 
-  // Le cadre épouse l'appareil : large et bas en paysage, étroit et haut en portrait.
+  // Le cadre épouse l'appareil : large en paysage, étroit en portrait. Sa
+  // HAUTEUR, elle, ne dépend que du type d'appareil (la plus grande des deux
+  // orientations) : une capture qui bascule de portrait à paysage pendant le
+  // diaporama ne doit pas faire sauter la page sous le doigt du visiteur.
   const maxW = landscape ? 560 : kind === 'ipad' ? 400 : 340;
-  const width = Math.min(containerW, maxW);
-  const height = landscape
-    ? Math.min(360, Math.max(150, width * (modelH / modelW) * 1.12))
-    : Math.min(kind === 'ipad' ? 440 : 460, Math.max(260, width * (modelH / modelW) * 0.78));
+  const landH = Math.min(360, Math.max(150, Math.min(containerW, 560) * (s.W / s.H) * 1.12));
+  const portH = Math.min(kind === 'ipad' ? 440 : 460, Math.max(260, Math.min(containerW, kind === 'ipad' ? 400 : 340) * (s.H / s.W) * 0.78));
+  const height = Math.max(landH, portH);
 
   const fallback = (
     <div style={{ width: '100%', height: `${height}px`, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
@@ -551,7 +554,7 @@ export default function TabletViewer({ screenshots, device, landscape: legacyTab
       <div style={{ maxWidth: `${maxW}px`, margin: '0 auto' }}>
         <CanvasErrorBoundary fallback={fallback}>
           <div
-            style={{ width: '100%', height: `${height}px`, cursor: 'grab', touchAction: 'none' }}
+            style={{ width: '100%', height: `${height}px`, cursor: 'grab', touchAction: 'pan-y' }}
             onPointerDown={onDown}
             onPointerMove={onMove}
             onPointerUp={onUp}

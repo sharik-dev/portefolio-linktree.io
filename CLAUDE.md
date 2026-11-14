@@ -120,6 +120,8 @@ d'Apple sert n'importe quelle taille, l'API ne renvoie qu'une vignette 320 px).
 - **`CURATION`** (clé = `trackId`) : `id` stable + copie éditoriale facultative
   (sous-titre/description FR-EN, fonctionnalités, stack, landing page, ordre).
 - **`MANUAL_APPS`** : apps d'un autre éditeur (Guidor, Skyconseil).
+- **`PITCH`** (clé = `id`) : la phrase FR-EN affichée sous le titre (aperçu 3D et cartes).
+  Une app absente retombe sur la première phrase de sa description : en écrire une à chaque nouvelle app.
 - FR et EN viennent des storefronts `fr` et `us`.
 
 ⚠️ Le CV (les 4 fichiers synchronisés ci-dessus) garde sa liste d'apps écrite à la

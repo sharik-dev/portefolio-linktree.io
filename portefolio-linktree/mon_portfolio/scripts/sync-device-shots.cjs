@@ -89,8 +89,10 @@ const APPS = {
     ipad: both(['iPad Pro 13-inch (M5)-01_Home.png', 'iPad Pro 13-inch (M5)-03_Statistics.png'], 'en-US', 'fr-FR'),
   },
   salat: {
-    root: 'IOS/Salat/fastlane/screenshots_raw',
-    iphone: both(['1_learn.png', '2_step.png', '4_vocal.png', '5_analytics.png'], 'en-US', 'fr-FR'),
+    // Captures de la refonte (14/11/2026). 3_quran.png écarté exprès : son fond
+    // vient de Pinterest, droits non réglés (QURAN_BACKGROUNDS.md du dépôt Salat).
+    root: 'IOS/Salat/fastlane/screenshots_raw/portfolio',
+    iphone: both(['1_learn.png', '2_step.png', '4_memorize.png'], 'en-US', 'fr-FR'),
   },
   salsa: {
     root: 'IOS/salsa/marketing/raw',
@@ -154,22 +156,6 @@ const APPS = {
     icon: 'icon.png',
     iphone: { en: ['fastlane/screenshots/en-US/1_01_combat.png', 'fastlane/screenshots/en-US/2_02_swarm.png', 'fastlane/screenshots/en-US/3_03_upgrade.png'] },
     ipad: { en: ['fastlane/screenshots/en-US/1_01_combat_ipad.png', 'fastlane/screenshots/en-US/2_02_swarm_ipad.png'] },
-  },
-  meowtoon: {
-    root: 'IOS/meowToon/meowToon',
-    icon: 'meowToon/Assets.xcassets/AppIcon.appiconset/Gemini Generated Image (13) 1.png',
-    iphone: { en: ['app-store-screenshots/public/screenshots/home.png', 'app-store-screenshots/public/screenshots/browser.png'] },
-  },
-  localshort: {
-    // Captures déjà dans le dépôt (page /localshort).
-    root: path.join(PROJECT, 'src', 'assets', 'localShort'),
-    iphone: { en: ['screen2.PNG', 'screen3.PNG'] },
-  },
-  recall: {
-    root: 'IOS/Recall',
-    icon: 'Recall/Assets.xcassets/AppIcon.appiconset/AppIcon.png',
-    iphone: both(['01_home_iPhone17ProMax.png', '02_review_iPhone17ProMax.png', '03_library_iPhone17ProMax.png', '04_stats_iPhone17ProMax.png'], 'fastlane/screenshots/en-US', 'fastlane/screenshots/fr-FR'),
-    ipad: both(['01_home_iPadPro13-inchM4.png', '04_stats_iPadPro13-inchM4.png'], 'fastlane/screenshots/en-US', 'fastlane/screenshots/fr-FR'),
   },
 };
 

@@ -1,5 +1,5 @@
 export { default as PortfolioPage } from './PortfolioPage';
-export { default as DesktopPage } from './DesktopPage';
+export { default as WebPage } from './WebPage';
 export { default as GamesPage } from './GamesPage';
 export { default as LinkTreePage } from './LinkTreePage';
 export { default as CvPage } from './CvPage';

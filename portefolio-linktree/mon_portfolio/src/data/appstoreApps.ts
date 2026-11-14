@@ -33,7 +33,6 @@ import shotsData from './deviceShots.json';
 import guidorLogo from '../assets/guidor/logo.png';
 import guidorImg1 from '../assets/guidor/imageApp.png';
 import guidorImg2 from '../assets/guidor/imageApp2.png';
-import localShortLogo from '../assets/localShort/logo.png';
 
 /* ─── Compte développeur ─────────────────────────────────────────── */
 export const APPLE_ARTIST_ID = '1816768480';
@@ -59,6 +58,8 @@ export interface PortfolioApp {
   status: AppStatus;
   name: Bilingual;
   subtitle: Bilingual;
+  /** Une phrase qui dit ce que fait l'app (aperçu 3D) — posée par buildApps(). */
+  pitch?: Bilingual;
   description: Bilingual;
   features: Bilingual<string[]>;
   price: Bilingual;
@@ -417,82 +418,6 @@ export const DEV_APPS: DevApp[] = [
     category: GAMES_ACTION,
     tech: GODOT,
   },
-  {
-    id: 'terra-beasts',
-    name: 'Terra Beasts',
-    subtitle: { fr: 'RPG de capture avec de vrais animaux', en: 'Creature-collecting RPG with real animals' },
-    description: {
-      fr: "Douze bêtes bien réelles — vache, cheval, renard, loup, alpaga… — cinq éléments en anneau, et un globe terrestre pour les capturer. Monde 3D vu de haut au joystick, combats au tour par tour, et une rareté par bête qui lui donne un pelage et des gènes uniques.",
-      en: 'Twelve very real beasts — cow, horse, fox, wolf, alpaca… — five elements in a ring, and a globe to capture them. A top-down 3D world on a joystick, turn-based battles, and a rarity per beast that gives it a unique coat and genes.',
-    },
-    features: {
-      fr: ['Douze animaux riggés et animés', 'Combat au tour par tour', 'Raretés, pelages et gènes', 'Rendu cel-shadé à gros contour'],
-      en: ['Twelve rigged, animated animals', 'Turn-based battles', 'Rarities, coats and genes', 'Cel-shaded look with bold outlines'],
-    },
-    category: { fr: 'Jeux & RPG', en: 'Games & RPG' },
-    tech: GODOT,
-  },
-  {
-    id: 'void-eater',
-    name: 'Void Eater',
-    subtitle: { fr: 'Un trou noir qui avale la ville', en: 'A black hole that swallows the city' },
-    description: {
-      fr: "On pilote un trou noir posé sur la chaussée d'une ville générée en code. Tout ce qui est plus petit que lui est happé et tombe dedans : la masse avalée est à la fois le score, le rayon et la catégorie d'objets avalables. Quatre trous adverses jouent en même temps ; deux minutes, la plus grosse masse gagne.",
-      en: 'You steer a black hole sitting on the streets of a code-generated city. Anything smaller gets pulled in and falls: swallowed mass is at once the score, the radius and the class of objects you can eat. Four rival holes play at the same time; two minutes, biggest mass wins.',
-    },
-    features: {
-      fr: ['Ville entièrement procédurale', 'Quatre adversaires qui chassent et fuient', 'Un trou peut avaler un trou', 'Parties de deux minutes'],
-      en: ['Fully procedural city', 'Four rivals that hunt and flee', 'A hole can swallow a hole', 'Two-minute matches'],
-    },
-    category: GAMES_ACTION,
-    tech: GODOT,
-  },
-  {
-    id: 'recall',
-    name: 'Recall',
-    subtitle: { fr: 'Cartes mémoire à répétition espacée', en: 'Spaced-repetition memory cards' },
-    description: {
-      fr: "Application de mémorisation par répétition espacée, dans une interface pixel : des cartes à revoir chaque jour, un objectif quotidien, une bibliothèque par catégories et des statistiques de rétention.",
-      en: 'Spaced-repetition memorisation app with a pixel interface: cards to review every day, a daily goal, a library sorted by category and retention statistics.',
-    },
-    features: {
-      fr: ['Révisions planifiées automatiquement', 'Objectif quotidien et série', 'Bibliothèque par catégories', 'Statistiques de rétention'],
-      en: ['Automatically scheduled reviews', 'Daily goal and streak', 'Library by category', 'Retention statistics'],
-    },
-    category: { fr: 'Éducation & Productivité', en: 'Education & Productivity' },
-    tech: ['Swift', 'SwiftUI', 'SwiftData', 'WidgetKit'],
-  },
-  {
-    id: 'localshort',
-    name: 'LocalShort',
-    subtitle: { fr: 'Lecteur de vidéos courtes en local', en: 'Offline short-form video player' },
-    description: {
-      fr: 'Lecteur de vidéos courtes pour ses propres fichiers : la bibliothèque reste sur l’appareil, sans compte ni flux en ligne.',
-      en: 'Short-form video player for your own files: the library stays on the device, with no account and no online feed.',
-    },
-    features: {
-      fr: ['Bibliothèque 100 % locale', 'Lecture verticale plein écran', 'Aucun compte'],
-      en: ['Fully local library', 'Full-screen vertical playback', 'No account'],
-    },
-    category: { fr: 'Vidéo', en: 'Video' },
-    tech: SWIFT,
-    icon: localShortLogo,
-  },
-  {
-    id: 'meowtoon',
-    name: 'meow-Toon',
-    subtitle: { fr: 'Navigateur avec bloqueur de pubs et traduction', en: 'Browser with ad blocker and translation' },
-    description: {
-      fr: 'Navigateur iOS pensé pour la vidéo : bloqueur de publicités, favoris sur l\u2019écran d\u2019accueil, boutons flottants réglables et traduction du texte à l\u2019écran par reconnaissance de caractères.',
-      en: 'iOS browser built for video: ad blocker, favourites on the start page, adjustable floating buttons and on-screen text translation through character recognition.',
-    },
-    features: {
-      fr: ['Bloqueur de publicités', 'Favoris sur la page d\u2019accueil', 'Boutons flottants réglables', 'Traduction du texte à l\u2019écran (OCR)'],
-      en: ['Ad blocker', 'Favourites on the start page', 'Adjustable floating buttons', 'On-screen text translation (OCR)'],
-    },
-    category: { fr: 'Utilitaires', en: 'Utilities' },
-    tech: ['Swift', 'SwiftUI', 'WebKit', 'Translation'],
-  },
 ];
 
 /* ─── Dérivation depuis les métadonnées Apple ────────────────────── */
@@ -702,6 +627,52 @@ function byId(list?: ITunesApp[]): Map<number, ITunesApp> {
   return new Map((list || []).map(a => [a.trackId, a]));
 }
 
+/* ─── Une phrase par app (aperçu 3D) ──────────────────────────────
+ * Écrite à la main : la description App Store est trop longue et commence
+ * souvent par une accroche marketing. Une app absente retombe sur la
+ * première phrase de sa description. */
+const PITCH: Record<string, Bilingual> = {
+  meowtube: { fr: 'Un navigateur qui retire les Shorts et les fils sans fin de YouTube et des réseaux sociaux.', en: 'A browser that strips Shorts and endless feeds from YouTube and social networks.' },
+  'islamic-daily-quote': { fr: 'Une citation islamique authentique chaque jour, en notification et en widget.', en: 'An authentic Islamic quote every day, as a notification and a widget.' },
+  'easy-gym': { fr: 'Des séances de sport à la maison, sans matériel, pour tous les niveaux.', en: 'Home workouts with no equipment, for every level.' },
+  'jeu-de-point': { fr: 'Le jeu de points traditionnel malgache, en ligne contre un ami ou un bot.', en: 'The traditional Malagasy dot game, online against a friend or a bot.' },
+  vocabulary: { fr: 'Un nouveau mot d’anglais et sa traduction chaque heure, directement sur l’écran d’accueil.', en: 'A new English word and its translation every hour, right on your home screen.' },
+  duobook: { fr: 'Transforme ta bibliothèque de PDF en habitude de lecture quotidienne, à la Duolingo.', en: 'Turns your PDF library into a daily reading habit, Duolingo-style.' },
+  salat: { fr: 'Apprendre ce qu’on dit dans chaque position de la prière : l’arabe, la prononciation et le sens.', en: 'Learn what to say in each position of the prayer: the Arabic, the pronunciation and the meaning.' },
+  salsa: { fr: 'Un jeu de rythme pour apprendre le tempo de la salsa et un wiki des pas tracés au sol.', en: 'A rhythm game to learn salsa timing, plus a wiki of steps drawn on the floor.' },
+  wordiko: { fr: 'Seize jeux de mots rapides pour apprendre le vocabulaire et l’orthographe anglais.', en: 'Sixteen quick word games to learn English vocabulary and spelling.' },
+  'strategic-wars': { fr: 'Un jeu de tactique au tour par tour : capturer villes et usines, produire des unités, déjouer l’adversaire.', en: 'A turn-based tactics game: capture cities and factories, build units, outsmart your opponent.' },
+  'last-soldier': { fr: 'Un runner où une poignée de soldats devient une armée de chars et d’hélicoptères.', en: 'A runner where a handful of soldiers grows into an army of tanks and helicopters.' },
+  'magic-tower': { fr: 'Un duel de châteaux où l’on dessine ses sorts : la qualité du tracé fait la puissance du tir.', en: 'A castle duel where you draw your spells: the better the drawing, the stronger the shot.' },
+  'clutch-lab': { fr: 'Un entraîneur qui isole les gestes des jeux compétitifs : esquive, visée, réflexes.', en: 'A trainer that isolates the skills of competitive games: dodging, aiming, reflexes.' },
+  terrafocus: { fr: 'Un minuteur Pomodoro où chaque session de concentration fait revivre une île.', en: 'A Pomodoro timer where every focus session brings a dying island back to life.' },
+  guidor: { fr: 'L’app de guidage en aéroport développée pour Skyconseil, utilisée par des compagnies aériennes.', en: 'The airport guidance app built for Skyconseil, used by airlines.' },
+  'flight-advisor': { fr: 'Suit une correspondance sur billets séparés : temps nécessaire, risque et plan B.', en: 'Tracks a self-transfer connection: time needed, risk score and a plan B.' },
+  'draw-your-family': { fr: 'Les dessins des enfants deviennent des widgets vivants sur l’écran d’accueil des parents.', en: 'Kids’ drawings become live widgets on their parents’ home screen.' },
+  'block-gallery': { fr: 'Un puzzle de blocs calme où chaque ligne cassée dévoile un morceau d’un tableau célèbre.', en: 'A calm block puzzle where every cleared line reveals part of a famous painting.' },
+  'rabbit-party': { fr: 'Près de 100 mini-jeux de soirée avec des lapins en peluche, jouables hors ligne.', en: 'Nearly 100 party mini-games with plush rabbits, playable offline.' },
+  'tornado-worlds': { fr: 'On est une tornade qui grossit en avalant tout ce qui est plus petit qu’elle, sur quatre mondes.', en: 'You are a tornado that grows by swallowing everything smaller, across four worlds.' },
+  'lenas-phone': { fr: 'Un jeu d’enquête : retrouver Lena, disparue, avec son téléphone pour seule piste.', en: 'A mystery game: find Lena, who went missing, with her phone as the only lead.' },
+  empire: { fr: 'Un poker de guerre où chaque main de poker est une attaque contre l’armée adverse.', en: 'A war poker game where every poker hand is an attack on the enemy army.' },
+  'archer-io': { fr: 'Un roguelite d’arène jouable au pouce : on se déplace, le héros tire tout seul.', en: 'A one-thumb arena roguelite: you move, the hero shoots on its own.' },
+  'castle-siege': { fr: 'Un tower defense où l’on protège une maison qui vole contre des vagues de squelettes.', en: 'A tower defense where you protect a flying house from waves of skeletons.' },
+  bastion: { fr: 'Un tower defense en coop : l’un se bat à l’épée, l’autre construit les défenses.', en: 'A co-op tower defense: one player fights with a sword, the other builds the defences.' },
+  'hook-wars': { fr: 'Une arène 5 contre 5 où l’on attrape ses adversaires à la chaîne pour les jeter dans le vide.', en: 'A 5v5 arena where you hook opponents with a chain and drag them into the void.' },
+};
+
+/** Première phrase d'un texte, bornée à ~140 caractères. */
+function firstSentence(text: string): string {
+  const flat = text.replace(/\s+/g, ' ').trim();
+  const m = flat.match(/^.{20,}?[.!?](\s|$)/);
+  const one = (m ? m[0] : flat).trim();
+  return one.length > 140 ? `${one.slice(0, 137).trimEnd()}…` : one;
+}
+
+const withPitch = (a: PortfolioApp): PortfolioApp => ({
+  ...a,
+  pitch: PITCH[a.id] ?? a.pitch ?? { fr: firstSentence(a.description.fr), en: firstSentence(a.description.en) },
+});
+
 /**
  * Assemble tout le portfolio : apps en ligne (curation d'abord, puis les plus
  * récentes), Guidor, puis les apps en revue et les projets en développement.
@@ -725,7 +696,7 @@ export function buildApps(data: StorefrontData): PortfolioApp[] {
   const dev = DEV_APPS.filter(d => !taken.has(d.id)).map(devToApp);
 
   const byStatus = (s: AppStatus) => [...pending, ...dev].filter(a => a.status === s);
-  return [...live, ...MANUAL_APPS, ...byStatus('review'), ...byStatus('dev')];
+  return [...live, ...MANUAL_APPS, ...byStatus('review'), ...byStatus('dev')].map(withPitch);
 }
 
 /* ─── Récupération (live → cache → snapshot) ─────────────────────── */
